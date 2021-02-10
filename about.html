@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Fab Icon -->
+  <link rel="shortcut icon" type="image/png" href="assets/img/logos/fav_icon.png"/>
+  <!-- Fonts Awesome Icons -->
+  <link rel="stylesheet" href="assets/fonts/fontawesome/css/all.min.css">
+  <!-- Flaticon -->
+  <link rel="stylesheet" href="assets/css/vander/flaticon.css">
+  <!-- Bootstrap Link -->
+  <link rel="stylesheet" href="assets/css/vander/bootstrap.min.css">
+  <!-- Progerss bar -->
+  <link rel="stylesheet" href="assets/css/vander/jquery.lineProgressbar.css">
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="assets/css/vander/owl.carousel.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Path | Meet Path</title>
+  <style>
+    .path-exam {
+      background-color: #E2EFF2;
+      padding: 10vh 15%;
+      text-align: center;
+    }
+    .path-exam-container {
+      background-color: white;
+      padding: 6vh 14vw;
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+    .path-exam-container h2 {
+      color: #004969;
+    }
+
+    .path-exam-container p:nth-child(3) {
+      font-weight: bold;
+    }
+
+    .path-exam-container > div {
+      margin: 2rem 0;
+    }
+
+    /* 
+    ===========
+    OUR MISSION
+    ===========
+    */
+
+    .our-mission__cont {
+      display: flex;
+      /* border: 2px solid red; */
+    }
+
+    .our-mission__grad-cont {
+    width: 40%;
+    /* border: navy 2px solid; */
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.our-mission__grad {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgb(0,212,255);
+    background: linear-gradient(90deg, rgba(0,212,255,0) 65%, rgba(255,255,255,1) 100%);  
+}
+
+    .our-mission__text {
+      width: 60%;
+      padding-left: 24px;
+      /* border: 2px dashed green; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .our-mission__title {
+      position: relative;
+    }
+
+    .our-mission__title::after {
+      content: 'Our mission';
+      position: absolute;
+      left: 0;
+      top: -33%;
+      right: 0;
+      transform: scale(2,2);
+      z-index: -1;
+      opacity: .07;
+    }
+
+/* 
+=====
+TABLE
+=====
+*/
+
+.table__title {
+  padding: .5rem 0;
+  width: 45%;
+  margin: 0 auto;
+  color: white;
+  border-radius: 2px;
+  text-align: center;
+  background-color: #004969;
+}
+
+
+/* 
+======
+POLICY
+======
+*/
+
+.policy__title {
+      position: relative;
+    }
+
+    .policy__title::after {
+      content: 'Policies and Procedures';
+      position: absolute;
+      left: 0;
+      top: -33%;
+      right: 0;
+      transform: scale(2,2);
+      z-index: -1;
+      opacity: .07;
+    }
+
+    .btn-1line, .btn-2line {
+      display: flex;
+      justify-content: space-between;
+      color: white; 
+    }
+        
+    .btn-1line div:nth-of-type(1) {
+      padding: .6rem 1.5rem;
+      border-radius: 2px;
+      background-color: #004969;
+      box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.25);
+      cursor: pointer;
+    }
+
+    .btn-1line div:nth-of-type(2) {
+      padding: .6rem 1.5rem;
+      border-radius: 2px;
+      background-color: #767EA5;
+      box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.25);
+      cursor: pointer;
+    }
+
+    .btn-1line div:nth-of-type(3) {
+      padding: .6rem 1.5rem;
+      border-radius: 2px;
+      background-color: #7BA988;
+      box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.25);
+      cursor: pointer;
+    }
+
+    .btn-2line {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 3rem;
+      /* background-color: red; */
+    }
+
+    .btn-2line div:nth-of-type(1) {
+      padding: .6rem 1.5rem;
+      border-radius: 2px;
+      background-color: #0091B8;
+      box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.25);
+      cursor: pointer;
+    }
+
+    .btn-2line div:nth-of-type(2) {
+      padding: .6rem 1.5rem;
+      border-radius: 2px;
+      background-color: #8B9A99;
+      box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.25);
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar-section container-fluid d-none d-sm-block" id="header">
+      
+  </nav>
+
+    <!-- Navbar for mobile screen -->
+    <div class="navbar-mobile sticky-bar d-block d-sm-none">
+        <div class="container-fluid">
+            <div class="menu-toggler">
+                <div class="hamburger-menu">
+                    <a href="#">
+                        <span>Menu</span>
+                    </a>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="logo">
+                <a href="#"><img src="assets/img/logos/logo_1.png" alt="logo" class="img-fluid"></a>
+            </div>
+            <div class="divider"></div>
+            <div class="language">
+                <div class="dropdown">
+                    <button class="active" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <img class="flag" src="assets/img/icons/Flags/united-kingdom.png" alt="cuntry flag" />
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button"><img src="assets/img/icons/Flags/france.png"
+                                alt="flag image" class="flag" /></button>
+                        <button class="dropdown-item" type="button"><img src="assets/img/icons/Flags/germany.png"
+                                alt="flag image" class="flag" /></button>
+                        <button class="dropdown-item" type="button"><img src="assets/img/icons/Flags/japan.png"
+                                alt="flag image" class="flag" /></button>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="search">
+                <i class="flaticon-search"></i>
+            </div>
+        </div>
+
+        <div class="nav-menu-items">
+            <ul class="nav-items">
+                <li><a href="sign-in.html">Login/Sign up</a></li>
+                <li class="menu-item-has-children"><a href="index.html">Home</a>
+                    <ul class="sub-menu">
+                        <li><a href="index.html">Homepage 1</a></li>
+                        <li><a href="index-2.html">Homepage 2</a></li>
+                        <li><a href="index-3.html">Homepage 3</a></li>
+                        <li><a href="index-4.html">Homepage 4</a></li>
+                        <li><a href="index-5.html">Homepage 5</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html" class="current-menu-item">About</a></li>
+                <li class="menu-item-has-children"><a href="#">Courses</a>
+                    <ul class="sub-menu">
+                        <li><a href="courses.html">Courses Style 1</a></li>
+                        <li><a href="all-courses.html">Courses Style 2</a></li>
+                        <li><a href="course-detail.html">Course Detail</a></li>
+                        <li><a href="enrollment.html">Enrollment</a></li>
+                        <li><a href="join.html">Join Us</a></li>
+                        <li><a href="teacher.html">Single Instructor</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">Blog</a>
+                    <ul class="sub-menu">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="blog-detail.html">Blog Detail</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">Events</a>
+                    <ul class="sub-menu">
+                        <li><a href="event.html">Events</a></li>
+                        <li><a href="event-detail.html">Event Detail</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">Pages</a>
+                    <ul class="sub-menu">
+                        <li><a href="404.html">404</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="coming-soon.html">Coming soon</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-no-child"><a href="contact.html">Contact</a></li>
+                <li class="menu-item-has-children">
+                  <a href="#">UI Elements</a>
+                  <ul class="sub-menu">
+                      <li><a href="Typography-UI.html">Typography</a></li>
+                      <li><a href="accordions.html">Accordion</a></li>
+                      <li><a href="Button-UI.html">Button</a></li>
+                      <li><a href="Icons.html">Icons</a></li>
+                      <li><a href="Tables-UI.html">Tables</a></li>
+                      <li><a href="Forms-UI.html">Forms</a></li>
+                      <li><a href="Alerts&Cookies-UI.html">Alerts & Cookies</a>
+                      <li><a href="Model-UI.html">Model</a></li>
+                      <li><a href="Pagination-UI.html">Pagination</a></li>
+                      <li><a href="breadcrub.html">Breadcrumb</a></li>
+                      <li><a href="Footer-UI.html">Footer</a></li>
+                      <li><a href="Countdowns&Menus-UI.html">Countdowns & Menus</a></li>
+                      <li><a href="Card-UI.html">Card</a></li>
+                      <li><a href="Popover&Lists-UI.html">Popover&List</a></li>
+                  </ul>
+              </li>
+            </ul>
+        </div>
+
+        <div class="mobile-search-wrapper">
+            <form>
+                <input type="text" placeholder="Type something to start">
+            </form>
+        </div>
+    </div>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrub-style-1 section">
+    <div class="row d-flex align-items-center">
+      <div class="col-12 col-lg-8 bg-img"
+        style="background-image: url(assets/img/University/About-us-1/breadcrumb_bg.png)"></div>
+      <div class="hide-md-and-down col-4 bg-color"></div>
+    </div>
+    <div class="heading text-center">
+      <h1>Meet Path</h1>
+      <div class="breadcrub-style">
+        <a href="#">Home</a>
+        <span class="arrow"> > </span>
+        <a href="#" class="active">Meet Path</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PATH EXAMINATION -->
+  <div class="path-exam mantra section">
+    <div class="path-exam-container">
+      <h2>Path International Examinations</h2>
+      <div>
+        <p>We are an international examination board based in the United Kingdom, which offers a brand-new alternative for examinations in English to speakers of other languages (ESOL).</p>
+        <p>Our examinations are a fresh and contemporary option for learners since they are both the result of sustained research in the field of evaluation and a response to the demands of students, parents, teachers and administrators. In that sense, our examinations are a groundbreaking path towards a new horizon in language assessment.</p>
+      </div>
+      <p>Path International Examinations | UK-based</p>
+    </div>
+  </div>
+
+  <!-- Side form icons -->
+<div class="fixed-right side-form-icons">
+  <i class="fas fa-phone icon" id="open-opening-popup"></i>
+  <i class="fas fa-map-marker-alt icon" id="open-location-popup"></i>
+  <i class="fas fa-envelope icon" id="open-form-popup"></i>
+</div>
+
+  <div class="believes-section section">
+    <div class="container">
+      <div class="row d-flex justify-content-between">
+        <div class="col-12 col-lg-6">
+          <img src="assets/img/University/About-us-1/rawpixel.png" alt="feature image" class="img-fluid">
+        </div>
+        <div class="col-12 col-lg-6">
+          <h2 class="margin-bottom-30">Our Principles</h2>
+          <div class="accordion-wrapper acorrdion__mine">
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <a role="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Inclusiveness
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    We are committed to seeing education as fundamental to the development of both individuals and societies. We make students from all backgrounds feel welcome, appropriately challenged, and supported.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h5 class="mb-0">
+                    <a role="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      Openness
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                  <div class="card-body">
+                    Education is sharing, and we are open to what students,  parents and teachers bring us, to their ideas and suggestions. This helps us improve our practices and constantly push for excellence.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Quality
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body">
+                    Our Research and Design department embraces high standards of evaluation to accurately determine our candidates’ competency in English. It is our duty to  upgrade the way language assessment is carried out.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Innovation
+                    </a>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body">
+                    The world has progressed, and introducing new and different methods to assess candidates creatively, innovatively and critically is at the heart of our organisation.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- mission&vision -->
+  <div class="mission-vision section">
+    <!-- mantra -->
+    <div class="mantra section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-8 content">
+            <h2>Our vision</h2>
+            <p>We aim to provide every student and teacher with up-to-date and effective assessment in a world that increasingly demands better-designed education.</p>
+            <p>We are focused on being modern and progressive; innovation and the desire to go beyond what is already established drive the way we operate.</p>
+            <p>To continue achieving such sustainable quality growth, we are determined to deliver positive and human-centric service, making everyone feel welcome and valued.</p>
+          </div>
+          <div class="col-12 col-lg-4 media" style="background-image: url(assets/img/University/About-us-1/our-vision.png); background-size: cover;
+      background-position: center; ">
+            <!-- Media BG Goes Here -->
+            <!-- <img class="img-fluid" src="assets/img/University/About-us-1/our-vision.png" -->
+              <!-- alt="martra media" /> -->
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+    <!-- video popup -->
+    <div class="video-popup">
+        <div class="video-popup-wrapper">
+          <div class="v-container">
+            <div class="close-popup">
+              <i class="fas fa-times"></i>
+            </div>
+            <video src="assets/img/videos/university.mp4" id="myVideo"></video>
+            <div class="video-bar">
+              <div class="passed"></div>
+            </div>
+            <div class="buttons">
+              <button id="play-pause">
+                <i class="fas fa-play"></i>
+              </button>
+              <button id="sound-toggler">
+                <i class="fas fa-volume-up"></i>
+              </button>
+              <button id="share-toggler">
+                <i class="fas fa-share-alt"></i>
+              </button>
+            </div>
+            <div class="share">
+              <div class="social-icons">
+                <a target="_blank" href="https://www.facebook.com/codingeek.net"><i class="fab fa-facebook-square"></i></a>
+                <a target="_blank" href="https://www.instagram.com/codingeeknet/"><i class="fab fa-instagram"></i></a>
+                <a target="_blank" href="https://twitter.com/codingeeknet"><i class="fab fa-twitter"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/company/codingeek/about/"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Mission -->
+    <div class="section">
+      <div class="container text-center">
+        <h2 class="our-mission__title">Our mission</h2>
+        <p class="margin-bottom-40 margin-top-30">It is our mission to:</p>
+      </div>
+      <div class="our-mission__cont container">
+        <div class="our-mission__grad-cont">
+          <img width="100%" src="assets/img/University/About-us-1/our-mision.jpg">
+          <div class="our-mission__grad"></div>
+      </div>
+          <div class="content our-mission__text">
+            <p>Be a leading inclusive international organisation in the field of language assessment.</p>
+            <p>Develop and deliver highly communicative and contemporary examinations which assess students competency of English accurately.</p>
+            <p>Provide a reliable evaluation system which does not involve studying exam formats, but achieving the real level.</p>
+            <p>Promote among students and teachers the value and contributions of other languages and cultures to the community</p>
+            <p>Support students and teachers from all backgrounds and improve their job and academic opportunities worldwide.</p>
+            <p>Make strategic decisions which ensure we are socially responsible and environmentally sustainable.</p>
+            <p>Our mision is what makes us <span style="font-size: 1.5rem;">stand out.</span></p>
+          </div>
+        </div>
+    </div>
+
+    
+    <!-- Popup -->
+    <div class="side-form-popup">
+        <div class="popup-wrapper">
+            <div class="center-popup">
+                    <div class="opening-popup">
+                            <div class="close-popup">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-lg-8 media">
+                                    <img src="assets/img/University/students/adolescent-adorable-alone.png" alt="media"
+                                        class="img-fluid">
+                                </div>
+                                <div class="col-md-6 col-lg-4 content">
+                                    <h5>Opening hours</h5>
+                                    <div class="openings">
+                                        <div class="opening opening-days">
+                                            <p class="day">Monday</p>
+                                            <div class="divider"></div>
+                                            <p class="day">Friday</p>
+                                        </div>
+                                        <div class="opening opening-time">
+                                            <p class="time">08.00 am</p>
+                                            <div class="divider"></div>
+                                            <p class="time">16.00 pm</p>
+                                        </div>
+                                    </div>
+                                    <p class="num">+24 45 15 62 129</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="location-popup">
+                            <div class="close-popup">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-8 media">
+                                    <div id="location-map"></div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4 content">
+                                    <h5>Address</h5>
+                                    <p class="address">2, Ave Manchester, Lorem ipsum St, Rio Danubin</p>
+                                    <button class="main-btn">Open in Maps</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-popup">
+                            <div class="close-popup">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-7 content">
+                                    <h4>You have a question for us?</h4>
+                                    <p>leave your message below or email us at info@bantinguniversity.com</p>
+                                    <form class="text-left form-style-2">
+                                        <div class="form-group required">
+                                            <label for="email">Email address</label>
+                                            <input type="email" id="email" class="form-control" name="email"
+                                                placeholder="johnLP12@gmail.com" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message">Message</label>
+                                            <input type="text" id="message" class="form-control" name="name"
+                                                placeholder="Hello, I wanted to know about this particular course called..." />
+                                            <span class="small-text">120 characters left</span>
+                                        </div>
+                                        <button class="main-btn" type="submit">Send message</button>
+                                    </form>
+                                </div>
+                                <div class="d-none d-lg-block col-lg-5 media">
+                                    <img src="assets/img/University/Coming_soon/ambar-simpang.png"
+                                        alt="media image" class="img-fluid" />
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="stripped-table-part">
+        <h2 class="table__title">#ThinkForward strategy</h2>
+        <p class="margin-top-40 margin-bottom-40 text-center">We are very proud of our team and the way we work. Our strategy is based on a three-axis model of values and behaviours which are fundamental to us. It seeks to make the organisational culture of Path Examinations visible to guarantee that the proposed goals are achieved in coherence with our mission and vision. </p>
+        <div class="responsive-table">  
+          <table class="table stripped-package-table">
+              <thead>
+                <tr>
+                  <th scope="col">We are our behaviours</th>
+                  <th scope="col">We are a group and act as such</th>
+                  <th scope="col">#WeArePath</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td> We are proactive and work hard to achieve good results. We get involved to motivate and add value without seeking attention.</td>
+                  <td>We seek what favours progress for Path Examinations and the team, which will contribute to the benefit and progress of each one of us.</td>
+                  <td>We identify and guide members and centres who are proactive, inclusive, influential and flexible to change. We seek to create a solid and lasting relationship. We respect their times.</td>
+                </tr>
+                <tr>
+                  <td>We are committed to what we know we will be able to do correctly and professionally.</td>
+                  <td>We share all the knowledge and information relevant to the group as a whole, without rationing or being biased.</td>
+                  <td>We provide accurate information without omitting data. We are honest and open with our proposal. If there is something we do not know, we find it out.</td>
+                </tr>
+                <tr>
+                  <td>We pay attention and work in an efficient, orderly and neat way. We collaborate without intruding.</td>
+                  <td>We work together, helping each other to achieve the common goal. We support each other as a group, internally and externally.</td>
+                  <td> We accompany and support every member and centre, as long as the subject is within our competence. We provide an excellent humane treatment.</td>
+                </tr>
+                <tr>
+                  <td>We consult with our team before making a decision. We do not do anything that may create conflict with our role as collaborators.</td>
+                  <td>We communicate regularly with every collaborator to work on the proposed goals.</td>
+                  <td>We are professionals who generate empathy and motivation in members and centres. We listen and respond attentively, thinking about what to say and how.</td>
+                </tr>
+                <tr>
+                  <td>We seek solutions and consensus in the event of a possible problem. We are open to give and receive suggestions. We are constantly learning.</td>
+                  <td>We respect each other and recognise the scope of others’ roles. We create and take care of the group bond at all levels.</td>
+                  <td>We create a community of work and respect towards the rest of the team, suppliers, members, centres, parents, students, and competitors, so that it is mutual.</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Policy -->
+    <div class="mission-section section">
+      <div class="container text-center">
+        <h2 class="margin-bottom-50 policy__title">Policies and Procedures</h2>
+        <div class="content">
+          <div class="btn-1line">
+            <div>
+              Complaints Policy and Procedure
+            </div>
+            <div>
+              Recruitment and Selection Policy
+            </div>
+            <div>
+              Quality Assurance Policy
+            </div>
+          </div>
+          <div class="btn-2line">
+            <div>
+              Data Protection and Data Security Policy
+            </div>
+            <div>
+              Diversity and Equal Opportunities Policy
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Footer Section -->
+  <footer class="footer-section" id="footer">
+    
+  </footer>
+
+
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+
+  <!-- JQuery Link -->
+  <script src="assets/js/vander/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/vander/jquery-migrate-1.4.1.min.js"></script>
+  <!-- Popper Js -->
+  <script src="assets/js/vander/popper.min.js"></script>
+  <script src="assets/js/vander/bootstrap.min.js"></script>
+  <script src="assets/js/vander/waypoints.min.js"></script>
+  <script src="assets/js/vander/jquery.rprogressbar.js"></script>
+  <script src="assets/js/vander/owl.carousel.min.js"></script>
+  <script src="assets/js/vander/slick.min.js"></script>
+
+  <!-- Google maps geolocation -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVyNXoXHkqAwBKJaouZWhHPCP5vg7N0HQ&callback=initMap"
+  async defer></script>
+  <!-- Custom Script -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/progressbar.js"></script>
+  <script src="assets/js/slider.js"></script>
+  <script src="assets/js/toggler.js"></script>
+  <script src="assets/js/map.js"></script>
+  <script src="assets/js/vPlayer.js"></script>
+</body>
+
+</html>

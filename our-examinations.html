@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700&display=swap" rel="stylesheet" />
+      <!-- Fab Icon -->
+      <link rel="shortcut icon" type="image/png" href="assets/img/logos/fav_icon.png"/>
+  <!-- Fonts Awesome Icons -->
+  <link rel="stylesheet" href="assets/fonts/fontawesome/css/all.min.css" />
+  <!-- Flaticon -->
+  <link rel="stylesheet" href="assets/css/vander/flaticon.css">
+  <!-- Bootstrap Link -->
+  <link rel="stylesheet" href="assets/css/vander/bootstrap.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Path | Our Examinations</title>
+  <style>
+
+
+    /* 
+    ============
+    EXAM MODULES (line 504)
+    ============
+    */
+
+    .modules__text-container h2 {
+      position: relative;
+    }
+
+    .modules__text-container h2::after {
+      content: 'Exam modules';
+      position: absolute;
+      left: 0;
+      top: -33%;
+      right: 0;
+      transform: scale(2,2);
+      z-index: -1;
+      opacity: .07;
+    }
+    .modules__circle-cont {
+      position: relative;
+      display: flex;
+    }
+
+    .modules__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 30%;
+    }
+
+    .modules__content h4 {
+      margin: 1rem 0;
+    }
+
+    .modules__circle {
+      width: 10vh;
+      height: 10vh;
+      background-color: #767EA5;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      border-radius: 50%;
+      opacity: .9;
+    }
+
+    .modules__circle-skills {
+      background-color: #CB574C;
+    }
+
+    .modules__circle-marks {
+      background-color: #CFA676;
+    }
+
+    .modules__circle-img {
+      max-width: 60%;
+    }
+
+    .modules__line {
+      position: absolute;
+      width: 70%;
+      height: 1px;
+      padding: 1px 0;
+      top:13%;
+      left:0;
+      right:0;
+      margin-left:auto;
+      margin-right:auto;
+      background-color: #8B9A99;
+      z-index: -1;
+      opacity: .2;
+    }
+
+    /* 
+    ======================
+    MAP OF LEVELS / MODALS
+    ======================
+    */
+
+    h3 {
+      margin-bottom: 40px 0!important;
+    }
+
+    .map__speak-container {
+      margin: 8vh 0;
+    }
+
+    .modal__action {
+      border-bottom: 1px solid #004969!important;
+      margin-top: 1rem;
+      color: #004969!important;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="navbar-section container-fluid d-none d-sm-block" id="header">
+        
+    </nav>
+
+    <!-- Navbar for mobile screen -->
+    <div class="navbar-mobile sticky-bar d-block d-sm-none">
+        <div class="container-fluid">
+            <div class="menu-toggler">
+                <div class="hamburger-menu">
+                    <a href="#">
+                        <span>Menu</span>
+                    </a>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="logo">
+                <a href="#"><img src="assets/img/logos/logo_1.png" alt="logo" class="img-fluid"></a>
+            </div>
+            <div class="divider"></div>
+            <div class="language">
+                <div class="dropdown">
+                    <button class="active" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <img class="flag" src="assets/img/icons/Flags/united-kingdom.png" alt="cuntry flag" />
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <button class="dropdown-item" type="button"><img src="assets/img/icons/Flags/france.png"
+                                alt="flag image" class="flag" /></button>
+                        <button class="dropdown-item" type="button"><img src="assets/img/icons/Flags/germany.png"
+                                alt="flag image" class="flag" /></button>
+                        <button class="dropdown-item" type="button"><img src="assets/img/icons/Flags/japan.png"
+                                alt="flag image" class="flag" /></button>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="search">
+                <i class="flaticon-search"></i>
+            </div>
+        </div>
+
+        <div class="nav-menu-items">
+            <ul class="nav-items">
+                <li><a href="sign-in.html">Login/Sign up</a></li>
+                <li class="menu-item-has-children"><a href="index.html">Home</a>
+                    <ul class="sub-menu">
+                        <li><a href="index.html">Homepage 1</a></li>
+                        <li><a href="index-2.html">Homepage 2</a></li>
+                        <li><a href="index-3.html">Homepage 3</a></li>
+                        <li><a href="index-4.html">Homepage 4</a></li>
+                        <li><a href="index-5.html">Homepage 5</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li class="menu-item-has-children"><a href="#"class="current-menu-item">Courses</a>
+                    <ul class="sub-menu">
+                        <li><a href="courses.html">Courses Style 1</a></li>
+                        <li><a href="all-courses.html"  class="current-menu-item">Courses Style 2</a></li>
+                        <li><a href="course-detail.html">Course Detail</a></li>
+                        <li><a href="enrollment.html">Enrollment</a></li>
+                        <li><a href="join.html">Join Us</a></li>
+                        <li><a href="teacher.html">Single Instructor</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">Blog</a>
+                    <ul class="sub-menu">
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="blog-detail.html">Blog Detail</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">Events</a>
+                    <ul class="sub-menu">
+                        <li><a href="event.html">Events</a></li>
+                        <li><a href="event-detail.html">Event Detail</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">Pages</a>
+                    <ul class="sub-menu">
+                        <li><a href="404.html">404</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="coming-soon.html">Coming soon</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#">UI Elements</a>
+                  <ul class="sub-menu">
+                      <li><a href="Typography-UI.html">Typography</a></li>
+                      <li><a href="accordions.html">Accordion</a></li>
+                      <li><a href="Button-UI.html">Button</a></li>
+                      <li><a href="Icons.html">Icons</a></li>
+                      <li><a href="Tables-UI.html">Tables</a></li>
+                      <li><a href="Forms-UI.html">Forms</a></li>
+                      <li><a href="Alerts&Cookies-UI.html">Alerts & Cookies</a>
+                      <li><a href="Model-UI.html">Model</a></li>
+                      <li><a href="Pagination-UI.html">Pagination</a></li>
+                      <li><a href="breadcrub.html">Breadcrumb</a></li>
+                      <li><a href="Footer-UI.html">Footer</a></li>
+                      <li><a href="Countdowns&Menus-UI.html">Countdowns & Menus</a></li>
+                      <li><a href="Card-UI.html">Card</a></li>
+                      <li><a href="Popover&Lists-UI.html">Popover&List</a></li>
+                  </ul>
+              </li>
+                <li class="menu-item-has-no-child"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="mobile-search-wrapper">
+            <form>
+                <input type="text" placeholder="Type something to start">
+            </form>
+        </div>
+    </div>
+
+  <!-- Breadcrumb -->
+  <section class="breadcrub-style-4 section margin-bottom-0">
+    <div class="container">
+      <div class="heading">
+        <h2>Our examinations</h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section section">
+    <div class="container">
+        <div class="row d-flex justify-content-between">
+            <div class="col-12 col-lg-6">
+              <h2>About our exams</h2>
+              <p>Path exams assess the ability to receive information (reading and listening skills) and provide information (speaking and writing skills). Furthermore, we look for evidence of active communication skills. In order to achieve this, our examinations offer more opportunities for free expression of ideas. The relevance and clarity of those ideas may be enough to achieve good marks. Appropriate vocabulary with correct spelling, or clear pronunciation when speaking, is however important.</p>
+              <p>We do not want students to have to attend lengthy exam preparation classes in order to learn ‘exam techniques’ or a certain exam format. We are interested in communication skills, so all that is really needed is to attend regular classes.</p>
+            </div>
+            <div class="col-12 col-lg-6 content">
+                <div class="accordion-wrapper">
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <a role="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Domain
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>These are the broad areas of life in which we function as human beings, and can be categorised as follows:</p>
+                                    <p>- The personal domain concerns us as individuals. It is about our family and friends, hobbies and interests, likes and dislikes.</p>
+                                    <p>- The public domain is where we interact as members of the public, with organisations or other people who are not as close as family and friends. An example is going on holiday, where we interact with representatives of airlines, hotels, restaurants and local people.</p>
+                                    <p>- The educational domain is where we are a part of organised learning, for example at university. It concerns the need for skills such as essay and report writing, as well as abilities to use pragmatic and discursive language.</p>
+                                    <p>- The occupational domain concerns the workplace, and the learner as an employee or member of a profession. It concerns the vocabulary and communicative skills related to our jobs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Skills
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                  Alongside the core skills of listening, speaking, reading and writing, there is a comprehensive skill set, including interaction. This concerns the spontaneous exchange of language between two or more people in conversation or transaction, and strategic interaction by email or other written media. Skills also include mediation, where a language user must pass on information, either by speaking or in writing, to another party who was not present when the information was originated, such as passing on a telephone message, or reporting on a political debate.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header" id="headingFive">
+                                <h5 class="mb-0">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        Competences
+                                    </a>
+                                </h5>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                                <div class="card-body">
+                                    <p>There are various competences which inform our ability to use the language:</p>
+                                    <p>Lexical: This concerns the building blocks of language; its vocabulary, expressions and standard phrases.</p>
+                                    <p>Grammatical: The ability to use correct and accurate grammar forms, in order to provide contexts such as time and comparison.</p>
+                                    <p>Semantic: This is primarily concerned with the awareness of meaning, grasp of connotation, and the understanding of collocation, synonymy and antonymy.</p>
+                                    <p>Phonological: This concerns skill in the understanding of, and ability to produce, spoken words and sentences.</p>
+                                    <p>Orthographic: This concerns skill in the understanding of, and ability to produce, written words and sentences.</p>
+                                    <p>Sociolinguistic: This is concerned with the social dimension of language, e.g. formality and politeness.</p>
+                                    <p>Pragmatic: This primarily concerns discursive and interactive skills.</p>
+                                    <p>Functional: This is concerned with the ability to perform functions such as making enquiries and asking for opinions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- EXAM MODULES -->
+<div class="section modules">
+  <div class="container modules__container">
+    <div class="modules__text-container text-center margin-bottom-20 margin-top-20">
+      <h2>Exam modules</h2>
+      <p>Our examinations are divided into modules, which may be taken separately or altogether:</p>
+      <p>Speaking module / Listening module / Reading and writing module</p>
+      <p>These are the reasons why modules can be taken individually</p>
+    </div>
+    <div class="row d-flex justify-content-between modules__circle-cont">
+      
+      <div class="modules__content">
+        <div class="modules__circle"> 
+          <img class="modules__circle-img" src="assets\img\icons\study-01.svg" alt="Skills">
+        </div>
+        <h4>Skills</h4>
+        <p>Students may decide not to take all modules because they do not need to. If a job position involves, for example, sending and receiving emails in English, candidates may simply be required proof of their writing skills. The opposite will happen, for instance, for the position of call centre assistant, where proof of speaking skills will be more relevant.</p>
+      </div>
+      <div class="modules__content">
+          <div class="modules__circle modules__circle-skills">
+            <img class="modules__circle-img" src="assets\img\icons\learn-01.svg" alt="Levels">
+          </div>
+          <h4>Levels</h4>
+          <p>All people, as language users, have their own strengths and weaknesses when it comes to the different language skills. A student may be stronger at writing than at speaking. Therefore, they may choose a different level for each skill. E.g. A candidate may decide to take a reading and writing module at B2 Competency level, and speaking module at B1 Progress level.</p>
+      </div>
+      <div class="modules__content">
+        <div class="modules__circle modules__circle-marks">
+          <img class="modules__circle-img" src="assets\img\icons\computer-01.svg" alt="Marks">
+        </div>
+        <h4>Marks</h4>
+        <p>An overall mark of all modules does not show the student’s genuine level. If a candidate obtained, for example, 69% in listening, 66% in writing, and 96% in speaking, the overall mark would be 77%, despite the fact that their speaking skills are higher.</p>
+      </div>
+      <div class="modules__line"></div>
+    </div>
+  </div>
+</div>
+
+  <!-- Popular Courses -->
+  <section class="popular-courses section margin-top-0">
+    <div class="container map">
+      <div class="modules__text-container text-center">
+        <h2>Map of levels</h2>
+        <p>The diagram below shows all of our exam levels, which have been carefully designed to assess candidates progressively.</p>
+      </div>
+      <div class="map__speak-container">
+        <h2 class="rotated-text-2 d-none d-md-block">Basic levels</h2>
+        <h3 class="text-center margin-bottom-30">Speaking only exams</h3>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 col-lg-3 padding-0">
+            <div class="course-card-style-3">
+              <div class="card">
+                <div class="thumb exam-card___text text-center">
+                  <h5>Speaking Performance Assessment (SPA) level I</h5>
+                  <!-- <img class="card-img-top"src="assets/img/University/All_courses/course_5.png" alt="Card image cap"> -->
+                  <div class="hover">
+                    <span class="plus">
+                      <i style="color: black;" class="fas fa-plus-circle" id="open-exam-modal"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="card-img-overlay">
+                  <div style="background-color:#004969" class="card-body text-center">
+                    <h6 style="color: white;">A1-</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 padding-0">
+            <div class="course-card-style-3">
+              <div class="card">
+                <div class="thumb exam-card___text text-center">
+                  <h5>Speaking Performance Assessment (SPA) level II</h5>
+                  <!-- <img class="card-img-top"src="assets/img/University/All_courses/course_8.png" alt="Card image cap"> -->
+                </div>
+                <div class="card-img-overlay">
+                  <div style="background-color:#004969" class="card-body text-center">
+                    <h6 style="color: white;">A1</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 padding-0">
+            <div class="course-card-style-3">
+              <div class="card">
+                <div class="thumb exam-card___text text-center">
+                  <h5>Speaking Performance Assessment (SPA) level III</h5>
+                  <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_4.png" alt="Card image cap"> -->
+                </div>
+                <div class="card-img-overlay">
+                  <div style="background-color:#004969" class="card-body text-center">
+                    <h6 style="color: white;">A1+</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="text-center margin-bottom-30">Four-skills examns</h3>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-3 padding-0">
+          <div class="course-card-style-3">
+            <div class="card">
+              <div class="thumb exam-card___text">
+                <h4>Entry level</h4>
+                <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_5.png" alt="Card image cap"> -->
+              </div>
+              <div class="card-img-overlay">
+                <div style="background-color: #CFA676;" class="card-body text-center">
+                  <h6 style="color: white">A1-</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 padding-0">
+          <div class="course-card-style-3">
+            <div class="card">
+              <div class="thumb exam-card___text">
+                <h4>Access level</h4>
+                <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_4.png" alt="Card image cap"> -->
+              </div>
+
+              <div class="card-img-overlay">
+                <div style="background-color: #CFA676;" class="card-body text-center">
+                  <h6 style="color: white">A1</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 padding-0">
+          <div class="course-card-style-3">
+            <div class="card">
+              <div class="thumb exam-card___text">
+                <h4>Achiever level</h4>
+                <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_4.png" alt="Card image cap"> -->
+              </div>
+
+              <div class="card-img-overlay">
+                <div style="background-color: #CFA676;" class="card-body text-center">
+                  <h6 style="color: white;">A1+</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-3 padding-0">
+          <div class="course-card-style-3">
+            <div class="card">
+              <div class="thumb exam-card___text">
+                <h4>Preliminary level</h4>
+                <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_5.png" alt="Card image cap"> -->
+              </div>
+              <div class="card-img-overlay">
+                <div style="background-color: #CB574C;" class="card-body text-center">
+                  <h6 style="color: white;">A2</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 padding-0">
+          <div class="course-card-style-3">
+            <div class="card">
+              <div class="thumb exam-card___text">
+                <h4>Elementary level</h4>
+                <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_4.png"alt="Card image cap"> -->
+              </div>
+
+              <div class="card-img-overlay">
+                <div style="background-color: #CB574C;" class="card-body text-center">
+                  <h6 style="color: white;">A2+</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-3 padding-0">
+          <div class="course-card-style-3">
+            <div class="card">
+              <div class="thumb exam-card___text">
+                <h4>Progress level</h4>
+                <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_5.png" alt="Card image cap"> -->
+              </div>
+              <div class="card-img-overlay">
+                <div style="background-color: #767EA5;" class="card-body text-center">
+                  <h6>B1</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 padding-0">
+          <div class="course-card-style-3">
+            <div class="card">
+              <div class="thumb exam-card___text">
+                <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_4.png" alt="Card image cap"> -->
+                <h4>Competency level</h4>
+              </div>
+
+              <div class="card-img-overlay">
+                <div style="background-color: #767EA5;" class="card-body text-center">
+                  <h6>B2</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 padding-0">
+          <div class="course-card-style-3">
+            <div class="card">
+              <div class="thumb exam-card___text">
+                <h4>Forward level</h4>
+                <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_4.png" alt="Card image cap"> -->
+              </div>
+
+              <div class="card-img-overlay">
+                <div style="background-color: #767EA5;" class="card-body text-center">
+                  <h6 style="color: white;">B2+</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup -->
+  <div class="side-form-popup">
+    <div class="popup-wrapper">
+        <div class="center-popup">
+            <div class="opening-popup">
+                <div class="close-popup">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="row exam__modal padding-top-40 padding-bottom-60">
+                    <div class="content">
+                        <h5>A1 | Speaking Performance Assessment (SPA) level I</h5>
+                        <p class="comment-item-style-1">This is the first very basic level on the Path speaking-only exam scale. Candidates at this level can understand short, very simple questions and statements about everyday familiar words, provided they are delivered slowly and clearly and accompanied by visuals or manual gestures to support understanding and repeated if necessary. They can produce short phrases about themselves giving basic personal information. They make frequent use of very simple fixed expressions.</p>
+                        <div class="level-sepecs__container comment-item-style-1">
+                          <h5>Level specifications</h5>
+                          <div class="level-specs__cont d-flex">
+                            <div class="level-specs__title">
+                              <ul>
+                                <li>Exam type:</li>
+                                <li>Modules:</li>
+                                <li>Total length:</li>
+                                <li>Age range:</li>
+                                <li>CEFR level:</li>
+                              </ul>
+                            </div>
+                            <div class="level-specs__info">
+                              <ul>
+                                <li>A1- (Pre Breakthrough)</li>
+                                <li>Online and presential</li>
+                                <li>Speaking</li>
+                                <li>10 minutes</li>
+                                <li>Version for children aged 4-12, Version for adolescents aged 13+ and adults</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                          
+                        <div><a class="modal__action">Download a sample test</a></div>
+                        <div><a class="modal__action">Book this exam</a></div>
+                        <div><a class="modal__action">Are you ready for this exam?</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="location-popup">
+                <div class="close-popup">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-8 media">
+                        <div id="location-map"></div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 content">
+                        <h5>Address</h5>
+                        <p class="address">2, Ave Manchester, Lorem ipsum St, Rio Danubin</p>
+                        <button class="main-btn">Open in Maps</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-popup">
+                <div class="close-popup">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-7 content">
+                        <h4>You have a question for us?</h4>
+                        <p>leave your message below or email us at info@bantinguniversity.com</p>
+                        <form class="text-left form-style-2">
+                            <div class="form-group required">
+                                <label for="email">Email address</label>
+                                <input type="email" id="email" class="form-control" name="email"
+                                    placeholder="johnLP12@gmail.com" />
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <input type="text" id="message" class="form-control" name="name"
+                                    placeholder="Hello, I wanted to know about this particular course called..." />
+                                <span class="small-text">120 characters left</span>
+                            </div>
+                            <button class="main-btn" type="submit">Send message</button>
+                        </form>
+                    </div>
+                    <div class="d-none d-lg-block col-lg-5 media">
+                        <img src="assets/img/University/Coming_soon/ambar-simpang.png" alt="media image"
+                            class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- Footer Section -->
+  <footer class="footer-section" id="footer">
+  </footer>
+
+
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+</div>
+  <!-- JQuery Link -->
+  <script src="assets/js/vander/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/vander/jquery-migrate-1.4.1.min.js"></script>
+  <!-- Popper Js -->
+  <script src="assets/js/vander/popper.min.js"></script>
+  <script src="assets/js/vander/bootstrap.min.js"></script>
+  <!-- Custom Script -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/toggler.js"></script>
+</body>
+
+</html>
