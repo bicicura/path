@@ -227,6 +227,52 @@
             max-width: 100%;
             transform: scale(.7, .7);
         }
+        @media only screen and (max-width: 799px) {
+            html {
+                overflow-x: hidden;
+            }
+            
+            .boxed-btn {
+                text-align: center;
+            }
+
+            .franja {
+                flex-direction: column;
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .franja__title {
+                opacity: 1;
+                text-align: center;
+                width: 100%;
+            }
+
+            .franja button {
+            padding: 1em 3.2em;
+            background-color: white;
+            outline: none;
+            border: none;
+            border-radius: 2px;
+            font-weight: bold;
+            box-shadow: 0px 6px 10px -8px white;
+            }
+
+            .quote__title {
+            opacity: 1;
+            transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+            margin: 0 5%;
+            text-align: left;
+            }
+            
+            .anim__home1, .anim__home2, .anim__home3, .anim__home4, .anim__home5, .europe, .latin, .asia. .africa {
+                opacity: 1;
+            } 
+
+            .connect__container {
+                flex-direction: column;
+            }
+        }
         </style>
 </head>
 
@@ -300,11 +346,6 @@
             </ul>
         </div>
 
-        <div class="mobile-search-wrapper">
-            <form>
-                <input type="text" placeholder="Type something to start">
-            </form>
-        </div>
     </div>
 
     <!-- Showcase Section -->
