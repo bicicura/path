@@ -488,6 +488,47 @@
           margin: 0;
         }
 
+        @media only screen and (max-width: 799px) {
+          * {
+            overflow-x: hidden;
+          }
+          .heading h1 {
+          font-size: 1.5rem!important;
+        }
+
+        .breadcrub-style-5 .heading {
+          min-width: 400px;
+        }
+
+        .table__title {
+          width: 100%;
+        }
+
+        .cards-mobile {
+          flex-direction: column;
+        }
+
+        .benefits {
+          width: 55%;
+        }
+
+        .benefits__left {
+          width: 100%;
+          flex-direction: column;
+        }
+
+        .benefits__img-container {
+        width: 90%;
+        }
+
+        .benefits__left span {
+      margin: 0 auto;
+        }
+
+        .benefits__right {
+        width: 100%;
+        }
+      }
         </style>
 </head>
 
@@ -936,7 +977,7 @@
     <div class="membership-section section">
       <div class="container">
         <h2 class="text-center join-path-title">Join Path</h2>
-        <div class="text-center price-cards d-flex align-items-start">
+        <div class="text-center price-cards d-flex align-items-start cards-mobile">
           <div class="price-card basic">
             <h4 style="color: #0091B7;">AFFILIATE</h4>
             <div class="features">
