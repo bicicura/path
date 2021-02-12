@@ -32,12 +32,23 @@
     ======
     */
 
+    .banner__subtitle-container {
+        width: 100%;
+    }
+
+
+    .banner__subtitle {
+        font-size: 1.6rem;
+    }
+
     .content-area-span {
         background-color: #004969;
         padding: .2em .4em;
         border-radius: 2px;
         color: white;
+        font-weight: bold;
     }
+
 
     /* 
     =====
@@ -99,6 +110,7 @@
 
         .franja h3 {
             color: white;
+            font-weight: 400;
         }
 
         .franja button {
@@ -134,12 +146,14 @@
 
         .quote__after-text {
             text-align: center;
-            padding: 20vh 0;
+            padding: 24vh 0;
             position: relative;
+            z-index: 100;
         }
 
         .quote__after-text h2 {
-            color: white;
+            color: white!important;
+            font-weight: 400;
         }
 
         .quote__after-coma {
@@ -344,7 +358,9 @@
             <div class="single-header-item">
                 <div class="content-area">
                     <h1 class="title" style="color:#004969;">Evolution in <br> language assesment</h1>
-                    <p class="d-none d-lg-block">Internationally <span class="content-area-span">recognized examinations.</span></p>
+                    <div class="banner__subtitle-container">
+                        <p class="d-none d-lg-block banner__subtitle">Internationally <br><span class="banner__subtitle-span content-area-span">recognized examinations.</span></p>
+                    </div>
 
                     <a href="#" class="boxed-btn">Read More</a>
                 </div>
@@ -393,7 +409,7 @@
     <!-- FRANJA CERTIFY -->
     <section class="franja-container">
         <div class="franja">
-            <h3>Certify all language skills <br> or just the ones you need.</h3>
+            <h3><span style="font-weight: bold;">Certify</span> all language skills <br> or just the ones you need.</h3>
             <button>Learn more</button>
         </div>
     </section>
@@ -405,7 +421,7 @@
            <div class="quote__after-courtain">
                 <div class="quote__after-text container">
                     <img class="quote__after-coma" src="assets\img\icons\caro-bac.png" alt="Quote">
-                <h2>We aim to provide every student and teacher with up-to-date and effective assessment in a world that increasingly demands better-designed education.</h2>
+                <h2>We aim to provide every student and teacher with <span style="font-weight: bold;">up-to-date</span> and <span style="font-weight: bold;">effective assessment</span> in a world that increasingly demands better-designed education.</h2>
                 </div>
            </div>
         </div>
@@ -620,11 +636,11 @@
                 
                 <div class="connect__europe">
                     <div class="connect__img-cont">
-                        <img src="..\assets\img\custom\EUROPE_FINAL.png" alt="">
+                        <img src="..\assets\img\custom\LATINA_FINAL.png" alt="">
                     </div>
                     <p>LATIN AMERICA</p>
                     <div class="connect__social row">
-                    	<a target="_blank" href="https://www.instagram.com/codingeeknet/"><i
+                    	<a target="_blank" href="https://www.instagram.com/pathlatam/"><i
                     	    class="fab fa-instagram"></i></a>
                     	<a target="_blank" href="https://www.instagram.com/codingeeknet/"><i
                     	    class="fab fa-youtube"></i></a>
@@ -633,7 +649,7 @@
 
                 <div class="connect__europe">
                     <div class="connect__img-cont">
-                        <img src="..\assets\img\custom\EUROPE_FINAL.png" alt="">
+                        <img src="..\assets\img\custom\AFRICA_FINAL.png" alt="">
                     </div>
                     <p>AFRICA</p>
                     <a target="_blank" href="https://www.instagram.com/codingeeknet/"><i
@@ -642,7 +658,7 @@
 
                 <div class="connect__europe">
                     <div class="connect__img-cont">
-                        <img src="..\assets\img\custom\EUROPE_FINAL.png" alt="">
+                        <img src="..\assets\img\custom\ASIA_FINAL.png" alt="">
                     </div>
                     <p>ASIA</p>
                     <a target="_blank" href="https://www.instagram.com/codingeeknet/"><i

@@ -28,6 +28,20 @@
     ============
     */
 
+    .table__title {
+    padding: .5rem 0;
+    width: 50%;
+    margin: 1rem auto;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #CB574C;
+    box-shadow: 0px 7px 5px 0px rgba(0,0,0,.15);
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+
     .modules__text-container h2 {
       position: relative;
     }
@@ -103,6 +117,25 @@
     ======================
     */
 
+    .map__text-container h2 {
+      position: relative;
+    }
+
+    .map__text-container h2::after {
+      content: 'Exam modules';
+      position: absolute;
+      left: 0;
+      top: -33%;
+      right: 0;
+      transform: scale(2,2);
+      z-index: -1;
+      opacity: .07;
+    }
+    .modules__circle-cont {
+      position: relative;
+      display: flex;
+    }
+
     h3 {
       margin-bottom: 40px 0!important;
     }
@@ -157,6 +190,21 @@
         margin-right: 20px;
     }
 
+
+    .map__exam-title {
+      width: 25%;
+      border-radius: 4px;
+      margin: auto;
+      margin-bottom: 2rem;
+      color: white!important;
+      padding: .5rem 0;
+      background-color: #004969;
+      font-weight: bold;
+    }
+
+    .map__header-guide {
+      position: relative;
+    }
   </style>
 </head>
 
@@ -293,6 +341,7 @@
               <p>We do not want students to have to attend lengthy exam preparation classes in order to learn ‘exam techniques’ or a certain exam format. We are interested in communication skills, so all that is really needed is to attend regular classes.</p>
             </div>
             <div class="col-12 col-lg-6 content">
+              <h4 style="color: #004969;" class="margin-bottom-30">Our examinations are carefully designed around the following elements of language use and acquisition:</h4>
                 <div class="accordion-wrapper">
                     <div id="accordion">
                         <div class="card">
@@ -305,7 +354,7 @@
                             </div>
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body">
-                                    <p>These are the broad areas of life in which we function as human beings, and can be categorised as follows:</p>
+                                    <p style="font-weight: bolder;">These are the broad areas of life in which we function as human beings, and can be categorised as follows:</p>
                                     <p>- The personal domain concerns us as individuals. It is about our family and friends, hobbies and interests, likes and dislikes.</p>
                                     <p>- The public domain is where we interact as members of the public, with organisations or other people who are not as close as family and friends. An example is going on holiday, where we interact with representatives of airlines, hotels, restaurants and local people.</p>
                                     <p>- The educational domain is where we are a part of organised learning, for example at university. It concerns the need for skills such as essay and report writing, as well as abilities to use pragmatic and discursive language.</p>
@@ -363,9 +412,9 @@
   <div class="container modules__container">
     <div class="modules__text-container text-center margin-bottom-20 margin-top-20">
       <h2>Exam modules</h2>
-      <p>Our examinations are divided into modules, which may be taken separately or altogether:</p>
-      <p>Speaking module / Listening module / Reading and writing module</p>
-      <p>These are the reasons why modules can be taken individually</p>
+      <p style="background-color: #767EA5;" class="table__title">Our examinations are divided into modules, which may be taken separately or altogether:</p>
+      <p class="table__title">Speaking module / Listening module / Reading and writing module</p>
+      <p style="background-color: #CFA676;" class="table__title">These are the reasons why modules can be taken individually</p>
     </div>
     <div class="row d-flex justify-content-between modules__circle-cont">
       
@@ -398,13 +447,12 @@
   <!-- Popular Courses -->
   <section class="popular-courses section margin-top-0">
     <div class="container map">
-      <div class="modules__text-container text-center">
+      <div class="map__text-container text-center">
         <h2>Map of levels</h2>
         <p>The diagram below shows all of our exam levels, which have been carefully designed to assess candidates progressively.</p>
       </div>
       <div class="map__speak-container">
-        <h2 class="rotated-text-2 d-none d-md-block">Basic levels</h2>
-        <h3 class="text-center margin-bottom-30">Speaking only exams</h3>
+        <h3 class="text-center margin-bottom-30 map__exam-title">Speaking only exams</h3>
         <div class="row justify-content-center">
           <div class="col-12 col-md-6 col-lg-3 padding-0">
             <div class="course-card-style-3">
@@ -464,8 +512,9 @@
         </div>
       </div>
 
-      <h3 class="text-center margin-bottom-30">Four-skills examns</h3>
-      <div class="row justify-content-center">
+      <h3 class="text-center margin-bottom-30 map__exam-title" style="background-color: #CFA676">Four-skills exams</h3>
+      <div class="row justify-content-center map__header-guide">
+        <h2 class="rotated-text-2 d-none d-md-block">Basic levels</h2>
         <div class="col-12 col-md-6 col-lg-3 padding-0">
           <div class="course-card-style-3">
             <div class="card disparar_modal" id="entrya1menos">
@@ -517,7 +566,7 @@
         
 
       </div>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center map__header-guide2">
         <div class="col-12 col-md-6 col-lg-3 padding-0">
           <div class="course-card-style-3">
             <div class="card disparar_modal" id="preliminarya2">
@@ -551,7 +600,8 @@
           </div>
         </div>
       </div>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center map__header-guide">
+        <h2 class="rotated-text-2 d-none d-md-block">Independent levels</h2>
         <div class="col-12 col-md-6 col-lg-3 padding-0">
           <div class="course-card-style-3">
             <div class="card disparar_modal" id="progressb1">
@@ -895,7 +945,7 @@ $(".close-popup").click(function(){
 
 $(document).click(function(event) {
   //if you click on anything except the modal itself or the "open modal" link, close the modal
-  if (!$(event.target).closest("#modal-back .content ,.disparar_modal").length) {
+  if (!$(event.target).closest("#modal-back>div ,.disparar_modal").length) {
     $("body").find(".modal").removeClass("visible");
   }
 });

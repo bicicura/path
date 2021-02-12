@@ -3,7 +3,7 @@
 :root {
   --heading-font: "Lato", sans-serif;
   --main-font: "Lato", sans-serif;
-  --heading-color: rgba(51, 62, 72, 0.9);
+  --heading-color: #004969;
   --white: #fff;
   --red: #D80027;
   --light-red: #FC6B6B;
@@ -481,6 +481,16 @@ span {
 Footer Natgeo
 ==============
 */
+
+.footer__e-flag {
+margin-right: 1rem;
+width: 36px;
+cursor: pointer;
+}
+
+.footer__e-flag img {
+  max-width: 100%;
+}
 
 .natgeo {
   display: flex;
