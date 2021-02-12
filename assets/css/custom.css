@@ -1,53 +1,263 @@
-.franja-container {
-    width: 100%;
+/* #af__online:hover::after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: #004969;
+  bottom: 83%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  transform: rotate(45deg);
+} */
+
+.table__title {
+    padding: .5rem 0;
+    width: 45%;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    background-color: #004969;
-}
-.franja {
-  width: 45%;
-  display: flex;
-  justify-content: space-between;
-  padding: 2em 0;
-  align-items: center;
-}
-
-.franja h3 {
     color: white;
-}
-
-.franja button {
-    padding: 1em 4em;
-    background-color: white;
-    outline: none;
-    border: none;
     border-radius: 2px;
-    font-weight: bold;
-    box-shadow: 0px 6px 20px -8px white;
-}
+    text-align: center;
+    background-color: #004969;
+  }
 
-.quote__after-img {
-    background-image: url(../assets/img/University/students/path-quote.jpg)!important; 
-    margin: 6vh 0!important;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.timeline {
     position: relative;
 }
 
-.quote__after-courtain {
-    background-color: #000;
-    opacity: .5;
+* _timeline.scss | Bulkit | CSS Ninja *//* line 28, src/assets/scss/components/_timeline.scss */.timeline{width:100%;margin:30px auto;position:relative;padding:0 10px;-webkit-transition:all .4s ease;transition:all .4s ease}/* line 35, src/assets/scss/components/_timeline.scss */.timeline *,.timeline *:before,.timeline *:after{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box}/* line 42, src/assets/scss/components/_timeline.scss */.timeline .timeline-item:after,.timeline .timeline-item:before{content:'';display:block;width:100%;clear:both}/* line 50, src/assets/scss/components/_timeline.scss */.timeline:before{content:"";width:3px;height:100%;background:#ededed;left:50%;top:0;position:absolute}/* line 60, src/assets/scss/components/_timeline.scss */.timeline:after{content:"";clear:both;display:table;width:100%}/* line 67, src/assets/scss/components/_timeline.scss */.timeline .timeline-item{margin-bottom:50px;position:relative}/* line 73, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-icon{background:#0091B8;width:50px;height:50px;position:absolute;top:0;left:50%;overflow:hidden;margin-left:-23px;cursor:pointer;border-radius:50%;-webkit-box-shadow:0px 5px 43px rgba(0,0,0,0.18);box-shadow:0px 5px 43px rgba(0,0,0,0.18)}/* line 86, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-icon i{position:relative;font-size:1.6rem;top:12px;left:13px;color:#fff}/* line 94, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-icon svg{position:relative;top:14px;left:14px}/* line 101, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-content{width:45%;background:#fff;padding:20px;-webkit-box-shadow:0px 5px 43px rgba(0,0,0,0.18);box-shadow:0px 5px 43px rgba(0,0,0,0.18);border-radius:5px;-webkit-transition:all .3s;transition:all .3s}/* line 109, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-content .content-header{padding:10px;background:#fff;color:#444F60;margin:-20px -20px 0 -20px;font-weight:300;border-radius:3px 3px 0 0}/* line 117, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-content .content-header .timestamp{font-size:0.9rem;color:#999}/* line 123, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-content .content-body{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;width:100%}/* line 128, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-content .content-body .timeline-avatar{height:40px;border-radius:100px}/* line 133, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-content .content-body .timeline-text{margin:0 10px}/* line 136, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-content .content-body .timeline-text div:first-child{font-family:"Nexa Bold",sans-serif;font-weight:500;color:#444F60}/* line 142, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-content .content-body .timeline-text div:last-child{color:#999}/* line 146, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-content .content-body .timeline-text .timestamp{font-size:0.9rem;color:#999}/* line 153, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-content:before{content:'';position:absolute;left:45%;top:20px;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:7px solid #fff}/* line 165, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-content.right{float:right}/* line 168, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-content.right:before{content:'';right:45%;left:inherit;border-left:0;border-right:7px solid #fff}/* line 179, src/assets/scss/components/_timeline.scss */.timeline.doted .timeline-icon{background:white;border:2px solid #ededed;width:14px;height:14px;position:absolute;top:22%;overflow:hidden;margin:-5px;cursor:pointer;border-radius:50%;-webkit-box-shadow:0px 5px 43px rgba(0,0,0,0.18);box-shadow:0px 5px 43px rgba(0,0,0,0.18)}@media screen and (max-width: 768px){/* line 199, src/assets/scss/components/_timeline.scss */.timeline{margin:10px;padding:0px;width:100%}/* line 204, src/assets/scss/components/_timeline.scss */.timeline:before{left:0}/* line 209, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-content{width:90%;float:right}/* line 213, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-content:before,.timeline .timeline-item .timeline-content.right:before{left:10%;margin-left:-6px;border-left:0;border-right:7px solid #fff}/* line 221, src/assets/scss/components/_timeline.scss */.timeline .timeline-item .timeline-icon{left:0}/* line 226, src/assets/scss/components/_timeline.scss */.timeline.doted .timeline-icon{left:0}}/* line 236, src/assets/scss/components/_timeline.scss */.simple-feed{padding:15px;list-style:none}/* line 240, src/assets/scss/components/_timeline.scss */.simple-feed a{color:#ad5cff}/* line 244, src/assets/scss/components/_timeline.scss */.simple-feed .feed-item{position:relative;top:-10px;padding-bottom:40px;padding-left:30px;border-left:2px solid #ededed;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}/* line 253, src/assets/scss/components/_timeline.scss */.simple-feed .feed-item .name{font-weight:600;color:#444F60}/* line 258, src/assets/scss/components/_timeline.scss */.simple-feed .feed-item img{border-radius:100px;width:45px;height:45px}/* line 264, src/assets/scss/components/_timeline.scss */.simple-feed .feed-item .feed-item-text{margin-left:15px}/* line 268, src/assets/scss/components/_timeline.scss */.simple-feed .feed-item::after{content:"";display:block;position:absolute;top:20%;left:-8px;width:14px;height:14px;border-radius:100px;background:#fff;border:2px solid #ededed}/* line 281, src/assets/scss/components/_timeline.scss */.simple-feed .feed-item .date{display:block;position:relative;top:-5px;color:#999;text-transform:none;font-size:13px}/* line 290, src/assets/scss/components/_timeline.scss
+*/
+
+/* 
+========
+TARJETAS
+========
+*/
+
+#af__academic, #af__online, #af__logo, #af__platform, #af__groups, #af__meetings, #af__webinars, #af__discount, #af__invigliator, #mem__online, #mem__academic, #mem__logo, #mem__platform, #mem__group, #mem__meeting, #mem__webinars, #mem__discount, #mem__invigilator, #mem__access, #mem__onboard, #mem__id, #mem__certificate, #mem__annual, #mem__registrations, #mem__fixed, #mem__comission, #app__comission, #app__logo, #app__group, 
+#app__meeting, #app__webinars, #app__discounts, #app__invigiliator, #app__access, #app__onboard, #app__certificate, #app__adv, #app__reg, #app__inst, #app__banner, #app__perf, #app__10com, #app__prop, #cer__comission, #cer__logo, #cer__webinars, #app__cert-cent, #app__adv,
+#app__qmark, #app__plaque {
+  position: relative;
 }
 
-.quote__after-text {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 15vh 0;
+.card__more-info:hover::before {
+  position: absolute; 
+  font-size: .8em;
+  width: 250px;
+  color: white;
+  text-align: center;
+  top: -70%;
+  left: -20%;
+  padding: .5rem;
+  z-index: 100;
+  border-radius: 4px;
+  background-color: #004969;
+
 }
 
-.quote__after-text h2 {
-    color: white;
+#af__online:hover::before {
+  content: 'You will be able to offer your students online exams or the possibility to take an exam at the nearest exam centre';
 }
+
+#af__academic:hover::before {
+  content: 'You will receive guidance from and register students through a Path Academic Coordinator or Consultant';
+}
+
+#af__logo:hover::before {
+ content: 'You will receive a Path Affiliate logo';
+}
+
+#af__platform:hover::before {
+  content: 'You will have access to a demo of our exclusive e-platform Beyond™ for online mock exams';
+}
+
+#af__groups:hover::before {
+  content: 'You will take part in a news group exclusive to Path affiliates'
+}
+
+#af__meetings:hover::before {
+  content: 'You will be able to invite students and parents to informative meetings delivered by Path prior to exam registration windows'
+}
+
+#af__webinars:hover::before {
+  content: 'You will be able to attend Path webinars at a discounted fee'
+}
+
+#af__discount:hover::before {
+ content: 'You will be able to offer your students different payment methods to pay fixed fees in your local currency'; 
+}
+
+#af__invigliator:hover::before {
+  content: 'You will have the possibility to become a Path invigilator';
+}
+
+#mem__online:hover::before {
+  content: 'You will be able to offer your students online exams or the possibility to take an exam at the nearest exam centre';
+}
+
+#mem__academic:hover::before {
+  content: 'You will receive guidance from a Path Academic Coordinator or Consultant';
+}
+
+#mem__logo:hover::before {
+  content: 'You will receive a personalised Path Official Member logo';
+}
+
+#mem__platform:hover::before {
+  content: 'You will have access to a demo of our exclusive e-platform Beyond™ for online mock exams';
+}
+
+#mem__group:hover::before {
+  content: 'You will take part in a news group exclusive to Path members';
+}
+
+#mem__meeting:hover::before {
+  content: 'You will be able to invite students and parents to informative meetings delivered by Path prior to exam registration windows';
+}
+
+#mem__webinars:hover::before {
+  content: 'You will be able to attend Path webinars for free';
+}
+
+#mem__discount:hover::before {
+  content: 'You will be able to offer your students different payment methods to pay fixed fees in your local currency';
+}
+
+#mem__invigilator:hover::before {
+  content: 'You will have the possibility to become a Path invigilator';
+}
+
+#mem__access:hover::before {
+  content: 'You will have access to My Path area to download preparation materials, paper-based mock exams and to make group exam registrations';
+}
+
+#mem__onboard:hover::before {
+  content: 'You will take part in an Onboarding meeting with your staff to gain a deeper understanding of the Path proposal';
+}
+
+#mem__id:hover::before {
+  content: 'You will have a unique Path ID number';
+}
+
+#mem__certificate:hover::before {
+  content: 'You will receive a digital certificate issued by Path Examinations UK stating you are a Path Official Member';
+}
+
+#mem__certificate:hover::before {
+  content: 'You will receive a digital certificate issued by Path Examinations UK stating you are a Path Official Member';
+}
+
+#mem__annual:hover::before {
+  content: 'You will be sent an annual package of personalised advertising material';
+}
+
+#mem__registrations:hover::before {
+  content: 'You will be able to offer your students a 5% discount on early registrations';
+}
+
+#mem__fixed:hover::before {
+  content: 'You will be able to offer your students different payment methods to pay fixed fees in your local currency';
+}
+
+#mem__comission:hover::before {
+  content: 'You will be given a 10% commission for registrations of 15+ candidates';
+}
+
+#app__comission:hover::before {
+  content: 'You will be able to conduct online or paper-based exam sessions at your institution';
+}
+
+#app__logo:hover::before {
+  content: 'You will receive a personalised Path Approved Exam Centre logo';
+}
+
+#app__group:hover::before {
+  content: 'You will take part in a news group exclusive to Path exam centres';
+}
+
+#app__meeting:hover::before {
+  content: 'You will be able to organise informative meetings delivered by Path for students and parents prior to exam registration windows';
+}
+
+#app__webinars:hover::before {
+  content: 'You will be able to attend Path webinars and seminars for free';
+}
+
+#app__discounts:hover::before {
+  content: 'You will be able to offer your students different payment methods to pay fixed fees in your local currency';
+}
+
+#app__invigiliator:hover::before {
+  content: 'You will have the possibility to become a Path supervisor and offer your staff to act as invigilators';
+}
+
+#app__access:hover::before {
+  content: 'You will have access to My Path area to download preparation materials, paper-based mock exams and to make group exam registrations';
+}
+
+#app__onboard:hover::before {
+  content: 'You will take part and offer your staff Onboarding meetings with your staff to gain a deeper understanding of the Path proposal';
+}
+
+#app__certificate:hover::before {
+  content: 'You will receive a digital and a paper certificate issued by Path Examinations UK stating your institution is a Path Approved Exam Centre';
+}
+
+#app__adv:hover::before {
+  content: 'You will be sent personalised advertising material every month';
+}
+
+#app__reg:hover::before {
+  content: 'You will be able to offer your students a 5% and a 10% discounts on early registrations';
+}
+
+#app__10com:hover::before {
+  content: 'You will be given a 10% commission on all exam registrations';
+}
+
+#app__perf:hover::before {
+  content: 'You will receive a report with comments on your students’ performance at exams';
+}
+
+#app__prop:hover::before {
+  content: 'You will have your own Path academic proposal to share with students and parents';
+}
+
+#app__banner:hover::before {
+  content: 'You will be sent a Path Approved Exam Centre banner design';
+}
+
+#app__inst:hover::before {
+  content: 'After two consecutive successful annual registrations, your institution will be listed on our website.';
+  font-weight: bold;
+}
+
+#cer__comission:hover::before {
+  content: 'You will receive exclusive guidance from the Path academic team';
+}
+
+#cer__logo:hover::before {
+  content: 'You will receive a personalised Path Certified Exam Centre logo';
+}
+
+#cer__webinars:hover::before {
+  content: 'You will be able to attend Path webinars, seminars and courses for free';
+}
+
+#app__cert-cent:hover::before {
+  content: 'You will receive a digital and a paper certificate issued by Path Examinations UK stating your institution is a Path Certified Exam Centre';
+}
+
+#app__adv:hover::before {
+  content: 'You will be sent personalised advertising material (images or videos) baring your logo every month';
+}
+
+#app__plaque:hover::before {
+  content: 'After two consecutive successful annual registrations, you will be invited, together with your staff, students and parents, to an awarding ceremony at which you will be presented with a Certified Exam Centre plaque';
+}
+
+#app__qmark:hover::before {
+  content: 'After two consecutive successful annual registrations, your institution will become a candidate to the Path Q-mark (Quality mark)'
+}
+

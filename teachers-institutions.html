@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="assets/css/vander/flaticon.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
     <title>Path | Teachers and Institutions</title>
     <style type="text/css">
     /* 
@@ -44,11 +45,29 @@
         bottom: -1rem!important;
     }    
 
+
+
+
     /* 
     =====
     EVENT
     =====
     */
+
+    .events-section h2 {
+      position: relative;
+    }
+
+    .events-section h2::after {
+      content: 'Our levels';
+      position: absolute;
+      left: 0;
+      top: -33%;
+      right: 0;
+      transform: scale(2,2);
+      z-index: -1;
+      opacity: .07;
+    }
 
     .event__line {
     width: 12%;
@@ -163,8 +182,8 @@
       position: relative;
     }
 
-    .modules__text-container h2::after {
-      content: 'Exam modules';
+    /* .modules__text-container h2::after {
+      content: 'Key reasons to adopt the path inbuilt programme';
       position: absolute;
       left: 0;
       top: -33%;
@@ -172,7 +191,7 @@
       transform: scale(2,2);
       z-index: -1;
       opacity: .07;
-    }
+    } */
     .modules__circle-cont {
       position: relative;
       display: flex;
@@ -234,13 +253,159 @@
         ======================
         */
 
-        .inbuilt__info {
-          width: 60%;
+        .inbuilt__titles-container {
+          display: flex;
+          align-items: flex-end;
+        }
+
+        .features {
+          width: 70%!important;
+        }
+
+        .inbuilt__titles-aside {
+          width: 30%;
+          padding: 1rem;
+          height: 100%;
+          color: white!important;
           border-radius: 4px;
-          border: 2px solid #004969;
+          box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.15);
+          background-color: #004969;
+        }
+
+        .inbuilt__info {
+          width: 90%;
+          border-radius: 4px;
+          border: 2px solid rgba(0, 73, 105, .8);
           box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.25);
           padding: 2rem 2rem 4rem 2rem;
         }
+
+        .price-card {
+          margin: 0 .5em;
+        }
+
+        /* 
+        ======
+        Q MARK
+        ======
+        */
+
+        .qmark h2 {
+      position: relative;
+    }
+
+    .qmark h2::after {
+      content: 'Path Q-mark';
+      position: absolute;
+      left: 0;
+      top: -33%;
+      right: 0;
+      transform: scale(2,2);
+      z-index: -1;
+      opacity: .07;
+    }
+
+        .qmark__card-container {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 8vh;
+        }
+
+        .qmark__card {
+          width: 30%;
+          padding: 2rem 2rem;
+          border-radius: 4px;
+          border: 1px solid #cccccc;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.10);
+        }
+
+        .qmark__card-circle {
+          height: 50px;
+          width: 50px;
+          background-color: #004969;
+          border-radius: 50%;
+          margin-bottom: 1rem;
+        }
+
+        .qmark__end {
+          width: 50%;
+          /* margin: 2rem 0; */
+          padding: 1.5rem;
+          margin: 0 auto;
+          box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.10);
+          border: 1px solid #cccccc;
+          border-radius: 4px;
+        }
+
+        /* 
+        ======
+        NATGEO
+        ======
+        */
+
+
+
+        .natgeo__logo-container {
+          width: 70%;
+          margin: 0 auto;
+        }
+        
+        .natgeo__img {
+          max-width: 100%;
+          margin-bottom: 2rem;
+        }
+
+        .natgeo-content p {
+          width: 70%;
+          margin: 0 auto;
+        }
+
+        .movida {
+          width: 100%;
+          height: 400px;
+          background-image: url(../assets/img/logos/path-natgeo.svg);
+          background-size: cover;
+          background-position: center;
+        }
+
+        .movida {
+          display: flex;
+        }
+
+        .benefits {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          align-content: center;
+        }
+
+        .benefits__img-container {
+          width: 20%;
+        }
+
+        .benefits__img {
+          max-width: 100%;
+        }
+
+        /*
+        ======
+        SERIES
+        ======
+        */
+
+        .series__list {
+          margin-right: 1rem;
+        }
+
+        .series__list li {
+
+          margin: 0;
+        }
+
         </style>
 </head>
 
@@ -367,9 +532,9 @@
         </div>
       </div>
 
-    <section class="features-section section">
+    <section class="section">
         <div class="container text-center">
-            <h2>International standards</h2>
+            <h2 class="table__title text-center">International standards</h2>
             <p>All Path exams are aligned with the Common European Framework of Reference for Languages. The CEFR is the result of sustained research conducted by 41 member states of the Council of Europe, and was first published in 2001. This alignment provides consistency in international language assessment, as it sets out uniform standards for levels of competency in languages.</p>
         </div>
     </section>
@@ -385,239 +550,7 @@
                 <p>Path Examinations has subdivided level A1 into 3 levels, and level A2 into 2 levels. This is because the amount of time, effort and study required to become a full basic user is considerable. Through this progressive approach, we ensure that the candidate’s language competency has been assessed thoroughly.</p>
             </div>
 
-    <!-- ASSESSMENT INNOVATION -->
-    <div class="teacher-form section">
-        <div class="row">
-          <div class="col-12 col-xl-10">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-12 col-md-7 content">
-                    <h2 class="margin-bottom-30">Our Principles</h2>
-                    <div class="accordion-wrapper acorrdion__mine">
-                      <div id="accordion">
-                        <div class="card">
-                          <div class="card-header" id="headingOne">
-                            <h5 class="mb-0">
-                              <a role="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Opportunities for free expression
-                              </a>
-                            </h5>
-                          </div>
-                          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                            <div class="card-body">
-                                Comprehension of reading texts and audio needs to be assessed. Path exams do so by giving candidates the opportunity to give their opinions, provide examples or imagine different situations. Assessment will take into account the candidates’ language ability to construe these communicative acts.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <div class="card-header" id="headingTwo">
-                            <h5 class="mb-0">
-                              <a role="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Contextualised tasks
-                              </a>
-                            </h5>
-                          </div>
-                          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                            <div class="card-body">
-                                It is quite often the case to find exercises with no overall context at all, just random questions to check grammatical structures and vocabulary. Path exam tasks are contextualised; the setting is provided by a dialogue, a short story, a letter, etc., thus focusing on the active use of language rather than on meaningless and mechanical repetition.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <div class="card-header" id="headingThree">
-                            <h5 class="mb-0">
-                              <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Real-life scenarios
-                              </a>
-                            </h5>
-                          </div>
-                          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                            <div class="card-body">
-                                Path exam tasks feature anecdotes and stories, discussions and arguments, business meetings and speeches: the kind of situations and scenarios that people experience in everyday life. Path exams are designed to prepare candidates for the real world.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <div class="card-header" id="headingFour">
-                            <h5 class="mb-0">
-                              <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                No word limits
-                              </a>
-                            </h5>
-                          </div>
-                          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                            <div class="card-body">
-                                The aim of writing is to communicate ideas; to create a text which can convey a clear message and have an effect on the reader. Provided writers fulfil their communicative objective, writing has nothing to do with the number of words used. That is why exam designers have eliminated word counts. Path exams focus on the message which is to be transmitted, and on the communicative competence the candidate has in order to do so, not on how many words have been used.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingFive">
-                              <h5 class="mb-0">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                Open-ended tasks
-                                </a>
-                              </h5>
-                            </div>
-                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                              <div class="card-body">
-                                Accuracy is usually assessed through closed tasks, such as sentence transformation, fill in the gaps, true or false or multiple choice questions, which actually tend to be mechanical and limit the candidates’ creativity. Path exams from A2 Preliminary onwards only feature open-ended tasks which have no corrrect or incorrect answer. Candidates are given the opportunity to express their own ideas and to use the language communicatively. They engage with the exam more creatively, critically and effectively.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-header" id="headingSix">
-                              <h5 class="mb-0">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    Warm-up session for the speaking module
-                                </a>
-                              </h5>
-                            </div>
-                            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-                              <div class="card-body">
-                                Candidates are often nervous and do not perform well if they are not comfortable with the examiner. For Path International Examinations, it is paramount to make candidates feel at ease so that they can use their speaking skills at their best. Before the speaking module begins, Path examiners gather all candidates in a room to have a warm-up session and help them reduce the level of stress and anxiety. Our examiners have been trained to create a positive atmosphere in which candidates can show their true level of English. 
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-header" id="headingSeven">
-                              <h5 class="mb-0">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                No scripts for the speaking examiner
-                                </a>
-                              </h5>
-                            </div>
-                            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
-                              <div class="card-body">
-                                In everyday life, speaking is far from being a structured predictable activity. Even though some of the speaking is organised and follows a pattern, most of it does not. Path exams incorporate this conception of speaking and allow for a non-scripted conversation between the examiner and the candidate so that real communication can actually occur. However, strict guidelines are provided to the examiner to ensure there is no unfair advantage for one candidate over another.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-header" id="headingEight">
-                              <h5 class="mb-0">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                A prepared speaking task at higher levels
-                                </a>
-                              </h5>
-                            </div>
-                            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
-                              <div class="card-body">
-                                In real life, people often need to prepare to speak; for example, when giving a presentation or attending a job interview, they need to conduct research beforehand and organise what they are going to say. Path exams allow preparation time for candidates at higher levels, which has a significant impact on their performance, providing a better sample of what that particular learner can achieve in the language.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-header" id="headingNine">
-                              <h5 class="mb-0">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                Inclusion of technology in the speaking module
-                                </a>
-                              </h5>
-                            </div>
-                            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
-                              <div class="card-body">
-                                Candidates often perform best when they are engaged, and technology helps them do so. In order to make the speaking module a more interactive experience, Path International Examinations provides tablets so as to replace the use of printed pictures with more visually appealing videos.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-header" id="headingTen">
-                              <h5 class="mb-0">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                                Separate modules as opposed to a full exam
-                                </a>
-                              </h5>
-                            </div>
-                            <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
-                              <div class="card-body">
-                                Path exams comprise modules, which may be taken separately or altogether. This scheme has been designed to address the candidates’ needs, as they may simply have to certify certain skills. At the same time, having separate modules takes into consideration individual learning paces, as candidates may choose to certify their skills at different levels. Please <a href="#">click here to read more about it.</a> 
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-header" id="headingEleven">
-                              <h5 class="mb-0">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-                                Integration of skills
-                                </a>
-                              </h5>
-                            </div>
-                            <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
-                              <div class="card-body">
-                                In real-life communication, we use our language skills in an integrated way. New technologies have reinforced this holistic view of listening, speaking, reading and writing. Path exams have sought to integrate the skills, where feasible, so as to provide candidates with more contextualised, true-to-life situations in which they can put the language to work.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-header" id="headingTwelve">
-                              <h5 class="mb-0">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
-                                Introduction of annual updates
-                                </a>
-                              </h5>
-                            </div>
-                            <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion">
-                              <div class="card-body">
-                                Path International Examinations feeds on the enriching and open dialogue established with students, teachers, school administrators and examiners. As a result of this continuous feedback, Path exams are reassessed annually so as to keep up to date with the latest developments in language education.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-header" id="headingThirteen">
-                              <h5 class="mb-0">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
-                                Focus on achievement
-                                </a>
-                              </h5>
-                            </div>
-                            <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordion">
-                              <div class="card-body">
-                                Students are often demotivated when they fail an exam and generally desist from studying English because they think they are simply not made for it. Path exams focus on what candidates can achieve rather than on what they still can’t. Therefore, if they get between 49 and 58 marks, they will be awarded a certificate for the immediate previous level. Besides, Path certificates do not show grades but a confirmation of level.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-header" id="headingFourteen">
-                              <h5 class="mb-0">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
-                                Report with comments
-                                </a>
-                              </h5>
-                            </div>
-                            <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordion">
-                              <div class="card-body">
-                                Path International Examinations offers all exam centres a report on how students have performed at exams.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-header" id="headingFifteen">
-                              <h5 class="mb-0">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
-                                Online exams
-                                </a>
-                              </h5>
-                            </div>
-                            <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#accordion">
-                              <div class="card-body">
-                                With the outbreak of COVID-19 and resultant lockdowns, Path Examinations created its online platform, Beyond™, to conduct exams remotely, preserve the health of those involved at exam sessions and make a contribution to the environment. This system was specially designed to meet our high quality standards and assess candidates fairly, transparently and securely.
-                              </div>
-                            </div>
-                          </div>
-                          
-                      </div>
-                    </div>
-                </div>
     
-                <div class="col-5 d-sm-none d-md-block media">
-                  <!-- Background Img Goes Here -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
         <!-- Side Icons -->
         <div class="fixed-right side-form-icons">
@@ -690,14 +623,248 @@
                 </div>
             </div>
         </div>
+
+        <!-- ASSESSMENT INNOVATION -->
+    <div class="teacher-form section">
+      <div class="row">
+        <div class="col-12 col-xl-10">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 col-md-7 content">
+                  <h2 class="margin-bottom-30">Our Principles</h2>
+                  <div class="accordion-wrapper acorrdion__mine">
+                    <div id="accordion">
+                      <div class="card">
+                        <div class="card-header" id="headingOne">
+                          <h5 class="mb-0">
+                            <a role="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Opportunities for free expression
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                          <div class="card-body">
+                              Comprehension of reading texts and audio needs to be assessed. Path exams do so by giving candidates the opportunity to give their opinions, provide examples or imagine different situations. Assessment will take into account the candidates’ language ability to construe these communicative acts.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingTwo">
+                          <h5 class="mb-0">
+                            <a role="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Contextualised tasks
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                          <div class="card-body">
+                              It is quite often the case to find exercises with no overall context at all, just random questions to check grammatical structures and vocabulary. Path exam tasks are contextualised; the setting is provided by a dialogue, a short story, a letter, etc., thus focusing on the active use of language rather than on meaningless and mechanical repetition.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingThree">
+                          <h5 class="mb-0">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Real-life scenarios
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                          <div class="card-body">
+                              Path exam tasks feature anecdotes and stories, discussions and arguments, business meetings and speeches: the kind of situations and scenarios that people experience in everyday life. Path exams are designed to prepare candidates for the real world.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingFour">
+                          <h5 class="mb-0">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              No word limits
+                            </a>
+                          </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                          <div class="card-body">
+                              The aim of writing is to communicate ideas; to create a text which can convey a clear message and have an effect on the reader. Provided writers fulfil their communicative objective, writing has nothing to do with the number of words used. That is why exam designers have eliminated word counts. Path exams focus on the message which is to be transmitted, and on the communicative competence the candidate has in order to do so, not on how many words have been used.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                          <div class="card-header" id="headingFive">
+                            <h5 class="mb-0">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                              Open-ended tasks
+                              </a>
+                            </h5>
+                          </div>
+                          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                            <div class="card-body">
+                              Accuracy is usually assessed through closed tasks, such as sentence transformation, fill in the gaps, true or false or multiple choice questions, which actually tend to be mechanical and limit the candidates’ creativity. Path exams from A2 Preliminary onwards only feature open-ended tasks which have no corrrect or incorrect answer. Candidates are given the opportunity to express their own ideas and to use the language communicatively. They engage with the exam more creatively, critically and effectively.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingSix">
+                            <h5 class="mb-0">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                  Warm-up session for the speaking module
+                              </a>
+                            </h5>
+                          </div>
+                          <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                            <div class="card-body">
+                              Candidates are often nervous and do not perform well if they are not comfortable with the examiner. For Path International Examinations, it is paramount to make candidates feel at ease so that they can use their speaking skills at their best. Before the speaking module begins, Path examiners gather all candidates in a room to have a warm-up session and help them reduce the level of stress and anxiety. Our examiners have been trained to create a positive atmosphere in which candidates can show their true level of English. 
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingSeven">
+                            <h5 class="mb-0">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                              No scripts for the speaking examiner
+                              </a>
+                            </h5>
+                          </div>
+                          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                            <div class="card-body">
+                              In everyday life, speaking is far from being a structured predictable activity. Even though some of the speaking is organised and follows a pattern, most of it does not. Path exams incorporate this conception of speaking and allow for a non-scripted conversation between the examiner and the candidate so that real communication can actually occur. However, strict guidelines are provided to the examiner to ensure there is no unfair advantage for one candidate over another.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingEight">
+                            <h5 class="mb-0">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                              A prepared speaking task at higher levels
+                              </a>
+                            </h5>
+                          </div>
+                          <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                            <div class="card-body">
+                              In real life, people often need to prepare to speak; for example, when giving a presentation or attending a job interview, they need to conduct research beforehand and organise what they are going to say. Path exams allow preparation time for candidates at higher levels, which has a significant impact on their performance, providing a better sample of what that particular learner can achieve in the language.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingNine">
+                            <h5 class="mb-0">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                              Inclusion of technology in the speaking module
+                              </a>
+                            </h5>
+                          </div>
+                          <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
+                            <div class="card-body">
+                              Candidates often perform best when they are engaged, and technology helps them do so. In order to make the speaking module a more interactive experience, Path International Examinations provides tablets so as to replace the use of printed pictures with more visually appealing videos.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingTen">
+                            <h5 class="mb-0">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                              Separate modules as opposed to a full exam
+                              </a>
+                            </h5>
+                          </div>
+                          <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
+                            <div class="card-body">
+                              Path exams comprise modules, which may be taken separately or altogether. This scheme has been designed to address the candidates’ needs, as they may simply have to certify certain skills. At the same time, having separate modules takes into consideration individual learning paces, as candidates may choose to certify their skills at different levels. Please <a href="#">click here to read more about it.</a> 
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingEleven">
+                            <h5 class="mb-0">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                              Integration of skills
+                              </a>
+                            </h5>
+                          </div>
+                          <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
+                            <div class="card-body">
+                              In real-life communication, we use our language skills in an integrated way. New technologies have reinforced this holistic view of listening, speaking, reading and writing. Path exams have sought to integrate the skills, where feasible, so as to provide candidates with more contextualised, true-to-life situations in which they can put the language to work.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingTwelve">
+                            <h5 class="mb-0">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                              Introduction of annual updates
+                              </a>
+                            </h5>
+                          </div>
+                          <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion">
+                            <div class="card-body">
+                              Path International Examinations feeds on the enriching and open dialogue established with students, teachers, school administrators and examiners. As a result of this continuous feedback, Path exams are reassessed annually so as to keep up to date with the latest developments in language education.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingThirteen">
+                            <h5 class="mb-0">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                              Focus on achievement
+                              </a>
+                            </h5>
+                          </div>
+                          <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordion">
+                            <div class="card-body">
+                              Students are often demotivated when they fail an exam and generally desist from studying English because they think they are simply not made for it. Path exams focus on what candidates can achieve rather than on what they still can’t. Therefore, if they get between 49 and 58 marks, they will be awarded a certificate for the immediate previous level. Besides, Path certificates do not show grades but a confirmation of level.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingFourteen">
+                            <h5 class="mb-0">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                              Report with comments
+                              </a>
+                            </h5>
+                          </div>
+                          <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordion">
+                            <div class="card-body">
+                              Path International Examinations offers all exam centres a report on how students have performed at exams.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header" id="headingFifteen">
+                            <h5 class="mb-0">
+                              <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                              Online exams
+                              </a>
+                            </h5>
+                          </div>
+                          <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#accordion">
+                            <div class="card-body">
+                              With the outbreak of COVID-19 and resultant lockdowns, Path Examinations created its online platform, Beyond™, to conduct exams remotely, preserve the health of those involved at exam sessions and make a contribution to the environment. This system was specially designed to meet our high quality standards and assess candidates fairly, transparently and securely.
+                            </div>
+                          </div>
+                        </div>
+                        
+                    </div>
+                  </div>
+              </div>
+  
+              <div class="col-5 d-sm-none d-md-block media">
+                <!-- Background Img Goes Here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     </section>
 
     <div class="membership-section section">
       <div class="container">
         <h2>Join Path</h2>
         <div class="text-center price-cards d-flex align-items-start">
-          <div class="price-card basic active-price-card">
-            <h4>AFFILIATE</h4>
+          <div class="price-card basic">
+            <h4 style="color: #0091B7;">AFFILIATE</h4>
             <div class="features">
               <div class="feature">
                 <i class="fas fa-check"></i>
@@ -714,39 +881,39 @@
             </div>
             <table class="table">
                 <tr>
-                  <td scope="col">Online or paper-based exams at the nearest exam centre</td>
+                  <td id="af__online" class="card__more-info" scope="col">Online or paper-based exams at the nearest exam centre</td>
                 </tr>
               <tbody>
                 <tr>
-                  <td>Academic guidance</td>
+                  <td id="af__academic" class="card__more-info">Academic guidance</td>
                 </tr>
                 <tr>
-                  <td>Path Affiliate logo</td>
+                  <td id="af__logo" class="card__more-info">Path Affiliate logo</td>
                 </tr>
                 <tr>
-                  <td>Access to our e-platform Beyond™</td>
+                  <td id="af__platform" class="card__more-info">Access to our e-platform Beyond™</td>
                 </tr>
                 <tr>
-                  <td>News group for Path affiliates</td>
+                  <td id="af__groups" class="card__more-info">News group for Path affiliates</td>
                 </tr>
                 <tr>
-                  <td>Meetings for students and parents</td>
+                  <td id="af__meetings" class="card__more-info">Meetings for students and parents</td>
                 </tr>
                 <tr>
-                  <td>Discounted fee for Path webinars</td>
+                  <td id="af__webinars" class="card__more-info">Discounted fee for Path webinars</td>
                 </tr>
                 <tr>
-                  <td>5% discount on early exam registrations</td>
+                  <td id="af__discount" class="card__more-info">5% discount on early exam registrations</td>
                 </tr>
                 <tr>
-                  <td>Application for Path invigilator</td>
+                  <td id="af__invigliator" class="card__more-info">Application for Path invigilator</td>
                 </tr>
               </tbody>
             </table>
             <button class="main-btn">Learn More</button>
           </div>
           <div class="price-card standard">
-            <h4>OFFICIAL MEMBER</h4>
+            <h4 style="color: #757DA4;">OFFICIAL MEMBER</h4>
             <div class="features">
               <div class="feature">
                 <i class="fas fa-check"></i>
@@ -763,57 +930,63 @@
             </div>
             <table class="table">
                 <tr>
-                  <td scope="col">Online or paper-based exams at the nearest exam centre</td>
+                  <td id="mem__online" class="card__more-info" scope="col">Online or paper-based exams at the nearest exam centre</td>
                 </tr>
               <tbody>
                 <tr>
-                  <td>Academic guidance</td>
+                  <td id="mem__academic" class="card__more-info">Academic guidance</td>
                 </tr>
                 <tr>
-                  <td>Personalised Path Official Member logo</td>
+                  <td id="mem__academic" class="card__more-info">Personalised Path Official Member logo</td>
                 </tr>
                 <tr>
-                  <td>Access to our e-platform Beyond™</td>
+                  <td id="mem__platform" class="card__more-info">Access to our e-platform Beyond™</td>
                 </tr>
                 <tr>
-                  <td>News group for Path members</td>
+                  <td id="mem__group" class="card__more-info">News group for Path members</td>
                 </tr>
                 <tr>
-                  <td>Meetings for students and parents</td>
+                  <td id="mem__meeting" class="card__more-info">Meetings for students and parents</td>
                 </tr>
                 <tr>
-                  <td>Free access to Path webinars</td>
+                  <td id="mem__webinars" class="card__more-info">Free access to Path webinars</td>
                 </tr>
                 <tr>
-                  <td>5% discount on early exam registrations</td>
+                  <td id="mem__fixed" class="card__more-info">Fixed exam fees in your local currency</td>
                 </tr>
                 <tr>
-                  <td>Application for Path invigilator</td>
+                  <td id="mem__discount" class="card__more-info">5% discount on early exam registrations</td>
                 </tr>
                 <tr>
-                  <td>Access to My Path area</td>
+                  <td id="mem__invigilator" class="card__more-info">Application for Path invigilator</td>
                 </tr>
                 <tr>
-                  <td>Onboarding meeting</td>
+                  <td id="mem__access" class="card__more-info">Access to My Path area</td>
                 </tr>
                 <tr>
-                  <td>Unique Path ID number</td>
+                  <td id="mem__onboard" class="card__more-info">Onboarding meeting</td>
                 </tr>
                 <tr>
-                  <td>Digital member certificate</td>
+                  <td id="mem__id" class="card__more-info">Unique Path ID number</td>
                 </tr>
                 <tr>
-                  <td>Annual package of personalised advertising material</td>
+                  <td id="mem__certificate" class="card__more-info">Digital member certificate</td>
                 </tr>
                 <tr>
-                  <td>Changes to exam registrations</td>
+                  <td id="mem__annual" class="card__more-info">Annual package of personalised advertising material</td>
+                </tr>
+                <tr>
+                  <td id="mem__registrations" class="card__more-info">Changes to exam registrations</td>
+                </tr>
+                <tr>
+                  <td id="mem__comission" class="card__more-info">You will be given a 10% commission for registrations of 15+ candidates</td>
                 </tr>
               </tbody>
             </table>
             <button class="main-btn">Learn More</button>
           </div>
           <div class="price-card advanced">
-            <h4>APPROVED EXAM CENTRE</h4>
+            <h4 style="color: #79A786;">APPROVED EXAM CENTRE</h4>
             <div class="features">
               <div class="feature">
                 <i class="fas fa-check"></i>
@@ -830,75 +1003,75 @@
             </div>
             <table class="table">
                 <tr>
-                  <td scope="col">Online or paper-based exam sessions at your institution</td>
+                  <td id="app__comission" class="card__more-info" scope="col">Online or paper-based exam sessions at your institution</td>
                 </tr>
               <tbody>
                 <tr>
-                  <td>Academic guidance</td>
+                  <td id="mem__academic" class="card__more-info">Academic guidance</td>
                 </tr>
                 <tr>
-                  <td>personalised Path Approved Exam Centre logo</td>
+                  <td id="app__logo" class="card__more-info">personalised Path Approved Exam Centre logo</td>
                 </tr>
                 <tr>
-                  <td>Access to our e-platform Beyond™</td>
+                  <td id="mem__platform" class="card__more-info">Access to our e-platform Beyond™</td>
                 </tr>
                 <tr>
-                  <td>News group for Path exam centres</td>
+                  <td id="app__group" class="card__more-info">News group for Path exam centres</td>
                 </tr>
                 <tr>
-                  <td>Set up of meetings for students and parents</td>
+                  <td id="app__meeting" class="card__more-info">Set up of meetings for students and parents</td>
                 </tr>
                 <tr>
-                  <td>Free access to Path webinars and seminars</td>
+                  <td id="app__webinars" class="card__more-info">Free access to Path webinars and seminars</td>
                 </tr>
                 <tr>
-                  <td>5% and 10% discounts on early exam registrations</td>
+                  <td id="mem__fixed" class="card__more-info">Fixed exam fees in your local currency</td>
                 </tr>
                 <tr>
-                  <td>Application for Path invigilator and supervisor</td>
+                  <td id="app__discounts" class="card__more-info">5% and 10% discounts on early exam registrations</td>
                 </tr>
                 <tr>
-                  <td>Access to My Path area</td>
+                  <td id="app__invigiliator" class="card__more-info">Application for Path invigilator and supervisor</td>
                 </tr>
                 <tr>
-                  <td>Onboarding meeting</td>
+                  <td id="app__access" class="card__more-info">Access to My Path area</td>
                 </tr>
                 <tr>
-                  <td>Unique Path ID number</td>
+                  <td id="app__onboard" class="card__more-info">Onboarding meeting</td>
                 </tr>
                 <tr>
-                  <td>Digital and paper centre certificate</td>
+                  <td id="mem__id" class="card__more-info">Unique Path ID number</td>
                 </tr>
                 <tr>
-                  <td>Personalised advertising material every month</td>
+                <tr>
+                  <td id="app__certificate" class="card__more-info">Digital and paper centre certificate</td>
+                <tr>
+                  <td id="app__adv" class="card__more-info">Personalised advertising material every month</td>
                 </tr>
                 <tr>
-                  <td>Changes to exam registrations</td>
+                  <td id="app__reg" class="card__more-info">Changes to exam registrations</td>
                 </tr>
                 <tr>
-                  <td>Unique Path ID number</td>
+                  <td id="app__10com" class="card__more-info">10% commission on registrations</td>
                 </tr>
                 <tr>
-                  <td>Report of exam performance</td>
+                  <td id="app__perf" class="card__more-info">Report of exam performance</td>
                 </tr>
                 <tr>
-                  <td>Personalised Path academic proposal</td>
+                  <td id="app__prop" class="card__more-info">Personalised Path academic proposa</td>
                 </tr>
                 <tr>
-                  <td>10% commission on registrations</td>
+                  <td id="app__banner" class="card__more-info">Path banner design</td>
                 </tr>
                 <tr>
-                  <td>Path banner design</td>
-                </tr>
-                <tr>
-                  <td>Institution listed on the Path website</td>
+                  <td id="app__inst" class="card__more-info">Institution listed on the Path website</td>
                 </tr>
               </tbody>
             </table>
             <button class="main-btn">Learn More</button>
           </div>
           <div class="price-card basic">
-            <h4>CERTIFIED EXAM CENTRE</h4>
+            <h4 style="color: #CEA574;">CERTIFIED EXAM CENTRE</h4>
             <div class="features">
               <div class="feature">
                 <i class="fas fa-check"></i>
@@ -915,56 +1088,56 @@
             </div>
             <table class="table">
                 <tr>
-                  <td scope="col">Online or paper-based exam sessions at your institution</td>
+                  <td id="app__comission" class="card__more-info" scope="col">Online or paper-based exam sessions at your institution</td>
                 </tr>
               <tbody>
                 <tr>
-                  <td>Exclusive academic guidance</td>
+                  <td id="cer__comission" class="card__more-info">Exclusive academic guidance</td>
                 </tr>
                 <tr>
-                  <td>personalised Path Certified Exam Centre logo</td>
+                  <td id="cer__logo" class="card__more-info">personalised Path Certified Exam Centre logo</td>
                 </tr>
                 <tr>
-                  <td>Access to our e-platform Beyond™</td>
+                  <td id="mem__platform" class="card__more-info">Access to our e-platform Beyond™</td> 
                 </tr>
                 <tr>
-                  <td>News group for Path exam centres</td>
+                  <td id="app__group" class="card__more-info">News group for Path exam centres</td> 
                 </tr>
                 <tr>
-                  <td>Set up of meetings for students and parents</td>
+                  <td id="app__meeting" class="card__more-info">Set up of meetings for students and parents</td> 
                 </tr>
                 <tr>
-                  <td>Free access to Path webinars, seminars and courses</td>
+                  <td id="cer__webinars" class="card__more-info">Free access to Path webinars, seminars and courses</td>
                 </tr>
                 <tr>
-                  <td>5% and 10% discounts on early exam registrations</td>
+                  <td id="mem__fixed" class="card__more-info">5% and 10% discounts on early exam registrations</td>
                 </tr>
                 <tr>
-                  <td>Application for Path invigilator and supervisor</td>
+                  <td id="app__invigiliator" class="card__more-info">Application for Path invigilator and supervisor</td> 
                 </tr>
                 <tr>
-                  <td>Access to My Path area</td>
+                  <td id="app__access" class="card__more-info">Access to My Path area</td> 
                 </tr>
                 <tr>
-                  <td>Onboarding meeting</td>
+                  <td id="app__onboard" class="card__more-info">Onboarding meeting</td> 
                 </tr>
                 <tr>
-                  <td>Unique Path ID number</td>
+                  <td id="mem__id" class="card__more-info">Unique Path ID number</td>
                 </tr>
                 <tr>
-                  <td>Digital and paper Certified Exam Centre certificate</td>
+                  <td id="app__cert-cent" class="card__more-info">Digital and paper Certified Exam Centre certificate</td>
                 </tr>
                 <tr>
-                  <td>Personalised advertising material every month</td>
+                  <td id="app__adv" class="card__more-info">Personalised advertising material every month</td>
                 </tr>
                 <tr>
-                  <td>Changes to exam registrations</td>
+                  <td id="app__reg" class="card__more-info">Changes to exam registrations</td> 
                 </tr>
                 <tr>
-                  <td>Unique Path ID number</td>
+                  <td id="app__10com" class="card__more-info">10% commission on registrations</td> 
                 </tr>
                 <tr>
-                  <td>Report of exam performance</td>
+                  <td id="app__perf" class="card__more-info">Report of exam performance</td> 
                 </tr>
                 <tr>
                   <td>Personalised Path academic proposal</td>
@@ -988,10 +1161,10 @@
                   <td>Professional development for teachers</td>
                 </tr>
                 <tr>
-                  <td>Certified Exam Centre plaque</td>
+                  <td id="app__plaque" class="card__more-info">Certified Exam Centre plaque</td>
                 </tr>
                 <tr>
-                  <td>Candidate to the Path Q-mark</td>
+                  <td id="app__qmark" class="card__more-info">Candidate to the Path Q-mark</td>
                 </tr>
               </tbody>
             </table>
@@ -1005,21 +1178,27 @@
     <div class="section">
       <div class="container">
         <h2>Path Inbuilt programme</h2>
-        <div class="features">
-          <div class="feature d-flex align-items-baseline">
-            <i class="fas fa-check"></i>
-            <p>Free of charge</p>
+        <div class="inbuilt__titles-container">
+          <div class="features">
+            <div class="feature d-flex align-items-baseline">
+              <i class="fas fa-check"></i>
+              <p>Free of charge</p>
+            </div>
+            <div class="feature d-flex align-items-baseline">
+              <i class="fas fa-check"></i>
+              <p>Eligible for institutions with 50 students or more</p>
+            </div>
+            <div class="inbuilt__info">
+              <p>Path exams provide focus and pace to keep your students motivated, every step of the way. Our progressive scale of levels makes it possible for institutions to adopt Path exams as their end-of-course assessment.</p>
+              <p>Institutions adopting the Inbuilt programme will work closely together with our academic team to align the different Path levels with their existing courses. In this way, all students will be candidates to a Path international certification at the end of the school year.</p>
+              <p>The Path administrative team will also develop a tailor-made solution for flexible exam registration and payment of fees, so that all students will have confirmation of placement at the beginning of their courses.</p>
+            </div>
           </div>
-          <div class="feature d-flex align-items-baseline">
-            <i class="fas fa-check"></i>
-            <p>Eligible for institutions with 50 students or more</p>
+          <div class="inbuilt__titles-aside">
+            <h4>Requirements</h4>
+            <p style="color: white;">Eligible for institutions wishing to adopt Path exams for<span style="font-weight: bold;"> all their students </span>and integrate our proposal into their existing programmes - Minimum number of candidates: 50+ <br> -All candidates must be registered within the first month of the school year. <br>Adopting the Path Inbuilt programme is <span style="font-weight: bold; font-size: 1.5em;"> free of charge.</span></p>
           </div>
-          <div class="inbuilt__info">
-            <p>Path exams provide focus and pace to keep your students motivated, every step of the way. Our progressive scale of levels makes it possible for institutions to adopt Path exams as their end-of-course assessment.</p>
-            <p>Institutions adopting the Inbuilt programme will work closely together with our academic team to align the different Path levels with their existing courses. In this way, all students will be candidates to a Path international certification at the end of the school year.</p>
-            <p>The Path administrative team will also develop a tailor-made solution for flexible exam registration and payment of fees, so that all students will have confirmation of placement at the beginning of their courses.</p>
-          </div>
-        </div>
+        </div> 
       </div>
     </div>
       </div>
@@ -1059,6 +1238,113 @@
       </div>
     </div>
 
+    <section class="section">
+      <div class="container qmark">
+        <h2 class="text-center">Path Q-mark</h2>
+        <div class="qmark__card-container">
+          <div class="qmark__card"><div class="qmark__card-circle" style="background-color:#7BA988"><img src="" alt=""></div><p>The Path Q-mark (Quality mark) is an international accreditation that supports and recognises rigorous standards in the provision, practice and performance of English language courses at level B1 and above. Our Q-mark provides institutions with recognition of their commitment to academic excellence.</p></div>
+          <div class="qmark__card"><div class="qmark__card-circle" style="background-color:#CFA676"><img src="" alt=""></div><p>Institutions that achieve the Q-mark will receive an awarding certificate for display and a personalised quality logo to use on their website and marketing material.</p></div>
+          <div class="qmark__card"><div class="qmark__card-circle" style="background-color:#CB574C" ><img src="" alt=""></div><p>In order to be eligible for the Path Q-mark, institutions must plan and review their courses effectively and consistently apply suitable policies and procedures for quality assurance. The courses offered must also be delivered by staff with appropriate qualifications, experience and expertise.</p></div>
+        </div>
+        <h4 class="text-center">To apply for the Path Q-mark, institutions must:</h4>
+          <div class="timeline">
+            <!-- Timeline item -->
+            <div class="timeline-item">
+                <div class="timeline-icon g-item">
+                    <i class="sl sl-icon-wallet"></i>
+                </div>
+                <div class="timeline-content right">
+                    <div class="content-body">
+                        <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/henry.jpg"> -->
+                        <div class="timeline-text">
+                            <!-- <div>Henry Rodstein</div> -->
+                            <div><p>Have been a Path Certified Exam Centre for at least 2 years.</p></div>
+                            <!-- <span class="timestamp">2 hours ago</span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Timeline item -->
+            <div class="columns is-vcentered pt-30">
+              <div class="column is-10 is-offset-1">
+                  <!-- Timeline -->
+                  <div class="timeline">
+                      <!-- Timeline item -->
+                      <div class="timeline-item">
+                          <div class="timeline-icon g-item">
+                              <i class="sl sl-icon-lock"></i>
+                          </div>
+                          <div class="timeline-content">
+                              <div class="content-body">
+                                  <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/carolin.png"> -->
+                                  <div class="timeline-text">
+                                      <!-- <div>Marjory Cambell</div> -->
+                                      <div><p>Have been operating as a business for at least 4 years.</p></div>
+                                      <!-- <span class="timestamp">30 minutes ago</span> -->
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Timeline item -->
+                      <div class="timeline-item">
+                          <div class="timeline-icon g-item">
+                              <i class="sl sl-icon-wallet"></i>
+                          </div>
+                          <div class="timeline-content right">
+                              <div class="content-body">
+                                  <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/henry.jpg"> -->
+                                  <div class="timeline-text">
+                                      <!-- <div>Henry Rodstein</div> -->
+                                      <div><p>Have had an exam pass rate of 90% or over for the past 2 years.</p></div>
+                                      <!-- <span class="timestamp">2 hours ago</span> -->
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Timeline item -->
+                      <div class="timeline-item">
+                          <div class="timeline-icon g-item">
+                              <i class="sl sl-icon-cloud-upload"></i>
+                          </div>
+                          <div class="timeline-content">
+                              <div class="content-body">
+                                  <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/helen.jpg"> -->
+                                  <div class="timeline-text">
+                                      <!-- <div>Helen Miller</div> -->
+                                      <div><p>Provide Path Examinations with their annual syllabuses for quality control</p></div>
+                                      <!-- <span class="timestamp">Yesterday</span> -->
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      <div class="qmark__end"><p>The Path Q-mark is excellent for reflecting and developing best practice. Through this endorsement, institutions will be able to show that their work is of first-rate standards.</p></div>
+        
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="natgeo-content">
+          <div class="natgeo__logo-container"><img class="natgeo__img" src="assets\img\logos\natgeo-learning.svg" alt=""></div>
+          <p>Path exams do not need any special study books or preparation in particular. All that is really needed is to attend regular classes in order to develop effective communicative competence.</p>
+          <p>Teachers or institutions are free to choose the material they want for each of their classes. Nevertheless, Path Examinations is in partnership with National Geographic Learning to provide anyone interested with a highly communicative alternative which is also aligned with our approach.</p>
+        </div>
+      </div>
+      <div class="movida">
+        <div class="container benefits">
+          <div class="benefits__img-container"><img class="benefits__img" src="assets\img\logos\natgeo-learning.svg" alt=""></div>
+          <span>+</span>
+          <div class="benefits__img-container"><img class="benefits__img" src="assets\img\logos\path_logo-01.svg" alt=""></div>
+          <button>Learn More</button>
+        </div>
+      </div>
+      <!-- <img src="assets\img\logos\path-natgeo.svg" alt=""> -->
+    </section>
+
     <section class="quote__banner">
         <div class="quote__after-img">
            <div class="quote__after-courtain">
@@ -1068,6 +1354,135 @@
                 </div>
            </div>
         </div>
+    </section>
+
+    <section class="popular-courses section margin-top-0">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="text-center">Series</h2>
+          <p>Members and centres of Path Examinations will be able to access a digital sample of the following recommended series.</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 col-lg-5 padding-0">
+            <div class="course-card-style-3">
+              <div class="card">
+                <div class="thumb series__info">
+                  <img class="card-img-top" src="assets/img/University/About-us-1/series-info.png" alt="Card image cap">
+                  <div class="hover">
+                    <span class="plus">
+                      <i class="fas fa-plus-circle"></i>
+                    </span>
+                    <div class="hover-inner">
+                      <div class="course-details">
+                        <p>Look is a series with simple and dynamic activities which excite students and make learning a positive experience. This series provides kids and pre-teens with the core language, a balanced skills foundation and the necessary support for them to use English in an effective way.</p>
+                        <div class="d-flex">
+                          <ul class="series__list"><li>Age:</li> <li>Levels:</li></ul>
+                          <ul class="series__list"><li>Kids and pre-teens</li> <li>A1- Entry</li> <li>A1 Access</li> <li>A1+ Achiever</li> <li>A2 Preliminary</li> <li>A2+ Elementary</li></ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-img-overlay">
+                  <div class="card-body">
+                    <h6 class="text-center" style="color: black;">LOOK</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-5 padding-0">
+            <div class="course-card-style-3">
+              <div class="card">
+                <div class="thumb series__info">
+                  <img class="card-img-top" src="assets/img/University/About-us-1/series-info.png" alt="Card image cap">
+                  <div class="hover">
+                    <span class="plus">
+                      <i class="fas fa-plus-circle"></i>
+                    </span>
+                    <div class="hover-inner">
+                      <div class="course-details">
+                        <p>Impact helps teenage students to understand themselves and the world they live in. By encouraging self-expression, global citizenship, and active participation, this series motivates students to explore who they are and who they want to be, all while learning English.  Cross-curricular topics engage students with stimulating information about the world and prepare them to be successful global citizens.</p>
+                        <div class="d-flex">
+                          <ul class="series__list"><li>Age:</li> <li>Levels:</li></ul>
+                          <ul class="series__list"><li>Teens and adults</li> <li>A2 Preliminary</li> <li>A2+ Elementary</li> <li>B1 Progress</li> <li>B2 Competency</li> <li>B2+ Forward</li></ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="card-img-overlay">
+                  <div class="card-body">
+                    <h6 style="color: black;">IMPACT</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 col-lg-5 padding-0">
+            <div class="course-card-style-3">
+              <div class="card">
+                <div class="thumb series__info">
+                  <img class="card-img-top" src="assets/img/University/About-us-1/series-info.png" alt="Card image cap">
+                  <div class="hover">
+                    <span class="plus">
+                      <i class="fas fa-plus-circle"></i>
+                    </span>
+                    <div class="hover-inner">
+                      <div class="course-details">
+                        <p>Look is a series with simple and dynamic activities which excite students and make learning a positive experience. This series provides kids and pre-teens with the core language, a balanced skills foundation and the necessary support for them to use English in an effective way.</p>
+                        <div class="d-flex">
+                          <ul class="series__list"><li>Age:</li> <li>Levels:</li></ul>
+                          <ul class="series__list"><li>Kids and pre-teens</li> <li>A1- Entry</li> <li>A1 Access</li> <li>A1+ Achiever</li> <li>A2 Preliminary</li> <li>A2+ Elementary</li></ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="card-img-overlay">
+                  <div class="card-body">
+                    <h6 style="color: black;">PERSPECTIVES</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-5 padding-0">
+            <div class="course-card-style-3">
+              <div class="card">
+                <div class="thumb series__info">
+                  <img class="card-img-top" src="assets/img/University/About-us-1/series-info.png" alt="Card image cap">
+                  <div class="hover">
+                    <span class="plus">
+                      <i class="fas fa-plus-circle"></i>
+                    </span>
+                    <div class="hover-inner">
+                      <div class="course-details">
+                        <p>Life is a series which brings the world to the classroom. Through interesting content, videos and topics, this series inspires a whole generation of decision-makers to develop their ability to think critically and communicate effectively in the global community.  Relevant and up-to-date topics involve students, connect them with people and places from around the world, encourage them to develop well-informed opinions and help them make connections between the content and their own lives.</p>
+                        <div class="d-flex">
+                          <ul class="series__list"><li>Age:</li> <li>Levels:</li></ul>
+                          <ul class="series__list"><li>Adults</li> <li>A1 Access</li> <li>A1+ Achiever</li> <li>A2 Preliminary</li> <li>A2+ Elementary</li> <li>B1 Progress</li> <li>B2 Competency</li> <li>B2+ Forward</li></ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="card-img-overlay">
+                  <div class="card-body">
+                    <h6 style="color: black;">LIFE</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
     </section>
 
     <!-- Popup -->
