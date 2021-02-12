@@ -9933,3 +9933,32 @@ body {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* franja contacto */
+#franja-contacto{
+  
+  padding: 10vh 0;
+  background: #e2eff2;
+
+}
+#franja-contacto>div{
+  
+  background: white;
+  padding: 20px;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+
+}
+#franja-contacto form{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+.form-group{
+  width: 47%;
+}
+#textareaCont{
+  width: 100%;
+}
