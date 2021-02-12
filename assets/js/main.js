@@ -218,10 +218,20 @@ $(document).ready(function(){
   $(function() {
       let element = $('.anim__home1');
 
+      
+
     // Anim meet h1
       setTimeout(() => {
         $('.meet_h1').css({'opacity':1, 'transform':'translateY(0%)'});
     }, 700);
+
+    //PRIMER ANIM OUR EXAMINATIONS
+    setTimeout(() => {
+      $('.our-exams-anim1').css({'opacity':1, 'transform':'translateX(0%)'});
+  }, 700);
+  setTimeout(() => {
+    $('.our-exams-anim2').css({'opacity':1, 'transform':'translateX(0%)'});
+}, 1000);
 
       if(!window.mobileCheck()){
   
@@ -254,6 +264,7 @@ $(document).ready(function(){
           }
 
           // INDEX ANIMS
+          //
 
             if (scroll >= 400) {
 
@@ -282,15 +293,12 @@ $(document).ready(function(){
               $('.anim__home3').css({'opacity':1, 'transform':'translateX(0%)'});
           };
           if (scroll >= 2600) {
-
             $('.anim__home4').css({'opacity':1, 'transform':'translateX(0%)'});
         };
         if (scroll >= 3000) {
-
           $('.anim__home5').css({'opacity':1, 'transform':'translateX(0%)'});
       };
       if (scroll >= 3800) {
-
         $('.europe').css({'opacity':1, 'transform':'translateY(0%)'});
         setTimeout(() => {
           $('.latin').css({'opacity':1, 'transform':'translateY(0%)'});
@@ -302,6 +310,14 @@ $(document).ready(function(){
       $('.asia').css({'opacity':1, 'transform':'translateY(0%)'});
   }, 600);
     };
+    // ANIMS OUR EXAMINATIONS
+    if (scroll >= 900) {
+      $('.our-exams-anim3').css({'opacity':1, 'transform':'translateY(0%)'});
+  };
+
+  if (scroll >= 1700) {
+    $('.our-exams-anim4').css({'opacity':1, 'transform':'translateY(0%)'});
+};
 
           
       });

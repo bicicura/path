@@ -401,10 +401,19 @@ PARA ANIMAR MEET PATH
 }
 
 /* 
-==============
-ANIMS TEACHERS
-==============
+======================
+ANIMS OUR EXAMINATIONS
+======================
 */
 
+.our-exams-anim1,   {
+  opacity: 0;
+  transform: translateX(-5%);
+  transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+}
 
-
+.our-exams-anim2, .our-exams-anim3, .our-exams-anim4 {
+  opacity: 0;
+  transform: translateY(5%);
+  transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+}
