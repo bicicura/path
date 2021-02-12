@@ -20,13 +20,14 @@
   <link rel="stylesheet" href="assets/css/vander/owl.carousel.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
   <title>Path | Meet Path</title>
   <style>
     p {
       font-size: 1rem;
     }
     th p {
-      font-size: 1.125rem;
+      font-size: 1.2rem;
       margin: 0;
       color: #004969;
       font-weight: bold;
@@ -62,7 +63,8 @@
     */
 
     .believes-section .container {
-      outline: 2px solid rgba(0, 73, 105, .2);
+      box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.10);
+      border-radius: 4px;
     }
 
     /* 
@@ -106,6 +108,9 @@
 
     .our-mission__title {
       position: relative;
+      opacity: 0;
+    transform: translateY(5%);
+    transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
     }
 
     .our-mission__title::after {
@@ -336,25 +341,27 @@ POLICY
       <div class="hide-md-and-down col-4 bg-color"></div>
     </div>
     <div class="heading text-center">
-      <h1>Meet Path</h1>
+      <h1 class="meet_h1">Meet Path</h1>
       <div class="breadcrub-style">
-        <a href="#">Home</a>
+        <a href="index.html">Home</a>
         <span class="arrow"> > </span>
-        <a href="#" class="active">Meet Path</a>
+        <a href="about.html" class="active">Meet Path</a>
       </div>
     </div>
   </div>
 
   <!-- PATH EXAMINATION -->
-  <div class="path-exam mantra section">
+  <div class="path-exam mantra section meet_heading">
     <div class="path-exam-container">
-      <h2>Path International Examinations</h2>
-      <div>
-        <p>We are an international examination board based in the United Kingdom, which offers a brand-new alternative for examinations in English to speakers of other languages (ESOL).</p>
-        <p>Our examinations are a fresh and contemporary option for learners since they are both the result of sustained research in the field of evaluation and a response to the demands of students, parents, teachers and administrators. In that sense, our examinations are a groundbreaking path towards a new horizon in language assessment.</p>
+      <div class="path-exam-text">
+        <h2>Path International Examinations</h2>
+        <div>
+          <p>We are an international examination board based in the United Kingdom, which offers a brand-new alternative for examinations in English to speakers of other languages (ESOL).</p>
+          <p>Our examinations are a fresh and contemporary option for learners since they are both the result of sustained research in the field of evaluation and a response to the demands of students, parents, teachers and administrators. In that sense, our examinations are a groundbreaking path towards a new horizon in language assessment.</p>
+        </div>
+        <p>Path International Examinations | UK-based</p>
+            </div>
       </div>
-      <p>Path International Examinations | UK-based</p>
-    </div>
   </div>
 
   <!-- Side form icons -->
@@ -365,7 +372,7 @@ POLICY
 </div>
 
   <div class="believes-section section">
-    <div class="container">
+    <div class="container our-principles">
       <div class="row d-flex justify-content-between">
         <div class="col-12 col-lg-6">
           <img src="assets/img/University/About-us-1/rawpixel.png" alt="feature image" class="img-fluid">
@@ -446,10 +453,10 @@ POLICY
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-8 content">
-            <h2>Our vision</h2>
-            <p>We aim to provide every student and teacher with up-to-date and effective assessment in a world that increasingly demands better-designed education.</p>
-            <p>We are focused on being modern and progressive; innovation and the desire to go beyond what is already established drive the way we operate.</p>
-            <p>To continue achieving such sustainable quality growth, we are determined to deliver positive and human-centric service, making everyone feel welcome and valued.</p>
+            <h2 class="our-vision__title">Our vision</h2>
+            <p class="our-vision__text">We aim to provide every student and teacher with up-to-date and effective assessment in a world that increasingly demands better-designed education.</p>
+            <p class="our-vision__text">We are focused on being modern and progressive; innovation and the desire to go beyond what is already established drive the way we operate.</p>
+            <p class="our-vision__text">To continue achieving such sustainable quality growth, we are determined to deliver positive and human-centric service, making everyone feel welcome and valued.</p>
           </div>
           <div class="col-12 col-lg-4 media" style="background-image: url(assets/img/University/About-us-1/our-vision.png); background-size: cover;
       background-position: center; ">
@@ -516,7 +523,7 @@ POLICY
             <p>Promote among students and teachers the value and contributions of other languages and cultures to the community</p>
             <p>Support students and teachers from all backgrounds and improve their job and academic opportunities worldwide.</p>
             <p>Make strategic decisions which ensure we are socially responsible and environmentally sustainable.</p>
-            <p>Our mision is what makes us<span style="font-size: 2em; font-weight: bold; color: #004969;"> stand out.</span></p>
+            <p>Our mission is what makes us<span style="font-size: 2em; font-weight: bold; color: #004969;"> stand out.</span></p>
           </div>
         </div>
     </div>
@@ -606,7 +613,7 @@ POLICY
         <h2 class="table__title">#ThinkForward strategy</h2>
         <p class="margin-top-40 margin-bottom-40 text-center">We are very proud of our team and the way we work. Our strategy is based on a three-axis model of values and behaviours which are fundamental to us. It seeks to make the organisational culture of Path Examinations visible to guarantee that the proposed goals are achieved in coherence with our mission and vision. </p>
         <div class="responsive-table">  
-          <table class="table stripped-package-table">
+          <table class="table stripped-package-table tabla-anim">
               <thead>
                 <tr>
                   <th scope="col"><p>We are our behaviours</p></th>

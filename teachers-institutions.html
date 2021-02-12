@@ -33,6 +33,10 @@
     ======
     */
 
+    .teachers__title {
+      margin-bottom: 3vh;
+    }
+
     .heading {
         height: 60px!important;
         width: 60%!important;
@@ -45,6 +49,12 @@
         bottom: -1rem!important;
     }    
 
+
+    .international__text {
+      width: 80%;
+      font-size: 1rem;
+      margin: 0 auto;
+    }
 
 
 
@@ -280,8 +290,31 @@
           padding: 2rem 2rem 4rem 2rem;
         }
 
+        .inbuilt__title {
+          margin-top: 2rem;
+          width: 100%;
+        }
+
+        .join-path-title {
+      position: relative;
+      font-size: 46px;
+    }
+
+    .join-path-title::after {
+      content: 'Join Path';
+      position: absolute;
+      left: 0;
+      top: -33%;
+      right: 0;
+      transform: scale(2,2);
+      z-index: -1;
+      opacity: .07;
+    }
+
         .price-card {
           margin: 0 .5em;
+          border-radius: 4px;
+          box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.10);
         }
 
         /* 
@@ -378,13 +411,38 @@
 
         .benefits {
           display: flex;
-          justify-content: space-between;
+          justify-content: space-evenly;
+          width: 50%;
           align-items: center;
           align-content: center;
+          position: relative;
+        }
+
+        .benefits__left {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+          padding: 1rem;
+        }
+        .benefits__right{
+          width: 30%;
+          position: absolute;
+          bottom: -5%;
+          right: 0;
+          left: 0;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .benefits__left span {
+          font-weight: bold;
+          font-size: 4rem;
+          color: #0091B7;
         }
 
         .benefits__img-container {
-          width: 20%;
+          width: 30%;
         }
 
         .benefits__img {
@@ -396,6 +454,30 @@
         SERIES
         ======
         */
+
+        .series__title {
+      position: relative;
+      font-size: 50px;
+    }
+
+    .series__title::after {
+      content: 'Series';
+      position: absolute;
+      left: 0;
+      top: -33%;
+      right: 0;
+      transform: scale(2,2);
+      z-index: -1;
+      opacity: .07;
+    }
+
+    .series__text {
+      width: 55%;
+      font-size: 1.125rem;
+      margin: 0 auto;
+      font-weight: bold;
+      margin-bottom: 6vh;
+    }
 
         .series__list {
           margin-right: 1rem;
@@ -534,8 +616,8 @@
 
     <section class="section">
         <div class="container text-center">
-            <h2 class="table__title text-center">International standards</h2>
-            <p>All Path exams are aligned with the Common European Framework of Reference for Languages. The CEFR is the result of sustained research conducted by 41 member states of the Council of Europe, and was first published in 2001. This alignment provides consistency in international language assessment, as it sets out uniform standards for levels of competency in languages.</p>
+            <h2 class="table__title text-center teachers__title international_anim">International standards</h2>
+            <p class="international__text">All <span style="font-weight: bold;">Path exams</span> are aligned with the Common European Framework of Reference for Languages. The CEFR is the result of sustained research conducted by 41 member states of the Council of Europe, and was first published in 2001. This alignment provides consistency in international language assessment, as it sets out uniform standards for levels of competency in languages.</p>
         </div>
     </section>
 
@@ -546,8 +628,8 @@
     <!-- Events Section -->
     <section class="events-section section">
             <div class="container text-center">
-                <h2>Our levels</h2>
-                <p>Path Examinations has subdivided level A1 into 3 levels, and level A2 into 2 levels. This is because the amount of time, effort and study required to become a full basic user is considerable. Through this progressive approach, we ensure that the candidate’s language competency has been assessed thoroughly.</p>
+                <h2 class="teachers__title">Our levels</h2>
+                <p class="international__text"><span style="font-weight: bold;">Path Examinations</span> has subdivided level A1 into 3 levels, and level A2 into 2 levels. This is because the amount of time, effort and study required to become a full basic user is considerable. Through this progressive approach, we ensure that the candidate’s language competency has been assessed thoroughly.</p>
             </div>
 
     
@@ -564,7 +646,7 @@
             
             <div class="row event-item-style-1 even-event">
                 <div class="col-5 col-lg-2 date">
-                    <h1>02</h1>
+                    <h1>.A</h1>
                 </div>
                 <div class="col-7 col-md-6 col-lg-3 media">
                     <img src="assets/img/University/students/02.jpg" alt="events image" class="img-fluid">
@@ -572,15 +654,15 @@
                 <div class="col-12 col-lg-7 details">
                     <h3>Basic users  / A1- / A1 / A1+ / A2 / A2+</h3>
                     <div class="event__line"></div>
-                    <p>In your area.
+                    <p>Basic users are able to use the language where it relates to personal 
+                      matters such as family, shopping and employment.
                     </p>
-                    <button class="main-btn">Read more</button>
                 </div>
 
             </div>
             <div class="row event-item-style-1 odd-event">
                 <div class="col-5 col-lg-2 date">
-                    <h1>03</h1>
+                    <h1>B.</h1>
                 </div>
                 <div class="col-7 col-md-6 col-lg-3 media">
                     <img src="assets/img/University/students/03.jpg" alt="events image"
@@ -590,21 +672,19 @@
                     <h3>Independent users / B1 / B2 / B2+</h3>
                     <div class="event__line"></div>
                     <!-- <div class="event__title-col"> -->
-                        <div class="event__title-child1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="10.1" height="14.3"><path fill="#004969" d="M10.1 7.1L3 14.3l-3-3.1 4.1-4.1L0 3l3-3 7.1 7.1z"/></svg>
-                            <p>As a teacher or an Institution.</p>
+                        <div class="">
+                            <p>Independent users are additionally able to use the language where 
+                              it relates to travel, work and study. These users are 
+                              generally consideredable to meet the demands 
+                              of many university degree programmes</p>
                         </div>
-                        <div class="event__title-child2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="10.1" height="14.3"><path fill="#004969" d="M10.1 7.1L3 14.3l-3-3.1 4.1-4.1L0 3l3-3 7.1 7.1z"/></svg>
-                            <p>Find the programme that suits your needs.</p>
-                        </div>
+                       
                     <!-- </div> -->
-                    <button class="main-btn">Read more</button>
                 </div>
             </div>
             <div class="row event-item-style-1 even-event">
                 <div class="col-5 col-lg-2 date">
-                    <h1>04</h1>
+                    <h1>.C</h1>
                 </div>
                 <div class="col-7 col-md-6 col-lg-3 media">
                     <img src="assets/img/University/students/04.jpg" alt="events image" class="img-fluid">
@@ -612,14 +692,8 @@
                 <div class="col-12 col-lg-7 details">
                     <h3>Proficient users / C1 / C2 /</h3>
                     <div class="event__line"></div>
-                    <p>
-                        Student-centred exams. <br>
-                        Opportunities for free expression. <br>
-                        Focus on the active use of language. <br>
-                        Real-life situations and scenarios. <br>
-                        Warm-up session for the speaking module.
+                    <p> Proficient users are additionally able to use the language where it  relates to more complex demands encountered in academic study,  legal matters, or in a professional capacity.  A C2 has achieved mastery in language.
                     </p>
-                    <button class="main-btn">Read more</button>
                 </div>
             </div>
         </div>
@@ -861,7 +935,7 @@
 
     <div class="membership-section section">
       <div class="container">
-        <h2>Join Path</h2>
+        <h2 class="text-center join-path-title">Join Path</h2>
         <div class="text-center price-cards d-flex align-items-start">
           <div class="price-card basic">
             <h4 style="color: #0091B7;">AFFILIATE</h4>
@@ -910,7 +984,7 @@
                 </tr>
               </tbody>
             </table>
-            <button class="main-btn">Learn More</button>
+            <button class="main-btn" style="background-color: #0091B7;">Learn More</button>
           </div>
           <div class="price-card standard">
             <h4 style="color: #757DA4;">OFFICIAL MEMBER</h4>
@@ -983,7 +1057,7 @@
                 </tr>
               </tbody>
             </table>
-            <button class="main-btn">Learn More</button>
+            <button class="main-btn" style="background-color: #757DA4;">Learn More</button>
           </div>
           <div class="price-card advanced">
             <h4 style="color: #79A786;">APPROVED EXAM CENTRE</h4>
@@ -1068,7 +1142,7 @@
                 </tr>
               </tbody>
             </table>
-            <button class="main-btn">Learn More</button>
+            <button class="main-btn" style="background-color: #79A786;">Learn More</button>
           </div>
           <div class="price-card basic">
             <h4 style="color: #CEA574;">CERTIFIED EXAM CENTRE</h4>
@@ -1140,25 +1214,22 @@
                   <td id="app__perf" class="card__more-info">Report of exam performance</td> 
                 </tr>
                 <tr>
-                  <td>Personalised Path academic proposal</td>
+                  <td id="app__prop" class="card__more-info">Personalised Path academic proposal</td>
                 </tr>
                 <tr>
-                  <td>10% commission on registrations</td>
+                  <td id="app__banner2" class="card__more-info">Path banner design</td>
                 </tr>
                 <tr>
-                  <td>Path banner design</td>
+                  <td id="app__website" class="card__more-info">Institution listed and described on the Path website</td>
                 </tr>
                 <tr>
-                  <td>Institution listed and described on the Path website</td>
+                  <td id="app__scho" class="card__more-info">Exam scholarships</td>
                 </tr>
                 <tr>
-                  <td>Exam scholarships</td>
+                  <td id="app__stud" class="card__more-info"> Academic presentations for students</td>
                 </tr>
                 <tr>
-                  <td>Academic presentations for students</td>
-                </tr>
-                <tr>
-                  <td>Professional development for teachers</td>
+                  <td id="app__prof" class="card__more-info">Professional development for teachers</td>
                 </tr>
                 <tr>
                   <td id="app__plaque" class="card__more-info">Certified Exam Centre plaque</td>
@@ -1168,7 +1239,7 @@
                 </tr>
               </tbody>
             </table>
-            <button class="main-btn">Learn More</button>
+            <button class="main-btn" style="background-color: #CEA574;">Learn More</button>
           </div>
         </div>
         </div>
@@ -1177,7 +1248,7 @@
 
     <div class="section">
       <div class="container">
-        <h2>Path Inbuilt programme</h2>
+        <h2 class="table__title">Path Inbuilt programme</h2>
         <div class="inbuilt__titles-container">
           <div class="features">
             <div class="feature d-flex align-items-baseline">
@@ -1196,7 +1267,7 @@
           </div>
           <div class="inbuilt__titles-aside">
             <h4>Requirements</h4>
-            <p style="color: white;">Eligible for institutions wishing to adopt Path exams for<span style="font-weight: bold;"> all their students </span>and integrate our proposal into their existing programmes - Minimum number of candidates: 50+ <br> -All candidates must be registered within the first month of the school year. <br>Adopting the Path Inbuilt programme is <span style="font-weight: bold; font-size: 1.5em;"> free of charge.</span></p>
+            <p style="color: white;">Eligible for institutions wishing to adopt Path exams for<span style="font-weight: bold;"> all their students </span>and integrate our proposal into their existing programmes - Minimum number of candidates: 50+ <br> -All candidates must be registered within the first month of the school year. <br>Adopting the Path Inbuilt programme is <span style="font-weight: bold;"> free of charge.</span></p>
           </div>
         </div> 
       </div>
@@ -1207,7 +1278,7 @@
     <div class="section modules">
       <div class="container modules__container">
         <div class="modules__text-container text-center margin-bottom-20 margin-top-20">
-          <h2>Key reasons to adopt the Path Inbuilt programme</h2>
+          <h2 class="teachers__title">Key reasons to adopt the Path Inbuilt programme</h2>
         </div>
         <div class="row d-flex justify-content-between modules__circle-cont">
           
@@ -1235,18 +1306,107 @@
           </div>
           <div class="modules__line"></div>
         </div>
+        <div class="acordion-container d-flex justify-content-between">
+          <div class="col-12 col-lg-4 ">
+            <div class="accordion-wrapper">
+              <div id="accordion d-flex">
+                <div class="card">
+                  <div class="card-header" id="headingTwenty">
+                    <h5 class="mb-0">
+                      <a role="button" data-toggle="collapse" data-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
+                        Academic benefits
+                      </a>
+                    </h5>
+                  </div>
+                  <div id="collapseTwenty" class="collapse" aria-labelledby="headingTwenty" data-parent=".acordion-container">
+                    <div class="card-body">
+                      <ul>
+                        <li>take part and offer your staff Onboarding meetings to gain a deeper understanding of the Path proposal</li>
+                        <li>receive exclusive support from the Path academic team throughout the year</li>
+                        <li>have your own Path academic proposal to share with students and parents</li>
+                        <li>be able to organise informative meetings delivered by Path for students and parents</li>
+                        <li>have access to a demo of our exclusive e-platform Beyond™ for online mock exams</li>
+                        <li>have access to My Path area to download preparation materials and paper-based mock exams</li>
+                        <li>be able to conduct online or paper-based exam sessions at your institution</li>
+                        <li>be awarded scholarships for 3 all-module exams as part of the Path CSR (Corporate Social Responsibility) programme</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 ">
+            <div class="accordion-wrapper">
+              <div id="accordion d-flex">
+                <div class="card">
+                  <div class="card-header" id="headingTwentytwo">
+                    <h5 class="mb-0">
+                      <a role="button" data-toggle="collapse" data-target="#collapseTwentytwo" aria-expanded="false" aria-controls="collapseTwentytwo">
+                        Administrative benefits
+                      </a>
+                    </h5>
+                  </div>
+                  <div id="collapseTwentytwo" class="collapse" aria-labelledby="headingTwentytwo" data-parent=".acordion-container">
+                    <div class="card-body">
+                      <ul>
+                        <li>be able to work closely together with our administrative team</li>
+                        <li>be provided with fixed exam fees in your local currency</li>
+                        <li>be able to offer your students a 10% discounts on exam registrations</li>
+                        <li>be able to make level changes to exam registrations throughout the year</li>
+                        <li>be given a 10% commission on exam registrations</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 ">
+            <div class="accordion-wrapper">
+              <div id="accordion d-flex">
+                <div class="card">
+                  <div class="card-header" id="headingTwentythree">
+                    <h5 class="mb-0">
+                      <a role="button" data-toggle="collapse" data-target="#collapseTwentythree" aria-expanded="false" aria-controls="collapseTwentythree">
+                        Institutional benefits
+                      </a>
+                    </h5>
+                  </div>
+                  <div id="collapseTwentythree" class="collapse" aria-labelledby="headingTwentythree" data-parent=".acordion-container">
+                    <div class="card-body">
+                      <ul>
+                        <li>have a unique Path ID number</li>
+                        <li>receive a digital and a paper certificate issued by Path Examinations UK stating your institution is a Path Certified Exam Centre and offers end-of-course international assessment</li>
+                        <li>receive a personalised Path Certified Exam Centre logo, stating that all of your courses include international certification</li>
+                        <li>be sent a Path Certified Exam Centre banner design, stating your institution offers end-of-course international assessment</li>
+                        <li>be sent personalised advertising material (images or videos) bearing your logo every month</li>
+                        <li>have the possibility to become a Path supervisor and offer your staff to act as invigilators</li>
+                        <li style="font-weight: bold;">After two consecutive successful annual registrations, your institution will be:</li>
+                        <li>listed on our website, including a description of the courses you offer</li>
+                        <li>invited, together with your staff, students and parents, to an awarding ceremony at which you will be presented with a Certified Exam Centre plaque</li>
+                        <li>a candidate to the Path Q-mark (Quality mark)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inbuilt__cta"><button id="open-exam-modal" class="main-btn" style="background-color: #004969;">Learn More</button></div>
       </div>
     </div>
 
     <section class="section">
       <div class="container qmark">
-        <h2 class="text-center">Path Q-mark</h2>
+        <h2 class="text-center teachers__title">Path Q-mark</h2>
         <div class="qmark__card-container">
           <div class="qmark__card"><div class="qmark__card-circle" style="background-color:#7BA988"><img src="" alt=""></div><p>The Path Q-mark (Quality mark) is an international accreditation that supports and recognises rigorous standards in the provision, practice and performance of English language courses at level B1 and above. Our Q-mark provides institutions with recognition of their commitment to academic excellence.</p></div>
           <div class="qmark__card"><div class="qmark__card-circle" style="background-color:#CFA676"><img src="" alt=""></div><p>Institutions that achieve the Q-mark will receive an awarding certificate for display and a personalised quality logo to use on their website and marketing material.</p></div>
           <div class="qmark__card"><div class="qmark__card-circle" style="background-color:#CB574C" ><img src="" alt=""></div><p>In order to be eligible for the Path Q-mark, institutions must plan and review their courses effectively and consistently apply suitable policies and procedures for quality assurance. The courses offered must also be delivered by staff with appropriate qualifications, experience and expertise.</p></div>
         </div>
-        <h4 class="text-center">To apply for the Path Q-mark, institutions must:</h4>
+        <h4 class="text-center teachers__title">To apply for the Path Q-mark, institutions must:</h4>
           <div class="timeline">
             <!-- Timeline item -->
             <div class="timeline-item">
@@ -1330,16 +1490,55 @@
       <div class="container">
         <div class="natgeo-content">
           <div class="natgeo__logo-container"><img class="natgeo__img" src="assets\img\logos\natgeo-learning.svg" alt=""></div>
-          <p>Path exams do not need any special study books or preparation in particular. All that is really needed is to attend regular classes in order to develop effective communicative competence.</p>
-          <p>Teachers or institutions are free to choose the material they want for each of their classes. Nevertheless, Path Examinations is in partnership with National Geographic Learning to provide anyone interested with a highly communicative alternative which is also aligned with our approach.</p>
+          <p><span style="font-weight: bold;">Path exams</span> do not need any special study books or preparation in particular. All that is really needed is to attend regular classes in order to develop effective communicative competence.</p>
+          <p>Teachers or institutions are free to choose the material they want for each of their classes. Nevertheless, <span style="font-weight: bold;">Path Examinations</span> is in partnership with <span style="font-weight: bold;">National Geographic Learning</span> to provide anyone interested with a highly communicative alternative which is also aligned with our approach.</p>
         </div>
       </div>
       <div class="movida">
         <div class="container benefits">
-          <div class="benefits__img-container"><img class="benefits__img" src="assets\img\logos\natgeo-learning.svg" alt=""></div>
-          <span>+</span>
-          <div class="benefits__img-container"><img class="benefits__img" src="assets\img\logos\path_logo-01.svg" alt=""></div>
-          <button>Learn More</button>
+          <div class="benefits__left">
+            <div class="benefits__img-container"><img class="benefits__img" src="assets\img\logos\natgeo-learning.svg" alt=""></div>
+            <span>+</span>
+            <div class="benefits__img-container"><img class="benefits__img" src="assets\img\logos\path_logo-01.svg" alt=""></div>
+          </div>
+          <div class="popover-container benefits__right">
+            <button id="popup-toggle" class="main-btn" style="background-color: #004969;">See Benefits</button>
+            <div class="popover-right">
+              <div class="contact-links">
+                <div class="link">
+                  <i class="fas fa-check"></i>
+                  <p>Complementary resources for teachers and students </p>
+                </div>
+                <div class="link">
+                  <i class="fas fa-check"></i>
+                  <p>Digital material for teachers and institutions</p>
+                </div>
+                <div class="link">
+                  <i class="fas fa-check"></i>
+                  <p>Online platform to work with each programme</p>
+                </div>
+                <div class="link">
+                  <i class="fas fa-check"></i>
+                  <p>End of course certificate issued by Path Examinations and NatGeo Learning</p>
+                </div>
+                <div class="link">
+                  <i class="fas fa-check"></i>
+                  <p>Webinars, courses and other academic events
+                  </p>
+                </div>
+                <div class="link">
+                  <i class="fas fa-check"></i>
+                  <p>Path Examinations and NatGeo Learning’s logo to use in advertising material
+                  </p>
+                </div>
+                <div class="link">
+                  <i class="fas fa-check"></i>
+                  <p>Guidance in the implementation and usage of material by NatGeo Learning’s team
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div>
         </div>
       </div>
       <!-- <img src="assets\img\logos\path-natgeo.svg" alt=""> -->
@@ -1359,11 +1558,11 @@
     <section class="popular-courses section margin-top-0">
       <div class="container">
         <div class="text-center">
-          <h2 class="text-center">Series</h2>
-          <p>Members and centres of Path Examinations will be able to access a digital sample of the following recommended series.</p>
+          <h2 class="text-center teachers__title series__title">Series</h2>
+          <p class="series__text">Members and centres of Path Examinations will be able to access a digital sample of the following recommended series.</p>
         </div>
         <div class="row justify-content-center">
-          <div class="col-12 col-md-6 col-lg-5 padding-0">
+          <div class="col-12 col-md-6 col-lg-6 padding-0 hover">
             <div class="course-card-style-3">
               <div class="card">
                 <div class="thumb series__info">
@@ -1385,13 +1584,13 @@
                 </div>
                 <div class="card-img-overlay">
                   <div class="card-body">
-                    <h6 class="text-center" style="color: black;">LOOK</h6>
+                    <h4 class="text-center" style="color: black;">LOOK</h4>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-5 padding-0">
+          <div class="col-12 col-md-6 col-lg-6 padding-0">
             <div class="course-card-style-3">
               <div class="card">
                 <div class="thumb series__info">
@@ -1414,7 +1613,7 @@
   
                 <div class="card-img-overlay">
                   <div class="card-body">
-                    <h6 style="color: black;">IMPACT</h6>
+                    <h4 class="text-center" style="color: black;">IMPACT</h4>
                   </div>
                 </div>
               </div>
@@ -1422,7 +1621,7 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-12 col-md-6 col-lg-5 padding-0">
+          <div class="col-12 col-md-6 col-lg-6 padding-0">
             <div class="course-card-style-3">
               <div class="card">
                 <div class="thumb series__info">
@@ -1445,13 +1644,13 @@
   
                 <div class="card-img-overlay">
                   <div class="card-body">
-                    <h6 style="color: black;">PERSPECTIVES</h6>
+                    <h4 class="text-center" style="color: black;">PERSPECTIVES</h4>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-5 padding-0">
+          <div class="col-12 col-md-6 col-lg-6 padding-0">
             <div class="course-card-style-3">
               <div class="card">
                 <div class="thumb series__info">
@@ -1462,7 +1661,7 @@
                     </span>
                     <div class="hover-inner">
                       <div class="course-details">
-                        <p>Life is a series which brings the world to the classroom. Through interesting content, videos and topics, this series inspires a whole generation of decision-makers to develop their ability to think critically and communicate effectively in the global community.  Relevant and up-to-date topics involve students, connect them with people and places from around the world, encourage them to develop well-informed opinions and help them make connections between the content and their own lives.</p>
+                        <p>Perspectives is a series which teaches students to think critically and develop the linguistic skills needed to find their own voice in English. Clear and dynamic activities, real-world stories, and TED talks motivate students to think openly, creatively and to communicate effectively. </p>
                         <div class="d-flex">
                           <ul class="series__list"><li>Age:</li> <li>Levels:</li></ul>
                           <ul class="series__list"><li>Adults</li> <li>A1 Access</li> <li>A1+ Achiever</li> <li>A2 Preliminary</li> <li>A2+ Elementary</li> <li>B1 Progress</li> <li>B2 Competency</li> <li>B2+ Forward</li></ul>
@@ -1474,7 +1673,7 @@
   
                 <div class="card-img-overlay">
                   <div class="card-body">
-                    <h6 style="color: black;">LIFE</h6>
+                    <h4 class="text-center" style="color: black;">LIFE</h4>
                   </div>
                 </div>
               </div>
@@ -1494,25 +1693,34 @@
                         <i class="fas fa-times"></i>
                     </div>
                     <div class="row">
-                        <div class="col-md-6 col-lg-8 media">
-                            <img src="assets/img/University/students/adolescent-adorable-alone.png" alt="media"
-                                class="img-fluid">
-                        </div>
-                        <div class="col-md-6 col-lg-4 content">
-                            <h5>Opening hours</h5>
-                            <div class="openings">
-                                <div class="opening opening-days">
-                                    <p class="day">Monday</p>
-                                    <div class="divider"></div>
-                                    <p class="day">Friday</p>
+                        
+                        <div class="col-md-6 col-lg-12 content d-flex justify-content-center">
+                            <h5 class="inbuilt__title">If you wish to be contacted and guided by our staff, please complete the form below:</h5>
+                            <div class="col-12 col-md-6 col-lg-12">
+                              <form class="form-style-1">
+                                <div class="form-group ">
+                                  <input type="text" class="form-control" placeholder="Name">
                                 </div>
-                                <div class="opening opening-time">
-                                    <p class="time">08.00 am</p>
-                                    <div class="divider"></div>
-                                    <p class="time">16.00 pm</p>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Surname">
                                 </div>
+                                <div class="form-group">
+                                  <input type="email" class="form-control" placeholder="Email adress">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Phone number">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="Country">
+                                </div>
+                                <div class="form-group">
+                                  <input type="text" class="form-control" placeholder="City">
+                                </div>
+                                
+                                <button class="main-btn" style="background-color: #004969;">Submit</button>
+                              </form>
                             </div>
-                            <p class="num">+24 45 15 62 129</p>
+                            
                         </div>
                     </div>
                 </div>

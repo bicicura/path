@@ -37,7 +37,7 @@ TARJETAS
 
 #af__academic, #af__online, #af__logo, #af__platform, #af__groups, #af__meetings, #af__webinars, #af__discount, #af__invigliator, #mem__online, #mem__academic, #mem__logo, #mem__platform, #mem__group, #mem__meeting, #mem__webinars, #mem__discount, #mem__invigilator, #mem__access, #mem__onboard, #mem__id, #mem__certificate, #mem__annual, #mem__registrations, #mem__fixed, #mem__comission, #app__comission, #app__logo, #app__group, 
 #app__meeting, #app__webinars, #app__discounts, #app__invigiliator, #app__access, #app__onboard, #app__certificate, #app__adv, #app__reg, #app__inst, #app__banner, #app__perf, #app__10com, #app__prop, #cer__comission, #cer__logo, #cer__webinars, #app__cert-cent, #app__adv,
-#app__qmark, #app__plaque {
+#app__qmark, #app__plaque, #app__prof, #app__stud, #app__scho, #app__website, #app__banner2, #app__prop {
   position: relative;
 }
 
@@ -253,11 +253,158 @@ TARJETAS
   content: 'You will be sent personalised advertising material (images or videos) baring your logo every month';
 }
 
+#app__prof:hover::before {
+  content: 'You will be able to offer your teachers annual professional development seminars on teaching-related topics';
+}
+
 #app__plaque:hover::before {
   content: 'After two consecutive successful annual registrations, you will be invited, together with your staff, students and parents, to an awarding ceremony at which you will be presented with a Certified Exam Centre plaque';
+  font-weight: bold;
 }
 
 #app__qmark:hover::before {
-  content: 'After two consecutive successful annual registrations, your institution will become a candidate to the Path Q-mark (Quality mark)'
+  content: 'After two consecutive successful annual registrations, your institution will become a candidate to the Path Q-mark (Quality mark)';
+  font-weight: bold;
 }
+
+#app__stud:hover::before {
+  content: 'You will be able to offer your students annual academic presentations on exam-related topics';
+}
+
+#app__scho:hover::before {
+  content: 'You will be awarded scholarships for 3 all-module exams as part of the Path CSR (Corporate Social Responsibility) programme';
+}
+
+#app__website:hover::before {
+  content: 'After two consecutive successful annual registrations, your institution will be listed on our website, including a description of the courses you offer'
+}
+
+#app__banner2:hover::before {
+  content: 'You will be sent a Path Certified Exam Centre banner design'
+}
+
+#app__prop:hover::before {
+  content: 'You will have your own Path academic proposal to share with students and parents';
+}
+
+/* 
+==========================
+ELEMENTOS HOME PARA ANIMAR
+==========================
+*/
+
+.quote__title {
+  opacity: 0;
+  transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+}
+
+.franja__title {
+  opacity: 0;
+  transform: translateY(5%);
+  transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+}
+
+.anim__home1 {
+    opacity: 0;
+    transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+    transform: translateX(-5%);
+}
+
+.anim__home2 {
+  opacity: 0;
+  transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+  transform: translateX(5%);
+}
+
+.anim__home3 {
+  opacity: 0;
+  transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+  transform: translateX(-5%);
+}
+
+.anim__home4 {
+  opacity: 0;
+  transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+  transform: translateX(5%);
+}
+
+.anim__home5 {
+  opacity: 0;
+  transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+  transform: translateX(-5%);
+}
+
+/* Para que floten */
+
+.europe{
+  animation: float 3.5s ease-in-out forwards infinite;
+  animation-delay: .33s;
+  opacity: 0;
+  transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+  transform: translateY(-5%);
+}
+
+.latin{
+  animation: float 3.5s ease-in-out forwards infinite;
+  animation-delay: .66s;
+  opacity: 0;
+  transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+  transform: translateY(-5%);
+}
+.africa{
+
+  animation: float 3.5s ease-in-out forwards infinite;
+  animation-delay: .99s;
+  opacity: 0;
+  transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+  transform: translateY(-5%);
+}
+
+.asia{
+  animation: float 3.5s ease-in-out forwards infinite;
+  animation-delay: .33s;
+  opacity: 0;
+  transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+  transform: translateY(-5%);
+}
+@keyframes float {
+
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(-3%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* 
+=====================
+PARA ANIMAR MEET PATH
+=====================
+*/
+
+.path-exam-text, .meet_h1, .our-principles, .tabla-anim {
+  opacity: 0;
+  transform: translateY(5%);
+  transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+}
+
+.our-vision__text, .our-vision__title {
+  opacity: 0;
+  transform: translateX(-5%);
+  transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+}
+
+/* 
+==============
+ANIMS TEACHERS
+==============
+*/
+
+
 
