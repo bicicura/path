@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- Fab Icon -->
-  <link rel="shortcut icon" type="image/png" href="assets/img/logos/fav_icon.png"/>
+  <link rel="shortcut icon" type="image/png" href="assets/img/logos/pathfavicon-01.png" /> 
   <!-- Fonts Awesome Icons -->
   <link rel="stylesheet" href="assets/fonts/fontawesome/css/all.min.css">
   <!-- Flaticon -->
@@ -23,6 +23,31 @@
   <link rel="stylesheet" href="assets/css/custom.css">
   <title>Path | Meet Path</title>
   <style>
+
+    .header-img {
+      position: relative;
+    }
+
+    .social-icon {
+      position: absolute;
+      top: 18%;
+      left: 7.5%;
+      background: rgba(0, 73, 105, .7);
+      /* width: 3.8%; */
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      }
+
+      .social-icon i {
+        color: #fff;
+      }
+
+      .social-icon ul {
+        margin: 0;
+      }
+
     p {
       font-size: 1rem;
     }
@@ -213,6 +238,10 @@ POLICY
     
     @media only screen and (max-width: 799px) {
 
+      .social-icon {
+        display: none;
+      }
+
       .section {
         margin: 4vh 0!important;
       }
@@ -399,11 +428,22 @@ POLICY
 
   </div>
 
+  
+
   <!-- Breadcrumb -->
   <div class="breadcrub-style-1 section">
     <div class="row d-flex align-items-center">
-      <div class="col-12 col-lg-8 bg-img"
-        style="background-image: url(assets/img/University/About-us-1/breadcrumb_bg.png)"></div>
+      <div class="col-12 col-lg-8 bg-img header-img"
+        style="background-image: url(assets/img/University/About-us-1/breadcrumb_bg.png)">
+        <div class="social-icon">
+          <ul>
+              <li><a target="_blank" href="https://www.facebook.com/codingeek.net"><i class="fab fa-facebook-square"></i></a></li>
+              <li><a target="_blank" href="https://www.instagram.com/codingeeknet/"><i class="fab fa-instagram"></i></a></li>
+              <li><i class="fas fa-envelope" id="open-form-popup"></i></li>
+              <li><i class="fas fa-phone" id="open-opening-popup"></i></li>      
+          </ul>
+      </div>
+    </div>
       <div class="hide-md-and-down col-4 bg-color"></div>
     </div>
     <div class="heading text-center">
@@ -432,9 +472,9 @@ POLICY
 
   <!-- Side form icons -->
 <div class="fixed-right side-form-icons">
-  <i class="fas fa-phone icon" id="open-opening-popup"></i>
+  <a target="_blank" href="https://www.facebook.com/codingeek.net"><i class="fab icon fa-facebook-square"></i></a>
+  <a target="_blank" href="https://www.instagram.com/codingeeknet/"><i class="fab icon fa-instagram"></i></a>
   <i class="fas fa-map-marker-alt icon" id="open-location-popup"></i>
-  <i class="fas fa-envelope icon" id="open-form-popup"></i>
 </div>
 
   <div class="believes-section section">
@@ -538,39 +578,6 @@ POLICY
     </div>
   </div>
 
-    <!-- video popup -->
-    <div class="video-popup">
-        <div class="video-popup-wrapper">
-          <div class="v-container">
-            <div class="close-popup">
-              <i class="fas fa-times"></i>
-            </div>
-            <video src="assets/img/videos/university.mp4" id="myVideo"></video>
-            <div class="video-bar">
-              <div class="passed"></div>
-            </div>
-            <div class="buttons">
-              <button id="play-pause">
-                <i class="fas fa-play"></i>
-              </button>
-              <button id="sound-toggler">
-                <i class="fas fa-volume-up"></i>
-              </button>
-              <button id="share-toggler">
-                <i class="fas fa-share-alt"></i>
-              </button>
-            </div>
-            <div class="share">
-              <div class="social-icons">
-                <a target="_blank" href="https://www.facebook.com/codingeek.net"><i class="fab fa-facebook-square"></i></a>
-                <a target="_blank" href="https://www.instagram.com/codingeeknet/"><i class="fab fa-instagram"></i></a>
-                <a target="_blank" href="https://twitter.com/codingeeknet"><i class="fab fa-twitter"></i></a>
-                <a target="_blank" href="https://www.linkedin.com/company/codingeek/about/"><i class="fab fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     <!-- Mission -->
     <div class="section">
       <div class="container text-center">

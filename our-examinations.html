@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet" />
@@ -21,6 +21,30 @@
   <link rel="stylesheet" href="assets/css/custom.css" />
   <title>Path | Our Examinations</title>
   <style>
+
+.header-img {
+      position: relative;
+    }
+
+    .social-icon {
+      position: absolute;
+      top: 18%;
+      left: 4%;
+      background: rgba(0, 73, 105, .7);
+      /* width: 3.8%; */
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      }
+
+      .social-icon i {
+        color: #fff;
+      }
+
+      .social-icon ul {
+        margin: 0;
+      }
 
 
     /* 
@@ -298,6 +322,48 @@ ANIMS OUR EXAMINATIONS
     width: 70%;
   }
 
+  #modal-back>div {
+    width: 100%;
+    padding: 5% 5%;
+  }
+
+  .level-specs__title {
+    width: 35%;
+  }
+
+  .level-specs__title > ul li {
+    font-weight: bold;
+  }
+
+  ul li:nth-child(3) {
+    white-space: nowrap;
+  }
+
+  .level-specs__info {
+    width: 75%;
+    margin-left: .5rem;
+  }
+
+  #modal-back li {
+    margin-right: 0;
+  }
+
+  li {
+    margin-bottom: 0;
+  }
+
+  .modal__action{
+    margin-top: .5rem;
+  }
+
+  .comment-item-style-1 {
+    margin: .5rem 0;
+  }
+
+  .close-popup {
+    right: 0;
+  }
+
 
 }
   </style>
@@ -376,7 +442,15 @@ ANIMS OUR EXAMINATIONS
   </div>
 
   <!-- Breadcrumb -->
-  <section class="breadcrub-style-4 section margin-bottom-0">
+  <section class="breadcrub-style-4 section margin-bottom-0 header-img">
+    <div class="social-icon">
+      <ul>
+          <li><a target="_blank" href="https://www.facebook.com/codingeek.net"><i class="fab fa-facebook-square"></i></a></li>
+          <li><a target="_blank" href="https://www.instagram.com/codingeeknet/"><i class="fab fa-instagram"></i></a></li>
+          <li><i class="fas fa-envelope" id="open-form-popup"></i></li>
+          <li><i class="fas fa-phone" id="open-opening-popup"></i></li>      
+      </ul>
+  </div>
     <div class="container">
       <div class="heading">
         <h2>Our examinations</h2>
@@ -881,6 +955,8 @@ ANIMS OUR EXAMINATIONS
 
 <script>
 $(document).ready(function () {
+
+
 
 var exams_modales = {
     speakinga1menos : {

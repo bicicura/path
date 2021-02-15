@@ -16,10 +16,9 @@
               <div class="form-group required" id="textareaCont">
                 <label for="message">Message</label>
                 <input type="text" id="message" class="form-control" name="message" placeholder="">
-                <span class="small-text">120 characters left</span>
               </div>
             </form>
-            <div class="main-btn" style="background: #014a68; box-shadow: 0px 6px 20px -8px #014a68">Send message</div>
+            <div class="main-btn footer-btn-mob" style="background: #014a68; box-shadow: 0px 6px 20px -8px #014a68">Send message</div>
           </div>
     </div>
 </div>
@@ -60,7 +59,7 @@
                 <li><a href="all-courses.html">News and Events</a></li>
             </ul>
         </div>
-        <div class="col-12 col-md-6 col-lg-2">
+        <div class="col-12 col-md-6 col-lg-4">
             <h5>Information</h5>
             <ul>
                 <li><a href="privacy-policy.html">Privacy Policy</a></li>
@@ -68,7 +67,7 @@
                 <li><a href="cookie-policy.html">Cookies and policy</a></li>
             </ul>
         </div>
-        <div class="col-12 col-md-6 col-lg-4 d-flex footer__flag-container justify-content-end">
+        <div class="col-12 col-md-6 col-lg-2 d-flex footer__flag-container justify-content-center">
             <div class="footer__e-flag"><img src="assets\img\icons\Flags\uk.png" alt=""></div>
             <div class="footer__e-flag"><img src="assets\img\icons\Flags\spanish.png" alt=""></div> 
         </div>
@@ -89,3 +88,12 @@
     <!-- onClick="document.getElementById('#header').scrollIntoView();" POSIBLE SOLUCION  -->
 
 </div>
+
+<script>
+    $("#scroll-top").click(function() {
+        $('html,body').animate({
+            scrollTop: $(".header").offset().top},
+            'slow');
+    });
+    
+</script>

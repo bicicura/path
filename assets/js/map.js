@@ -5,7 +5,7 @@
 function initMap() {
   var map = new google.maps.Map(document.getElementById("location-map"), {
     zoom: 14,
-    center: new google.maps.LatLng(-20.0052713, 57.6413037),
+    center: new google.maps.LatLng(-34.60583864310056, -58.36651807516362),
     disableDefaultUI: true,
     styles: [
       {
@@ -136,7 +136,7 @@ function initMap() {
   });
 
   marker = new google.maps.Marker({
-    position: new google.maps.LatLng(-20.0052713, 57.6413037),
+    position: new google.maps.LatLng(-34.60583864310056, -58.36651807516362),
     map: map,
   });
 }

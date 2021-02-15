@@ -18,7 +18,46 @@
   <link rel="stylesheet" href="assets/css/vander/bootstrap.min.css" />
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  <title>Banting University</title>
+  <title>Path | News & Events</title>
+  <style>
+
+    @media only screen and (max-width: 799px) {
+      .social-icon {
+        right: 5%;
+        top: 8%!important;
+        z-index: 10;
+        left: unset!important;;
+        }
+    }
+
+    .card-body h6 {
+      color: black!important;
+    } 
+
+    .header-img {
+      position: relative;
+    }
+
+    .social-icon {
+      position: absolute;
+      top: 18%;
+      left: 4%;
+      background: rgba(0, 73, 105, .7);
+      /* width: 3.8%; */
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      }
+
+      .social-icon i {
+        color: #fff;
+      }
+
+      .social-icon ul {
+        margin: 0;
+      }
+  </style>
 </head>
 
 <body>
@@ -137,7 +176,15 @@
     </div>
 
   <!-- Breadcrumb -->
-  <section class="breadcrub-style-4 section margin-bottom-0">
+  <section class="breadcrub-style-4 section margin-bottom-0 header-img">
+    <div class="social-icon">
+      <ul>
+          <li><a target="_blank" href="https://www.facebook.com/codingeek.net"><i class="fab fa-facebook-square"></i></a></li>
+          <li><a target="_blank" href="https://www.instagram.com/codingeeknet/"><i class="fab fa-instagram"></i></a></li>
+          <li><i class="fas fa-envelope" id="open-form-popup"></i></li>
+          <li><i class="fas fa-phone" id="open-opening-popup"></i></li>      
+      </ul>
+  </div>
     <div class="container">
       <div class="heading">
         <h2>News & Events</h2>

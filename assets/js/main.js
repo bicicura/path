@@ -36,14 +36,6 @@ sidebarSearch();
             ScrollTop
 =====================================*/
 
-$("#scroll-top").click(function() {
-  $("html").animate(
-    {
-      scrollTop: 0
-    },
-    "slow"
-  );
-});
 
 /*===================================
             ScrollBottom
