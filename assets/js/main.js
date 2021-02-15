@@ -85,7 +85,10 @@ if ($(window).width() < 769) {
 if ($("#popup-toggle").length > 0) {
   $("#popup-toggle").click(function() {
     $(".popover-right").toggleClass("show");
+    $(this).text(function(i, text){
+      return text === "Hide benefits" ? "See benefits" : "Hide benefits";})
   });
+  
 }
 
 // Disable Input
@@ -217,22 +220,6 @@ $(document).ready(function(){
   // JS DESKTOP
   $(function() {
       let element = $('.anim__home1');
-
-      
-
-    // Anim meet h1
-      setTimeout(() => {
-        $('.meet_h1').css({'opacity':1, 'transform':'translateY(0%)'});
-    }, 700);
-
-    //PRIMER ANIM OUR EXAMINATIONS
-    setTimeout(() => {
-      $('.our-exams-anim1').css({'opacity':1, 'transform':'translateX(0%)'});
-  }, 700);
-  setTimeout(() => {
-    $('.our-exams-anim2').css({'opacity':1, 'transform':'translateX(0%)'});
-}, 1000);
-
       if(!window.mobileCheck()){
   
           
@@ -240,37 +227,8 @@ $(document).ready(function(){
               
               var scroll = $(window).scrollTop();
               console.log(scroll);
-
-            // MEET PATH ANIMS
-              if (scroll >= 1000) {
-                $('.our-principles').css({'opacity':1, 'transform':'translateY(0%)'});
-            };
-
-            if (scroll >= 1500) {
-
-              $('.our-vision__title').css({'opacity':1, 'transform':'translateX(0%)'});
-              setTimeout(() => {
-                $('.our-vision__text').css({'opacity':1, 'transform':'translateX(0%)'});
-            }, 200);
-          };
-
-          if (scroll >= 3000) {
-
-            $('.tabla-anim').css({'opacity':1, 'transform':'translateY(0%)'});
-        };          
-
-          if (scroll >= 2000) { 
-            $('.our-mission__title').css({'opacity':1, 'transform':'translateY(0%)'});
-          }
-
           // INDEX ANIMS
           //
-
-            if (scroll >= 400) {
-
-                $('.path-exam-text').css({'opacity':1, 'transform':'translateY(0%)'});
-            };
-
               if (scroll >= 400) {
 
                 $('.franja__title').css({'opacity':1, 'transform':'translateY(0%)'});
@@ -310,14 +268,7 @@ $(document).ready(function(){
       $('.asia').css({'opacity':1, 'transform':'translateY(0%)'});
   }, 600);
     };
-    // ANIMS OUR EXAMINATIONS
-    if (scroll >= 900) {
-      $('.our-exams-anim3').css({'opacity':1, 'transform':'translateY(0%)'});
-  };
-
-  if (scroll >= 1700) {
-    $('.our-exams-anim4').css({'opacity':1, 'transform':'translateY(0%)'});
-};
+   
 
           
       });

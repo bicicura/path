@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
 
     <!-- Fab Icon -->
     <link rel="shortcut icon" type="image/png" href="assets/img/logos/pathfavicon-01.png" /> 
@@ -111,42 +111,6 @@
     }
 
     /* 
-    ======
-    FRANJA
-    ======
-    */
-
-        .franja-container {
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            background-color: #004969;
-        }
-        .franja {
-          width: 45%;
-          display: flex;
-          justify-content: space-between;
-          padding: 2em 0;
-          align-items: center;
-        }
-
-        .franja h3 {
-            color: white;
-        }
-
-        .franja button {
-            padding: 1em 4em;
-            background-color: white;
-            outline: none;
-            border: none;
-            border-radius: 2px;
-            font-weight: bold;
-            box-shadow: 0px 6px 20px -8px white;
-        }
-
-
-    /* 
     ==================
     QUOTE AFTER BANNER
     ==================
@@ -192,16 +156,6 @@
       position: relative;
     }
 
-    /* .modules__text-container h2::after {
-      content: 'Key reasons to adopt the path inbuilt programme';
-      position: absolute;
-      left: 0;
-      top: -33%;
-      right: 0;
-      transform: scale(2,2);
-      z-index: -1;
-      opacity: .07;
-    } */
     .modules__circle-cont {
       position: relative;
       display: flex;
@@ -263,13 +217,26 @@
         ======================
         */
 
+        .inbuilt__title {
+          padding: .5rem .5rem;
+          max-width: 45%;
+          color: white;
+          border-radius: 4px;
+          /* text-align: center; */
+          background-color: #004969;
+        }
+
         .inbuilt__titles-container {
           display: flex;
           align-items: flex-end;
         }
 
-        .features {
-          width: 70%!important;
+        .inbuilt-info-container {
+          width: 100%;
+          display: flex;
+          align-items: flex-end;
+          /* outline: 2px pink solid; */
+
         }
 
         .inbuilt__titles-aside {
@@ -278,14 +245,14 @@
           height: 100%;
           color: white!important;
           border-radius: 4px;
-          box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.15);
+          box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.25);
           background-color: #004969;
         }
 
         .inbuilt__info {
           width: 90%;
           border-radius: 4px;
-          border: 2px solid rgba(0, 73, 105, .8);
+          /* border: 2px solid rgba(0, 73, 105, .8); */
           box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.25);
           padding: 2rem 2rem 4rem 2rem;
         }
@@ -315,6 +282,18 @@
           margin: 0 .5em;
           border-radius: 4px;
           box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.10);
+        }
+
+        
+
+        .feature-cartita {
+          margin: .2rem 0 0 1.5rem;
+          font-style: italic;
+        }
+
+        .price-cards .price-card .main-btn {
+          margin: 2rem auto;
+          width: 80%;
         }
 
         /* 
@@ -508,15 +487,27 @@
           width: 80%;
           margin: auto;
         }
+        .TH h4 {
+          margin-bottom: .4rem!important;
+        }
 
 
         @media only screen and (max-width: 799px) {
-          * {
-            overflow-x: hidden;
+          .heading{
+            min-width: 90%!important;
+            padding: 0.25rem 2.5rem 0 1rem!important;
           }
+
           .heading h1 {
           font-size: 1.5rem!important;
+          margin: 0;
         }
+
+        .events-section h2::after, .join-path-title::after, .qmark h2::after, .series__title::after {
+      width: 60%;
+      margin: 0 auto;
+      transform: scale(1.5,1.5);
+    }
 
         .breadcrub-style-5 .heading {
           min-width: 400px;
@@ -528,6 +519,48 @@
 
         .cards-mobile {
           flex-direction: column;
+        }
+
+        .inbuilt__title {
+          max-width: 100%!important;
+          text-align: center;
+        } 
+
+        .inbuilt-info-container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .inbuilt__titles-aside, .inbuilt__info {
+          width: 100%;
+        }
+
+        .modules__circle-cont {
+          flex-direction: column;
+        }
+
+        .modules__line {
+          display: none;
+        }
+
+        .modules__content {
+          width: 100%;
+        }
+
+        .qmark__card-container {
+          flex-direction: column;
+        }
+
+        .qmark__card, .qmark__end {
+          width: 100%;
+        }
+
+        .acordion-container2 {
+          flex-direction: column!important;
+        }
+
+        .acordion-container2 div:nth-child(2), .acordion-container2 div:nth-child(3) {
+          margin-top: 1rem;
         }
 
         .benefits {
@@ -562,112 +595,69 @@
 
     <!-- Navbar for mobile screen -->
     <div class="navbar-mobile sticky-bar d-block d-sm-none">
-        <div class="container-fluid">
-            <div class="menu-toggler">
-                <div class="hamburger-menu">
-                    <a href="#">
-                        <span>Menu</span>
-                    </a>
-                </div>
-            </div>
-            <div class="divider"></div>
-            <div class="logo">
-                <a href="#"><img src="assets/img/logos/logo_1.png" alt="logo" class="img-fluid"></a>
-            </div>
-            <div class="divider"></div>
-            <div class="language">
-                <div class="dropdown">
-                    <button class="active" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        <img class="flag" src="assets/img/icons/Flags/united-kingdom.png" alt="cuntry flag" />
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <button class="dropdown-item" type="button"><img src="assets/img/icons/Flags/france.png"
-                                alt="flag image" class="flag" /></button>
-                        <button class="dropdown-item" type="button"><img src="assets/img/icons/Flags/germany.png"
-                                alt="flag image" class="flag" /></button>
-                        <button class="dropdown-item" type="button"><img src="assets/img/icons/Flags/japan.png"
-                                alt="flag image" class="flag" /></button>
-                    </div>
-                </div>
-            </div>
-            <div class="divider"></div>
-            <div class="search">
-                <i class="flaticon-search"></i>
-            </div>
-        </div>
+      <div class="container-fluid">
+          <div class="menu-toggler">
+              <div class="hamburger-menu">
+                  <a href="#">
+                      <span>Menu</span>
+                  </a>
+              </div>
+          </div>
+          <div class="divider"></div>
+          <div class="logo">
+              <a href="#"><img src="assets/img/logos/path_logo-mob.svg" alt="logo" class="img-fluid"></a>
+          </div>
+          <div class="divider"></div>
+          <div class="language">
+              <div class="dropdown">
+                  <button class="active" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                      aria-expanded="false">
+                      <img class="flag" src="assets\img\icons\Flags\uk-flag.png" alt="cuntry flag" />
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                      <button class="dropdown-item" type="button"><img src="assets\img\icons\Flags\spain-flag.png"
+                              alt="flag image" class="flag" /></button>
+                      
+                  </div>
+              </div>
+          </div>
+          
+      </div>
 
-        <div class="nav-menu-items">
-            <ul class="nav-items">
-                <li><a href="sign-in.html">Login/Sign up</a></li>
-                <li class="menu-item-has-children"><a href="index.html" class="current-menu-item">Home</a>
-                    <ul class="sub-menu">
-                        <li><a href="index.html" class="current-menu-item">Homepage 1</a></li>
-                        <li><a href="index-2.html">Homepage 2</a></li>
-                        <li><a href="index-3.html">Homepage 3</a></li>
-                        <li><a href="index-4.html">Homepage 4</a></li>
-                        <li><a href="index-5.html">Homepage 5</a></li>
-                    </ul>
-                </li>
-                <li><a href="about.html">About</a></li>
-                <li class="menu-item-has-children"><a href="#">Courses</a>
-                    <ul class="sub-menu">
-                        <li><a href="courses.html">Courses Style 1</a></li>
-                        <li><a href="all-courses.html">Courses Style 2</a></li>
-                        <li><a href="course-detail.html">Course Detail</a></li>
-                        <li><a href="enrollment.html">Enrollment</a></li>
-                        <li><a href="join.html">Join Us</a></li>
-                        <li><a href="teacher.html">Single Instructor</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children"><a href="#">Blog</a>
-                    <ul class="sub-menu">
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="blog-detail.html">Blog Detail</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children"><a href="#">Events</a>
-                    <ul class="sub-menu">
-                        <li><a href="event.html">Events</a></li>
-                        <li><a href="event-detail.html">Event Detail</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children"><a href="#">Pages</a>
-                    <ul class="sub-menu">
-                        <li><a href="404.html">404</a></li>
-                        <li><a href="faq.html">FAQs</a></li>
-                        <li><a href="coming-soon.html">Coming soon</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-children">
-                    <a href="#">UI Elements</a>
-                    <ul class="sub-menu">
-                        <li><a href="Typography-UI.html">Typography</a></li>
-                        <li><a href="accordions.html">Accordion</a></li>
-                        <li><a href="Button-UI.html">Button</a></li>
-                        <li><a href="Icons.html">Icons</a></li>
-                        <li><a href="Tables-UI.html">Tables</a></li>
-                        <li><a href="Forms-UI.html">Forms</a></li>
-                        <li><a href="Alerts&Cookies-UI.html">Alerts & Cookies</a>
-                        <li><a href="Model-UI.html">Model</a></li>
-                        <li><a href="Pagination-UI.html">Pagination</a></li>
-                        <li><a href="breadcrub.html">Breadcrumb</a></li>
-                        <li><a href="Footer-UI.html">Footer</a></li>
-                        <li><a href="Countdowns&Menus-UI.html">Countdowns & Menus</a></li>
-                        <li><a href="Card-UI.html">Card</a></li>
-                        <li><a href="Popover&Lists-UI.html">Popover&List</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item-has-no-child"><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+      <div class="nav-menu-items">
+          <ul class="nav-items">
+              <li><a href="index.html">Home</a></li>
+              <li class="menu-item-has-children"><a href="about.html">Meet Path</a>
+                  <ul class="sub-menu">
+                      <li><a href="index.html">About us</a></li>
+                      <li><a href="index-2.html">Think Forward Strategy</a></li>
+                      <li><a href="index-3.html">Policies and Procedures</a></li>
+                  </ul>
+              </li>
+              <!-- <li><a href="teachers-institutions.html" class="current-menu-item">Teachers and Institutions</a></li> -->
+              <li class="menu-item-has-children"><a href="teachers-institutions.html">Teachers and Institutions</a>
+                  <ul class="sub-menu">
+                      <li><a href="courses.html">International Standards</a></li>
+                      <li><a href="all-courses.html">Assesment Innovation</a></li>
+                      <li><a href="course-detail.html">Join Path</a></li>
+                      <li><a href="enrollment.html">Inbuilt Programme</a></li>
+                      <li><a href="join.html">Q-mark</a></li>
+                      <li><a href="teacher.html">NatGeo Learning</a></li>
+                  </ul>
+              </li>
+              <li class="menu-item-has-no-children"><a href="#">Students & Parents</a></li>
+              <li class="menu-item-has-children"><a href="#">Our Examinations</a>
+                  <ul class="sub-menu">
+                      <li><a href="event.html">General Information</a></li>
+                      <li><a href="event-detail.html">Speaking Only Exams</a></li>
+                      <li><a href="event-detail.html">Four Skills Exams</a></li>
+                  </ul>
+              </li>
+              <li class="menu-item-has-no-children"><a href="#">News and Events</a></li>
+          </ul>
+      </div>
 
-        <div class="mobile-search-wrapper">
-            <form>
-                <input type="text" placeholder="Type something to start">
-            </form>
-        </div>
-    </div>
+  </div>
 
     <div class="breadcrub-style-5 section">
         <div class="container">
@@ -1005,15 +995,15 @@
           <div class="TH" style="background-color: #0091B7;">
                 <h4>AFFILIATE</h4>
                 <div class="features">
-                  <div class="feature">
+                  <div class="feature feature-cartita">
                     <i class="fas fa-check"></i>
                     <p>Free of charge</p>
                   </div>
-                  <div class="feature">
+                  <div class="feature feature-cartita">
                     <i class="fas fa-check"></i>
                     <p>For freelance teachers</p>
                   </div>
-                  <div class="feature">
+                  <div class="feature feature-cartita">
                     <i class="fas fa-check"></i>
                     <p>No minimum candidate registrations required</p>
                   </div>
@@ -1062,15 +1052,15 @@
 
               <h4 >OFFICIAL MEMBER</h4>
               <div class="features">
-                <div class="feature">
+                <div class="feature feature-cartita">
                   <i class="fas fa-check"></i>
                   <p>Free of charge</p>
                 </div>
-                <div class="feature">
+                <div class="feature feature-cartita">
                   <i class="fas fa-check"></i>
                   <p>For freelance teachers</p>
                 </div>
-                <div class="feature">
+                <div class="feature feature-cartita">
                   <i class="fas fa-check"></i>
                   <p>No minimum candidate registrations required</p>
                 </div>
@@ -1144,15 +1134,15 @@
 
             <h4>APPROVED EXAM CENTRE</h4>
             <div class="features">
-              <div class="feature">
+              <div class="feature feature-cartita">
                 <i class="fas fa-check"></i>
                 <p>Free of charge</p>
               </div>
-              <div class="feature">
+              <div class="feature feature-cartita">
                 <i class="fas fa-check"></i>
                 <p>For freelance teachers</p>
               </div>
-              <div class="feature">
+              <div class="feature feature-cartita">
                 <i class="fas fa-check"></i>
                 <p>No minimum candidate registrations required</p>
               </div>
@@ -1236,15 +1226,15 @@
 
               <h4>CERTIFIED EXAM CENTRE</h4>
               <div class="features">
-                <div class="feature">
+                <div class="feature feature-cartita">
                   <i class="fas fa-check"></i>
                   <p>Free of charge</p>
                 </div>
-                <div class="feature">
+                <div class="feature feature-cartita">
                   <i class="fas fa-check"></i>
                   <p>For freelance teachers</p>
                 </div>
-                <div class="feature">
+                <div class="feature feature-cartita">
                   <i class="fas fa-check"></i>
                   <p>No minimum candidate registrations required</p>
                 </div>
@@ -1340,26 +1330,27 @@
 
     <div class="section">
       <div class="container">
-        <h2 class="table__title">Path Inbuilt programme</h2>
+        <h2 class="inbuilt__title">Path Inbuilt programme</h2>
+        <div class="feature d-flex align-items-baseline">
+          <i class="fas fa-check"></i>
+          <p>Free of charge</p>
+        </div>
+        <div class="feature d-flex align-items-baseline">
+          <i class="fas fa-check"></i>
+          <p>Eligible for institutions with 50 students or more</p>
+        </div>
         <div class="inbuilt__titles-container">
-          <div class="features">
-            <div class="feature d-flex align-items-baseline">
-              <i class="fas fa-check"></i>
-              <p>Free of charge</p>
-            </div>
-            <div class="feature d-flex align-items-baseline">
-              <i class="fas fa-check"></i>
-              <p>Eligible for institutions with 50 students or more</p>
-            </div>
+          <div class="features inbuilt-info-container">
+            
             <div class="inbuilt__info">
               <p>Path exams provide focus and pace to keep your students motivated, every step of the way. Our progressive scale of levels makes it possible for institutions to adopt Path exams as their end-of-course assessment.</p>
               <p>Institutions adopting the Inbuilt programme will work closely together with our academic team to align the different Path levels with their existing courses. In this way, all students will be candidates to a Path international certification at the end of the school year.</p>
               <p>The Path administrative team will also develop a tailor-made solution for flexible exam registration and payment of fees, so that all students will have confirmation of placement at the beginning of their courses.</p>
             </div>
-          </div>
-          <div class="inbuilt__titles-aside">
-            <h4>Requirements</h4>
-            <p style="color: white;">Eligible for institutions wishing to adopt Path exams for<span style="font-weight: bold;"> all their students </span>and integrate our proposal into their existing programmes - Minimum number of candidates: 50+ <br> -All candidates must be registered within the first month of the school year. <br>Adopting the Path Inbuilt programme is <span style="font-weight: bold;"> free of charge.</span></p>
+            <div class="inbuilt__titles-aside">
+              <h4>Requirements</h4>
+              <p style="color: white;">Eligible for institutions wishing to adopt Path exams for<span style="font-weight: bold;"> all their students </span>and integrate our proposal into their existing programmes - Minimum number of candidates: 50+ <br> -All candidates must be registered within the first month of the school year. <br>Adopting the Path Inbuilt programme is <span style="font-weight: bold;"> free of charge.</span></p>
+            </div>
           </div>
         </div> 
       </div>
@@ -1398,7 +1389,7 @@
           </div>
           <div class="modules__line"></div>
         </div>
-        <div class="acordion-container d-flex justify-content-between">
+        <div class="acordion-container d-flex justify-content-between acordion-container2">
           <div class="col-12 col-lg-4 ">
             <div class="accordion-wrapper">
               <div id="accordion d-flex">
@@ -1492,28 +1483,29 @@
 
 
     <h4 class="text-center teachers__title">To apply for the Path Q-mark, institutions must:</h4>
-          <div class="timeline">
+          
             <!-- Timeline item -->
-            <div class="timeline-item">
-                <div class="timeline-icon g-item">
-                    <i class="sl sl-icon-wallet"></i>
-                </div>
-                <div class="timeline-content right">
-                    <div class="content-body">
-                        <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/henry.jpg"> -->
-                        <div class="timeline-text">
-                            <!-- <div>Henry Rodstein</div> -->
-                            <div><p>Have been a Path Certified Exam Centre for at least 2 years.</p></div>
-                            <!-- <span class="timestamp">2 hours ago</span> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
             <!-- Timeline item -->
             <div class="columns is-vcentered pt-30">
               <div class="column is-10 is-offset-1">
                   <!-- Timeline -->
-                  <div class="timeline">
+                  <div class="timeline container">
+                    <div class="timeline-item">
+                      <div class="timeline-icon g-item">
+                          <i class="sl sl-icon-wallet"></i>
+                      </div>
+                      <div class="timeline-content right">
+                          <div class="content-body">
+                              <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/henry.jpg"> -->
+                              <div class="timeline-text">
+                                  <!-- <div>Henry Rodstein</div> -->
+                                  <div><p>Have been a Path Certified Exam Centre for at least 2 years.</p></div>
+                                  <!-- <span class="timestamp">2 hours ago</span> -->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
                       <!-- Timeline item -->
                       <div class="timeline-item">
                           <div class="timeline-icon g-item">
@@ -1565,7 +1557,7 @@
                   </div>
               </div>
           </div>
-        </div>
+        
     <section class="section">
       <div class="container qmark">
         <h2 class="text-center teachers__title">Path Q-mark</h2>
@@ -1601,33 +1593,33 @@
               <div class="contact-links">
                 <div class="link">
                   <i class="fas fa-check"></i>
-                  <p>Complementary resources for teachers and students </p>
+                  <p>Complementary resources for teachers and students.</p>
                 </div>
                 <div class="link">
                   <i class="fas fa-check"></i>
-                  <p>Digital material for teachers and institutions</p>
+                  <p>Digital material for teachers and institutions.</p>
                 </div>
                 <div class="link">
                   <i class="fas fa-check"></i>
-                  <p>Online platform to work with each programme</p>
+                  <p>Online platform to work with each programme.</p>
                 </div>
                 <div class="link">
                   <i class="fas fa-check"></i>
-                  <p>End of course certificate issued by Path Examinations and NatGeo Learning</p>
+                  <p>End of course certificate issued by Path Examinations and NatGeo Learning.</p>
                 </div>
                 <div class="link">
                   <i class="fas fa-check"></i>
-                  <p>Webinars, courses and other academic events
+                  <p>Webinars, courses and other academic events.
                   </p>
                 </div>
                 <div class="link">
                   <i class="fas fa-check"></i>
-                  <p>Path Examinations and NatGeo Learning’s logo to use in advertising material
+                  <p>Path Examinations and NatGeo Learning’s logo to use in advertising material.
                   </p>
                 </div>
                 <div class="link">
                   <i class="fas fa-check"></i>
-                  <p>Guidance in the implementation and usage of material by NatGeo Learning’s team
+                  <p>Guidance in the implementation and usage of material by NatGeo Learning’s team.
                   </p>
                 </div>
               </div>
@@ -1660,7 +1652,8 @@
             <div class="course-card-style-3">
               <div class="card">
                 <div class="thumb series__info">
-                  <img class="card-img-top" src="assets/img/University/About-us-1/series-info.png" alt="Card image cap">
+                  <img class="card-img-top" src="assets/img/University/About-us-1/series-look.jpg" alt="Card image cap">
+                  <!-- assets/img/slider/home1/path_cover.jpg -->
                   <div class="hover">
                     <span class="plus">
                       <i class="fas fa-plus-circle"></i>
@@ -1688,7 +1681,7 @@
             <div class="course-card-style-3">
               <div class="card">
                 <div class="thumb series__info">
-                  <img class="card-img-top" src="assets/img/University/About-us-1/series-info.png" alt="Card image cap">
+                  <img class="card-img-top" src="assets/img/University/About-us-1/series-impact.jpg" alt="Card image cap">
                   <div class="hover">
                     <span class="plus">
                       <i class="fas fa-plus-circle"></i>
@@ -1719,7 +1712,7 @@
             <div class="course-card-style-3">
               <div class="card">
                 <div class="thumb series__info">
-                  <img class="card-img-top" src="assets/img/University/About-us-1/series-info.png" alt="Card image cap">
+                  <img class="card-img-top" src="assets/img/University/About-us-1/series-perspectives.jpg" alt="Card image cap">
                   <div class="hover">
                     <span class="plus">
                       <i class="fas fa-plus-circle"></i>
@@ -1748,7 +1741,7 @@
             <div class="course-card-style-3">
               <div class="card">
                 <div class="thumb series__info">
-                  <img class="card-img-top" src="assets/img/University/About-us-1/series-info.png" alt="Card image cap">
+                  <img class="card-img-top" src="assets/img/University/About-us-1/series-life.jpg" alt="Card image cap">
                   <div class="hover">
                     <span class="plus">
                       <i class="fas fa-plus-circle"></i>
