@@ -44,16 +44,47 @@ TARJETAS
 .card__more-info:hover::before {
   position: absolute; 
   font-size: .8em;
-  width: 250px;
+  width: 250px!important;
   color: white;
   text-align: center;
-  top: -70%;
-  left: -20%;
-  padding: .5rem;
-  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: -150%;
+  padding: .5rem .5rem .7rem .5rem!important;
+  height: fit-content;
+  z-index: 20000;
   border-radius: 4px;
   background-color: #004969;
+  line-height: 1.3;
+}
 
+
+
+.card__more-info:hover::after {
+    content: '';
+    position: absolute;
+    left: -15%;
+    box-sizing: border-box !important;
+    top: 12%;
+    bottom: 0;
+    width: 0;
+    z-index: 20000;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #004969;
+}
+
+
+@media only screen and (max-width: 799px) {
+  .card__more-info:hover::before {
+    left: 0%;
+    top: -120%;
+  }
+
+  .card__more-info:hover::after {
+    top: 35%;
+  }
 }
 
 #af__online:hover::before {

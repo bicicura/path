@@ -33,6 +33,10 @@
     ======
     */
 
+    .section {
+      margin: 18vh 0!important;
+    }
+
     .teachers__title {
       margin-bottom: 3vh;
     }
@@ -64,11 +68,15 @@
     =====
     */
 
+    .events-section {
+      padding: 0;
+    }
+
     .events-section h2 {
       position: relative;
     }
 
-    .events-section h2::after {
+    .our-levels-anim::after {
       content: 'Our levels';
       position: absolute;
       left: 0;
@@ -78,6 +86,7 @@
       z-index: -1;
       opacity: .07;
     }
+
 
     .event__line {
     width: 12%;
@@ -278,6 +287,10 @@
       opacity: .07;
     }
 
+    .membership-section {
+      padding: 0;
+    }
+
         .price-card {
           margin: 0 .5em;
           border-radius: 4px;
@@ -359,10 +372,13 @@
         ======
         */
 
-
+        .natgeo-content {
+          margin: 10rem 0 2.5rem 0;
+        }
 
         .natgeo__logo-container {
           width: 70%;
+
           margin: 0 auto;
         }
         
@@ -491,8 +507,56 @@
           margin-bottom: .4rem!important;
         }
 
+        /* 
+        =====================
+        ELEMENTOS PARA ANIMAR
+        =====================
+         */
+        
+        .heading h1 {
+          opacity: 0;
+          transform: translateX(-5%);
+            transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+        }
+
+        .international_anim, .our-levels-anim, .our-principles-anim, .join-path-title, .price-card, .inbuilt__titles-aside, .inbuilt__info, 
+        .natgeo__img, .natgeo-content p, .benefits__img, .benefits__right, .quote__after-text h2, .series__title, .series__card{
+          opacity: 0;
+          transform: translateY(5%);
+          transition: .2s cubic-bezier(0.13, 0.77, 0.33, 1); 
+        }
+
+        .carta-anim-1, .carta-anim-3, .inbuilt-checks-1, .inbuilt-checks-2 {
+          opacity: 0;
+          transform: translateX(-15%);
+          transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+        }
+
+        .carta-anim-2, .img-anim {
+          opacity: 0;
+          transform: translateX(15%);
+          transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+        }
+
+        .price-cards>div:nth-child(2), .series__row1, .series__row1>div:nth-child(2), .series__row2>div:nth-child(2)   {
+          transition-delay: .33s;
+        }
+
+        .price-cards>div:nth-child(3) {
+          transition-delay: .66s;
+        }
+
+        .price-cards>div:nth-child(4) {
+          transition-delay: .99s;
+        }
+        
+
 
         @media only screen and (max-width: 799px) {
+          .section {
+          margin: 4vh 0!important;
+          }
+
           .heading{
             min-width: 90%!important;
             padding: 0.25rem 2.5rem 0 1rem!important;
@@ -545,6 +609,7 @@
 
         .modules__content {
           width: 100%;
+          padding: 0 5%;
         }
 
         .qmark__card-container {
@@ -555,12 +620,26 @@
           width: 100%;
         }
 
+        .teacher-form {
+          overflow-x: hidden!important;
+        }
+
         .acordion-container2 {
           flex-direction: column!important;
         }
 
         .acordion-container2 div:nth-child(2), .acordion-container2 div:nth-child(3) {
           margin-top: 1rem;
+        }
+
+        .accordion-wrapper .card .card-header a {
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        .timeline {
+          width: 90%;
+          margin: 0 auto;
         }
 
         .benefits {
@@ -582,6 +661,22 @@
 
         .benefits__right {
         width: 100%;
+        }
+
+        .popover-right {
+          width: 300px;
+          left: -25%;
+          top: -440%;
+        }
+
+        .quote__after-text h2 {
+          padding: 0 5%;
+          text-align: left;
+        }
+
+        .series__text {
+          width: 100%;
+          font-size: .9rem;
         }
       }
         </style>
@@ -681,7 +776,7 @@
     <!-- Events Section -->
     <section class="events-section section">
             <div class="container text-center">
-                <h2 class="teachers__title">Our levels</h2>
+                <h2 class="teachers__title our-levels-anim">Our levels</h2>
                 <p class="international__text"><span style="font-weight: bold;">Path Examinations</span> has subdivided level A1 into 3 levels, and level A2 into 2 levels. This is because the amount of time, effort and study required to become a full basic user is considerable. Through this progressive approach, we ensure that the candidate’s language competency has been assessed thoroughly.</p>
             </div>
 
@@ -697,7 +792,7 @@
             <!-- <h2 class="margin-bottom-50">Upcoming events</h2> *SACAR* -->
 
             
-            <div class="row event-item-style-1 even-event">
+            <div class="row event-item-style-1 even-event carta-anim-1">
                 <div class="col-5 col-lg-2 date">
                     <h1>.A</h1>
                 </div>
@@ -713,7 +808,7 @@
                 </div>
 
             </div>
-            <div class="row event-item-style-1 odd-event">
+            <div class="row event-item-style-1 odd-event carta-anim-2">
                 <div class="col-5 col-lg-2 date">
                     <h1>B.</h1>
                 </div>
@@ -735,7 +830,7 @@
                     <!-- </div> -->
                 </div>
             </div>
-            <div class="row event-item-style-1 even-event">
+            <div class="row event-item-style-1 even-event carta-anim-3">
                 <div class="col-5 col-lg-2 date">
                     <h1>.C</h1>
                 </div>
@@ -758,7 +853,7 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-12 col-md-7 content">
-                  <h2 class="margin-bottom-30">Our Principles</h2>
+                  <h2 class="margin-bottom-30 our-principles-anim">Assessment Innovation</h2>
                   <div class="accordion-wrapper acorrdion__mine">
                     <div id="accordion">
                       <div class="card">
@@ -976,7 +1071,7 @@
                   </div>
               </div>
   
-              <div class="col-5 d-sm-none d-md-block media">
+              <div class="col-5 d-sm-none d-md-block media img-anim">
                 <!-- Background Img Goes Here -->
               </div>
             </div>
@@ -1331,13 +1426,13 @@
     <div class="section">
       <div class="container">
         <h2 class="inbuilt__title">Path Inbuilt programme</h2>
-        <div class="feature d-flex align-items-baseline">
-          <i class="fas fa-check"></i>
-          <p>Free of charge</p>
+        <div class="feature d-flex align-items-baseline inbuilt-checks-1">
+          <i style="color: #004969;" class="fas fa-check"></i>
+          <p style="color: #004969; font-weight: bold;">Free of charge</p>
         </div>
-        <div class="feature d-flex align-items-baseline">
-          <i class="fas fa-check"></i>
-          <p>Eligible for institutions with 50 students or more</p>
+        <div class="feature d-flex align-items-baseline inbuilt-checks-2">
+          <i style="color: #004969; font-weight: bold;" class="fas fa-check"></i>
+          <p style="color: #004969; font-weight: bold;">Eligible for institutions with 50 students or more</p>
         </div>
         <div class="inbuilt__titles-container">
           <div class="features inbuilt-info-container">
@@ -1354,209 +1449,136 @@
           </div>
         </div> 
       </div>
+      <div class="modules">
+        <div class="container modules__container">
+          <div class="modules__text-container text-center margin-bottom-20 margin-top-20">
+            <h2 class="teachers__title">Key reasons to adopt the Path Inbuilt programme</h2>
+          </div>
+          <div class="row d-flex justify-content-between modules__circle-cont">
+            
+            <div class="modules__content">
+              <div class="modules__circle"> 
+                <img class="modules__circle-img" src="assets\img\icons\study-01.svg" alt="Skills">
+              </div>
+              <h4>01</h4>
+              <p>Students will certify their language competency at the end of every school year, which will tangibly show them or their parents the steady and constant progress they are making in their studies.</p>
+              
+            </div>
+            <div class="modules__content">
+                <div class="modules__circle modules__circle-skills">
+                  <img class="modules__circle-img" src="assets\img\icons\learn-01.svg" alt="Levels">
+                </div>
+                <h4>02</h4>
+                <p>Your courses will be aligned with the different levels on the Path exam scale, which are carefully mapped to the Common European Framework of Reference for Languages (CEFR).</p>
+            </div>
+            <div class="modules__content">
+              <div class="modules__circle modules__circle-marks">
+                <img class="modules__circle-img" src="assets\img\icons\computer-01.svg" alt="Marks">
+              </div>
+              <h4>03</h4>
+              <p>Your institution will act as a Certified Exam Centre and access the a-z benefits that come with it.</p>
+            </div>
+            <div class="modules__line"></div>
+          </div>
+          <div class="acordion-container d-flex justify-content-between acordion-container2">
+            <div class="col-12 col-lg-4 ">
+              <div class="accordion-wrapper">
+                <div id="accordion d-flex">
+                  <div class="card">
+                    <div class="card-header" id="headingTwenty">
+                      <h5 class="mb-0">
+                        <a role="button" data-toggle="collapse" data-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
+                          Academic benefits
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="collapseTwenty" class="collapse" aria-labelledby="headingTwenty" data-parent=".acordion-container">
+                      <div class="card-body">
+                        <ul>
+                          <li>take part and offer your staff Onboarding meetings to gain a deeper understanding of the Path proposal</li>
+                          <li>receive exclusive support from the Path academic team throughout the year</li>
+                          <li>have your own Path academic proposal to share with students and parents</li>
+                          <li>be able to organise informative meetings delivered by Path for students and parents</li>
+                          <li>have access to a demo of our exclusive e-platform Beyond™ for online mock exams</li>
+                          <li>have access to My Path area to download preparation materials and paper-based mock exams</li>
+                          <li>be able to conduct online or paper-based exam sessions at your institution</li>
+                          <li>be awarded scholarships for 3 all-module exams as part of the Path CSR (Corporate Social Responsibility) programme</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 ">
+              <div class="accordion-wrapper">
+                <div id="accordion d-flex">
+                  <div class="card">
+                    <div class="card-header" id="headingTwentytwo">
+                      <h5 class="mb-0">
+                        <a role="button" data-toggle="collapse" data-target="#collapseTwentytwo" aria-expanded="false" aria-controls="collapseTwentytwo">
+                          Administrative benefits
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="collapseTwentytwo" class="collapse" aria-labelledby="headingTwentytwo" data-parent=".acordion-container">
+                      <div class="card-body">
+                        <ul>
+                          <li>be able to work closely together with our administrative team</li>
+                          <li>be provided with fixed exam fees in your local currency</li>
+                          <li>be able to offer your students a 10% discounts on exam registrations</li>
+                          <li>be able to make level changes to exam registrations throughout the year</li>
+                          <li>be given a 10% commission on exam registrations</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 ">
+              <div class="accordion-wrapper">
+                <div id="accordion d-flex">
+                  <div class="card">
+                    <div class="card-header" id="headingTwentythree">
+                      <h5 class="mb-0">
+                        <a role="button" data-toggle="collapse" data-target="#collapseTwentythree" aria-expanded="false" aria-controls="collapseTwentythree">
+                          Institutional benefits
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="collapseTwentythree" class="collapse" aria-labelledby="headingTwentythree" data-parent=".acordion-container">
+                      <div class="card-body">
+                        <ul>
+                          <li>have a unique Path ID number</li>
+                          <li>receive a digital and a paper certificate issued by Path Examinations UK stating your institution is a Path Certified Exam Centre and offers end-of-course international assessment</li>
+                          <li>receive a personalised Path Certified Exam Centre logo, stating that all of your courses include international certification</li>
+                          <li>be sent a Path Certified Exam Centre banner design, stating your institution offers end-of-course international assessment</li>
+                          <li>be sent personalised advertising material (images or videos) bearing your logo every month</li>
+                          <li>have the possibility to become a Path supervisor and offer your staff to act as invigilators</li>
+                          <li style="font-weight: bold;">After two consecutive successful annual registrations, your institution will be:</li>
+                          <li>listed on our website, including a description of the courses you offer</li>
+                          <li>invited, together with your staff, students and parents, to an awarding ceremony at which you will be presented with a Certified Exam Centre plaque</li>
+                          <li>a candidate to the Path Q-mark (Quality mark)</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="inbuilt__cta"><button id="open-exam-modal" class="main-btn" style="background-color: #004969;">Learn More</button></div>
+        </div>
+      </div>
     </div>
       </div>
     </section>
 
-    <div class="section modules">
-      <div class="container modules__container">
-        <div class="modules__text-container text-center margin-bottom-20 margin-top-20">
-          <h2 class="teachers__title">Key reasons to adopt the Path Inbuilt programme</h2>
-        </div>
-        <div class="row d-flex justify-content-between modules__circle-cont">
-          
-          <div class="modules__content">
-            <div class="modules__circle"> 
-              <img class="modules__circle-img" src="assets\img\icons\study-01.svg" alt="Skills">
-            </div>
-            <h4>01</h4>
-            <p>Students will certify their language competency at the end of every school year, which will tangibly show them or their parents the steady and constant progress they are making in their studies.</p>
-            
-          </div>
-          <div class="modules__content">
-              <div class="modules__circle modules__circle-skills">
-                <img class="modules__circle-img" src="assets\img\icons\learn-01.svg" alt="Levels">
-              </div>
-              <h4>02</h4>
-              <p>Your courses will be aligned with the different levels on the Path exam scale, which are carefully mapped to the Common European Framework of Reference for Languages (CEFR).</p>
-          </div>
-          <div class="modules__content">
-            <div class="modules__circle modules__circle-marks">
-              <img class="modules__circle-img" src="assets\img\icons\computer-01.svg" alt="Marks">
-            </div>
-            <h4>03</h4>
-            <p>Your institution will act as a Certified Exam Centre and access the a-z benefits that come with it.</p>
-          </div>
-          <div class="modules__line"></div>
-        </div>
-        <div class="acordion-container d-flex justify-content-between acordion-container2">
-          <div class="col-12 col-lg-4 ">
-            <div class="accordion-wrapper">
-              <div id="accordion d-flex">
-                <div class="card">
-                  <div class="card-header" id="headingTwenty">
-                    <h5 class="mb-0">
-                      <a role="button" data-toggle="collapse" data-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
-                        Academic benefits
-                      </a>
-                    </h5>
-                  </div>
-                  <div id="collapseTwenty" class="collapse" aria-labelledby="headingTwenty" data-parent=".acordion-container">
-                    <div class="card-body">
-                      <ul>
-                        <li>take part and offer your staff Onboarding meetings to gain a deeper understanding of the Path proposal</li>
-                        <li>receive exclusive support from the Path academic team throughout the year</li>
-                        <li>have your own Path academic proposal to share with students and parents</li>
-                        <li>be able to organise informative meetings delivered by Path for students and parents</li>
-                        <li>have access to a demo of our exclusive e-platform Beyond™ for online mock exams</li>
-                        <li>have access to My Path area to download preparation materials and paper-based mock exams</li>
-                        <li>be able to conduct online or paper-based exam sessions at your institution</li>
-                        <li>be awarded scholarships for 3 all-module exams as part of the Path CSR (Corporate Social Responsibility) programme</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-4 ">
-            <div class="accordion-wrapper">
-              <div id="accordion d-flex">
-                <div class="card">
-                  <div class="card-header" id="headingTwentytwo">
-                    <h5 class="mb-0">
-                      <a role="button" data-toggle="collapse" data-target="#collapseTwentytwo" aria-expanded="false" aria-controls="collapseTwentytwo">
-                        Administrative benefits
-                      </a>
-                    </h5>
-                  </div>
-                  <div id="collapseTwentytwo" class="collapse" aria-labelledby="headingTwentytwo" data-parent=".acordion-container">
-                    <div class="card-body">
-                      <ul>
-                        <li>be able to work closely together with our administrative team</li>
-                        <li>be provided with fixed exam fees in your local currency</li>
-                        <li>be able to offer your students a 10% discounts on exam registrations</li>
-                        <li>be able to make level changes to exam registrations throughout the year</li>
-                        <li>be given a 10% commission on exam registrations</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-4 ">
-            <div class="accordion-wrapper">
-              <div id="accordion d-flex">
-                <div class="card">
-                  <div class="card-header" id="headingTwentythree">
-                    <h5 class="mb-0">
-                      <a role="button" data-toggle="collapse" data-target="#collapseTwentythree" aria-expanded="false" aria-controls="collapseTwentythree">
-                        Institutional benefits
-                      </a>
-                    </h5>
-                  </div>
-                  <div id="collapseTwentythree" class="collapse" aria-labelledby="headingTwentythree" data-parent=".acordion-container">
-                    <div class="card-body">
-                      <ul>
-                        <li>have a unique Path ID number</li>
-                        <li>receive a digital and a paper certificate issued by Path Examinations UK stating your institution is a Path Certified Exam Centre and offers end-of-course international assessment</li>
-                        <li>receive a personalised Path Certified Exam Centre logo, stating that all of your courses include international certification</li>
-                        <li>be sent a Path Certified Exam Centre banner design, stating your institution offers end-of-course international assessment</li>
-                        <li>be sent personalised advertising material (images or videos) bearing your logo every month</li>
-                        <li>have the possibility to become a Path supervisor and offer your staff to act as invigilators</li>
-                        <li style="font-weight: bold;">After two consecutive successful annual registrations, your institution will be:</li>
-                        <li>listed on our website, including a description of the courses you offer</li>
-                        <li>invited, together with your staff, students and parents, to an awarding ceremony at which you will be presented with a Certified Exam Centre plaque</li>
-                        <li>a candidate to the Path Q-mark (Quality mark)</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="inbuilt__cta"><button id="open-exam-modal" class="main-btn" style="background-color: #004969;">Learn More</button></div>
-      </div>
-    </div>
+    
 
 
-    <h4 class="text-center teachers__title">To apply for the Path Q-mark, institutions must:</h4>
-          
-            <!-- Timeline item -->
-           
-            <!-- Timeline item -->
-            <div class="columns is-vcentered pt-30">
-              <div class="column is-10 is-offset-1">
-                  <!-- Timeline -->
-                  <div class="timeline container">
-                    <div class="timeline-item">
-                      <div class="timeline-icon g-item">
-                          <i class="sl sl-icon-wallet"></i>
-                      </div>
-                      <div class="timeline-content right">
-                          <div class="content-body">
-                              <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/henry.jpg"> -->
-                              <div class="timeline-text">
-                                  <!-- <div>Henry Rodstein</div> -->
-                                  <div><p>Have been a Path Certified Exam Centre for at least 2 years.</p></div>
-                                  <!-- <span class="timestamp">2 hours ago</span> -->
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                      <!-- Timeline item -->
-                      <div class="timeline-item">
-                          <div class="timeline-icon g-item">
-                              <i class="sl sl-icon-lock"></i>
-                          </div>
-                          <div class="timeline-content">
-                              <div class="content-body">
-                                  <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/carolin.png"> -->
-                                  <div class="timeline-text">
-                                      <!-- <div>Marjory Cambell</div> -->
-                                      <div><p>Have been operating as a business for at least 4 years.</p></div>
-                                      <!-- <span class="timestamp">30 minutes ago</span> -->
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Timeline item -->
-                      <div class="timeline-item">
-                          <div class="timeline-icon g-item">
-                              <i class="sl sl-icon-wallet"></i>
-                          </div>
-                          <div class="timeline-content right">
-                              <div class="content-body">
-                                  <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/henry.jpg"> -->
-                                  <div class="timeline-text">
-                                      <!-- <div>Henry Rodstein</div> -->
-                                      <div><p>Have had an exam pass rate of 90% or over for the past 2 years.</p></div>
-                                      <!-- <span class="timestamp">2 hours ago</span> -->
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Timeline item -->
-                      <div class="timeline-item">
-                          <div class="timeline-icon g-item">
-                              <i class="sl sl-icon-cloud-upload"></i>
-                          </div>
-                          <div class="timeline-content">
-                              <div class="content-body">
-                                  <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/helen.jpg"> -->
-                                  <div class="timeline-text">
-                                      <!-- <div>Helen Miller</div> -->
-                                      <div><p>Provide Path Examinations with their annual syllabuses for quality control</p></div>
-                                      <!-- <span class="timestamp">Yesterday</span> -->
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
+
         
     <section class="section">
       <div class="container qmark">
@@ -1566,6 +1588,79 @@
           <div class="qmark__card"><div class="qmark__card-circle" style="background-color:#CFA676"><img src="" alt=""></div><p>Institutions that achieve the Q-mark will receive an awarding certificate for display and a personalised quality logo to use on their website and marketing material.</p></div>
           <div class="qmark__card"><div class="qmark__card-circle" style="background-color:#CB574C" ><img src="" alt=""></div><p>In order to be eligible for the Path Q-mark, institutions must plan and review their courses effectively and consistently apply suitable policies and procedures for quality assurance. The courses offered must also be delivered by staff with appropriate qualifications, experience and expertise.</p></div>
         </div>
+
+        <h4 class="text-center teachers__title">To apply for the Path Q-mark, institutions must:</h4>           
+        <!-- Timeline item -->
+        <div class="columns is-vcentered pt-30">
+          <div class="column is-10 is-offset-1">
+              <!-- Timeline -->
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-icon g-item">
+                      <i class="sl sl-icon-wallet"></i>
+                  </div>
+                  <div class="timeline-content right">
+                      <div class="content-body">
+                          <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/henry.jpg"> -->
+                          <div class="timeline-text">
+                              <!-- <div>Henry Rodstein</div> -->
+                              <div><p>Have been a Path Certified Exam Centre for at least 2 years.</p></div>
+                              <!-- <span class="timestamp">2 hours ago</span> -->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+                  <!-- Timeline item -->
+                  <div class="timeline-item">
+                      <div class="timeline-icon g-item">
+                          <i class="sl sl-icon-lock"></i>
+                      </div>
+                      <div class="timeline-content">
+                          <div class="content-body">
+                              <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/carolin.png"> -->
+                              <div class="timeline-text">
+                                  <!-- <div>Marjory Cambell</div> -->
+                                  <div><p>Have been operating as a business for at least 4 years.</p></div>
+                                  <!-- <span class="timestamp">30 minutes ago</span> -->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Timeline item -->
+                  <div class="timeline-item">
+                      <div class="timeline-icon g-item">
+                          <i class="sl sl-icon-wallet"></i>
+                      </div>
+                      <div class="timeline-content right">
+                          <div class="content-body">
+                              <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/henry.jpg"> -->
+                              <div class="timeline-text">
+                                  <!-- <div>Henry Rodstein</div> -->
+                                  <div><p>Have had an exam pass rate of 90% or over for the past 2 years.</p></div>
+                                  <!-- <span class="timestamp">2 hours ago</span> -->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Timeline item -->
+                  <div class="timeline-item">
+                      <div class="timeline-icon g-item">
+                          <i class="sl sl-icon-cloud-upload"></i>
+                      </div>
+                      <div class="timeline-content">
+                          <div class="content-body">
+                              <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/helen.jpg"> -->
+                              <div class="timeline-text">
+                                  <!-- <div>Helen Miller</div> -->
+                                  <div><p>Provide Path Examinations with their annual syllabuses for quality control</p></div>
+                                  <!-- <span class="timestamp">Yesterday</span> -->
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
         
       <div class="qmark__end"><p>The Path Q-mark is excellent for reflecting and developing best practice. Through this endorsement, institutions will be able to show that their work is of first-rate standards.</p></div>
         
@@ -1647,8 +1742,8 @@
           <h2 class="text-center teachers__title series__title">Series</h2>
           <p class="series__text">Members and centres of Path Examinations will be able to access a digital sample of the following recommended series.</p>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-6 col-lg-6 padding-0 hover">
+        <div class="row justify-content-center series__row1">
+          <div class="col-12 col-md-6 col-lg-6 padding-0 hover series__card">
             <div class="course-card-style-3">
               <div class="card">
                 <div class="thumb series__info">
@@ -1671,13 +1766,13 @@
                 </div>
                 <div class="card-img-overlay">
                   <div class="card-body">
-                    <h4 class="text-center" style="color: black;">LOOK</h4>
+                    <h4 class="text-center" style="color: black; letter-spacing: .2rem;">LOOK</h4>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-6 padding-0">
+          <div class="col-12 col-md-6 col-lg-6 padding-0 series__card">
             <div class="course-card-style-3">
               <div class="card">
                 <div class="thumb series__info">
@@ -1700,15 +1795,15 @@
   
                 <div class="card-img-overlay">
                   <div class="card-body">
-                    <h4 class="text-center" style="color: black;">IMPACT</h4>
+                    <h4 class="text-center" style="color: black; letter-spacing: .2rem;">IMPACT</h4>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-6 col-lg-6 padding-0">
+        <div class="row justify-content-center series__row2">
+          <div class="col-12 col-md-6 col-lg-6 padding-0 series__card">
             <div class="course-card-style-3">
               <div class="card">
                 <div class="thumb series__info">
@@ -1731,13 +1826,13 @@
   
                 <div class="card-img-overlay">
                   <div class="card-body">
-                    <h4 class="text-center" style="color: black;">PERSPECTIVES</h4>
+                    <h4 class="text-center" style="color: black; letter-spacing: .2rem;">PERSPECTIVES</h4>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-6 padding-0">
+          <div class="col-12 col-md-6 col-lg-6 padding-0 series__card">
             <div class="course-card-style-3">
               <div class="card">
                 <div class="thumb series__info">
@@ -1760,7 +1855,7 @@
   
                 <div class="card-img-overlay">
                   <div class="card-body">
-                    <h4 class="text-center" style="color: black;">LIFE</h4>
+                    <h4 class="text-center" style="color: black; letter-spacing: .2rem;">LIFE</h4>
                   </div>
                 </div>
               </div>
@@ -1932,6 +2027,181 @@
     </script>
     <script src="http://codingeek.io/html/banting-university/codingeek-link.js"></script>
     <script src="https://codingeek.net/codingeek-js/codingeek.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        // Anim meet h1
+      setTimeout(() => {
+        $('.heading h1').css({'opacity':1, 'transform':'translateX(0%)'});
+    }, 700);
+    setTimeout(() => {
+        $('.international_anim').css({'opacity':1, 'transform':'translateY(0%)'});
+    }, 1000);
+      // JS DESKTOP
+      $(function() {
+          if(!window.mobileCheck()){        
+              $(window).scroll(function() {
+                  var scroll = $(window).scrollTop();
+                  console.log(scroll);
+
+      if (scroll >= 500) {
+        $('.our-levels-anim').css({'opacity':1, 'transform':'translateY(0%)'});
+        };
+  
+        if (scroll >= 830) {
+        $('.carta-anim-1').css({'opacity':1, 'transform':'translateX(0%)'});
+        };
+  
+      if (scroll >= 1300) {
+                $('.carta-anim-2').css({'opacity':1, 'transform':'translateY(0%)'});
+        };
+
+      if (scroll >= 1600) {
+          $('.carta-anim-3').css({'opacity':1, 'transform':'translateX(0%)'});
+};
+       
+
+      if (scroll >= 2000) { 
+            $('.our-principles-anim').css({'opacity':1, 'transform':'translateY(0%)'});
+            setTimeout(() => {
+            $('.img-anim').css({'opacity':1, 'transform':'translateX(0%)'});
+            }, 300);
+          }
+        
+      if (scroll >= 3350) {
+            $('.join-path-title').css({'opacity':1, 'transform':'translateY(0%)'});
+            setTimeout(() => {
+            $('.price-card').css({'opacity':1, 'transform':'translateY(0%)'});
+            }, 300);
+        }; 
+
+        
+        if (scroll >= 6400) {
+            $('.inbuilt-checks-1').css({'opacity':1, 'transform':'translateX(0%)'});
+            setTimeout(() => {
+            $('.inbuilt-checks-2').css({'opacity':1, 'transform':'translateX(0%)'});
+            }, 200);
+            setTimeout(() => {
+            $('.inbuilt__info').css({'opacity':1, 'transform':'translateY(0%)'});
+            }, 500);
+            setTimeout(() => {
+            $('.inbuilt__titles-aside').css({'opacity':1, 'transform':'translateY(0%)'});
+            }, 700);
+        };
+
+        if (scroll >= 8400) {
+            $('.natgeo__img').css({'opacity':1, 'transform':'translateY(0%)'});
+            setTimeout(() => {
+            $('.natgeo-content p').css({'opacity':1, 'transform':'translateY(0%)'});
+            }, 300);
+        }; 
+
+        if (scroll >= 8900) {
+            $('.benefits__img').css({'opacity':1, 'transform':'translateY(0%)'});
+            setTimeout(() => {
+            $('.benefits__right').css({'opacity':1, 'transform':'translateY(0%)'});
+            }, 500);
+          };
+
+          if (scroll >= 9550) {
+            $('.quote__after-text h2').css({'opacity':1, 'transform':'translateY(0%)'});
+          };
+
+          if (scroll >= 10000) {
+            $('.series__title').css({'opacity':1, 'transform':'translateY(0%)'});
+            setTimeout(() => {
+            $('.series__card').css({'opacity':1, 'transform':'translateY(0%)'});
+            }, 500);
+          };
+
+        })}
+  
+          // JS MOBILE    
+      else{
+              $(window).scroll(function() {
+              var scroll = $(window).scrollTop();
+              console.log(scroll);
+              if (scroll >= 500) {
+        $('.our-levels-anim').css({'opacity':1, 'transform':'translateY(0%)'});
+        };
+  
+        if (scroll >= 830) {
+        $('.carta-anim-1').css({'opacity':1, 'transform':'translateX(0%)'});
+        };
+  
+      if (scroll >= 1300) {
+                $('.carta-anim-2').css({'opacity':1, 'transform':'translateY(0%)'});
+        };
+
+      if (scroll >= 1600) {
+          $('.carta-anim-3').css({'opacity':1, 'transform':'translateX(0%)'});
+};
+       
+
+      if (scroll >= 2000) { 
+            $('.our-principles-anim').css({'opacity':1, 'transform':'translateY(0%)'});
+            setTimeout(() => {
+            $('.img-anim').css({'opacity':1, 'transform':'translateX(0%)'});
+            }, 300);
+          }
+        
+      if (scroll >= 3350) {
+            $('.join-path-title').css({'opacity':1, 'transform':'translateY(0%)'});
+            setTimeout(() => {
+            $('.price-card').css({'opacity':1, 'transform':'translateY(0%)'});
+            }, 300);
+        }; 
+
+        
+        if (scroll >= 9600) {
+            $('.inbuilt-checks-1').css({'opacity':1, 'transform':'translateX(0%)'});
+            setTimeout(() => {
+            $('.inbuilt-checks-2').css({'opacity':1, 'transform':'translateX(0%)'});
+            }, 200);
+            setTimeout(() => {
+            $('.inbuilt__info').css({'opacity':1, 'transform':'translateY(0%)'});
+            }, 500);
+            setTimeout(() => {
+            $('.inbuilt__titles-aside').css({'opacity':1, 'transform':'translateY(0%)'});
+            }, 700);
+        };
+
+        if (scroll >= 13000) {
+            $('.natgeo__img').css({'opacity':1, 'transform':'translateY(0%)'});
+            setTimeout(() => {
+            $('.natgeo-content p').css({'opacity':1, 'transform':'translateY(0%)'});
+            }, 300);
+        }; 
+
+        if (scroll >= 13600) {
+            $('.benefits__img').css({'opacity':1, 'transform':'translateY(0%)'});
+            setTimeout(() => {
+            $('.benefits__right').css({'opacity':1, 'transform':'translateY(0%)'});
+            }, 500);
+          };
+
+          if (scroll >= 14100) {
+            $('.quote__after-text h2').css({'opacity':1, 'transform':'translateY(0%)'});
+          };
+
+          if (scroll >= 14600) {
+            $('.series__title').css({'opacity':1, 'transform':'translateY(0%)'});
+            setTimeout(() => {
+            $('.series__card').css({'opacity':1, 'transform':'translateY(0%)'});
+            }, 500);
+          };
+    
+      });
+      }
+      });
+      // Para checkear Mobile o Desktop
+      window.mobileCheck = function() {
+          let check = false;
+          (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+          return check;
+        };
+  });
+    </script>
 </body>
 
 </html>
