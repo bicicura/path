@@ -47,6 +47,53 @@
       }
 
 
+      .exam_desc {
+        width: 70ch;
+      }
+
+      /* 
+    ===============
+    SIDE ICONS MENU
+    ===============
+    */
+
+    #side__email {
+        position: relative;
+    }
+
+    #side__email:hover::after {
+        content: 'admin@pathexaminations.com';
+        position: absolute;
+        box-shadow: 0px 7px 5px 0px rgba(0,0,0,.15);
+        background: #004969;
+        padding: .5rem 1rem;
+        font-family: 'Lato', sans-serif;
+        top: -50%;
+        right: 150%;
+        color: white;
+        z-index:99999!important;
+        border-radius: 4px;
+    }
+
+    #side__phone {
+        position: relative;
+    }
+
+    #side__phone:hover::after {
+        content: '+54 9 11 5738 5100';
+        position: absolute;
+        box-shadow: 0px 7px 5px 0px rgba(0,0,0,.15);
+        white-space: nowrap;
+        background: #004969;
+        padding: .5rem 1rem;
+        font-family: 'Lato', sans-serif;
+        top: -50%;
+        right: 150%;
+        color: white;
+        z-index:99999!important;
+        border-radius: 4px;
+    }
+
     /* 
     ============
     EXAM MODULES (line 504)
@@ -54,7 +101,7 @@
     */
 
     .table__title {
-    padding: .5rem 0;
+    padding: .5rem .5rem;
     width: 50%;
     margin: 1rem auto;
     color: white;
@@ -185,6 +232,17 @@
       box-shadow: 0px 10px 11px 1px rgb(0 0 0 / 10%)!important;
     }
 
+    .card-img-overlay {
+      position: relative;
+    }
+
+    .plus__container {
+      right: 1.5%;
+      top: 1.5%;
+    }
+
+
+
 
     /* MODAL HECHO POR FRAN */
     #modal-back{
@@ -207,7 +265,7 @@
       position: relative;
       background: white;
       width: 65vw;
-      padding: 50px 7%;
+      padding: 50px 5%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -273,8 +331,30 @@ ANIMS OUR EXAMINATIONS
 }
 
     @media only screen and (max-width: 799px) {
+      .social-icon {
+      position: absolute;
+      /* right: 18%; */
+      left: 88%;
+      background: rgba(0, 73, 105, .7);
+      /* width: 3.8%; */
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      }
+
+      .features-section .container h2 {
+        margin-bottom: 1rem;
+      }
+
+      .popular-courses {
+        padding: 0;
+      }
+
+
+
       .section {
-        margin: 4vh 0!important;
+        margin: 8vh 0!important;
       }
 
       .navbar-mobile {
@@ -290,9 +370,17 @@ ANIMS OUR EXAMINATIONS
         white-space: nowrap;
       }
 
-    .table__title {
-    width: 100%;
-  }
+      .table__title {
+      width: 100%;
+      }
+
+      .about-our-exams__info {
+        padding: 0!important;
+      } 
+
+      .our-exams-anim2 {
+        margin: 2rem 0;
+      }
 
     .modules__text-container h2::after {
       width: 50%;
@@ -312,6 +400,7 @@ ANIMS OUR EXAMINATIONS
   .modules__content {
     margin: 0 auto;
     width: 90%;
+    margin: 1.5rem auto;
   }
 
   .modules__line {
@@ -324,7 +413,11 @@ ANIMS OUR EXAMINATIONS
 
   #modal-back>div {
     width: 100%;
-    padding: 5% 5%;
+    padding: 7% 5%;
+  }
+
+  .level-specs__cont {
+    margin: 2.5% 0;
   }
 
   .level-specs__title {
@@ -445,15 +538,15 @@ ANIMS OUR EXAMINATIONS
   <section class="breadcrub-style-4 section margin-bottom-0 header-img">
     <div class="social-icon">
       <ul>
-          <li><a target="_blank" href="https://www.facebook.com/codingeek.net"><i class="fab fa-facebook-square"></i></a></li>
-          <li><a target="_blank" href="https://www.instagram.com/codingeeknet/"><i class="fab fa-instagram"></i></a></li>
+          <li><a target="_blank" href="https://www.facebook.com/pathlatam"><i class="fab fa-facebook-square"></i></a></li>
+          <li><a target="_blank" href="https://www.instagram.com/pathlatam"><i class="fab fa-instagram"></i></a></li>
           <li><i class="fas fa-envelope" id="open-form-popup"></i></li>
           <li><i class="fas fa-phone" id="open-opening-popup"></i></li>      
       </ul>
   </div>
     <div class="container">
       <div class="heading">
-        <h2>Our examinations</h2>
+        <h1>Our examinations</h1>
       </div>
     </div>
   </section>
@@ -461,13 +554,13 @@ ANIMS OUR EXAMINATIONS
   <section class="features-section section">
     <div class="container">
         <div class="row d-flex justify-content-between">
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 about-our-exams__info">
               <h2 class="our-exams-anim1">About our exams</h2>
               <p>Path exams assess the ability to receive information (reading and listening skills) and provide information (speaking and writing skills). Furthermore, we look for evidence of active communication skills. In order to achieve this, our examinations offer more opportunities for free expression of ideas. The relevance and clarity of those ideas may be enough to achieve good marks. Appropriate vocabulary with correct spelling, or clear pronunciation when speaking, is however important.</p>
               <p>We do not want students to have to attend lengthy exam preparation classes in order to learn ‘exam techniques’ or a certain exam format. We are interested in communication skills, so all that is really needed is to attend regular classes.</p>
             </div>
             <div class="col-12 col-lg-6 content">
-              <h4 style="color: #004969;" class="margin-bottom-30 our-exams-anim2">Our examinations are carefully designed around the following elements of language use and acquisition:</h4>
+              <h4 style="color: #004969;" class="our-exams-anim2">Our examinations are carefully designed around the following elements of language use and acquisition:</h4>
                 <div class="accordion-wrapper">
                     <div id="accordion">
                         <div class="card">
@@ -533,10 +626,17 @@ ANIMS OUR EXAMINATIONS
     </div>
 </section>
 
+<!-- Side Icons -->
+<div class="fixed-right side-form-icons">
+  <i class="fas fa-phone icon side__button" id="side__phone"></i>
+  <i class="fas fa-envelope icon side__button" id="side__email"></i>
+  <i class="fas fa-map-marker-alt icon"></i>
+</div>
+
 <!-- EXAM MODULES -->
 <div class="section modules">
   <div class="container modules__container">
-    <div class="modules__text-container text-center margin-bottom-20 margin-top-20">
+    <div class="modules__text-container text-center">
       <h2 class="our-exams-anim3">Exam modules</h2>
       <p style="background-color: #767EA5;" class="table__title">Our examinations are divided into modules, which may be taken separately or altogether:</p>
       <p class="table__title">Speaking module / Listening module / Reading and writing module</p>
@@ -586,15 +686,13 @@ ANIMS OUR EXAMINATIONS
               border-radius: 4px;">
                 <div class="thumb exam-card___text">
                   <h5 class="text-center" style="width: 90%; margin: 0 auto;">Speaking Performance Assessment (SPA) level I</h5>
-                  <div class="hover">
-                    <span class="plus">
-                      <i style="color: black;" class="fas fa-plus-circle" id="open-exam-modal"></i>
-                    </span>
-                  </div>
                   <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_5.png" alt="Card image cap"> -->
                   
                 </div>
                 <div class="card-img-overlay">
+                  <span style="position: absolute;" class="plus plus__container">
+                    <i style="color: #004969;" class="fas fa-plus-circle" id="open-exam-modal"></i>
+                  </span>
                   <div style="background-color: #004969;border: none;" class="card-body text-center">
                     <h6 style="color: white">A1-</h6>
                   </div>
@@ -608,15 +706,11 @@ ANIMS OUR EXAMINATIONS
               border-radius: 4px;">
                 <div class="thumb exam-card___text">
                   <h5 class="text-center" style="width: 90%; margin: 0 auto;">Speaking Performance Assessment (SPA) level II</h5>
-                  <div class="hover">
-                    <span class="plus">
-                      <i style="color: black;" class="fas fa-plus-circle" id="open-exam-modal"></i>
-                    </span>
-                  </div>
-                  <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_5.png" alt="Card image cap"> -->
-                  
                 </div>
                 <div class="card-img-overlay">
+                  <span style="position: absolute;" class="plus plus__container">
+                    <i style="color: #004969;" class="fas fa-plus-circle" id="open-exam-modal"></i>
+                  </span>
                   <div style="background-color: #004969;border: none;" class="card-body text-center">
                     <h6 style="color: white">A1+</h6>
                   </div>
@@ -630,15 +724,11 @@ ANIMS OUR EXAMINATIONS
               border-radius: 4px;">
                 <div class="thumb exam-card___text">
                   <h5 class="text-center" style="width: 90%; margin: 0 auto;">Speaking Performance Assessment (SPA) level III</h5>
-                  <div class="hover">
-                    <span class="plus">
-                      <i style="color: black;" class="fas fa-plus-circle" id="open-exam-modal"></i>
-                    </span>
-                  </div>
-                  <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_5.png" alt="Card image cap"> -->
-                  
                 </div>
                 <div class="card-img-overlay">
+                  <span style="position: absolute;" class="plus plus__container">
+                    <i style="color: #004969;" class="fas fa-plus-circle" id="open-exam-modal"></i>
+                  </span>
                   <div style="background-color: #004969;border: none;" class="card-body text-center">
                     <h6 style="color: white">A1+</h6>
                   </div>
@@ -660,6 +750,9 @@ ANIMS OUR EXAMINATIONS
                 <h4>Entry level</h4>                
               </div>
               <div class="card-img-overlay">
+                <span style="position: absolute;" class="plus plus__container">
+                  <i style="color: #CFA676;" class="fas fa-plus-circle" id="open-exam-modal"></i>
+                </span>
                 <div style="background-color: #CFA676;border: none;" class="card-body text-center">
                   <h6 style="color: white">A1-</h6>
                 </div>
@@ -673,10 +766,12 @@ ANIMS OUR EXAMINATIONS
             border-radius: 4px;">
               <div class="thumb exam-card___text">
                 <h4>Access level</h4>
-                <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_4.png" alt="Card image cap"> -->
               </div>
 
               <div class="card-img-overlay">
+                <span style="position: absolute;" class="plus plus__container">
+                  <i style="color: #CFA676;" class="fas fa-plus-circle" id="open-exam-modal"></i>
+                </span>
                 <div style="background-color: #CFA676; border: none;" class="card-body text-center">
                   <h6 style="color: white">A1</h6>
                 </div>
@@ -693,6 +788,9 @@ ANIMS OUR EXAMINATIONS
                 <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_4.png" alt="Card image cap"> -->
               </div>
               <div class="card-img-overlay">
+                <span style="position: absolute;" class="plus plus__container">
+                  <i style="color: #CFA676;" class="fas fa-plus-circle" id="open-exam-modal"></i>
+                </span>
                 <div style="background-color: #CFA676; border:none" class="card-body text-center">
                   <h6 style="color: white;">A1+</h6>
                 </div>
@@ -713,6 +811,9 @@ ANIMS OUR EXAMINATIONS
                 <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_5.png" alt="Card image cap"> -->
               </div>
               <div class="card-img-overlay">
+                <span style="position: absolute;" class="plus plus__container">
+                  <i style="color: #CB574C;" class="fas fa-plus-circle" id="open-exam-modal"></i>
+                </span>
                 <div style="background-color: #CB574C;" class="card-body text-center">
                   <h6 style="color: white;">A2</h6>
                 </div>
@@ -731,6 +832,9 @@ ANIMS OUR EXAMINATIONS
               </div>
 
               <div class="card-img-overlay">
+                <span style="position: absolute;" class="plus plus__container">
+                  <i style="color: #CB574C;" class="fas fa-plus-circle" id="open-exam-modal"></i>
+                </span>
                 <div style="background-color: #CB574C;" class="card-body text-center">
                   <h6 style="color: white;">A2+</h6>
                 </div>
@@ -750,6 +854,9 @@ ANIMS OUR EXAMINATIONS
                 <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_5.png" alt="Card image cap"> -->
               </div>
               <div class="card-img-overlay">
+                <span style="position: absolute;" class="plus plus__container">
+                  <i style="color: #767EA5;" class="fas fa-plus-circle" id="open-exam-modal"></i>
+                </span>
                 <div style="background-color: #767EA5;" class="card-body text-center">
                   <h6>B1</h6>
                 </div>
@@ -763,11 +870,12 @@ ANIMS OUR EXAMINATIONS
             <div class="card disparar_modal" id="competencyb2" style="border: 1px solid #767EA5;
             border-radius: 4px;">
               <div class="thumb exam-card___text">
-                <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_4.png" alt="Card image cap"> -->
                 <h4>Competency level</h4>
               </div>
-
               <div class="card-img-overlay">
+                <span style="position: absolute;" class="plus plus__container">
+                  <i style="color: #767EA5;" class="fas fa-plus-circle" id="open-exam-modal"></i>
+                </span>
                 <div style="background-color: #767EA5;" class="card-body text-center">
                   <h6>B2</h6>
                 </div>
@@ -781,10 +889,11 @@ ANIMS OUR EXAMINATIONS
             border-radius: 4px;">
               <div class="thumb exam-card___text">
                 <h4>Forward level</h4>
-                <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_4.png" alt="Card image cap"> -->
               </div>
-
               <div class="card-img-overlay">
+                <span style="position: absolute;" class="plus plus__container">
+                  <i style="color: #767EA5;" class="fas fa-plus-circle" id="open-exam-modal"></i>
+                </span>
                 <div style="background-color: #767EA5;" class="card-body text-center">
                   <h6 style="color: white;">B2+</h6>
                 </div>
@@ -797,98 +906,84 @@ ANIMS OUR EXAMINATIONS
       </div>
     </div>
   </section>
+</div>
 
-  <!-- Popup -->
-  <!-- <div class="side-form-popup">
-    <div class="popup-wrapper">
-        <div class="center-popup">
-            <div class="opening-popup">
-                <div class="close-popup">
-                    <i class="fas fa-times"></i>
-                </div>
-                <div class="row exam__modal padding-top-40 padding-bottom-60">
-                    <div class="content">
-                        <h5>A1 | Speaking Performance Assessment (SPA) level I</h5>
-                        <p class="comment-item-style-1">This is the first very basic level on the Path speaking-only exam scale. Candidates at this level can understand short, very simple questions and statements about everyday familiar words, provided they are delivered slowly and clearly and accompanied by visuals or manual gestures to support understanding and repeated if necessary. They can produce short phrases about themselves giving basic personal information. They make frequent use of very simple fixed expressions.</p>
-                        <div class="level-sepecs__container comment-item-style-1">
-                          <h5>Level specifications</h5>
-                          <div class="level-specs__cont d-flex">
-                            <div class="level-specs__title">
-                              <ul>
-                                <li>Exam type:</li>
-                                <li>Modules:</li>
-                                <li>Total length:</li>
-                                <li>Age range:</li>
-                                <li>CEFR level:</li>
-                              </ul>
-                            </div>
-                            <div class="level-specs__info">
-                              <ul>
-                                <li>A1- (Pre Breakthrough)</li>
-                                <li>Online and presential</li>
-                                <li>Speaking</li>
-                                <li>10 minutes</li>
-                                <li>Version for children aged 4-12, Version for adolescents aged 13+ and adults</li>
-                              </ul>
-                            </div>
+<div class="side-form-popup">
+  <div class="popup-wrapper">
+      <div class="center-popup">
+        <div class="opening-popup">
+          <div class="close-popup">
+              <i class="fas fa-times"></i>
+          </div>
+          <div class="row">
+              <div class="col-md-6 col-lg-8 media">
+                  <img src="assets/img/University/About-us-1/series-life.jpg" alt="media"
+                      class="img-fluid">
+              </div>
+              <div class="col-md-6 col-lg-4 content">
+                  <h5>Opening hours</h5>
+                  <div class="openings">
+                      <div class="opening opening-days">
+                          <p class="day">Monday</p>
+                          <div class="divider"></div>
+                          <p class="day">Friday</p>
+                      </div>
+                      <div class="opening opening-time">
+                          <p class="time">08.00 am</p>
+                          <div class="divider"></div>
+                          <p class="time">16.00 pm</p>
+                      </div>
+                  </div>
+                  <p class="num">+54 9 11 5738 5100</p>
+              </div>
+          </div>
+      </div>
+                  <div class="location-popup">
+                      <div class="close-popup">
+                          <i class="fas fa-times"></i>
+                      </div>
+                      <div class="row">
+                          <div class="col-12 col-md-6 col-lg-8 media">
+                              <div id="location-map"></div>
                           </div>
+                          <div class="col-12 col-md-6 col-lg-4 content">
+                              <h5>Address</h5>
+                              <p class="address">2, Ave Manchester, Lorem ipsum St, Rio Danubin</p>
+                              <button class="main-btn">Open in Maps</button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="form-popup">
+                    <div class="close-popup">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg-7 content">
+                            <h4>You have a question for us?</h4>
+                            <p>leave your message below or email us at admin@pathexaminations.com</p>
+                            <form class="text-left form-style-2">
+                                <div class="form-group required">
+                                    <label for="email">Email address</label>
+                                    <input type="email" id="email" class="form-control" name="email"
+                                        placeholder="johnLP12@gmail.com" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <input type="text" id="message" class="form-control" name="name"
+                                        placeholder="Hello, I wanted to know about this particular course called..." />
+                                    <span class="small-text">120 characters left</span>
+                                </div>
+                                <button class="main-btn" type="submit">Send message</button>
+                            </form>
                         </div>
-                          
-                        <div><a class="modal__action">Download a sample test</a></div>
-                        <div><a class="modal__action">Book this exam</a></div>
-                        <div><a class="modal__action">Are you ready for this exam?</a></div>
+                        <div class="d-none d-lg-block col-lg-5 media">
+                            <img src="assets/img/University/students/05.jpg" alt="media image"
+                                class="img-fluid" />
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="location-popup">
-                <div class="close-popup">
-                    <i class="fas fa-times"></i>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-8 media">
-                        <div id="location-map"></div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 content">
-                        <h5>Address</h5>
-                        <p class="address">2, Ave Manchester, Lorem ipsum St, Rio Danubin</p>
-                        <button class="main-btn">Open in Maps</button>
-                    </div>
-                </div>
-            </div>
-            <div class="form-popup">
-                <div class="close-popup">
-                    <i class="fas fa-times"></i>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-lg-7 content">
-                        <h4>You have a question for us?</h4>
-                        <p>leave your message below or email us at info@bantinguniversity.com</p>
-                        <form class="text-left form-style-2">
-                            <div class="form-group required">
-                                <label for="email">Email address</label>
-                                <input type="email" id="email" class="form-control" name="email"
-                                    placeholder="johnLP12@gmail.com" />
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <input type="text" id="message" class="form-control" name="name"
-                                    placeholder="Hello, I wanted to know about this particular course called..." />
-                                <span class="small-text">120 characters left</span>
-                            </div>
-                            <button class="main-btn" type="submit">Send message</button>
-                        </form>
-                    </div>
-                    <div class="d-none d-lg-block col-lg-5 media">
-                        <img src="assets/img/University/Coming_soon/ambar-simpang.png" alt="media image"
-                            class="img-fluid" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
+      </div>
+  </div>
 </div>
 
 
@@ -930,10 +1025,11 @@ ANIMS OUR EXAMINATIONS
   </div>              
 </div>
 
+
+
   <!-- Footer Section -->
   <footer class="footer-section" id="footer">
   </footer>
-
 
   <div class="preloader" id="preloader">
     <div class="preloader-inner">
@@ -955,8 +1051,6 @@ ANIMS OUR EXAMINATIONS
 
 <script>
 $(document).ready(function () {
-
-
 
 var exams_modales = {
     speakinga1menos : {
@@ -1142,7 +1236,7 @@ if (scroll >= 900) {
       $('.a2-level').css({'opacity':1, 'transform':'translateY(0%)'});
     };
     
-    if (scroll >= 3100) {
+    if (scroll >= 3000) {
       $('.independent-level').css({'opacity':1, 'transform':'translateY(0%)'});
     };
     
@@ -1159,8 +1253,12 @@ if (scroll >= 900) {
               console.log(scroll);
               // Si se excede la distancia de scroll que queres, haces un menjo
               setTimeout(() => {
-    $('.our-exams-anim2').css({'opacity':1, 'transform':'translateX(0%)'});
-}, 1000);
+              $('.our-exams-anim1').css({'opacity':1, 'transform':'translateX(0%)'});
+              }, 500);
+
+              setTimeout(() => {
+              $('.our-exams-anim2').css({'opacity':1, 'transform':'translateX(0%)'});
+              }, 500);
 
 if (scroll >= 1200) {
       $('.our-exams-anim3').css({'opacity':1, 'transform':'translateY(0%)'});

@@ -58,7 +58,7 @@
       }
 
     .section {
-      margin: 18vh 0!important;
+      margin: 13vh 0!important;
     }
 
     .teachers__title {
@@ -143,6 +143,10 @@
         align-items: center;
     }
 
+    .event-item-style-1 .details p {
+      font-size: .9rem;
+    }
+
     /* 
     ==================
     QUOTE AFTER BANNER
@@ -192,6 +196,7 @@
     .modules__circle-cont {
       position: relative;
       display: flex;
+      margin: 3rem 0;
     }
 
     .modules__content {
@@ -267,6 +272,7 @@
         .inbuilt-info-container {
           width: 100%;
           display: flex;
+          margin: 1.8rem 0;
           align-items: flex-end;
           /* outline: 2px pink solid; */
 
@@ -285,7 +291,6 @@
         .inbuilt__info {
           width: 90%;
           border-radius: 4px;
-          /* border: 2px solid rgba(0, 73, 105, .8); */
           box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.25);
           padding: 2rem 2rem 4rem 2rem;
         }
@@ -296,9 +301,17 @@
         }
 
         .join-path-title {
-      position: relative;
-      font-size: 46px;
-    }
+        position: relative;
+        font-size: 46px;
+        }
+
+        .key-reasons-cont {
+          margin: 3rem 0;
+        }
+        
+        .inbuilt__cta {
+          margin-top: 3rem 0;
+        }
 
     .join-path-title::after {
       content: 'Join Path';
@@ -414,6 +427,11 @@
         .natgeo-content p {
           width: 70%;
           margin: 0 auto;
+          font-size: 1rem;
+        }
+
+        .natgeo-content p:first-of-type {
+          margin: 1rem auto;
         }
 
         .movida {
@@ -457,7 +475,7 @@
         .benefits__left span {
           font-weight: bold;
           font-size: 4rem;
-          color: #0091B7;
+          color: #004969;
         }
 
         .benefits__img-container {
@@ -492,7 +510,7 @@
 
     .series__text {
       width: 55%;
-      font-size: 1.125rem;
+      font-size: 1rem;
       margin: 0 auto;
       font-weight: bold;
       margin-bottom: 6vh;
@@ -529,6 +547,11 @@
         }
         .TH h4 {
           margin-bottom: .4rem!important;
+        }
+
+        .fa-plus-circle:before {
+          filter: drop-shadow(0px 0px 2px black);
+          font-size: 1.2rem;
         }
 
         /* 
@@ -573,32 +596,90 @@
         .price-cards>div:nth-child(4) {
           transition-delay: .99s;
         }
+
+        /* 
+    ===============
+    SIDE ICONS MENU
+    ===============
+    */
+
+    #side__email {
+        position: relative;
+    }
+
+    #side__email:hover::after {
+        content: 'admin@pathexaminations.com';
+        position: absolute;
+        box-shadow: 0px 7px 5px 0px rgba(0,0,0,.15);
+        background: #004969;
+        padding: .5rem 1rem;
+        font-family: 'Lato', sans-serif;
+        top: -50%;
+        right: 150%;
+        color: white;
+        z-index:99999!important;
+        border-radius: 4px;
+    }
+
+    #side__phone {
+        position: relative;
+    }
+
+    #side__phone:hover::after {
+        content: '+54 9 11 5738 5100';
+        position: absolute;
+        box-shadow: 0px 7px 5px 0px rgba(0,0,0,.15);
+        white-space: nowrap;
+        background: #004969;
+        padding: .5rem 1rem;
+        font-family: 'Lato', sans-serif;
+        top: -50%;
+        right: 150%;
+        color: white;
+        z-index:99999!important;
+        border-radius: 4px;
+    }
         
 
 
         @media only screen and (max-width: 799px) {
+          h2 {
+            font-size: 1.8rem!important;
+          }
+
           .section {
-          margin: 4vh 0!important;
+          margin: 10vh 0!important;
           }
 
           .heading{
-            min-width: 90%!important;
-            padding: 0.25rem 2.5rem 0 1rem!important;
+            width: 100%!important;
+            padding: 0.25rem 0 0 1rem!important;
+            left: 0;
           }
 
           .heading h1 {
-          font-size: 1.5rem!important;
+          font-size: 1.9rem!important;
           margin: 0;
         }
 
-        .events-section h2::after, .join-path-title::after, .qmark h2::after, .series__title::after {
-      width: 60%;
-      margin: 0 auto;
-      transform: scale(1.5,1.5);
-    }
+        .international_anim {
+          margin-top: 5rem;
+        }
 
-        .breadcrub-style-5 .heading {
-          min-width: 400px;
+        .international__text {
+          text-align: left;
+          width: 100%;
+          margin-bottom: 2rem;
+        }
+
+        .events-section h2::after, .join-path-title::after, .qmark h2::after, .series__title::after {
+        width: 60%;
+        margin: 0 auto;
+        transform: scale(1.7,1.7);
+        }
+
+        .join-path-title {
+          font-size: 2rem;
         }
 
         .table__title {
@@ -607,6 +688,10 @@
 
         .cards-mobile {
           flex-direction: column;
+        }
+
+        .price-card {
+          outline: 1px solid rgba(0, 0, 0, .1);
         }
 
         .inbuilt__title {
@@ -634,6 +719,7 @@
         .modules__content {
           width: 100%;
           padding: 0 5%;
+          margin-bottom: 1.5rem;
         }
 
         .qmark__card-container {
@@ -642,6 +728,7 @@
 
         .qmark__card, .qmark__end {
           width: 100%;
+          margin-bottom: 1.8rem;
         }
 
         .teacher-form {
@@ -666,8 +753,26 @@
           margin: 0 auto;
         }
 
+        .natgeo__logo-container {
+          width: 100%;
+        }
+
+        .natgeo-content p:first-of-type {
+          margin: 0 auto;
+          width: 100%;
+        }
+
+        .natgeo-content p {
+          margin-top: 1rem;
+          width: 100%;
+        }
+
+        .movida {
+          height: 500px;
+        }
+
         .benefits {
-          width: 55%;
+          width: 100%;
         }
 
         .benefits__left {
@@ -676,20 +781,22 @@
         }
 
         .benefits__img-container {
-        width: 90%;
+        width: 60%;
+        margin: 0 auto;
         }
 
         .benefits__left span {
-      margin: 0 auto;
+        margin: 0 auto;
         }
 
         .benefits__right {
         width: 100%;
+        bottom: -3%;
         }
 
         .popover-right {
           width: 300px;
-          left: -25%;
+          left: 10%;
           top: -440%;
         }
 
@@ -698,9 +805,19 @@
           text-align: left;
         }
 
+        .popular-courses {
+          padding: 0;
+        }
+
         .series__text {
           width: 100%;
           font-size: .9rem;
+        }
+
+        .carta-anim-2, .img-anim, .carta-anim-1, .carta-anim-3, .inbuilt-checks-1, .inbuilt-checks-2, .our-principles-anim {
+          opacity: 0;
+          transform: translateY(10%);
+          transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
         }
       }
         </style>
@@ -781,8 +898,8 @@
     <div class="breadcrub-style-5 section">
       <div class="social-icon">
         <ul>
-            <li><a target="_blank" href="https://www.facebook.com/codingeek.net"><i class="fab fa-facebook-square"></i></a></li>
-            <li><a target="_blank" href="https://www.instagram.com/codingeeknet/"><i class="fab fa-instagram"></i></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/pathlatam"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/pathlatam"><i class="fab fa-instagram"></i></a></li>
             <li><i class="fas fa-envelope" id="open-form-popup"></i></li>
             <li><i class="fas fa-phone" id="open-opening-popup"></i></li>      
         </ul>
@@ -814,16 +931,14 @@
 
     
 
-        <!-- Side form icons -->
-<div class="fixed-right side-form-icons">
-  <a target="_blank" href="https://www.facebook.com/codingeek.net"><i class="fab icon fa-facebook-square"></i></a>
-  <a target="_blank" href="https://www.instagram.com/codingeeknet/"><i class="fab icon fa-instagram"></i></a>
-  <i class="fas fa-map-marker-alt icon" id="open-location-popup"></i>
-</div>
-        <div class="container">
-            <!-- <h2 class="margin-bottom-50">Upcoming events</h2> *SACAR* -->
-
-            
+        
+        <!-- Side Icons -->
+          <div class="fixed-right side-form-icons">
+           <i class="fas fa-phone icon side__button" id="side__phone"></i>
+            <i class="fas fa-envelope icon side__button" id="side__email"></i>
+            <i class="fas fa-map-marker-alt icon"></i>
+          </div>
+        <div class="container">            
             <div class="row event-item-style-1 even-event carta-anim-1">
                 <div class="col-5 col-lg-2 date">
                     <h1>.A</h1>
@@ -1481,10 +1596,10 @@
           </div>
         </div> 
       </div>
-      <div class="modules">
+      <div class="key-reasons-cont">
         <div class="container modules__container">
           <div class="modules__text-container text-center margin-bottom-20 margin-top-20">
-            <h2 class="teachers__title">Key reasons to adopt the Path Inbuilt programme</h2>
+            <h3 class="teachers__title key-reasons-title">Key reasons to adopt the Path Inbuilt programme</h3>
           </div>
           <div class="row d-flex justify-content-between modules__circle-cont">
             
@@ -1527,14 +1642,14 @@
                     <div id="collapseTwenty" class="collapse" aria-labelledby="headingTwenty" data-parent=".acordion-container">
                       <div class="card-body">
                         <ul>
-                          <li>take part and offer your staff Onboarding meetings to gain a deeper understanding of the Path proposal</li>
-                          <li>receive exclusive support from the Path academic team throughout the year</li>
-                          <li>have your own Path academic proposal to share with students and parents</li>
-                          <li>be able to organise informative meetings delivered by Path for students and parents</li>
-                          <li>have access to a demo of our exclusive e-platform Beyond™ for online mock exams</li>
-                          <li>have access to My Path area to download preparation materials and paper-based mock exams</li>
-                          <li>be able to conduct online or paper-based exam sessions at your institution</li>
-                          <li>be awarded scholarships for 3 all-module exams as part of the Path CSR (Corporate Social Responsibility) programme</li>
+                          <li>Take part and offer your staff Onboarding meetings to gain a deeper understanding of the Path proposal.</li>
+                          <li>Receive exclusive support from the Path academic team throughout the year.</li>
+                          <li>Have your own Path academic proposal to share with students and parents.</li>
+                          <li>Be able to organise informative meetings delivered by Path for students and parents.</li>
+                          <li>Have access to a demo of our exclusive e-platform Beyond™ for online mock exams.</li>
+                          <li>Have access to My Path area to download preparation materials and paper-based mock exams.</li>
+                          <li>Be able to conduct online or paper-based exam sessions at your institution.</li>
+                          <li>Be awarded scholarships for 3 all-module exams as part of the Path CSR (Corporate Social Responsibility) programme.</li>
                         </ul>
                       </div>
                     </div>
@@ -1556,11 +1671,11 @@
                     <div id="collapseTwentytwo" class="collapse" aria-labelledby="headingTwentytwo" data-parent=".acordion-container">
                       <div class="card-body">
                         <ul>
-                          <li>be able to work closely together with our administrative team</li>
-                          <li>be provided with fixed exam fees in your local currency</li>
-                          <li>be able to offer your students a 10% discounts on exam registrations</li>
-                          <li>be able to make level changes to exam registrations throughout the year</li>
-                          <li>be given a 10% commission on exam registrations</li>
+                          <li>Be able to work closely together with our administrative team.</li>
+                          <li>Be provided with fixed exam fees in your local currency.</li>
+                          <li>Be able to offer your students a 10% discounts on exam registrations.</li>
+                          <li>Be able to make level changes to exam registrations throughout the year.</li>
+                          <li>Be given a 10% commission on exam registrations.</li>
                         </ul>
                       </div>
                     </div>
@@ -1582,16 +1697,16 @@
                     <div id="collapseTwentythree" class="collapse" aria-labelledby="headingTwentythree" data-parent=".acordion-container">
                       <div class="card-body">
                         <ul>
-                          <li>have a unique Path ID number</li>
-                          <li>receive a digital and a paper certificate issued by Path Examinations UK stating your institution is a Path Certified Exam Centre and offers end-of-course international assessment</li>
-                          <li>receive a personalised Path Certified Exam Centre logo, stating that all of your courses include international certification</li>
-                          <li>be sent a Path Certified Exam Centre banner design, stating your institution offers end-of-course international assessment</li>
-                          <li>be sent personalised advertising material (images or videos) bearing your logo every month</li>
-                          <li>have the possibility to become a Path supervisor and offer your staff to act as invigilators</li>
+                          <li>Have a unique Path ID number.</li>
+                          <li>Receive a digital and a paper certificate issued by Path Examinations UK stating your institution is a Path Certified Exam Centre and offers end-of-course international assessment.</li>
+                          <li>Receive a personalised Path Certified Exam Centre logo, stating that all of your courses include international certification.</li>
+                          <li>Be sent a Path Certified Exam Centre banner design, stating your institution offers end-of-course international assessment.</li>
+                          <li>Be sent personalised advertising material (images or videos) bearing your logo every month.</li>
+                          <li>Have the possibility to become a Path supervisor and offer your staff to act as invigilators.</li>
                           <li style="font-weight: bold;">After two consecutive successful annual registrations, your institution will be:</li>
-                          <li>listed on our website, including a description of the courses you offer</li>
-                          <li>invited, together with your staff, students and parents, to an awarding ceremony at which you will be presented with a Certified Exam Centre plaque</li>
-                          <li>a candidate to the Path Q-mark (Quality mark)</li>
+                          <li>- Listed on our website, including a description of the courses you offer.</li>
+                          <li>- Invited, together with your staff, students and parents, to an awarding ceremony at which you will be presented with a Certified Exam Centre plaque.</li>
+                          <li>- A candidate to the Path Q-mark (Quality mark)</li>
                         </ul>
                       </div>
                     </div>
@@ -1616,12 +1731,12 @@
       <div class="container qmark">
         <h2 class="text-center teachers__title">Path Q-mark</h2>
         <div class="qmark__card-container">
-          <div class="qmark__card"><div class="qmark__card-circle" style="background-color:#7BA988"><img src="" alt=""></div><p>The Path Q-mark (Quality mark) is an international accreditation that supports and recognises rigorous standards in the provision, practice and performance of English language courses at level B1 and above. Our Q-mark provides institutions with recognition of their commitment to academic excellence.</p></div>
-          <div class="qmark__card"><div class="qmark__card-circle" style="background-color:#CFA676"><img src="" alt=""></div><p>Institutions that achieve the Q-mark will receive an awarding certificate for display and a personalised quality logo to use on their website and marketing material.</p></div>
-          <div class="qmark__card"><div class="qmark__card-circle" style="background-color:#CB574C" ><img src="" alt=""></div><p>In order to be eligible for the Path Q-mark, institutions must plan and review their courses effectively and consistently apply suitable policies and procedures for quality assurance. The courses offered must also be delivered by staff with appropriate qualifications, experience and expertise.</p></div>
+          <div class="qmark__card"><div class="qmark__card-circle modules__circle" style="background-color:#7BA988"><img class="modules__circle-img" src="assets\img\icons\study-01.svg" alt="Skills"></div><p>The Path Q-mark (Quality mark) is an international accreditation that supports and recognises rigorous standards in the provision, practice and performance of English language courses at level B1 and above. Our Q-mark provides institutions with recognition of their commitment to academic excellence.</p></div>
+          <div class="qmark__card"><div class="qmark__card-circle modules__circle" style="background-color:#CFA676"><img class="modules__circle-img" src="assets\img\icons\computer-01.svg" alt="Marks"></div><p>Institutions that achieve the Q-mark will receive an awarding certificate for display and a personalised quality logo to use on their website and marketing material.</p></div>
+          <div class="qmark__card"><div class="qmark__card-circle modules__circle" style="background-color:#CB574C" ><img class="modules__circle-img" src="assets\img\icons\learn-01.svg" alt="Levels"></div><p>In order to be eligible for the Path Q-mark, institutions must plan and review their courses effectively and consistently apply suitable policies and procedures for quality assurance. The courses offered must also be delivered by staff with appropriate qualifications, experience and expertise.</p></div>
         </div>
 
-        <h4 class="text-center teachers__title">To apply for the Path Q-mark, institutions must:</h4>           
+        <h3 style="margin: 3rem 0;" class="text-center teachers__title">To apply for the Path Q-mark, institutions must:</h3>           
         <!-- Timeline item -->
         <div class="columns is-vcentered pt-30">
           <div class="column is-10 is-offset-1">
@@ -1712,7 +1827,7 @@
           <div class="benefits__left">
             <div class="benefits__img-container"><img class="benefits__img" src="assets\img\logos\natgeo-learning.svg" alt=""></div>
             <span>+</span>
-            <div class="benefits__img-container"><img class="benefits__img" src="assets\img\logos\path_logo-01.svg" alt=""></div>
+            <div class="benefits__img-container"><img class="benefits__img" src="assets\img\logos\path_natgeo-01.svg" alt=""></div>
           </div>
           <div class="popover-container benefits__right">
             <button id="popup-toggle" class="main-btn" style="background-color: #004969;">See Benefits</button>
@@ -1902,42 +2017,33 @@
     <div class="side-form-popup">
         <div class="popup-wrapper">
             <div class="center-popup">
-                <div class="opening-popup">
-                    <div class="close-popup">
-                        <i class="fas fa-times"></i>
+              <div class="opening-popup">
+                <div class="close-popup">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-8 media">
+                        <img src="assets/img/University/About-us-1/series-life.jpg" alt="media"
+                            class="img-fluid">
                     </div>
-                    <div class="row">
-                        
-                        <div class="col-md-6 col-lg-12 content d-flex justify-content-center">
-                            <h5 class="inbuilt__title">If you wish to be contacted and guided by our staff, please complete the form below:</h5>
-                            <div class="col-12 col-md-6 col-lg-12">
-                              <form class="form-style-1">
-                                <div class="form-group ">
-                                  <input type="text" class="form-control" placeholder="Name">
-                                </div>
-                                <div class="form-group">
-                                  <input type="text" class="form-control" placeholder="Surname">
-                                </div>
-                                <div class="form-group">
-                                  <input type="email" class="form-control" placeholder="Email adress">
-                                </div>
-                                <div class="form-group">
-                                  <input type="text" class="form-control" placeholder="Phone number">
-                                </div>
-                                <div class="form-group">
-                                  <input type="text" class="form-control" placeholder="Country">
-                                </div>
-                                <div class="form-group">
-                                  <input type="text" class="form-control" placeholder="City">
-                                </div>
-                                
-                                <button class="main-btn" style="background-color: #004969;">Submit</button>
-                              </form>
+                    <div class="col-md-6 col-lg-4 content">
+                        <h5>Opening hours</h5>
+                        <div class="openings">
+                            <div class="opening opening-days">
+                                <p class="day">Monday</p>
+                                <div class="divider"></div>
+                                <p class="day">Friday</p>
                             </div>
-                            
+                            <div class="opening opening-time">
+                                <p class="time">08.00 am</p>
+                                <div class="divider"></div>
+                                <p class="time">16.00 pm</p>
+                            </div>
                         </div>
+                        <p class="num">+54 9 11 5738 5100</p>
                     </div>
                 </div>
+            </div>
                 <div class="location-popup">
                     <div class="close-popup">
                         <i class="fas fa-times"></i>
@@ -1954,34 +2060,34 @@
                     </div>
                 </div>
                 <div class="form-popup">
-                    <div class="close-popup">
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-lg-7 content">
-                            <h4>You have a question for us?</h4>
-                            <p>leave your message below or email us at info@bantinguniversity.com</p>
-                            <form class="text-left form-style-2">
-                                <div class="form-group required">
-                                    <label for="email">Email address</label>
-                                    <input type="email" id="email" class="form-control" name="email"
-                                        placeholder="johnLP12@gmail.com" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <input type="text" id="message" class="form-control" name="name"
-                                        placeholder="Hello, I wanted to know about this particular course called..." />
-                                    <span class="small-text">120 characters left</span>
-                                </div>
-                                <button class="main-btn" type="submit">Send message</button>
-                            </form>
-                        </div>
-                        <div class="d-none d-lg-block col-lg-5 media">
-                            <img src="assets/img/University/Coming_soon/ambar-simpang.png" alt="media image"
-                                class="img-fluid" />
-                        </div>
-                    </div>
-                </div>
+                  <div class="close-popup">
+                      <i class="fas fa-times"></i>
+                  </div>
+                  <div class="row">
+                      <div class="col-12 col-lg-7 content">
+                          <h4>You have a question for us?</h4>
+                          <p>leave your message below or email us at admin@pathexaminations.com</p>
+                          <form class="text-left form-style-2">
+                              <div class="form-group required">
+                                  <label for="email">Email address</label>
+                                  <input type="email" id="email" class="form-control" name="email"
+                                      placeholder="johnLP12@gmail.com" />
+                              </div>
+                              <div class="form-group">
+                                  <label for="message">Message</label>
+                                  <input type="text" id="message" class="form-control" name="name"
+                                      placeholder="Hello, I wanted to know about this particular course called..." />
+                                  <span class="small-text">120 characters left</span>
+                              </div>
+                              <button class="main-btn" type="submit">Send message</button>
+                          </form>
+                      </div>
+                      <div class="d-none d-lg-block col-lg-5 media">
+                          <img src="assets/img/University/students/05.jpg" alt="media image"
+                              class="img-fluid" />
+                      </div>
+                  </div>
+              </div>
             </div>
         </div>
     </div>
@@ -2108,7 +2214,7 @@
         }; 
 
         
-        if (scroll >= 6400) {
+        if (scroll >= 5900) {
             $('.inbuilt-checks-1').css({'opacity':1, 'transform':'translateX(0%)'});
             setTimeout(() => {
             $('.inbuilt-checks-2').css({'opacity':1, 'transform':'translateX(0%)'});
@@ -2121,7 +2227,7 @@
             }, 700);
         };
 
-        if (scroll >= 8400) {
+        if (scroll >= 8300) {
             $('.natgeo__img').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.natgeo-content p').css({'opacity':1, 'transform':'translateY(0%)'});
@@ -2135,11 +2241,11 @@
             }, 500);
           };
 
-          if (scroll >= 9550) {
+          if (scroll >= 9400) {
             $('.quote__after-text h2').css({'opacity':1, 'transform':'translateY(0%)'});
           };
 
-          if (scroll >= 10000) {
+          if (scroll >= 10100) {
             $('.series__title').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.series__card').css({'opacity':1, 'transform':'translateY(0%)'});
@@ -2158,7 +2264,7 @@
         };
   
         if (scroll >= 830) {
-        $('.carta-anim-1').css({'opacity':1, 'transform':'translateX(0%)'});
+        $('.carta-anim-1').css({'opacity':1, 'transform':'translateY(0%)'});
         };
   
       if (scroll >= 1300) {
@@ -2166,18 +2272,18 @@
         };
 
       if (scroll >= 1600) {
-          $('.carta-anim-3').css({'opacity':1, 'transform':'translateX(0%)'});
+          $('.carta-anim-3').css({'opacity':1, 'transform':'translateY(0%)'});
 };
        
 
-      if (scroll >= 2000) { 
+      if (scroll >= 2300) { 
             $('.our-principles-anim').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
-            $('.img-anim').css({'opacity':1, 'transform':'translateX(0%)'});
+            $('.img-anim').css({'opacity':1, 'transform':'translateY(0%)'});
             }, 300);
           }
         
-      if (scroll >= 3350) {
+      if (scroll >= 3800) {
             $('.join-path-title').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.price-card').css({'opacity':1, 'transform':'translateY(0%)'});
@@ -2185,10 +2291,10 @@
         }; 
 
         
-        if (scroll >= 9600) {
-            $('.inbuilt-checks-1').css({'opacity':1, 'transform':'translateX(0%)'});
+        if (scroll >= 9700) {
+            $('.inbuilt-checks-1').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
-            $('.inbuilt-checks-2').css({'opacity':1, 'transform':'translateX(0%)'});
+            $('.inbuilt-checks-2').css({'opacity':1, 'transform':'translateY(0%)'});
             }, 200);
             setTimeout(() => {
             $('.inbuilt__info').css({'opacity':1, 'transform':'translateY(0%)'});
@@ -2198,25 +2304,25 @@
             }, 700);
         };
 
-        if (scroll >= 13000) {
+        if (scroll >= 13700) {
             $('.natgeo__img').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.natgeo-content p').css({'opacity':1, 'transform':'translateY(0%)'});
             }, 300);
         }; 
 
-        if (scroll >= 13600) {
+        if (scroll >= 14200) {
             $('.benefits__img').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.benefits__right').css({'opacity':1, 'transform':'translateY(0%)'});
             }, 500);
           };
 
-          if (scroll >= 14100) {
+          if (scroll >= 15100) {
             $('.quote__after-text h2').css({'opacity':1, 'transform':'translateY(0%)'});
           };
 
-          if (scroll >= 14600) {
+          if (scroll >= 15500) {
             $('.series__title').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.series__card').css({'opacity':1, 'transform':'translateY(0%)'});

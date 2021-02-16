@@ -248,7 +248,7 @@ $(document).ready(function(){
         if (scroll >= 3000) {
           $('.anim__home5').css({'opacity':1, 'transform':'translateX(0%)'});
       };
-      if (scroll >= 3800) {
+      if (scroll >= 3600) {
         $('.europe').css({'opacity':1, 'transform':'translateY(0%)'});
         setTimeout(() => {
           $('.latin').css({'opacity':1, 'transform':'translateY(0%)'});

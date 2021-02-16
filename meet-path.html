@@ -64,13 +64,17 @@
     }
     .path-exam-container {
       background-color: white;
-      padding: 6vh 14vw;
+      padding: 6vh 12vw;
       margin: 0 auto;
       border-radius: 2px;
     }
 
     .path-exam-container h2 {
       color: #004969;
+    }
+
+    .path-exam-mid-text {
+      margin: 1.5rem 0;
     }
 
     .path-exam-container p:nth-child(3) {
@@ -90,6 +94,10 @@
     .believes-section .container {
       box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.10);
       border-radius: 4px;
+    }
+
+    .our-principles__title {
+      margin-bottom: 1.8rem;
     }
 
     /* 
@@ -134,8 +142,15 @@
     .our-mission__title {
       position: relative;
       opacity: 0;
-    transform: translateY(15%);
-    transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+      transform: translateY(15%);
+      transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+    }
+
+    .our-mission__subtitle {
+      font-size: 1.1rem;
+      text-align: center;
+      margin: 1.8rem auto;
+      border-bottom: rgba(0, 73, 105, .1) 2px solid;
     }
 
     .our-mission__title::after {
@@ -165,6 +180,11 @@ TABLE
   background-color: #004969;
 }
 
+.thinkforward__subtitle {
+  margin: 1.8rem auto;
+  width: 82ch;
+}
+
 
 /* 
 ======
@@ -174,6 +194,7 @@ POLICY
 
 .policy__title {
       position: relative;
+      margin: 1.8rem 0;
     }
 
     .policy__title::after {
@@ -235,6 +256,51 @@ POLICY
       background-color: #8B9A99;
       transition-delay: .33s;
     }
+
+
+    /* 
+    ===============
+    SIDE ICONS MENU
+    ===============
+    */
+
+    #side__email {
+        position: relative;
+    }
+
+    #side__email:hover::after {
+        content: 'admin@pathexaminations.com';
+        position: absolute;
+        box-shadow: 0px 7px 5px 0px rgba(0,0,0,.15);
+        background: #004969;
+        padding: .5rem 1rem;
+        font-family: 'Lato', sans-serif;
+        top: -50%;
+        right: 150%;
+        color: white;
+        z-index:99999!important;
+        border-radius: 4px;
+    }
+
+    #side__phone {
+        position: relative;
+    }
+
+    #side__phone:hover::after {
+        content: '+54 9 11 5738 5100';
+        position: absolute;
+        box-shadow: 0px 7px 5px 0px rgba(0,0,0,.15);
+        white-space: nowrap;
+        background: #004969;
+        padding: .5rem 1rem;
+        font-family: 'Lato', sans-serif;
+        top: -50%;
+        right: 150%;
+        color: white;
+        z-index:99999!important;
+        border-radius: 4px;
+    }
+
     
     @media only screen and (max-width: 799px) {
 
@@ -263,10 +329,6 @@ POLICY
         padding: 2.5% 5%!important;
         margin: 2rem 0;
       }
-
-      /* .path-exam-text, .meet_h1, .our-principles, .tabla-anim, .our-vision__title, .our-mission__title {
-        opacity: 1;
-      } */
 
       .our-principles {
         width: 90%!important;
@@ -299,9 +361,11 @@ POLICY
         overflow-y: hidden;
       }
 
-      /* .our-vision__text {
-        opacity: 1;
-      } */
+      .thinkforward__subtitle {
+      margin: 1.8rem auto;
+      width: 100%;
+      text-align: left!important;
+      }
 
       .policy__title {
       position: relative;
@@ -437,8 +501,8 @@ POLICY
         style="background-image: url(assets/img/University/About-us-1/breadcrumb_bg.png)">
         <div class="social-icon">
           <ul>
-              <li><a target="_blank" href="https://www.facebook.com/codingeek.net"><i class="fab fa-facebook-square"></i></a></li>
-              <li><a target="_blank" href="https://www.instagram.com/codingeeknet/"><i class="fab fa-instagram"></i></a></li>
+              <li><a target="_blank" href="https://www.facebook.com/pathlatam"><i class="fab fa-facebook-square"></i></a></li>
+              <li><a target="_blank" href="https://www.instagram.com/pathlatam"><i class="fab fa-instagram"></i></a></li>
               <li><i class="fas fa-envelope" id="open-form-popup"></i></li>
               <li><i class="fas fa-phone" id="open-opening-popup"></i></li>      
           </ul>
@@ -461,7 +525,7 @@ POLICY
     <div class="path-exam-container">
       <div class="path-exam-text">
         <h2>Path International Examinations</h2>
-        <div>
+        <div class="path-exam-mid-text">
           <p>We are an international examination board based in the United Kingdom, which offers a brand-new alternative for examinations in English to speakers of other languages (ESOL).</p>
           <p>Our examinations are a fresh and contemporary option for learners since they are both the result of sustained research in the field of evaluation and a response to the demands of students, parents, teachers and administrators. In that sense, our examinations are a groundbreaking path towards a new horizon in language assessment.</p>
         </div>
@@ -470,11 +534,11 @@ POLICY
       </div>
   </div>
 
-  <!-- Side form icons -->
-<div class="fixed-right side-form-icons">
-  <a target="_blank" href="https://www.facebook.com/codingeek.net"><i class="fab icon fa-facebook-square"></i></a>
-  <a target="_blank" href="https://www.instagram.com/codingeeknet/"><i class="fab icon fa-instagram"></i></a>
-  <i class="fas fa-map-marker-alt icon" id="open-location-popup"></i>
+  <!-- Side Icons -->
+  <div class="fixed-right side-form-icons">
+    <i class="fas fa-phone icon side__button" id="side__phone"></i>
+    <i class="fas fa-envelope icon side__button" id="side__email"></i>
+    <i class="fas fa-map-marker-alt icon"></i>
 </div>
 
   <div class="believes-section section">
@@ -484,7 +548,7 @@ POLICY
           <img src="assets/img/University/About-us-1/rawpixel.png" alt="feature image" class="img-fluid">
         </div>
         <div class="col-12 col-lg-6">
-          <h2 class="margin-bottom-30">Our Principles</h2>
+          <h2 class="our-principles__title">Our Principles</h2>
           <div class="accordion-wrapper acorrdion__mine">
             <div id="accordion">
               <div class="card">
@@ -582,7 +646,7 @@ POLICY
     <div class="section">
       <div class="container text-center">
         <h2 class="our-mission__title">Our mission</h2>
-        <p class="margin-bottom-40 margin-top-30">It is our mission to:</p>
+        <p class="our-mission__subtitle">It is <span style="font-style: italic; font-weight: bold;">our mission</span> to</p>
       </div>
       <div class="our-mission__cont container">
         <div class="our-mission__grad-cont">
@@ -606,33 +670,33 @@ POLICY
     <div class="side-form-popup">
         <div class="popup-wrapper">
             <div class="center-popup">
-                    <div class="opening-popup">
-                            <div class="close-popup">
-                                <i class="fas fa-times"></i>
+              <div class="opening-popup">
+                <div class="close-popup">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-8 media">
+                        <img src="assets/img/University/About-us-1/series-life.jpg" alt="media"
+                            class="img-fluid">
+                    </div>
+                    <div class="col-md-6 col-lg-4 content">
+                        <h5>Opening hours</h5>
+                        <div class="openings">
+                            <div class="opening opening-days">
+                                <p class="day">Monday</p>
+                                <div class="divider"></div>
+                                <p class="day">Friday</p>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 col-lg-8 media">
-                                    <img src="assets/img/University/students/adolescent-adorable-alone.png" alt="media"
-                                        class="img-fluid">
-                                </div>
-                                <div class="col-md-6 col-lg-4 content">
-                                    <h5>Opening hours</h5>
-                                    <div class="openings">
-                                        <div class="opening opening-days">
-                                            <p class="day">Monday</p>
-                                            <div class="divider"></div>
-                                            <p class="day">Friday</p>
-                                        </div>
-                                        <div class="opening opening-time">
-                                            <p class="time">08.00 am</p>
-                                            <div class="divider"></div>
-                                            <p class="time">16.00 pm</p>
-                                        </div>
-                                    </div>
-                                    <p class="num">+24 45 15 62 129</p>
-                                </div>
+                            <div class="opening opening-time">
+                                <p class="time">08.00 am</p>
+                                <div class="divider"></div>
+                                <p class="time">16.00 pm</p>
                             </div>
                         </div>
+                        <p class="num">+54 9 11 5738 5100</p>
+                    </div>
+                </div>
+            </div>
                         <div class="location-popup">
                             <div class="close-popup">
                                 <i class="fas fa-times"></i>
@@ -649,34 +713,34 @@ POLICY
                             </div>
                         </div>
                         <div class="form-popup">
-                            <div class="close-popup">
-                                <i class="fas fa-times"></i>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-lg-7 content">
-                                    <h4>You have a question for us?</h4>
-                                    <p>leave your message below or email us at info@bantinguniversity.com</p>
-                                    <form class="text-left form-style-2">
-                                        <div class="form-group required">
-                                            <label for="email">Email address</label>
-                                            <input type="email" id="email" class="form-control" name="email"
-                                                placeholder="johnLP12@gmail.com" />
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="message">Message</label>
-                                            <input type="text" id="message" class="form-control" name="name"
-                                                placeholder="Hello, I wanted to know about this particular course called..." />
-                                            <span class="small-text">120 characters left</span>
-                                        </div>
-                                        <button class="main-btn" type="submit">Send message</button>
-                                    </form>
-                                </div>
-                                <div class="d-none d-lg-block col-lg-5 media">
-                                    <img src="assets/img/University/Coming_soon/ambar-simpang.png"
-                                        alt="media image" class="img-fluid" />
-                                </div>
-                            </div>
-                        </div>
+                          <div class="close-popup">
+                              <i class="fas fa-times"></i>
+                          </div>
+                          <div class="row">
+                              <div class="col-12 col-lg-7 content">
+                                  <h4>You have a question for us?</h4>
+                                  <p>leave your message below or email us at admin@pathexaminations.com</p>
+                                  <form class="text-left form-style-2">
+                                      <div class="form-group required">
+                                          <label for="email">Email address</label>
+                                          <input type="email" id="email" class="form-control" name="email"
+                                              placeholder="johnLP12@gmail.com" />
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="message">Message</label>
+                                          <input type="text" id="message" class="form-control" name="name"
+                                              placeholder="Hello, I wanted to know about this particular course called..." />
+                                          <span class="small-text">120 characters left</span>
+                                      </div>
+                                      <button class="main-btn" type="submit">Send message</button>
+                                  </form>
+                              </div>
+                              <div class="d-none d-lg-block col-lg-5 media">
+                                  <img src="assets/img/University/students/05.jpg" alt="media image"
+                                      class="img-fluid" />
+                              </div>
+                          </div>
+                      </div>
             </div>
         </div>
     </div>
@@ -684,7 +748,7 @@ POLICY
     <div class="container">
       <div class="stripped-table-part">
         <h2 class="table__title">#ThinkForward strategy</h2>
-        <p class="margin-top-40 margin-bottom-40 text-center">We are very proud of our team and the way we work. Our strategy is based on a three-axis model of values and behaviours which are fundamental to us. It seeks to make the organisational culture of Path Examinations visible to guarantee that the proposed goals are achieved in coherence with our mission and vision. </p>
+        <p class="text-center thinkforward__subtitle">We are very proud of our team and the way we work. Our strategy is based on a three-axis model of values and behaviours which are fundamental to us. It seeks to make the organisational culture of Path Examinations visible to guarantee that the proposed goals are achieved in coherence with our mission and vision. </p>
         <div class="responsive-table">  
           <table class="table stripped-package-table tabla-anim">
               <thead>
@@ -730,7 +794,7 @@ POLICY
     <!-- Policy -->
     <div class="mission-section section">
       <div class="container text-center">
-        <h2 class="margin-bottom-50 policy__title">Policies and Procedures</h2>
+        <h2 class="policy__title">Policies and Procedures</h2>
         <div class="content">
           <div class="btn-1line">
             <div class="btn-row-1">
@@ -815,7 +879,7 @@ POLICY
                 $('.our-principles').css({'opacity':1, 'transform':'translateY(0%)'});
         };
 
-      if (scroll >= 1600) {
+      if (scroll >= 1500) {
           $('.our-vision__title').css({'opacity':1, 'transform':'translateX(0%)'});
           setTimeout(() => {
           $('.our-vision__text').css({'opacity':1, 'transform':'translateX(0%)'});
@@ -823,15 +887,15 @@ POLICY
 };
        
 
-      if (scroll >= 2000) { 
+      if (scroll >= 1800) { 
             $('.our-mission__title').css({'opacity':1, 'transform':'translateY(0%)'});
           }
         
-      if (scroll >= 3000) {
+      if (scroll >= 2900) {
             $('.tabla-anim').css({'opacity':1, 'transform':'translateY(0%)'});
         }; 
         
-        if (scroll >= 3800) {
+        if (scroll >= 3600) {
             $('.btn-row-1').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
           $('.btn-row-2').css({'opacity':1, 'transform':'translateY(0%)'});
