@@ -25,7 +25,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/custom.css">
-    <title>Path LATAM | Home</title>
+    <title>Path | Home</title>
     <style type="text/css">
     /* 
     ======
@@ -99,6 +99,11 @@
     EVENT / TARJETAS
     ================
     */
+
+    /* .fas {
+        margin: 0!important;
+        margin-left: 10px!important;
+    }  */
 
     .events-section {
         padding: 0;
@@ -280,6 +285,18 @@
         @media only screen and (max-width: 799px) {
             html {
                 overflow-x: hidden;
+            }
+
+            #side__phone:hover::after {
+                top: -250%;
+                right: -200%;
+                /* left: 100%; */
+            }
+
+            #side__email:hover::after {
+                top: -250%;
+                right: -850%;
+                /* left: 100%; */
             }
 
             .section {
@@ -610,7 +627,7 @@
                     <h3 style="color: #7BA988;">Sign up</h3>
                     <div style="background: #7BA988;" class="event__line"></div>
                     <p style="color: #7BA988;">
-                        Receive the latest news from Path Examinations.
+                    Receive the latest news from Path Examinations.
                     </p>
                     
                     <button style="background-color: #7BA988;" class="main-btn">Learn more</button>
