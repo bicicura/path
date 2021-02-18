@@ -139,6 +139,15 @@
       justify-content: space-between;
     }
 
+    .our-mission__text-stand {
+      margin-left: 26px;
+    }
+
+    .our-mission__text-container {
+      display: flex;
+      align-items: baseline;
+    }
+
     .our-mission__title {
       position: relative;
       opacity: 0;
@@ -146,10 +155,25 @@
       transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
     }
 
+    .our-mission__subtitle-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .our-mission__check {
+      margin: 0!important;
+      padding-right: 10px;
+    }
+
     .our-mission__subtitle {
-      font-size: 1.1rem;
-      text-align: center;
-      margin: 1.8rem auto;
+      font-size: 1.2rem;
+      text-align: left;
+      font-weight: bold;
+      padding-left: 24px;
+      color: #004969;
+      width: 60%;
+      margin: 1.8rem 0;
       border-bottom: rgba(0, 73, 105, .1) 2px solid;
     }
 
@@ -185,6 +209,13 @@ TABLE
   width: 82ch;
 }
 
+.stripped-package-table tr td {
+        font-weight: 400!important;
+}
+
+.table-bold-text {
+  font-weight: bold;
+}
 
 /* 
 ======
@@ -198,7 +229,7 @@ POLICY
     }
 
     .policy__title::after {
-      content: 'Policies and Procedures';
+      content: 'Policies and procedures';
       position: absolute;
       left: 0;
       top: -33%;
@@ -372,7 +403,7 @@ POLICY
     }
 
     .policy__title::after {
-      content: 'Policies and Procedures';
+      content: 'Policies and procedures';
       position: absolute;
       left: 0;
       top: -33%;
@@ -464,7 +495,7 @@ POLICY
                   <ul class="sub-menu">
                       <li><a href="index.html">About us</a></li>
                       <li><a href="index-2.html">Think Forward Strategy</a></li>
-                      <li><a href="index-3.html">Policies and Procedures</a></li>
+                      <li><a href="index-3.html">Policies and procedures</a></li>
                   </ul>
               </li>
               <!-- <li><a href="teachers-institutions.html" class="current-menu-item">Teachers and Institutions</a></li> -->
@@ -548,7 +579,7 @@ POLICY
           <img src="assets/img/University/About-us-1/rawpixel.png" alt="feature image" class="img-fluid">
         </div>
         <div class="col-12 col-lg-6">
-          <h2 class="our-principles__title">Our Principles</h2>
+          <h2 class="our-principles__title">Our principles</h2>
           <div class="accordion-wrapper acorrdion__mine">
             <div id="accordion">
               <div class="card">
@@ -646,7 +677,7 @@ POLICY
     <div class="section">
       <div class="container text-center">
         <h2 class="our-mission__title">Our mission</h2>
-        <p class="our-mission__subtitle">It is <span style="font-style: italic; font-weight: bold;">our mission</span> to</p>
+        <div class="our-mission__subtitle-container"><p class="our-mission__subtitle">It is our mission to:</p></div>
       </div>
       <div class="our-mission__cont container">
         <div class="our-mission__grad-cont">
@@ -654,13 +685,15 @@ POLICY
           <div class="our-mission__grad"></div>
       </div>
           <div class="content our-mission__text">
-            <p>Be a leading inclusive international organisation in the field of language assessment.</p>
-            <p>Develop and deliver highly communicative and contemporary examinations which assess students competency of English accurately.</p>
-            <p>Provide a reliable evaluation system which does not involve studying exam formats, but achieving the real level.</p>
-            <p>Promote among students and teachers the value and contributions of other languages and cultures to the community</p>
-            <p>Support students and teachers from all backgrounds and improve their job and academic opportunities worldwide.</p>
-            <p>Make strategic decisions which ensure we are socially responsible and environmentally sustainable.</p>
-            <p>Our mission is what makes us<span style="font-size: 2em; font-weight: bold; color: #004969;"> stand out.</span></p>
+            <div class="our-mission__text-container">
+              <i class="fas fa-check our-mission__check"></i><p>be a leading inclusive international organisation in the field of language assessment</p>
+            </div>
+            <div class="our-mission__text-container"><i class="fas fa-check our-mission__check"></i><p>develop and deliver highly communicative and contemporary examinations which assess students competency of English accurately</p></div>
+            <div class="our-mission__text-container"><i class="fas fa-check our-mission__check"></i><p>provide a reliable evaluation system which does not involve studying exam formats, but achieving the real level</p></div>
+            <div class="our-mission__text-container"><i class="fas fa-check our-mission__check"></i><p>promote among students and teachers the value and contributions of other languages and cultures to the community</p></div>
+            <div class="our-mission__text-container"><i class="fas fa-check our-mission__check"></i><p>support students and teachers from all backgrounds and improve their job and academic opportunities worldwide</p></div>
+            <div class="our-mission__text-container"><i class="fas fa-check our-mission__check"></i><p>make strategic decisions which ensure we are socially responsible and environmentally sustainable.</p></div>
+            <p class="our-mission__text-stand">Our mission is what makes us<span style="font-size: 2em; font-weight: bold; color: #004969;"> stand out.</span></p>
           </div>
         </div>
     </div>
@@ -760,29 +793,29 @@ POLICY
               </thead>
               <tbody>
                 <tr>
-                  <td> We are proactive and work hard to achieve good results. We get involved to motivate and add value without seeking attention.</td>
-                  <td>We seek what favours progress for Path Examinations and the team, which will contribute to the benefit and progress of each one of us.</td>
-                  <td>We identify and guide members and centres who are proactive, inclusive, influential and flexible to change. We seek to create a solid and lasting relationship. We respect their times.</td>
+                  <td><span class="table-bold-text">We are proactive</span> and work hard to achieve good results. We get involved to motivate and add value without seeking attention.</td>
+                  <td><span class="table-bold-text">We seek</span> what favours progress for Path Examinations and the team, which will contribute to the benefit and progress of each one of us.</td>
+                  <td><span class="table-bold-text">We identify</span> and guide members and centres who are proactive, inclusive, influential and flexible to change. We seek to create a solid and lasting relationship. We respect their times.</td>
                 </tr>
                 <tr>
-                  <td>We are committed to what we know we will be able to do correctly and professionally.</td>
-                  <td>We share all the knowledge and information relevant to the group as a whole, without rationing or being biased.</td>
-                  <td>We provide accurate information without omitting data. We are honest and open with our proposal. If there is something we do not know, we find it out.</td>
+                  <td><span class="table-bold-text">We are committed</span> to what we know we will be able to do correctly and professionally.</td>
+                  <td><span class="table-bold-text">We share</span> all the knowledge and information relevant to the group as a whole, without rationing or being biased.</td>
+                  <td><span class="table-bold-text">We provide</span> accurate information without omitting data. We are honest and open with our proposal. If there is something we do not know, we find it out.</td>
                 </tr>
                 <tr>
-                  <td>We pay attention and work in an efficient, orderly and neat way. We collaborate without intruding.</td>
-                  <td>We work together, helping each other to achieve the common goal. We support each other as a group, internally and externally.</td>
-                  <td> We accompany and support every member and centre, as long as the subject is within our competence. We provide an excellent humane treatment.</td>
+                  <td><span class="table-bold-text">We pay attention</span> and work in an efficient, orderly and neat way. We collaborate without intruding.</td>
+                  <td><span class="table-bold-text">We work</span> together, helping each other to achieve the common goal. We support each other as a group, internally and externally.</td>
+                  <td><span class="table-bold-text">We accompany and support</span> every member and centre, as long as the subject is within our competence. We provide an excellent humane treatment.</td>
                 </tr>
                 <tr>
-                  <td>We consult with our team before making a decision. We do not do anything that may create conflict with our role as collaborators.</td>
-                  <td>We communicate regularly with every collaborator to work on the proposed goals.</td>
-                  <td>We are professionals who generate empathy and motivation in members and centres. We listen and respond attentively, thinking about what to say and how.</td>
+                  <td><span class="table-bold-text">We consult</span> with our team before making a decision. We do not do anything that may create conflict with our role as collaborators.</td>
+                  <td><span class="table-bold-text">We communicate</span> regularly with every collaborator to work on the proposed goals.</td>
+                  <td><span class="table-bold-text">We are professionals</span> who generate empathy and motivation in members and centres. We listen and respond attentively, thinking about what to say and how.</td>
                 </tr>
                 <tr>
-                  <td>We seek solutions and consensus in the event of a possible problem. We are open to give and receive suggestions. We are constantly learning.</td>
-                  <td>We respect each other and recognise the scope of others’ roles. We create and take care of the group bond at all levels.</td>
-                  <td>We create a community of work and respect towards the rest of the team, suppliers, members, centres, parents, students, and competitors, so that it is mutual.</td>
+                  <td><span class="table-bold-text">We seek solutions and consensus</span> in the event of a possible problem. We are open to give and receive suggestions. We are constantly learning.</td>
+                  <td><span class="table-bold-text">We respect</span> each other and recognise the scope of others’ roles. We create and take care of the group bond at all levels.</td>
+                  <td><span class="table-bold-text">We create a community</span> of work and respect towards the rest of the team, suppliers, members, centres, parents, students, and competitors, so that it is mutual.</td>
                 </tr>
               </tbody>
             </table>
@@ -794,7 +827,7 @@ POLICY
     <!-- Policy -->
     <div class="mission-section section">
       <div class="container text-center">
-        <h2 class="policy__title">Policies and Procedures</h2>
+        <h2 class="policy__title">Policies and procedures</h2>
         <div class="content">
           <div class="btn-1line">
             <div class="btn-row-1">

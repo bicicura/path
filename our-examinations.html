@@ -51,6 +51,10 @@
         width: 70ch;
       }
 
+      .competences__list li {
+        list-style-type: circle;
+      }
+
       /* 
     ===============
     SIDE ICONS MENU
@@ -128,9 +132,9 @@
       z-index: -1;
       opacity: .07;
     }
-    .modules__circle-cont {
-      position: relative;
-      display: flex;
+
+    .modules__content-container h3 {
+      margin: 3rem 0;
     }
 
     .modules__content {
@@ -206,7 +210,6 @@
     .modules__circle-cont {
       position: relative;
       display: flex;
-      margin-top: 10%;
     }
 
     h3 {
@@ -574,10 +577,10 @@ ANIMS OUR EXAMINATIONS
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body">
                                     <p style="font-weight: bolder;">These are the broad areas of life in which we function as human beings, and can be categorised as follows:</p>
-                                    <p>- The personal domain concerns us as individuals. It is about our family and friends, hobbies and interests, likes and dislikes.</p>
-                                    <p>- The public domain is where we interact as members of the public, with organisations or other people who are not as close as family and friends. An example is going on holiday, where we interact with representatives of airlines, hotels, restaurants and local people.</p>
-                                    <p>- The educational domain is where we are a part of organised learning, for example at university. It concerns the need for skills such as essay and report writing, as well as abilities to use pragmatic and discursive language.</p>
-                                    <p>- The occupational domain concerns the workplace, and the learner as an employee or member of a profession. It concerns the vocabulary and communicative skills related to our jobs.</p>
+                                    <p>- The <span class="font-weight-bold">personal domain</span> concerns us as individuals. It is about our family and friends, hobbies and interests, likes and dislikes.</p>
+                                    <p>- The <span class="font-weight-bold">public domain</span> is where we interact as members of the public, with organisations or other people who are not as close as family and friends. An example is going on holiday, where we interact with representatives of airlines, hotels, restaurants and local people.</p>
+                                    <p>- The <span class="font-weight-bold">educational domain</span> is where we are a part of organised learning, for example at university. It concerns the need for skills such as essay and report writing, as well as abilities to use pragmatic and discursive language.</p>
+                                    <p>- The <span class="font-weight-bold">occupational domain</span> concerns the workplace, and the learner as an employee or member of a profession. It concerns the vocabulary and communicative skills related to our jobs.</p>
                                 </div>
                             </div>
                         </div>
@@ -607,14 +610,16 @@ ANIMS OUR EXAMINATIONS
                             <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
                                 <div class="card-body">
                                     <p>There are various competences which inform our ability to use the language:</p>
-                                    <p>Lexical: This concerns the building blocks of language; its vocabulary, expressions and standard phrases.</p>
-                                    <p>Grammatical: The ability to use correct and accurate grammar forms, in order to provide contexts such as time and comparison.</p>
-                                    <p>Semantic: This is primarily concerned with the awareness of meaning, grasp of connotation, and the understanding of collocation, synonymy and antonymy.</p>
-                                    <p>Phonological: This concerns skill in the understanding of, and ability to produce, spoken words and sentences.</p>
-                                    <p>Orthographic: This concerns skill in the understanding of, and ability to produce, written words and sentences.</p>
-                                    <p>Sociolinguistic: This is concerned with the social dimension of language, e.g. formality and politeness.</p>
-                                    <p>Pragmatic: This primarily concerns discursive and interactive skills.</p>
-                                    <p>Functional: This is concerned with the ability to perform functions such as making enquiries and asking for opinions.</p>
+                                    <ul class="competences__list">
+                                      <li><span class="font-weight-bold">Lexical</span>: This concerns the building blocks of language; its vocabulary, expressions and standard phrases.</li>
+                                    <li><span class="font-weight-bold">Grammatical</span>: The ability to use correct and accurate grammar forms, in order to provide contexts such as time and comparison.</li>
+                                    <li><span class="font-weight-bold">Semantic</span>: This is primarily concerned with the awareness of meaning, grasp of connotation, and the understanding of collocation, synonymy and antonymy.</li>
+                                    <li><span class="font-weight-bold">Phonological</span>: This concerns skill in the understanding of, and ability to produce, spoken words and sentences.</li>
+                                    <li><span class="font-weight-bold">Orthographic</span>: This concerns skill in the understanding of, and ability to produce, written words and sentences.</li>
+                                    <li><span class="font-weight-bold">Sociolinguistic</span>: This is concerned with the social dimension of language, e.g. formality and politeness.</li>
+                                    <li><span class="font-weight-bold">Pragmatic</span>: This primarily concerns discursive and interactive skills.</li>
+                                    <li><span class="font-weight-bold">Functional</span>: This is concerned with the ability to perform functions such as making enquiries and asking for opinions.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -638,34 +643,36 @@ ANIMS OUR EXAMINATIONS
   <div class="container modules__container">
     <div class="modules__text-container text-center">
       <h2 class="our-exams-anim3">Exam modules</h2>
-      <p style="background-color: #767EA5;" class="table__title">Our examinations are divided into modules, which may be taken separately or altogether:</p>
+      <p class="text-center">Our examinations are divided into modules, which may be taken separately or altogether:</p>
       <p class="table__title">Speaking module / Listening module / Reading and writing module</p>
-      <p style="background-color: #CFA676;" class="table__title">These are the reasons why modules can be taken individually</p>
     </div>
-    <div class="row d-flex justify-content-between modules__circle-cont">
-      
-      <div class="modules__content">
-        <div class="modules__circle"> 
-          <img class="modules__circle-img" src="assets\img\icons\study-01.svg" alt="Skills">
-        </div>
-        <h4>Skills</h4>
-        <p>Students may decide not to take all modules because they do not need to. If a job position involves, for example, sending and receiving emails in English, candidates may simply be required proof of their writing skills. The opposite will happen, for instance, for the position of call centre assistant, where proof of speaking skills will be more relevant.</p>
-      </div>
-      <div class="modules__content">
-          <div class="modules__circle modules__circle-skills">
-            <img class="modules__circle-img" src="assets\img\icons\learn-01.svg" alt="Levels">
+    
+    <div class="modules__content-container">
+      <h3 class="text-center">These are the reasons why modules can be taken individually</h3>
+      <div class="row d-flex justify-content-between modules__circle-cont">
+        <div class="modules__content">
+          <div class="modules__circle">
+            <img class="modules__circle-img" src="assets\img\icons\study-01.svg" alt="Skills">
           </div>
-          <h4>Levels</h4>
-          <p>All people, as language users, have their own strengths and weaknesses when it comes to the different language skills. A student may be stronger at writing than at speaking. Therefore, they may choose a different level for each skill. E.g. A candidate may decide to take a reading and writing module at B2 Competency level, and speaking module at B1 Progress level.</p>
-      </div>
-      <div class="modules__content">
-        <div class="modules__circle modules__circle-marks">
-          <img class="modules__circle-img" src="assets\img\icons\computer-01.svg" alt="Marks">
+          <h4>Skills</h4>
+          <p>Students may decide not to take all modules because they do not need to. If a job position involves, for example, sending and receiving emails in English, candidates may simply be required proof of their writing skills. The opposite will happen, for instance, for the position of call centre assistant, where proof of speaking skills will be more relevant.</p>
         </div>
-        <h4>Marks</h4>
-        <p>An overall mark of all modules does not show the student’s genuine level. If a candidate obtained, for example, 69% in listening, 66% in writing, and 96% in speaking, the overall mark would be 77%, despite the fact that their speaking skills are higher.</p>
+        <div class="modules__content">
+            <div class="modules__circle modules__circle-skills">
+              <img class="modules__circle-img" src="assets\img\icons\learn-01.svg" alt="Levels">
+            </div>
+            <h4>Levels</h4>
+            <p>All people, as language users, have their own strengths and weaknesses when it comes to the different language skills. A student may be stronger at writing than at speaking. Therefore, they may choose a different level for each skill. E.g. A candidate may decide to take a reading and writing module at B2 Competency level, and speaking module at B1 Progress level.</p>
+        </div>
+        <div class="modules__content">
+          <div class="modules__circle modules__circle-marks">
+            <img class="modules__circle-img" src="assets\img\icons\computer-01.svg" alt="Marks">
+          </div>
+          <h4>Marks</h4>
+          <p>An overall mark of all modules does not show the student’s genuine level. If a candidate obtained, for example, 69% in listening, 66% in writing, and 96% in speaking, the overall mark would be 77%, despite the fact that their speaking skills are higher.</p>
+        </div>
+        <div class="modules__line"></div>
       </div>
-      <div class="modules__line"></div>
     </div>
   </div>
 </div>
@@ -694,7 +701,7 @@ ANIMS OUR EXAMINATIONS
                     <i style="color: #004969;" class="fas fa-plus-circle" id="open-exam-modal"></i>
                   </span>
                   <div style="background-color: #004969;border: none;" class="card-body text-center">
-                    <h6 style="color: white">A1-</h6>
+                    <h6 style="color: white">CEFR A1-</h6>
                   </div>
                 </div>
               </div>
@@ -712,7 +719,7 @@ ANIMS OUR EXAMINATIONS
                     <i style="color: #004969;" class="fas fa-plus-circle" id="open-exam-modal"></i>
                   </span>
                   <div style="background-color: #004969;border: none;" class="card-body text-center">
-                    <h6 style="color: white">A1+</h6>
+                    <h6 style="color: white">CEFR A1+</h6>
                   </div>
                 </div>
               </div>
@@ -730,7 +737,7 @@ ANIMS OUR EXAMINATIONS
                     <i style="color: #004969;" class="fas fa-plus-circle" id="open-exam-modal"></i>
                   </span>
                   <div style="background-color: #004969;border: none;" class="card-body text-center">
-                    <h6 style="color: white">A1+</h6>
+                    <h6 style="color: white">CEFR A1+</h6>
                   </div>
                 </div>
               </div>
@@ -754,7 +761,7 @@ ANIMS OUR EXAMINATIONS
                   <i style="color: #CFA676;" class="fas fa-plus-circle" id="open-exam-modal"></i>
                 </span>
                 <div style="background-color: #CFA676;border: none;" class="card-body text-center">
-                  <h6 style="color: white">A1-</h6>
+                  <h6 style="color: white">CEFR A1-</h6>
                 </div>
               </div>
             </div>
@@ -773,7 +780,7 @@ ANIMS OUR EXAMINATIONS
                   <i style="color: #CFA676;" class="fas fa-plus-circle" id="open-exam-modal"></i>
                 </span>
                 <div style="background-color: #CFA676; border: none;" class="card-body text-center">
-                  <h6 style="color: white">A1</h6>
+                  <h6 style="color: white">CEFR A1</h6>
                 </div>
               </div>
             </div>
@@ -792,7 +799,7 @@ ANIMS OUR EXAMINATIONS
                   <i style="color: #CFA676;" class="fas fa-plus-circle" id="open-exam-modal"></i>
                 </span>
                 <div style="background-color: #CFA676; border:none" class="card-body text-center">
-                  <h6 style="color: white;">A1+</h6>
+                  <h6 style="color: white;">CEFR A1+</h6>
                 </div>
               </div>
             </div>
@@ -815,7 +822,7 @@ ANIMS OUR EXAMINATIONS
                   <i style="color: #CB574C;" class="fas fa-plus-circle" id="open-exam-modal"></i>
                 </span>
                 <div style="background-color: #CB574C;" class="card-body text-center">
-                  <h6 style="color: white;">A2</h6>
+                  <h6 style="color: white;">CEFR A2</h6>
                 </div>
               </div>
             </div>
@@ -836,7 +843,7 @@ ANIMS OUR EXAMINATIONS
                   <i style="color: #CB574C;" class="fas fa-plus-circle" id="open-exam-modal"></i>
                 </span>
                 <div style="background-color: #CB574C;" class="card-body text-center">
-                  <h6 style="color: white;">A2+</h6>
+                  <h6 style="color: white;">CEFR A2+</h6>
                 </div>
               </div>
             </div>
@@ -858,7 +865,7 @@ ANIMS OUR EXAMINATIONS
                   <i style="color: #767EA5;" class="fas fa-plus-circle" id="open-exam-modal"></i>
                 </span>
                 <div style="background-color: #767EA5;" class="card-body text-center">
-                  <h6>B1</h6>
+                  <h6>CEFR B1</h6>
                 </div>
               </div>
             </div>
@@ -877,7 +884,7 @@ ANIMS OUR EXAMINATIONS
                   <i style="color: #767EA5;" class="fas fa-plus-circle" id="open-exam-modal"></i>
                 </span>
                 <div style="background-color: #767EA5;" class="card-body text-center">
-                  <h6>B2</h6>
+                  <h6>CEFR B2</h6>
                 </div>
               </div>
             </div>
@@ -895,7 +902,7 @@ ANIMS OUR EXAMINATIONS
                   <i style="color: #767EA5;" class="fas fa-plus-circle" id="open-exam-modal"></i>
                 </span>
                 <div style="background-color: #767EA5;" class="card-body text-center">
-                  <h6 style="color: white;">B2+</h6>
+                  <h6 style="color: white;">CEFR B2+</h6>
                 </div>
               </div>
             </div>

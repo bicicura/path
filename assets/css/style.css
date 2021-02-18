@@ -812,6 +812,7 @@ cursor: pointer;
   display: flex;
   align-items: center;
   margin: 0.25rem 0;
+  width: 90%;
 }
 .contact-links .link * {
   margin: 0;
