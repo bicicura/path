@@ -7,7 +7,6 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
-
     <!-- Fab Icon -->
     <link rel="shortcut icon" type="image/png" href="assets/img/logos/pathfavicon-01.png" /> 
     <!-- Fonts Awesome Icons -->
@@ -84,7 +83,11 @@
       margin: 0 auto;
     }
 
-
+    .international__text a {
+      color: #004969;
+      font-weight: bold;
+      font-size: inherit;
+    }
 
     /* 
     =====
@@ -273,15 +276,15 @@
           width: 100%;
           display: flex;
           margin: 1.8rem 0;
-          align-items: flex-end;
+          /* align-items: flex-end; */
           /* outline: 2px pink solid; */
 
         }
 
         .inbuilt__titles-aside {
-          width: 30%;
-          padding: 1rem;
-          height: 100%;
+          width: 40%;
+          padding: 2rem 2rem 4rem 2rem;
+          /* height: 100%!important; */
           color: white!important;
           border-radius: 4px;
           box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.25);
@@ -289,7 +292,7 @@
         }
 
         .inbuilt__info {
-          width: 90%;
+          width: 60%;
           border-radius: 4px;
           box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.25);
           padding: 2rem 2rem 4rem 2rem;
@@ -337,7 +340,7 @@
         
 
         .feature-cartita {
-          margin: .2rem 0 0 1.5rem;
+          margin: .2rem 0 0 0;
           font-style: italic;
         }
 
@@ -533,6 +536,10 @@
       margin-bottom: 6vh;
     }
 
+    .carta-entera {
+      cursor: pointer;
+    }
+
         .series__list {
           margin-right: 1rem;
         }
@@ -546,7 +553,13 @@
           padding: 10%;
           border-top-left-radius: 4px;
           border-top-right-radius: 4px;
+          min-height: 200px;
         }
+
+        td {
+          text-align: left;
+        }
+
         .TH h4, .TH p{
           color: white!important;
         }
@@ -935,26 +948,17 @@
         </div>
     </section>
 
-
-    <!-- Quote BANNER -->
-
-
+        <!-- Side Icons -->
+        <div class="fixed-right side-form-icons">
+          <i class="fas fa-phone icon side__button" id="side__phone"></i>
+           <i class="fas fa-envelope icon side__button" id="side__email"></i>
+           <i class="fas fa-map-marker-alt icon"></i>
+         </div>
+         
+         
     <!-- Events Section -->
     <section class="events-section section">
-            <div class="container text-center">
-                <h2 class="teachers__title our-levels-anim">Our levels</h2>
-                <p class="international__text"><span style="font-weight: bold;">Path Examinations</span> has subdivided level A1 into 3 levels, and level A2 into 2 levels. This is because the amount of time, effort and study required to become a full basic user is considerable. Through this progressive approach, we ensure that the candidate’s language competency has been assessed thoroughly.</p>
-            </div>
-
-    
-
-        
-        <!-- Side Icons -->
-          <div class="fixed-right side-form-icons">
-           <i class="fas fa-phone icon side__button" id="side__phone"></i>
-            <i class="fas fa-envelope icon side__button" id="side__email"></i>
-            <i class="fas fa-map-marker-alt icon"></i>
-          </div>
+                <h2 class="text-center" class="teachers__title our-levels-anim">Our levels</h2>
         <div class="container">            
             <div class="row event-item-style-1 even-event carta-anim-1">
                 <div class="col-5 col-lg-2 date">
@@ -983,31 +987,12 @@
                 <div class="col-12 col-lg-7 details">
                     <h3 style="color: #0091B7;">Independent users / B1 / B2 / B2+</h3>
                     <div style="background: #0091B7;" class="event__line"></div>
-                    <!-- <div class="event__title-col"> -->
                         <div class="">
-                            <p style="color: #0091B7;">Independent users are additionally able to use the language where 
-                              it relates to travel, work and study. These users are 
-                              generally consideredable to meet the demands 
-                              of many university degree programmes</p>
+                            <p style="color: #0091B7;">Independent users are additionally able to use the language where it relates to travel, work and study. These users are generally considered to meet the demands of many university degree programmes</p>
                         </div>
-                       
-                    <!-- </div> -->
                 </div>
             </div>
-            <div class="row event-item-style-1 even-event carta-anim-3">
-                <div class="col-5 col-lg-2 date">
-                    <h1 style="color: #767EA5;">.C</h1>
-                </div>
-                <div class="col-7 col-md-6 col-lg-3 media">
-                    <img src="assets/img/University/students/04.jpg" alt="events image" class="img-fluid">
-                </div>
-                <div class="col-12 col-lg-7 details">
-                    <h3 style="color: #767EA5;">Proficient users / C1 / C2 /</h3>
-                    <div style="background: #767EA5;" class="event__line"></div>
-                    <p style="color: #767EA5;"> Proficient users are additionally able to use the language where it  relates to more complex demands encountered in academic study,  legal matters, or in a professional capacity.  A C2 has achieved mastery in language.
-                    </p>
-                </div>
-            </div>
+            <p class="text-center international__text">All Path exams are aligned with the <a href="https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions">Common European Framework of Reference for Languages</a>. The CEFR is the result of sustained research conducted by 41 member states of the Council of Europe, and was first published in 2001. This alignment provides consistency in international language assessment, as it sets out uniform standards for levels of competency in languages.</p>
         </div>
 
         <!-- ASSESSMENT INNOVATION -->
@@ -1268,7 +1253,7 @@
                   </div>
                 </div>
             </div>
-            <div class="tableta">
+            <div class="tableta table-affiliate">
 
               <table class="table">
                   <tr>
@@ -1303,7 +1288,7 @@
               </table>
 
             </div>
-            <button class="main-btn" style="background-color: #0091B7;">Learn More</button>
+            <button class="main-btn" id="toggle-affiliate" style="background-color: #0091B7;">Learn more</button>
           </div>
           <div class="price-card standard">
             
@@ -1317,16 +1302,16 @@
                 </div>
                 <div class="feature feature-cartita">
                   <i class="fas fa-check"></i>
-                  <p>For freelance teachers</p>
+                  <p>For freelance teachers and institutions</p>
                 </div>
                 <div class="feature feature-cartita">
                   <i class="fas fa-check"></i>
-                  <p>No minimum candidate registrations required</p>
+                  <p>Annual registration of 10 candidates required</p>
                 </div>
               </div>
             </div>
             
-            <div class="tableta">
+            <div class="tableta tableta-member">
 
             <table class="table">
                 <tr>
@@ -1386,7 +1371,7 @@
             
             </div>
 
-            <button class="main-btn" style="background-color: #757DA4;">Learn More</button>
+            <button class="main-btn" id="toggle-member" style="background-color: #757DA4;">Learn more</button>
           </div>
           <div class="price-card advanced">
           <div class="TH" style="background-color: #79A786;">
@@ -1399,15 +1384,15 @@
               </div>
               <div class="feature feature-cartita">
                 <i class="fas fa-check"></i>
-                <p>For freelance teachers</p>
+                <p>Upgrade for institutions</p>
               </div>
               <div class="feature feature-cartita">
                 <i class="fas fa-check"></i>
-                <p>No minimum candidate registrations required</p>
+                <p>Annual registration of 20 candidates or more, or institutions adopting our inbuilt programme</p>
               </div>
             </div>
           </div>
-          <div class="tableta">
+          <div class="tableta tableta-exam">
 
             <table class="table">
                 <tr>
@@ -1477,7 +1462,7 @@
               </tbody>
             </table>
           </div>
-            <button class="main-btn" style="background-color: #79A786;">Learn More</button>
+            <button class="main-btn" id="toggle-exam" style="background-color: #79A786;">Learn more</button>
           </div>
           <div class="price-card basic">
           
@@ -1491,15 +1476,15 @@
                 </div>
                 <div class="feature feature-cartita">
                   <i class="fas fa-check"></i>
-                  <p>For freelance teachers</p>
+                  <p>Upgrade for institutions</p>
                 </div>
                 <div class="feature feature-cartita">
                   <i class="fas fa-check"></i>
-                  <p>No minimum candidate registrations required</p>
+                  <p>Annual registration of 50 candidates or more</p>
                 </div>
               </div>
             </div>
-            <div class="tableta">
+            <div class="tableta tableta-certified">
             <table class="table">
                 <tr>
                   <td id="app__comission" class="card__more-info" scope="col">Online or paper-based exam sessions at your institution</td>
@@ -1580,7 +1565,7 @@
               </tbody>
             </table>
             </div>
-            <button class="main-btn" style="background-color: #CEA574;">Learn More</button>
+            <button class="main-btn" id="toggle-certified" style="background-color: #CEA574;">Learn more</button>
           </div>
         </div>
         </div>
@@ -1608,7 +1593,10 @@
             </div>
             <div class="inbuilt__titles-aside">
               <h4>Requirements</h4>
-              <p style="color: white;">Eligible for institutions wishing to adopt Path exams for<span style="font-weight: bold;"> all their students </span>and integrate our proposal into their existing programmes - Minimum number of candidates: 50+ <br> -All candidates must be registered within the first month of the school year. <br>Adopting the Path Inbuilt programme is <span style="font-weight: bold;"> free of charge.</span></p>
+              <p style="color: white;">Eligible for institutions wishing to adopt Path exams for<span style="font-weight: bold;"> all their students </span>and integrate our proposal into their existing programmes.</p>
+              <p style="color: white;"><span style="font-weight: bold;">- Minimum</span> number of candidates: <span style="font-weight: bold;">%50</span></p>
+              <p style="color: white;"><span style="font-weight: bold;">- All</span> candidates <span style="font-weight: bold;">must be registered</span> within the <span style="font-weight: bold;">first month</span> of the school year.</p>
+              <p style="color: white;">Adopting the Path Inbuilt programme is <span style="font-weight: bold;"> free of charge.</span></p>
             </div>
           </div>
         </div> 
@@ -1732,7 +1720,7 @@
               </div>
             </div>
           </div>
-          <div class="inbuilt__cta"><button id="open-location-popup" class="main-btn" style="background-color: #004969;">Learn More</button></div>
+          <div class="inbuilt__cta"><button id="open-location-popup" class="main-btn" style="background-color: #004969;">Learn more</button></div>
         </div>
       </div>
     </div>
@@ -1768,7 +1756,7 @@
                           <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/henry.jpg"> -->
                           <div class="timeline-text">
                               <!-- <div>Henry Rodstein</div> -->
-                              <div><p>Have been a Path Certified Exam Centre for at least 2 years.</p></div>
+                              <div><p>have been a Path Certified Exam Centre for at least 2 years</p></div>
                               <!-- <span class="timestamp">2 hours ago</span> -->
                           </div>
                       </div>
@@ -1784,7 +1772,7 @@
                               <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/carolin.png"> -->
                               <div class="timeline-text">
                                   <!-- <div>Marjory Cambell</div> -->
-                                  <div><p>Have been operating as a business for at least 4 years.</p></div>
+                                  <div><p>have been operating as a business for at least 4 years</p></div>
                                   <!-- <span class="timestamp">30 minutes ago</span> -->
                               </div>
                           </div>
@@ -1800,7 +1788,7 @@
                               <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/henry.jpg"> -->
                               <div class="timeline-text">
                                   <!-- <div>Henry Rodstein</div> -->
-                                  <div><p>Have had an exam pass rate of 90% or over for the past 2 years.</p></div>
+                                  <div><p>have had an exam pass rate of 90% or over for the past 2 years</p></div>
                                   <!-- <span class="timestamp">2 hours ago</span> -->
                               </div>
                           </div>
@@ -1816,7 +1804,7 @@
                               <!-- <img class="timeline-avatar" src="https://via.placeholder.com/250x250" alt="" data-demo-src="assets/img/avatars/helen.jpg"> -->
                               <div class="timeline-text">
                                   <!-- <div>Helen Miller</div> -->
-                                  <div><p>Provide Path Examinations with their annual syllabuses for quality control</p></div>
+                                  <div><p>provide Path Examinations with their annual syllabuses for quality control.</p></div>
                                   <!-- <span class="timestamp">Yesterday</span> -->
                               </div>
                           </div>
@@ -1847,7 +1835,7 @@
             <div class="benefits__img-container"><img class="benefits__img" src="assets\img\logos\path_natgeo-01.svg" alt=""></div>
           </div>
           <div class="popover-container benefits__right">
-            <button id="popup-toggle" class="main-btn" style="background-color: #004969;">See Benefits</button>
+            <button id="popup-toggle" class="main-btn" style="background-color: #004969;">See benefits</button>
             <div class="popover-right">
               <div class="contact-links">
                 <div class="link">
@@ -1909,9 +1897,9 @@
         <div class="row justify-content-center series__row1">
           <div class="col-12 col-md-6 col-lg-6 padding-0 hover series__card">
             <div class="course-card-style-3">
-              <div class="card">
-                <div class="thumb series__info">
-                  <img class="card-img-top" src="assets/img/University/About-us-1/series-look.jpg" alt="Card image cap">
+              <div class="card carta-entera">
+                <div class="thumb">
+                  <img class="card-img-top card" src="assets/img/University/About-us-1/series-look.jpg" alt="Card image cap">
                   <!-- assets/img/slider/home1/path_cover.jpg -->
                   <div class="hover">
                     <span class="plus">
@@ -1938,7 +1926,7 @@
           </div>
           <div class="col-12 col-md-6 col-lg-6 padding-0 series__card">
             <div class="course-card-style-3">
-              <div class="card">
+              <div class="card carta-entera">
                 <div class="thumb series__info">
                   <img class="card-img-top" src="assets/img/University/About-us-1/series-impact.jpg" alt="Card image cap">
                   <div class="hover">
@@ -1969,7 +1957,7 @@
         <div class="row justify-content-center series__row2">
           <div class="col-12 col-md-6 col-lg-6 padding-0 series__card">
             <div class="course-card-style-3">
-              <div class="card">
+              <div class="card carta-entera">
                 <div class="thumb series__info">
                   <img class="card-img-top" src="assets/img/University/About-us-1/series-perspectives.jpg" alt="Card image cap">
                   <div class="hover">
@@ -1978,10 +1966,10 @@
                     </span>
                     <div class="hover-inner">
                       <div class="course-details">
-                        <p>Look is a series with simple and dynamic activities which excite students and make learning a positive experience. This series provides kids and pre-teens with the core language, a balanced skills foundation and the necessary support for them to use English in an effective way.</p>
+                        <p>Perspectives is a series which teaches students to think critically and develop the linguistic skills needed to find their own voice in English. Clear and dynamic activities, real-world stories, and TED talks motivate students to think openly, creatively and to communicate effectively. </p>
                         <div class="d-flex">
                           <ul class="series__list"><li>Age:</li> <li>Levels:</li></ul>
-                          <ul class="series__list"><li>Kids and pre-teens</li> <li>A1- Entry</li> <li>A1 Access</li> <li>A1+ Achiever</li> <li>A2 Preliminary</li> <li>A2+ Elementary</li></ul>
+                          <ul class="series__list"><li>Teens and adults</li> <li>A2 Preliminary</li> <li>A2+ Elementary</li> <li>A1+ Achiever</li> <li>B1 Progress</li> <li>B2 Competency</li> <li>B2+ Forward</li></ul>
                         </div>
                       </div>
                     </div>
@@ -1998,7 +1986,7 @@
           </div>
           <div class="col-12 col-md-6 col-lg-6 padding-0 series__card">
             <div class="course-card-style-3">
-              <div class="card">
+              <div class="card carta-entera">
                 <div class="thumb series__info">
                   <img class="card-img-top" src="assets/img/University/About-us-1/series-life.jpg" alt="Card image cap">
                   <div class="hover">
@@ -2007,7 +1995,7 @@
                     </span>
                     <div class="hover-inner">
                       <div class="course-details">
-                        <p>Perspectives is a series which teaches students to think critically and develop the linguistic skills needed to find their own voice in English. Clear and dynamic activities, real-world stories, and TED talks motivate students to think openly, creatively and to communicate effectively. </p>
+                        <p>Life is a series which brings the world to the classroom. Through interesting content, videos and topics, this series inspires a whole generation of decision-makers to develop their ability to think critically and communicate effectively in the global community.  Relevant and up-to-date topics involve students, connect them with people and places from around the world, encourage them to develop well-informed opinions and help them make connections between the content and their own lives.</p>
                         <div class="d-flex">
                           <ul class="series__list"><li>Age:</li> <li>Levels:</li></ul>
                           <ul class="series__list"><li>Adults</li> <li>A1 Access</li> <li>A1+ Achiever</li> <li>A2 Preliminary</li> <li>A2+ Elementary</li> <li>B1 Progress</li> <li>B2 Competency</li> <li>B2+ Forward</li></ul>
@@ -2228,6 +2216,20 @@
     <script src="https://codingeek.net/codingeek-js/codingeek.js"></script>
     <script>
       $(document).ready(function(){
+        // Para que las tarjetas sean sliders.
+        $('.table-affiliate, .tableta-member, .tableta-exam, .tableta-certified').hide();
+        $('#toggle-affiliate').click(function() {
+          $('.table-affiliate').slideToggle();
+        });
+        $('#toggle-member').click(function() {
+          $('.tableta-member').slideToggle();
+        });
+        $('#toggle-exam').click(function() {
+          $('.tableta-exam').slideToggle();
+        });
+        $('#toggle-certified').click(function() {
+          $('.tableta-certified').slideToggle();
+        });
 
         // Anim meet h1
       setTimeout(() => {
@@ -2306,7 +2308,7 @@
             $('.quote__after-text h2').css({'opacity':1, 'transform':'translateY(0%)'});
           };
 
-          if (scroll >= 10100) {
+          if (scroll >= 8600) {
             $('.series__title').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.series__card').css({'opacity':1, 'transform':'translateY(0%)'});
