@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/jwf6mkc.css">
     <!-- Fab Icon -->
     <link rel="shortcut icon" type="image/png" href="assets/img/logos/pathfavicon-01.png" /> 
     <!-- Fonts Awesome Icons -->
@@ -194,6 +193,7 @@
 
         .modules__text-container h2 {
       position: relative;
+      border: 12px solid pink;
     }
 
     .modules__circle-cont {
@@ -252,39 +252,87 @@
       opacity: .2;
     }
 
+    /* 
+    =========
+    JOIN PATH
+    =========
+    
+     */
+
+    .join-path-title::after {
+      content: 'Join Path';
+      position: absolute;
+      left: 0;
+      top: -33%;
+      right: 0;
+      transform: scale(2,2);
+      z-index: -1;
+      opacity: .07;
+    }
+
+    .membership-section {
+      padding: 0;
+    }
+
+        .price-card {
+          margin: 0 .5em;
+          border-radius: 4px;
+          box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.10);
+        }
+
         /* 
         ======================
         PATH INBUILT PROGRAMME
         ======================
         */
 
+        .inbuilt__title-container {
+          width: 100%;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+
         .inbuilt__title {
           padding: .5rem .5rem;
-          max-width: 45%;
+          max-width: 60%;
           color: white;
-          border-radius: 4px;
-          /* text-align: center; */
+          border-radius: 4px 4px 0 0;
+          text-align: center;
           background-color: #004969;
+          margin-bottom: 0!important;
         }
+
+        .inbuilt-checks {
+          padding: .5rem 2rem;
+          width: 60%;
+          display: flex;
+          justify-content: space-around;
+          border: 2px solid #004969;
+          border-radius: 0 0 4px 4px;
+        }
+
+        .inbuilt-checks p, .inbuilt-checks i {
+          color: #004969;
+        }
+
 
         .inbuilt__titles-container {
           display: flex;
           align-items: flex-end;
         }
 
+
         .inbuilt-info-container {
           width: 100%;
           display: flex;
           margin: 1.8rem 0;
-          /* align-items: flex-end; */
-          /* outline: 2px pink solid; */
-
         }
 
         .inbuilt__titles-aside {
           width: 40%;
           padding: 2rem 2rem 4rem 2rem;
-          /* height: 100%!important; */
           color: white!important;
           border-radius: 4px;
           box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.25);
@@ -315,29 +363,12 @@
         .inbuilt__cta {
           margin-top: 3rem 0;
         }
-
-    .join-path-title::after {
-      content: 'Join Path';
-      position: absolute;
-      left: 0;
-      top: -33%;
-      right: 0;
-      transform: scale(2,2);
-      z-index: -1;
-      opacity: .07;
-    }
-
-    .membership-section {
-      padding: 0;
-    }
-
-        .price-card {
-          margin: 0 .5em;
-          border-radius: 4px;
-          box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.10);
-        }
-
         
+        .inbuilt-benefits {
+          padding-left: 0!important;
+          padding-right: 0!important;
+          width: 30%!important;
+        }
 
         .feature-cartita {
           margin: .2rem 0 0 0;
@@ -1574,18 +1605,21 @@
 
     <div class="section">
       <div class="container">
-        <h2 class="inbuilt__title">Path Inbuilt programme</h2>
-        <div class="feature d-flex align-items-baseline inbuilt-checks-1">
-          <i style="color: #004969;" class="fas fa-check"></i>
-          <p style="color: #004969; font-weight: bold;">Free of charge</p>
-        </div>
-        <div class="feature d-flex align-items-baseline inbuilt-checks-2">
-          <i style="color: #004969; font-weight: bold;" class="fas fa-check"></i>
-          <p style="color: #004969; font-weight: bold;">Eligible for institutions with 50 students or more</p>
+        <div class="inbuilt__title-container">
+          <h2 class="inbuilt__title">Path Inbuilt programme</h2>
+          <div class="feature d-flex align-items-baseline inbuilt-checks inbuilt-checks-1">
+            <div class="d-flex align-items-baseline">
+              <i class="fas fa-check"></i>
+              <p style="font-weight: bold;">Free of charge</p>
+            </div>
+            <div class="d-flex align-items-baseline">
+              <i style="font-weight: bold;" class="fas fa-check"></i>
+              <p style="font-weight: bold;">Eligible for institutions with 50 students or more</p>
+            </div>
+          </div>
         </div>
         <div class="inbuilt__titles-container">
           <div class="features inbuilt-info-container">
-            
             <div class="inbuilt__info">
               <p>Path exams provide focus and pace to keep your students motivated, every step of the way. Our progressive scale of levels makes it possible for institutions to adopt Path exams as their end-of-course assessment.</p>
               <p>Institutions adopting the Inbuilt programme will work closely together with our academic team to align the different Path levels with their existing courses. In this way, all students will be candidates to a Path international certification at the end of the school year.</p>
@@ -1633,7 +1667,7 @@
             <div class="modules__line"></div>
           </div>
           <div class="acordion-container d-flex justify-content-between acordion-container2">
-            <div class="col-12 col-lg-4 ">
+            <div class="inbuilt-benefits">
               <div class="accordion-wrapper">
                 <div id="accordion d-flex">
                   <div class="card">
@@ -1662,7 +1696,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-4 ">
+            <div class="inbuilt-benefits">
               <div class="accordion-wrapper">
                 <div id="accordion d-flex">
                   <div class="card">
@@ -1688,7 +1722,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-4 ">
+            <div class="inbuilt-benefits">
               <div class="accordion-wrapper">
                 <div id="accordion d-flex">
                   <div class="card">
@@ -1874,7 +1908,6 @@
         </div>
         </div>
       </div>
-      <!-- <img src="assets\img\logos\path-natgeo.svg" alt=""> -->
     </section>
 
     <section class="quote__banner">

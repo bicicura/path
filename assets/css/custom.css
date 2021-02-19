@@ -1,16 +1,7 @@
-/* #af__online:hover::after {
-  position: absolute;
-  content: '';
-  width: 20px;
-  height: 20px;
-  background-color: #004969;
-  bottom: 83%;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  transform: rotate(45deg);
-} */
+.sub-menu-our-examinations {
+  min-width: 660px;
+  transform: translateX(-35%);
+}
 
 .table__title {
     padding: .5rem 0;

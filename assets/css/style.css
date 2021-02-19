@@ -1,8 +1,7 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Comfortaa:300,400,500,600,700|Playfair+Display:400,700&display=swap");
 :root {
-  --heading-font: "Lato", sans-serif;
-  --main-font: "Lato", sans-serif;
+  --heading-font:  "skolar-sans-latin", sans-serif;
+  --main-font: "skolar-sans-latin", sans-serif;
   --heading-color: #004969;
   --white: #fff;
   --red: #D80027;
@@ -15,7 +14,7 @@
   --dark-blue-4: #0194BA;
   --dark-indigo: #242E50;
   --icon-color: #9EB6BC;
-  --active-icon-color: #507F8B;
+  --active-icon-color: #004969;
   --dark-grey-1: #545454;
   --dark-grey-2: #47515a;
   --dark-grey-3: #555555;
@@ -373,7 +372,7 @@ body {
 
 h1,
 h2 {
-  font-family: "Lato", sans-serif;
+  font-family: "skolar-sans-latin", sans-serif;
   font-weight: 700;
 }
 
@@ -3680,7 +3679,7 @@ cursor: pointer;
   border: none;
   font-weight: 600;
   font-size: 14px;
-  font-family: "Lato", sans-serif;
+  font-family: "skolar-sans-latin", sans-serif;
   cursor: pointer;
   box-shadow: 0px 6px 20px -8px var(--dark-blue-1);
   transition: all 0.4s;
@@ -3695,7 +3694,7 @@ cursor: pointer;
   box-shadow: 0px 10px 20px -8px var(--dark-blue-1);
 }
 .header_section .single-header-item .content-area p {
-  font-family: "Lato", sans-serif;
+  font-family: "skolar-sans-latin", sans-serif;
   color: var(--light-grey-2);
   line-height: 1.6;
   padding-right: 50px;
@@ -4009,7 +4008,7 @@ cursor: pointer;
   }
 }
 .testimonial-style-1 .testimonial-description-slider .single-testimonial-item p {
-  font-family: "Lato", sans-serif;
+  font-family: "skolar-sans-latin", sans-serif;
   color: var(--light-grey-2);
   font-size: 13px;
   font-weight: 400;
@@ -4354,7 +4353,7 @@ cursor: pointer;
   padding: 10px 30px;
   cursor: pointer;
   position: relative;
-  font-family: "Lato", sans-serif;
+  font-family: "skolar-sans-latin", sans-serif;
   color: white;
 }
 .accordion-wrapper .card .card-header a:after {
@@ -4377,7 +4376,7 @@ cursor: pointer;
 .accordion-wrapper .card .card-body {
   background-color: transparent;
   padding: 20px 30px 0px;
-  font-family: "Lato", sans-serif;
+  font-family: "skolar-sans-latin", sans-serif;
   color: var(--light-grey-2);
   font-size: 14px;
   font-weight: 400;
@@ -9314,8 +9313,8 @@ body {
   }
 
   .popular-courses .container .rotated-text-2 {
-    left: -130px;
-    top: 50%;
+    left: -20%;
+    top: 45%;
   }
 
   .all-courses .container h2 {
