@@ -103,6 +103,10 @@
     ============
     */
 
+    .card-body p, .competences__list li {
+      font-size: 1rem;
+    }
+
     .table__title {
     padding: .5rem .5rem;
     width: 50%;
@@ -196,6 +200,11 @@
       position: relative;
     }
 
+    .map__text-container p {
+      width: 55%;
+      margin: 0 auto;
+    }
+
     .map__text-container h2::after {
       content: 'Map of levels';
       position: absolute;
@@ -285,7 +294,7 @@
 
 
     .map__exam-title {
-      width: 25%;
+      width: 76%;
       border-radius: 4px;
       margin: auto;
       margin-bottom: 2rem;
@@ -1225,11 +1234,11 @@ $(document).ready(function(){
     $('.our-exams-anim2').css({'opacity':1, 'transform':'translateX(0%)'});
 }, 1000);
 
-if (scroll >= 900) {
+if (scroll >= 800) {
       $('.our-exams-anim3').css({'opacity':1, 'transform':'translateY(0%)'});
   };
 
-  if (scroll >= 1700) {
+  if (scroll >= 1900) {
     $('.our-exams-anim4').css({'opacity':1, 'transform':'translateY(0%)'});
 };
     

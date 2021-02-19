@@ -413,7 +413,7 @@ h6 {
 }
 
 a:hover {
-  color: var(--dark-blue-3);
+  color: var(--heading-color);
 }
 
 li {
@@ -1338,7 +1338,7 @@ cursor: pointer;
   transition: all 1s;
 }
 .preloader-inner .cancel-preloader a:hover {
-  background-color: var(--dark-blue-1);
+  background-color: var(--heading-color);
   color: var(--white);
 }
 
@@ -3058,7 +3058,7 @@ cursor: pointer;
 }
 .navbar-section .navbar .navbar-nav li .sub-menu li:hover > a {
   margin-left: 4px;
-  color: var(--dark-blue-1);
+  color: var(--heading-color);
 }
 .navbar-section .navbar .navbar-nav li .sub-menu .sub-menu-item-has-children {
   position: relative;
@@ -4644,7 +4644,7 @@ cursor: pointer;
   color: var(--light-grey-2);
 }
 .footer-style-2 .footer-content a:hover {
-  color: var(--dark-blue-1);
+  color: var(--heading-color);
 }
 .footer-style-2 .footer-content li {
   margin: 0.5rem 0;

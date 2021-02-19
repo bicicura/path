@@ -156,15 +156,17 @@
 
     
 
-        /* 
-        =======
-        CONNECT
-        =======
-        */
+    /* 
+     =======
+     CONNECT
+     =======
+     */
 
     .modules__circle-cont {
       position: relative;
       display: flex;
+      align-content: space-between;
+      justify-content: space-between;
       margin: 3rem 0;
     }
 
@@ -326,7 +328,7 @@
         .inbuilt-benefits {
           padding-left: 0!important;
           padding-right: 0!important;
-          width: 30%!important;
+          width: 32%!important;
         }
 
         .feature-cartita {
@@ -626,28 +628,30 @@
           transition: .2s cubic-bezier(0.13, 0.77, 0.33, 1); 
         }
 
-        .carta-anim-1, .carta-anim-3, .inbuilt-checks-1, .inbuilt-checks-2 {
+        .carta-anim-1, .carta-anim-3, .inbuilt-checks-1, .inbuilt-checks-2, .carta-anim-2, .img-anim {
           opacity: 0;
-          transform: translateX(-15%);
+          transform: translateX(-5%);
           transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
         }
 
         .carta-anim-2, .img-anim {
-          opacity: 0;
-          transform: translateX(15%);
-          transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+          transform: translateX(5%);
+        }
+
+        .img-anim {
+          transform: translateY(5%);
         }
 
         .price-cards>div:nth-child(2), .series__row1, .series__row1>div:nth-child(2), .series__row2>div:nth-child(2)   {
-          transition-delay: .33s;
+          transition-delay: .22s;
         }
 
         .price-cards>div:nth-child(3) {
-          transition-delay: .66s;
+          transition-delay: .44s;
         }
 
         .price-cards>div:nth-child(4) {
-          transition-delay: .99s;
+          transition-delay: .66s;
         }
 
         /* 
@@ -1632,7 +1636,7 @@
           <div class="modules__text-container text-center margin-bottom-20 margin-top-20">
             <h3 class="teachers__title key-reasons-title">Key reasons to adopt the Path Inbuilt programme</h3>
           </div>
-          <div class="row d-flex justify-content-between modules__circle-cont">
+          <div class="row modules__circle-cont">
             
             <div class="modules__content">
               <div class="modules__circle"> 
@@ -2270,31 +2274,26 @@
                   var scroll = $(window).scrollTop();
                   console.log(scroll);
 
-      if (scroll >= 500) {
+      if (scroll >= 550) {
         $('.our-levels-anim').css({'opacity':1, 'transform':'translateY(0%)'});
         };
   
-        if (scroll >= 830) {
+        if (scroll >= 800) {
         $('.carta-anim-1').css({'opacity':1, 'transform':'translateX(0%)'});
         };
   
-      if (scroll >= 1300) {
+      if (scroll >= 1100) {
                 $('.carta-anim-2').css({'opacity':1, 'transform':'translateY(0%)'});
         };
-
-      if (scroll >= 1600) {
-          $('.carta-anim-3').css({'opacity':1, 'transform':'translateX(0%)'});
-};
        
-
-      if (scroll >= 2000) { 
+      if (scroll >= 1700) { 
             $('.our-principles-anim').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
-            $('.img-anim').css({'opacity':1, 'transform':'translateX(0%)'});
+            $('.img-anim').css({'opacity':1, 'transform':'translateY(0%)'});
             }, 300);
           }
         
-      if (scroll >= 3350) {
+      if (scroll >= 3200) {
             $('.join-path-title').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.price-card').css({'opacity':1, 'transform':'translateY(0%)'});
@@ -2302,7 +2301,7 @@
         }; 
 
         
-        if (scroll >= 5900) {
+        if (scroll >= 3700) {
             $('.inbuilt-checks-1').css({'opacity':1, 'transform':'translateX(0%)'});
             setTimeout(() => {
             $('.inbuilt-checks-2').css({'opacity':1, 'transform':'translateX(0%)'});
@@ -2315,25 +2314,25 @@
             }, 700);
         };
 
-        if (scroll >= 8300) {
+        if (scroll >= 6600) {
             $('.natgeo__img').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.natgeo-content p').css({'opacity':1, 'transform':'translateY(0%)'});
             }, 300);
         }; 
 
-        if (scroll >= 8900) {
+        if (scroll >= 7400) {
             $('.benefits__img').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.benefits__right').css({'opacity':1, 'transform':'translateY(0%)'});
             }, 500);
           };
 
-          if (scroll >= 9400) {
+          if (scroll >= 7800) {
             $('.quote__after-text h2').css({'opacity':1, 'transform':'translateY(0%)'});
           };
 
-          if (scroll >= 8600) {
+          if (scroll >= 8300) {
             $('.series__title').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.series__card').css({'opacity':1, 'transform':'translateY(0%)'});
@@ -2371,7 +2370,7 @@
             }, 300);
           }
         
-      if (scroll >= 3800) {
+      if (scroll >= 3200) {
             $('.join-path-title').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.price-card').css({'opacity':1, 'transform':'translateY(0%)'});
@@ -2379,7 +2378,7 @@
         }; 
 
         
-        if (scroll >= 9700) {
+        if (scroll >= 4000) {
             $('.inbuilt-checks-1').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.inbuilt-checks-2').css({'opacity':1, 'transform':'translateY(0%)'});
