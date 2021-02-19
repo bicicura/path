@@ -377,19 +377,19 @@ h2 {
 }
 
 h1 {
-  font-size: 52px;
+  font-size: 60px;
   color: var(--heading-color);
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 50px;
   color: var(--heading-color);
 }
 
 h3 {
   font-family: var(--main-font);
   color: var(--heading-color);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
 }
 
@@ -424,7 +424,7 @@ p,
 li {
   font-family: var(--main-font);
   color: var(--light-grey-2);
-  font-size: 13px;
+  font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.6;
   margin-bottom: 0.5rem;
@@ -432,7 +432,7 @@ li {
 
 a {
   font-weight: 500;
-  font-size: 13px;
+  font-size: inherit;
   color: var(--dark-grey);
   font-family: var(--main-font);
   -webkit-transition: all 0.3s;
@@ -809,7 +809,7 @@ cursor: pointer;
 
 .contact-links .link {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   margin: 0.25rem 0;
   width: 90%;
 }
@@ -819,13 +819,13 @@ cursor: pointer;
 .contact-links .link i {
   color: var(--dark-grey-4);
   margin-right: 10px;
-  font-size: 13px;
+  font-size: 1rem;
   cursor: auto;
   color: var(--light-grey-2);
 }
 
 .contact-links .link p {
-  font-size: .9rem;
+  font-size: 1rem;
 }
 
 .social-icons {
@@ -1551,7 +1551,7 @@ cursor: pointer;
   background-color: rgba(0, 147, 184, 0.8);
   border: 0;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 1rem;
   font-family: var(--main-font);
   margin: 2rem auto;
   cursor: pointer;
@@ -3045,7 +3045,7 @@ cursor: pointer;
 }
 .navbar-section .navbar .navbar-nav li .sub-menu li a {
   margin: 5px 0;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
 }
 .navbar-section .navbar .navbar-nav li .sub-menu li a:hover {
@@ -3092,7 +3092,7 @@ cursor: pointer;
   opacity: 1;
 }
 .navbar-section .navbar .navbar-nav li a {
-  font-size: 14px;
+  font-size: 1rem;
   margin-right: 2px;
   font-weight: 700;
 }
@@ -3124,7 +3124,7 @@ cursor: pointer;
   content: "";
   position: absolute;
   right: -14px;
-  top: 5px;
+  top: 8px;
   font-family: "font awesome 5 free";
   font-weight: 900;
   font-size: 10px;
@@ -3678,7 +3678,7 @@ cursor: pointer;
   background-color: #004969;
   border: none;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 1rem;
   font-family: "skolar-sans-latin", sans-serif;
   cursor: pointer;
   box-shadow: 0px 6px 20px -8px var(--dark-blue-1);
@@ -3729,6 +3729,7 @@ cursor: pointer;
 }
 .event-item-style-1 .date, .event-item-style-1 .details {
   margin-top: 5%;
+  /* padding-bottom: 12%; */
 }
 .event-item-style-1 h1,
 .event-item-style-1 h5 {
@@ -4378,7 +4379,7 @@ cursor: pointer;
   padding: 20px 30px 0px;
   font-family: "skolar-sans-latin", sans-serif;
   color: var(--light-grey-2);
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -4535,11 +4536,11 @@ cursor: pointer;
 .footer-section .footer-content h5 {
   display: inline-block;
   color: var(--dark-grey-3);
-  border-bottom: 1px solid var(--dark-blue-4);
+  border-bottom: 1.5px solid var(--heading-color);
   padding-bottom: 0.5rem;
 }
 .footer-section .footer-content a {
-  font-size: 13px;
+  font-size: 1rem;
   color: var(--light-grey-2);
 }
 .footer-section .footer-content a:hover {
@@ -4600,9 +4601,9 @@ cursor: pointer;
 }
 .footer-section .copyright #scroll-top {
   display: inline-block;
-  background-color: var(--icon-color);
+  background-color: var(--heading-color);
   position: absolute;
-  right: 60px;
+  right: 51px;
   bottom: 25px;
   height: 35px;
   margin-bottom: -20px;
@@ -5089,15 +5090,14 @@ cursor: pointer;
 }
 .price-cards .price-card .features .feature {
   display: flex;
-  align-items: center;
   text-align: left;
 }
 .price-cards .price-card .features .feature i {
   font-size: 10px;
-  margin: 0.25rem 1rem 0.25rem 0;
+  margin: 0.25rem .5rem 0.25rem .5rem;
 }
 .price-cards .price-card .features .feature p {
-  font-size: 11px;
+  font-size: 14px;
   margin-bottom: 0;
   line-height: 15px;
 }

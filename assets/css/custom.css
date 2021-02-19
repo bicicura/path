@@ -1,11 +1,11 @@
 .sub-menu-our-examinations {
-  min-width: 660px;
-  transform: translateX(-35%);
+  min-width: 720px;
+  transform: translateX(-40%);
 }
 
 .table__title {
     padding: .5rem 0;
-    width: 45%;
+    width: 60%;
     margin: 0 auto;
     color: white;
     border-radius: 2px;
@@ -30,6 +30,11 @@ TARJETAS
 #app__meeting, #app__webinars, #app__discounts, #app__invigiliator, #app__access, #app__onboard, #app__certificate, #app__adv, #app__reg, #app__inst, #app__banner, #app__perf, #app__10com, #app__prop, #cer__comission, #cer__logo, #cer__webinars, #app__cert-cent, #app__adv,
 #app__qmark, #app__plaque, #app__prof, #app__stud, #app__scho, #app__website, #app__banner2, #app__prop {
   position: relative;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #004969;
 }
 
 .card__more-info:hover::before {
@@ -40,6 +45,7 @@ TARJETAS
   text-align: center;
   top: 0;
   bottom: 0;
+  font-weight: 400;
   left: -150%;
   padding: .5rem .5rem .7rem .5rem!important;
   height: fit-content;

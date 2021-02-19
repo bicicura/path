@@ -31,6 +31,17 @@
     ======
     */
 
+    .card-body ul li, .qmark__card p, .course-details p {
+      font-size: 1rem;
+      line-height: 1.4;
+
+    }
+
+    .our-level-cards h3 {
+      margin-bottom: 1rem;
+    }
+
+
     .breadcrub-style-5 {
       position: relative;
     }
@@ -78,14 +89,12 @@
 
     .international__text {
       width: 80%;
-      font-size: 1rem;
       margin: 0 auto;
     }
 
     .international__text a {
       color: #004969;
       font-weight: bold;
-      font-size: inherit;
     }
 
     /* 
@@ -145,56 +154,13 @@
         align-items: center;
     }
 
-    .event-item-style-1 .details p {
-      font-size: .9rem;
-    }
-
-    /* 
-    ==================
-    QUOTE AFTER BANNER
-    ==================
-    */
-
-        .quote__after-img {
-            background-image: url(../assets/img/University/students/path-quote.jpg); 
-            margin: 6vh 0!important;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-        }
-
-        .quote__after-courtain {
-            background-color: #000;
-            opacity: .5;
-        }
-
-        .quote__after-text {
-            text-align: center;
-            padding: 20vh 0;
-            position: relative;
-        }
-
-        .quote__after-text h2 {
-            color: white;
-        }
-
-        .quote__after-coma {
-            position: absolute;
-            top: 13%;
-            left: 0;
-        }
+    
 
         /* 
         =======
         CONNECT
         =======
         */
-
-        .modules__text-container h2 {
-      position: relative;
-      border: 12px solid pink;
-    }
 
     .modules__circle-cont {
       position: relative;
@@ -237,21 +203,6 @@
       max-width: 60%;
     }
 
-    .modules__line {
-      position: absolute;
-      width: 70%;
-      height: 1px;
-      padding: 1px 0;
-      top:13%;
-      left:0;
-      right:0;
-      margin-left:auto;
-      margin-right:auto;
-      background-color: #8B9A99;
-      z-index: -1;
-      opacity: .2;
-    }
-
     /* 
     =========
     JOIN PATH
@@ -274,10 +225,10 @@
       padding: 0;
     }
 
-        .price-card {
-          margin: 0 .5em;
-          border-radius: 4px;
-          box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.10);
+    .price-card {
+      margin: 0 .5em;
+      border-radius: 4px;
+      box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.10);
         }
 
         /* 
@@ -304,19 +255,28 @@
           margin-bottom: 0!important;
         }
 
+        .path-inbuilt-check {
+          margin: 0;
+          margin-right: 10px;
+        }
+
         .inbuilt-checks {
-          padding: .5rem 2rem;
+          padding: .5rem 1rem;
           width: 60%;
           display: flex;
-          justify-content: space-around;
+          justify-content: space-between;
           border: 2px solid #004969;
           border-radius: 0 0 4px 4px;
         }
 
         .inbuilt-checks p, .inbuilt-checks i {
           color: #004969;
+          font-size: 1rem;
         }
-
+        
+        .inbuilt-checks p {
+        font-style: italic;
+        }
 
         .inbuilt__titles-container {
           display: flex;
@@ -353,7 +313,6 @@
 
         .join-path-title {
         position: relative;
-        font-size: 46px;
         }
 
         .key-reasons-cont {
@@ -446,7 +405,6 @@
 
         .qmark__end {
           width: 50%;
-          /* margin: 2rem 0; */
           padding: 1.5rem;
           margin: 0 auto;
           box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.10);
@@ -478,7 +436,6 @@
         .natgeo-content p {
           width: 70%;
           margin: 0 auto;
-          font-size: 1rem;
         }
 
         .natgeo-content p:first-of-type {
@@ -488,7 +445,7 @@
         .movida {
           width: 100%;
           height: 400px;
-          background-image: url(../assets/img/logos/path-natgeo.svg);
+          background-image: url(/assets/img/logos/path-natgeo.svg);
           background-size: cover;
           background-position: center;
         }
@@ -537,6 +494,43 @@
           max-width: 100%;
         }
 
+
+    /* 
+    ==================
+    QUOTE AFTER BANNER
+    ==================
+    */
+
+    .quote__after-img {
+            background-image: url(/assets/img/University/students/path-quote.jpg); 
+            margin: 6vh 0!important;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .quote__after-courtain {
+            background-color: rgba(0, 0, 0, .4)
+        }
+
+        .quote__after-text {
+            text-align: center;
+            padding: 20vh 0;
+            position: relative;
+        }
+
+        .quote__after-text h2 {
+            color: white;
+        }
+
+        .quote__after-coma {
+            position: absolute;
+            top: 13%;
+            left: 0;
+        }
+
+
         /*
         ======
         SERIES
@@ -545,7 +539,6 @@
 
         .series__title {
       position: relative;
-      font-size: 50px;
     }
 
     .series__title::after {
@@ -561,7 +554,6 @@
 
     .series__text {
       width: 55%;
-      font-size: 1rem;
       margin: 0 auto;
       font-weight: bold;
       margin-bottom: 6vh;
@@ -989,8 +981,8 @@
          
     <!-- Events Section -->
     <section class="events-section section">
-                <h2 class="text-center" class="teachers__title our-levels-anim">Our levels</h2>
-        <div class="container">            
+      <div class="container">            
+          <h2 class="text-center" class="teachers__title our-levels-anim">Our levels</h2>
             <div class="row event-item-style-1 even-event carta-anim-1">
                 <div class="col-5 col-lg-2 date">
                     <h1>.A</h1>
@@ -998,7 +990,7 @@
                 <div class="col-7 col-md-6 col-lg-3 media">
                     <img src="assets/img/University/students/02.jpg" alt="events image" class="img-fluid">
                 </div>
-                <div class="col-12 col-lg-7 details">
+                <div class="col-12 col-lg-7 details our-level-cards">
                     <h3 style="color: #004969;">Basic users  / A1- / A1 / A1+ / A2 / A2+</h3>
                     <div style="background: #004969;" class="event__line"></div>
                     <p style="color: #004969;">Basic users are able to use the language where it relates to personal 
@@ -1015,12 +1007,10 @@
                     <img src="assets/img/University/students/03.jpg" alt="events image"
                         class="img-fluid">
                 </div>
-                <div class="col-12 col-lg-7 details">
+                <div class="col-12 col-lg-7 details our-level-cards">
                     <h3 style="color: #0091B7;">Independent users / B1 / B2 / B2+</h3>
-                    <div style="background: #0091B7;" class="event__line"></div>
-                        <div class="">
-                            <p style="color: #0091B7;">Independent users are additionally able to use the language where it relates to travel, work and study. These users are generally considered to meet the demands of many university degree programmes</p>
-                        </div>
+                    <div style="background: #0091B7;" class="event__line"></div>            
+                    <p style="color: #0091B7;">Independent users are additionally able to use the language where it relates to travel, work and study. These users are generally considered to meet the demands of many university degree programmes</p>
                 </div>
             </div>
             <p class="text-center international__text">All Path exams are aligned with the <a href="https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions">Common European Framework of Reference for Languages</a>. The CEFR is the result of sustained research conducted by 41 member states of the Council of Europe, and was first published in 2001. This alignment provides consistency in international language assessment, as it sets out uniform standards for levels of competency in languages.</p>
@@ -1269,6 +1259,7 @@
           
           <div class="TH" style="background-color: #0091B7;">
                 <h4>AFFILIATE</h4>
+                <br>
                 <div class="features">
                   <div class="feature feature-cartita">
                     <i class="fas fa-check"></i>
@@ -1287,10 +1278,10 @@
             <div class="tableta table-affiliate">
 
               <table class="table">
+                <tbody>
                   <tr>
                     <td id="af__online" class="card__more-info" scope="col">Online or paper-based exams at the nearest exam centre</td>
                   </tr>
-                <tbody>
                   <tr>
                     <td id="af__academic" class="card__more-info">Academic guidance</td>
                   </tr>
@@ -1326,6 +1317,7 @@
             <div class="TH" style="background-color: #757DA4;">
 
               <h4 >OFFICIAL MEMBER</h4>
+              <br>
               <div class="features">
                 <div class="feature feature-cartita">
                   <i class="fas fa-check"></i>
@@ -1345,10 +1337,10 @@
             <div class="tableta tableta-member">
 
             <table class="table">
+              <tbody>
                 <tr>
                   <td id="mem__online" class="card__more-info" scope="col">Online or paper-based exams at the nearest exam centre</td>
                 </tr>
-              <tbody>
                 <tr>
                   <td id="mem__academic" class="card__more-info">Academic guidance</td>
                 </tr>
@@ -1426,10 +1418,10 @@
           <div class="tableta tableta-exam">
 
             <table class="table">
+              <tbody>
                 <tr>
                   <td id="app__comission" class="card__more-info" scope="col">Online or paper-based exam sessions at your institution</td>
                 </tr>
-              <tbody>
                 <tr>
                   <td id="mem__academic" class="card__more-info">Academic guidance</td>
                 </tr>
@@ -1517,10 +1509,10 @@
             </div>
             <div class="tableta tableta-certified">
             <table class="table">
+              <tbody> 
                 <tr>
                   <td id="app__comission" class="card__more-info" scope="col">Online or paper-based exam sessions at your institution</td>
-                </tr>
-              <tbody>
+                </tr> 
                 <tr>
                   <td id="cer__comission" class="card__more-info">Exclusive academic guidance</td>
                 </tr>
@@ -1609,11 +1601,11 @@
           <h2 class="inbuilt__title">Path Inbuilt programme</h2>
           <div class="feature d-flex align-items-baseline inbuilt-checks inbuilt-checks-1">
             <div class="d-flex align-items-baseline">
-              <i class="fas fa-check"></i>
+              <i class="fas fa-check path-inbuilt-check"></i>
               <p style="font-weight: bold;">Free of charge</p>
             </div>
             <div class="d-flex align-items-baseline">
-              <i style="font-weight: bold;" class="fas fa-check"></i>
+              <i style="font-weight: bold;" class="fas fa-check path-inbuilt-check"></i>
               <p style="font-weight: bold;">Eligible for institutions with 50 students or more</p>
             </div>
           </div>
