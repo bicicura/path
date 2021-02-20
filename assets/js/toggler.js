@@ -110,12 +110,12 @@ $(".close-popup").click(function() {
 });
 
 // ===================== Show Details =====================
-$(".card .plus").on("click", function() {
-  var el = $(this);
-  el.parent()
-    .children(".hover-inner")
-    .toggleClass("show");
-});
+// $(".card .plus").on("click", function() {
+//   var el = $(this);
+//   el.parent()
+//     .children(".hover-inner")
+//     .toggleClass("show");
+// });
 
 $(".carta-entera").click(function () {
   $(this).children('.thumb').children(".hover").children('.hover-inner').toggleClass('show');

@@ -154,56 +154,6 @@
         align-items: center;
     }
 
-    
-
-    /* 
-     =======
-     CONNECT
-     =======
-     */
-
-    .modules__circle-cont {
-      position: relative;
-      display: flex;
-      align-content: space-between;
-      justify-content: space-between;
-      margin: 3rem 0;
-    }
-
-    .modules__content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 30%;
-    }
-
-    .modules__content h4 {
-      margin: 1rem 0;
-    }
-
-    .modules__circle {
-      width: 10vh;
-      height: 10vh;
-      background-color: #004969;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      align-items: center;
-      border-radius: 50%;
-      opacity: .9;
-    }
-
-    .modules__circle-skills {
-      background-color: #0091B8;
-    }
-
-    .modules__circle-marks {
-      background-color: #767EA5;
-    }
-
-    .modules__circle-img {
-      max-width: 60%;
-    }
 
     /* 
     =========
@@ -248,14 +198,22 @@
         }
 
         .inbuilt__title {
-          padding: .5rem .5rem;
+          width: 100%;
           max-width: 60%;
+          padding: .5rem .5rem;
           color: white;
           border-radius: 4px 4px 0 0;
           text-align: center;
           background-color: #004969;
           margin-bottom: 0!important;
+          margin-top: 2rem;
         }
+
+        .key-reasons-title {
+          max-width: 60%;
+          margin: 0 auto;
+        }
+
 
         .path-inbuilt-check {
           margin: 0;
@@ -266,7 +224,7 @@
           padding: .5rem 1rem;
           width: 60%;
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
           border: 2px solid #004969;
           border-radius: 0 0 4px 4px;
         }
@@ -301,6 +259,14 @@
           background-color: #004969;
         }
 
+        .inbuilt__titles-aside > h4 {
+          margin-bottom: 1.5em;
+        }
+
+        .inbuilt__titles-aside p:nth-child(2), .inbuilt__titles-aside p:nth-child(4) {
+          margin-bottom: 1.5em;
+        }
+
         .inbuilt__info {
           width: 60%;
           border-radius: 4px;
@@ -308,13 +274,8 @@
           padding: 2rem 2rem 4rem 2rem;
         }
 
-        .inbuilt__title {
-          margin-top: 2rem;
-          width: 100%;
-        }
-
-        .join-path-title {
-        position: relative;
+        .inbuilt__info p:nth-child(2) {
+          margin: 1.5em 0;
         }
 
         .key-reasons-cont {
@@ -324,22 +285,73 @@
         .inbuilt__cta {
           margin-top: 3rem 0;
         }
+
+        
+    .modules__circle-cont {
+      position: relative;
+      /* outline: 10px solid yellow; */
+      display: flex;
+      justify-content: space-between;
+      margin: 3rem 0;
+    }
+
+    .modules__line {
+      position: absolute;
+      width: 70%;
+      height: 1px;
+      padding: 1px 0;
+      top:13%;
+      left:0;
+      right:0;
+      margin-left:auto;
+      margin-right:auto;
+      background-color: #8B9A99;
+      z-index: -1;
+      opacity: .2;
+    }
+
+    .modules__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* outline: 5px solid pink; */
+      width: 30%;
+    }
+
+    .modules__content h4 {
+      margin: 1rem 0;
+    }
+
+    .modules__circle {
+      width: 10vh;
+      height: 10vh;
+      background-color: #004969;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      border-radius: 50%;
+      opacity: .9;
+    }
+
+    .modules__circle-skills {
+      background-color: #0091B8;
+    }
+
+    .modules__circle-marks {
+      background-color: #767EA5;
+    }
+
+    .modules__circle-img {
+      max-width: 60%;
+    }
         
         .inbuilt-benefits {
           padding-left: 0!important;
           padding-right: 0!important;
-          width: 32%!important;
+          width: 30%!important;
         }
 
-        .feature-cartita {
-          margin: .2rem 0 0 0;
-          font-style: italic;
-        }
-
-        .price-cards .price-card .main-btn {
-          margin: 2rem auto;
-          width: 80%;
-        }
 
         .form-inbuilt__container {
           padding: 2rem 1rem!important;
@@ -357,6 +369,25 @@
           border: none;
           border-bottom: 1px solid #004969;
         }
+
+
+
+        .join-path-title {
+        position: relative;
+        }
+
+
+        .feature-cartita {
+          margin: .2rem 0 0 0;
+          font-style: italic;
+        }
+
+        .price-cards .price-card .main-btn {
+          margin: 2rem auto;
+          width: 80%;
+        }
+
+      
 
         /* 
         ======
@@ -458,8 +489,8 @@
 
         .benefits {
           display: flex;
-          justify-content: space-evenly;
-          width: 50%;
+          justify-content: center;
+          width: 60%;
           align-items: center;
           align-content: center;
           position: relative;
@@ -468,7 +499,7 @@
         .benefits__left {
           width: 100%;
           display: flex;
-          justify-content: space-between;
+          justify-content: space-evenly;
           align-items: baseline;
           padding: 1rem;
         }
@@ -1305,6 +1336,10 @@
                     <td id="af__webinars" class="card__more-info">Discounted fee for Path webinars</td>
                   </tr>
                   <tr>
+                    <td id="mem__fixed" class="card__more-info">Fixed exam fees in your local currency</td>
+                  </tr>
+
+                  <tr>
                     <td id="af__discount" class="card__more-info">5% discount on early exam registrations</td>
                   </tr>
                   <tr>
@@ -1365,7 +1400,7 @@
                 </tr>
                 <tr>
                   <td id="mem__fixed" class="card__more-info">Fixed exam fees in your local currency</td>
-                </tr>
+                </tr>  
                 <tr>
                   <td id="mem__discount" class="card__more-info">5% discount on early exam registrations</td>
                 </tr>
@@ -1455,7 +1490,7 @@
                 </tr>
                 <tr>
                   <td id="app__access" class="card__more-info">Access to My Path area</td>
-                </tr>
+                </tr>  
                 <tr>
                   <td id="app__onboard" class="card__more-info">Onboarding meeting</td>
                 </tr>
@@ -1478,7 +1513,7 @@
                   <td id="app__perf" class="card__more-info">Report of exam performance</td>
                 </tr>
                 <tr>
-                  <td id="app__prop" class="card__more-info">Personalised Path academic proposa</td>
+                  <td id="app__prop" class="card__more-info">Personalised Path academic proposal</td>
                 </tr>
                 <tr>
                   <td id="app__banner" class="card__more-info">Path banner design</td>
@@ -1534,6 +1569,9 @@
                 </tr>
                 <tr>
                   <td id="cer__webinars" class="card__more-info">Free access to Path webinars, seminars and courses</td>
+                </tr>
+                <tr>
+                  <td id="mem__fixed" class="card__more-info">Fixed exam fees in your local currency</td>
                 </tr>
                 <tr>
                   <td id="mem__fixed" class="card__more-info">5% and 10% discounts on early exam registrations</td>
@@ -1634,10 +1672,9 @@
       <div class="key-reasons-cont">
         <div class="container modules__container">
           <div class="modules__text-container text-center margin-bottom-20 margin-top-20">
-            <h3 class="teachers__title key-reasons-title">Key reasons to adopt the Path Inbuilt programme</h3>
+            <h2 class="teachers__title key-reasons-title">Key reasons to adopt the Path Inbuilt programme</h2>
           </div>
           <div class="row modules__circle-cont">
-            
             <div class="modules__content">
               <div class="modules__circle"> 
                 <img class="modules__circle-img" src="assets\img\icons\study-01.svg" alt="Skills">
@@ -1854,7 +1891,7 @@
         <div class="natgeo-content">
           <div class="natgeo__logo-container"><img class="natgeo__img" src="assets\img\logos\natgeo-learning.svg" alt=""></div>
           <p><span style="font-weight: bold;">Path exams</span> do not need any special study books or preparation in particular. All that is really needed is to attend regular classes in order to develop effective communicative competence.</p>
-          <p>Teachers or institutions are free to choose the material they want for each of their classes. Nevertheless, <span style="font-weight: bold;">Path Examinations</span> is in partnership with <span style="font-weight: bold;">National Geographic Learning</span> to provide anyone interested with a highly communicative alternative which is also aligned with our approach.</p>
+          <p>Teachers or institutions are free to choose the material they want for each of their classes. Nevertheless, <span style="font-weight: bold;">Path Examinations</span> is in partnership with <span style="font-weight: bold;">National Geographic Learning</span><span class="natgeo-cont"><img src="assets\img\logos\nat-geo-01.svg" alt=""></span> to provide anyone interested with a highly communicative alternative which is also aligned with our approach.</p>
         </div>
       </div>
       <div class="movida">

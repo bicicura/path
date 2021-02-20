@@ -1,3 +1,12 @@
+.footer-a {
+  border-bottom: 1px solid whitesmoke;
+}
+
+.footer-a:hover {
+  color: #0091B8;
+  border-bottom: 1px solid #0091B8;
+}
+
 .social-icon li i {
   font-size: 15px;
 }
