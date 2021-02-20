@@ -1484,11 +1484,10 @@ cursor: pointer;
 }
 .breadcrub-style-4 .container .heading {
   position: absolute;
-  background-color: var(--light-grey-5);
-  padding: 0.25rem 10rem 0 1rem;
+  background-color: rgba(247, 249, 250, .8);
+  padding: 0.25rem 5rem 0 1rem;
   left: 0;
-  bottom: -10px;
-  opacity: .8;
+  bottom: -25px;
 }
 
 /* ESTA LA CUSTOMIZIE TODA! */
