@@ -395,6 +395,7 @@ h3 {
 
 h4 {
   font-family: var(--main-font);
+  color: var(--heading-color);
   font-size: 20px;
   font-weight: 600;
 }
@@ -3634,6 +3635,7 @@ cursor: pointer;
 .header_section .header-carousel .owl-stage .owl-item.active .single-header-item .content-area .title {
   -webkit-animation: 1s 0.2s fadeInLeft both;
   animation: 1s 0.2s fadeInLeft both;
+  left: 0;
 }
 .header_section .header-carousel .owl-stage .owl-item.active .single-header-item .content-area p {
   -webkit-animation: 1s 0.2s fadeInUp both;

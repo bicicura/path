@@ -26,6 +26,10 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <title>Path | Home</title>
     <style type="text/css">
+    body {
+        position: relative;
+    }
+
     /* 
     ======
     BANNER
@@ -174,20 +178,20 @@
     }
     
     .card-background1 {
-        background-image: url(/assets/img/University/students/path-quote.jpg); 
+        background-image: url(/assets/img/University/students/path-card2.jpg); 
     }
 
     .card-background2 {
-        background-image: url(/assets/img/University/students/path_cover.jpg);
+        background-image: url(/assets/img/University/students/path_card3.jpg);
         background-position: left;
     }
 
     .card-background3 {
-        background-image: url(/assets/img/University/students/card-3.jpg); 
+        background-image: url(/assets/img/University/students/path-card1.jpg); 
     }
 
     .card-background4 {
-        background-image: url(/assets/img/University/students/card4.jpg); 
+        background-image: url(/assets/img/University/students/path-card4.jpg); 
         background-position: top;
     }
 
@@ -222,7 +226,7 @@
         justify-content: space-between;
         display: flex;
         align-items: baseline;
-        opacity: 0;
+        opacity: 1;
         transform: translateX(-5%);
         transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1)!important;
     }
@@ -232,7 +236,7 @@
     }
     
     .col1, .col2 {
-        opacity: 0;
+        opacity: 1;
         transform: translateY(0%);
         transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1)!important;
     }
@@ -400,7 +404,13 @@
             }
 
             .title {
+                position: sticky;
+                left: 0;
                 text-shadow: 0px 2px 6px #FFFFFF;
+            }
+
+            .header_section {
+                position: relative;
             }
             
             .boxed-btn {
@@ -435,6 +445,24 @@
             transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
             margin: 0 5%;
             text-align: left;
+            }
+
+            .card__container {
+                flex-direction: column;
+                /* width: 100%; */
+            }
+
+            .col1, .col2 {
+                width: 100%;
+            }
+
+            .card__signup {
+                /* margin: 0 auto; */
+                flex-direction: column;
+                justify-content: center;
+                align-content: center;
+                text-align: center;
+                align-items: center;
             }
             
             .europe, .latin, .asia, .africa {
@@ -534,6 +562,7 @@
 
     <!-- Showcase Section -->
     <div class="header_section section">
+        <!-- <div class="title-real"><h1 style="color:#004969;">Evolution in <br> language assesment</h1></div> -->
         <div class="social-icon">
             <ul>
                 <li><i id="open-form-popup"  class="fas fa-envelope" style="margin:0" id="fab"></i></a></li>
@@ -542,6 +571,7 @@
                 <li><a target="_blank" href="https://www.instagram.com/pathlatam"><i class="fab fa-instagram"></i></a></li>           
             </ul>
         </div>
+        
         <div class="header-carousel">
             <div class="single-header-item">
                 <div class="content-area">
@@ -558,7 +588,7 @@
             </div>
             <div class="single-header-item">
                 <div class="content-area">
-                    <h1 class="title">We helpe you go further than you have ever dreamed.</h1>
+                    <h1 class="title" style="color:#004969;">Evolution in <br> language assesment</h1>
                     <p class="d-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in velit
                         odio. Morbi sodales nisi nec
                         tortor commodo, malesuada fermentum magna faucibus. Proin fringilla ante lacus, eu condimentum
@@ -570,7 +600,7 @@
             </div>
             <div class="single-header-item">
                 <div class="content-area">
-                    <h1 class="title">The education you want, the attention you deserve.</h1>
+                    <h1 class="title" style="color:#004969;">Evolution in <br> language assesment</h1>
                     <p class="d-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in velit
                         odio. Morbi sodales nisi nec
                         tortor commodo, malesuada fermentum magna faucibus. Proin fringilla ante lacus, eu condimentum
@@ -582,7 +612,7 @@
             </div>
             <div class="single-header-item">
                 <div class="content-area">
-                    <h1 class="title">Best university facilities in the world.</h1>
+                    <h1 class="title" style="color:#004969;">Evolution in <br> language assesment</h1>
                     <p class="d-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in velit
                         odio. Morbi sodales nisi nec
                         tortor commodo, malesuada fermentum magna faucibus. Proin fringilla ante lacus, eu condimentum
@@ -887,11 +917,39 @@
               var scroll = $(window).scrollTop();
               console.log(scroll);
               // Si se excede la distancia de scroll que queres, haces un menjo
-              if (scroll >= 25) {
-                  // Alteras el elemento 
-                  element.fadeIn(1000);
-                  element.removeClass("no");
+              if (scroll >= 800) {
+                  $('.quote__title').css({'opacity':1});
               };
+
+                if (scroll >= 1300) {
+                    $('.franja__title').css({'opacity':1, 'transform':'translateY(0%)'});
+                };
+    
+
+                if (scroll >= 1400) {
+                $('.col1').css({'opacity':1, 'transform':'translateY(-2.5%)'});
+                setTimeout(() => {
+                $('.col2').css({'opacity':1, 'transform':'translateY(2.5%)'});
+                }, 200);
+                };
+
+                if (scroll >= 2800) {
+                    $('.card__signup').css({'opacity':1, 'transform':'translateX(0%)'});
+                };
+
+
+                if (scroll >= 3200) {
+                $('.europe').css({'opacity':1, 'transform':'translateY(0%)'});
+                setTimeout(() => {
+                $('.latin').css({'opacity':1, 'transform':'translateY(0%)'});
+                }, 200);
+                setTimeout(() => {
+                $('.africa').css({'opacity':1, 'transform':'translateY(0%)'});
+                }, 400);
+                setTimeout(() => {
+                $('.asia').css({'opacity':1, 'transform':'translateY(0%)'});
+                }, 600);
+                };
     
       });
       }
