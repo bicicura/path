@@ -43,7 +43,7 @@
     #learn-more-form>div {
     position: relative;
     background: white;
-    width: 65vw;
+    width: 58vw;
     padding: 25px 0;
     top: 50%;
     left: 50%;
@@ -86,7 +86,6 @@
       top: 18%;
       left: 4%;
       background: rgba(0, 73, 105, .7);
-      /* width: 3.8%; */
       border-radius: 4px;
       display: flex;
       flex-direction: column;
@@ -638,8 +637,7 @@
           padding: 10%;
           border-top-left-radius: 4px;
           border-top-right-radius: 4px;
-          min-height: 200px;
-          cursor: pointer;
+          min-height: 220px;
         }
 
         td {
@@ -660,6 +658,7 @@
         .tableta{
           width: 80%;
           margin: auto;
+          cursor: pointer;
         }
         .TH h4 {
           margin-bottom: .4rem!important;
@@ -744,7 +743,7 @@
     }
 
     #side__phone:hover::after {
-        content: '+54 9 11 5738 5100';
+        content: '+44 020 3468 2534';
         position: absolute;
         box-shadow: 0px 7px 5px 0px rgba(0,0,0,.15);
         white-space: nowrap;
@@ -816,6 +815,11 @@
           max-width: 100%!important;
           text-align: center;
         } 
+
+        .inbuilt-checks {
+          width: 100%;
+          flex-direction: column;
+        }
 
         .inbuilt-info-container {
           flex-direction: column;
@@ -1005,37 +1009,36 @@
 
       <div class="nav-menu-items">
           <ul class="nav-items">
-              <li><a href="index.html">Home</a></li>
-              <li class="menu-item-has-children"><a href="about.html">Meet Path</a>
+              <li><a style="font-weight: bold;" href="index.html">Home</a></li>
+              <li class="menu-item-has-children"><a style="font-weight: bold;" href="meet-path.html">Meet Path</a>
                   <ul class="sub-menu">
-                      <li><a href="index.html">About us</a></li>
-                      <li><a href="index-2.html">Think Forward Strategy</a></li>
-                      <li><a href="index-3.html">Policies and Procedures</a></li>
+                      <li><a href="/meet-path.html#about-us">About us</a></li>
+                      <li><a href="/meet-path.html#think-forward-strategy">Think Forward strategy</a></li>
+                      <li><a href="/meet-path.html#policies-and-procedures">Policies and procedures</a></li>
                   </ul>
               </li>
               <!-- <li><a href="teachers-institutions.html" class="current-menu-item">Teachers and Institutions</a></li> -->
-              <li class="menu-item-has-children"><a href="teachers-institutions.html">Teachers and Institutions</a>
+              <li class="menu-item-has-children"><a style="font-weight: bold;" href="teachers-institutions.html">Teachers and Institutions</a>
                   <ul class="sub-menu">
-                      <li><a href="courses.html">International Standards</a></li>
-                      <li><a href="all-courses.html">Assesment Innovation</a></li>
-                      <li><a href="course-detail.html">Join Path</a></li>
-                      <li><a href="enrollment.html">Inbuilt Programme</a></li>
-                      <li><a href="join.html">Q-mark</a></li>
-                      <li><a href="teacher.html">NatGeo Learning</a></li>
+                      <li><a href="teachers-institutions.html#international-standards">International standards</a></li>
+                      <li><a href="teachers-institutions.html#assessment-innovation">Assessment innovation</a></li>
+                      <li><a href="teachers-institutions.html#join-path">Join Path</a></li>
+                      <li><a href="teachers-institutions.html#inbuilt-programme">Inbuilt programme</a></li>
+                      <li><a href="teachers-institutions.html#q-mark">Q-mark</a></li>
+                      <li><div class="natgeo"><a href="teachers-institutions.html#natgeo-learning">NatGeo Learning</a><div class="natgeo-cont"><img src="assets\img\logos\nat-geo-01.svg" alt=""></div></div></li>
                   </ul>
               </li>
-              <li class="menu-item-has-no-children"><a href="#">Students & Parents</a></li>
-              <li class="menu-item-has-children"><a href="#">Our Examinations</a>
+              <li class="menu-item-has-no-children"><a style="font-weight: bold;" href="#">Students and parents</a></li>
+              <li class="menu-item-has-children"><a style="font-weight: bold;" href="our-examinations.html">Our examinations</a>
                   <ul class="sub-menu">
-                      <li><a href="event.html">General Information</a></li>
-                      <li><a href="event-detail.html">Speaking Only Exams</a></li>
-                      <li><a href="event-detail.html">Four Skills Exams</a></li>
+                      <div><ul><li><a href="/our-examinations.html#general-information" style="font-weight: bold;">General information</a></li><div style="margin-left: 10px;"><li><a href="/our-examinations.html#about-our-exams">About our exams</a></li><li><a href="/our-examinations.html#exam-modules">Exam modules</a></li><li><a href="/our-examinations.html#map-of-levels">Map of levels</a></li></div></ul></div>
+                      <div><ul><li><a href="/our-examinations.html#speaking-only-exams" style="font-weight: bold;">Speaking-only exams</a></li><div style="margin-left: 10px;"><li><a href="/our-examinations.html#AminusSPAlevelI">A1- | Speaking Performance Assessment (SPA) level I</a></li><li><a href="/our-examinations.html#aSPAlevelII">A1 | Speaking Performance Assessment (SPA) level II</a></li><li><a href="/our-examinations.html#AplusSPAlevelIII">A1+ | Speaking Performance Assessment (SPA) level III</a></li></div></ul></div>
+                      <div><ul><li><a href="/our-examinations.html#four-skill-exam" style="font-weight: bold;">Four-skill exams</a></li><div style="margin-left: 10px;"><li><a href="/our-examinations.html#a1entrylevel">A1- | Entry level</a></li></li><li><a href="/our-examinations.html#A1AccessLevel">A1 | Access level</a></li></li><li><a href="/our-examinations.html#A1AchieverLevel">A1+ | Achiever level</a></li></li><li><a href="/our-examinations.html#A2PreliminaryLevel">A2 | Preliminary level</a></li></li><li><a href="/our-examinations.html#A2ElementaryLevel">A2+ | Elementary level</a></li></li><li><a href="/our-examinations.html#B1ProgressLevel">B1 | Progress level</a></li><li><a href="/our-examinations.html#B2CompetencyLevel">B2 | Competency level</a></li><li><a href="/our-examinations.html#B2ForwardLevel">B2+ | Forward level</a></li></div></ul></div>
                   </ul>
               </li>
-              <li class="menu-item-has-no-children"><a href="#">News and Events</a></li>
+              <li class="menu-item-has-no-children"><a style="font-weight: bold;" href="news-and-events.html">News and events</a></li>
           </ul>
       </div>
-
   </div>
 
     <div class="breadcrub-style-5 section">
@@ -1057,7 +1060,7 @@
     <section class="section" id="international-standards">
         <div class="container text-center">
             <h2 class="table__title text-center teachers__title international_anim">International standards</h2>
-            <p class="international__text">All <span style="font-weight: bold;">Path exams</span> are aligned with the Common European Framework of Reference for Languages. The CEFR is the result of sustained research conducted by 41 member states of the Council of Europe, and was first published in 2001. This alignment provides consistency in international language assessment, as it sets out uniform standards for levels of competency in languages.</p>
+            <p class="text-center international__text">All Path exams are aligned with the <a href="https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions">Common European Framework of Reference for Languages</a>. The CEFR is the result of sustained research conducted by 41 member states of the Council of Europe, and was first published in 2001. This alignment provides consistency in international language assessment, as it sets out uniform standards for levels of competency in languages.</p>
         </div>
     </section>
 
@@ -1103,7 +1106,7 @@
                     <p style="color: #0091B7;">Independent users are additionally able to use the language where it relates to travel, work and study. These users are generally considered to meet the demands of many university degree programmes</p>
                 </div>
             </div>
-            <p class="text-center international__text">All Path exams are aligned with the <a href="https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions">Common European Framework of Reference for Languages</a>. The CEFR is the result of sustained research conducted by 41 member states of the Council of Europe, and was first published in 2001. This alignment provides consistency in international language assessment, as it sets out uniform standards for levels of competency in languages.</p>
+            <p class="international__text text-center">Path Examinations has subdivided level A1 into 3 levels, and levels A2 and B2 into 2 levels. This is because the amount of time, effort and study required to move to the following level are considerable. Through this progressive approach, we ensure that the candidate’s language competency has been assessed thoroughly.</p>
         </div>
 
         <!-- ASSESSMENT INNOVATION -->
@@ -1347,7 +1350,7 @@
         <div class="text-center price-cards d-flex align-items-start cards-mobile">
           <div class="price-card basic">
           
-          <div class="TH" style="background-color: #0091B7;" id="toggle-affiliate">
+          <div class="TH" style="background-color: #0091B7;">
                 <h4>AFFILIATE</h4>
                 <br>
                 <div class="features">
@@ -1398,16 +1401,16 @@
                   <tr>
                     <td id="af__invigliator" class="card__more-info">Application for Path invigilator</td>
                   </tr>
-                  <th>
-                    <button class="main-btn open-learn-more-form" style="background-color: #0091B7;">Learn more</button>
-                  </th>
                 </tbody>
               </table>
+            </div>
+            <div>
+              <button id="toggle-affiliate" class="main-btn" style="background-color: #0091B7;">Learn more</button>
             </div>
           </div>
           <div class="price-card standard">
             
-            <div class="TH" style="background-color: #757DA4;" id="toggle-member">
+            <div class="TH" style="background-color: #757DA4;">
 
               <h4 >OFFICIAL MEMBER</h4>
               <br>
@@ -1482,15 +1485,15 @@
                 <tr>
                   <td id="mem__comission" class="card__more-info">You will be given a 10% commission for registrations of 15+ candidates</td>
                 </tr>
-                <th>
-                  <button class="main-btn open-learn-more-form" style="background-color: #757DA4;">Learn more</button>
-                </th>
               </tbody>
             </table>
             </div>
+            <div>
+              <button class="main-btn" style="background-color: #757DA4;" id="toggle-member">Learn more</button>
+            </div>
           </div>
           <div class="price-card advanced">
-          <div class="TH" style="background-color: #79A786;" id="toggle-exam">
+          <div class="TH" style="background-color: #79A786;">
 
             <h4>APPROVED EXAM CENTRE</h4>
             <div class="features">
@@ -1576,17 +1579,16 @@
                     <td id="app__inst" class="card__more-info">Institution listed on the Path website</td>
                   </tr>
                 </div>
-                <th>
-                  <button class="main-btn open-learn-more-form" style="background-color: #79A786;">Learn more</button>
-                </th>
               </tbody>
             </table>
           </div>
-            
+          <div>
+            <button class="main-btn" id="toggle-exam" style="background-color: #79A786;">Learn more</button>
+          </div>
           </div>
           <div class="price-card basic">
           
-            <div class="TH" style="background-color: #CEA574;" id="toggle-certified">
+            <div class="TH" style="background-color: #CEA574;">
 
               <h4>CERTIFIED EXAM CENTRE</h4>
               <div class="features">
@@ -1685,13 +1687,12 @@
                 <tr>
                   <td id="app__qmark" class="card__more-info">Candidate to the Path Q-mark</td>
                 </tr>
-                <th>
-                <button class="main-btn open-learn-more-form" style="background-color: #CEA574;">Learn more</button>
-                </th>
               </tbody>
             </table>
-            
         </div>
+        <div>
+          <button class="main-btn" id="toggle-certified" style="background-color: #CEA574;">Learn more</button>
+          </div>
         </div>
       </div>
     </div>
@@ -2365,6 +2366,10 @@
         });
         $('#toggle-certified').click(function() {
           $('.tableta-certified').slideToggle();
+        });
+
+        $('.tableta').click(function() {
+          $(this).slideUp();
         });
           
         

@@ -1264,7 +1264,7 @@ cursor: pointer;
 }
 
 .comment-item-style-1 {
-  margin: 2rem 0;
+  margin: .8rem 0;
 }
 .comment-item-style-1 .name {
   margin: 0;
@@ -3031,7 +3031,7 @@ cursor: pointer;
   opacity: 0;
   margin-top: 50px;
   transition: margin 0.1s linear 0.3s, visibility 0.1s linear 0.3s, opacity 0.1s linear 0.3s;
-  z-index: 999;
+  z-index: 9999999;
   white-space: nowrap;
 }
 .navbar-section .navbar .navbar-nav li .sub-menu * {
@@ -3453,7 +3453,7 @@ cursor: pointer;
   background-color: var(--white);
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
   position: absolute;
-  z-index: 99;
+  z-index: 999999;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
@@ -4546,7 +4546,7 @@ cursor: pointer;
   color: var(--light-grey-2);
 }
 .footer-section .footer-content a:hover {
-  color: var(--dark-blue-1);
+  color: var(--heading-color);
 }
 .footer-section .footer-content li {
   margin: 0.5rem 0;
@@ -5174,7 +5174,7 @@ cursor: pointer;
   margin: 0 2rem;
 }
 .stripped-package-table tr th, .stripped-package-table tr td {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   padding: 1rem;
 }
