@@ -485,6 +485,32 @@
                 width: 20%;
             }
         }
+
+        
+        @keyframes bg-move {
+            0% {
+                background-position: top left;
+                background-size: 110%;
+
+            }
+            100% {
+                background-position: bottom right;
+                background-size: 115%;
+            
+            }
+        }
+
+        /* The element to apply the animation to */
+        .bg-image-anim{
+            animation-name: bg-move;
+            animation-duration: 60s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            background-size: 110%;
+            background-repeat: no-repeat;
+            background-position: top left;
+        }
         </style>
 </head>
 
@@ -582,7 +608,7 @@
 
                     <a href="/teachers-institutions.html#international-standards" class="boxed-btn">Read more</a>
                 </div>
-                <div class="bg-image" style="background-image: url(assets/img/slider/home1/banner_home.jpg)">
+                <div class="bg-image bg-image-anim" style="background-image: url(assets/img/slider/home1/banner_home.jpg)">
 
                 </div>
             </div>
@@ -592,7 +618,7 @@
                     <p class="d-none d-lg-block banner__subtitle">Exams for children, adolescents and adults</p>
                     <a href="/our-examinations.html" class="boxed-btn">Learn More</a>
                 </div>
-                <div class="bg-image" style="background-image: url(assets/img/slider/home1/adolescent-adorable.jpg)">
+                <div class="bg-image bg-image-anim" style="background-image: url(assets/img/slider/home1/adolescent-adorable.jpg)">
                 </div>
             </div>
             <div class="single-header-item">
@@ -601,7 +627,7 @@
                     <p class="d-none d-lg-block banner__subtitle">Online and paper-based exams worldwide</p>
                     <a href="#" class="boxed-btn">Learn More</a>
                 </div>
-                <div class="bg-image"
+                <div class="bg-image bg-image-anim"
                     style="background-image: url(assets/img/slider/home1/bestfriends-boys-dating.jpg)"></div>
             </div>
             <!-- <div class="single-header-item">
@@ -613,14 +639,14 @@
                         est rutrum eget. Vestibulum molestie at sapien sed facilisis.</p>
                     <a href="#" class="boxed-btn">Learn More</a>
                 </div>
-                <div class="bg-image" style="background-image: url(assets/img/slider/home1/uni-students.jpg)"></div>
+                <div class="bg-image bg-image-anim" style="background-image: url(assets/img/slider/home1/uni-students.jpg)"></div>
             </div> -->
         </div>
     </div>
 
     <!-- Quote BANNER -->
     <section class="quote__banner section">
-        <div class="quote__after-img">
+        <div class="quote__after-img bg-image-anim">
            <div class="quote__after-courtain">
                 <div class="quote__after-text container">
                     <h2 class="quote__title">We aim to provide every student and teacher with <span style="font-weight: bold;">up-to-date</span> and <span style="font-weight: bold;">effective assessment</span> in a world that increasingly demands better-designed education.</h2>
