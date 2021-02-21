@@ -212,10 +212,10 @@
 
     .card__content-info p {
         font-weight: bold;
-        color: #004969;
+        color: white;
         font-style: italic;
         font-size: 1.5rem;
-        text-shadow: 0px 0px 6px rgba(255, 255, 255, .7);
+        text-shadow: 0px 0px 6px rgba(0, 0, 0, .7);
         margin: 1.5rem 0;
     }
 
@@ -226,7 +226,7 @@
         justify-content: space-between;
         display: flex;
         align-items: baseline;
-        opacity: 1;
+        opacity: 0;
         transform: translateX(-5%);
         transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1)!important;
     }
@@ -236,8 +236,8 @@
     }
     
     .col1, .col2 {
-        opacity: 1;
-        transform: translateY(0%);
+        opacity: 0;
+        transform: translateY(10%);
         transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1)!important;
     }
 
@@ -580,7 +580,7 @@
                         <p class="d-none d-lg-block banner__subtitle"><span class="banner__subtitle-span content-area-span">Internationally</span><br><span class="banner__subtitle-span content-area-span">recognised</span> examinations</p>
                     </div>
 
-                    <a href="#" class="boxed-btn">Read more</a>
+                    <a href="/teachers-institutions.html#international-standards" class="boxed-btn">Read more</a>
                 </div>
                 <div class="bg-image" style="background-image: url(assets/img/slider/home1/banner_home.jpg)">
 
@@ -589,11 +589,8 @@
             <div class="single-header-item">
                 <div class="content-area">
                     <h1 class="title" style="color:#004969;">Evolution in <br> language assesment</h1>
-                    <p class="d-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in velit
-                        odio. Morbi sodales nisi nec
-                        tortor commodo, malesuada fermentum magna faucibus. Proin fringilla ante lacus, eu condimentum
-                        est rutrum eget. Vestibulum molestie at sapien sed facilisis.</p>
-                    <a href="#" class="boxed-btn">Learn More</a>
+                    <p class="d-none d-lg-block banner__subtitle">Exams for children, adolescents and adults</p>
+                    <a href="/our-examinations.html" class="boxed-btn">Learn More</a>
                 </div>
                 <div class="bg-image" style="background-image: url(assets/img/slider/home1/adolescent-adorable.jpg)">
                 </div>
@@ -601,16 +598,13 @@
             <div class="single-header-item">
                 <div class="content-area">
                     <h1 class="title" style="color:#004969;">Evolution in <br> language assesment</h1>
-                    <p class="d-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in velit
-                        odio. Morbi sodales nisi nec
-                        tortor commodo, malesuada fermentum magna faucibus. Proin fringilla ante lacus, eu condimentum
-                        est rutrum eget. Vestibulum molestie at sapien sed facilisis.</p>
+                    <p class="d-none d-lg-block banner__subtitle">Online and paper-based exams worldwide</p>
                     <a href="#" class="boxed-btn">Learn More</a>
                 </div>
                 <div class="bg-image"
                     style="background-image: url(assets/img/slider/home1/bestfriends-boys-dating.jpg)"></div>
             </div>
-            <div class="single-header-item">
+            <!-- <div class="single-header-item">
                 <div class="content-area">
                     <h1 class="title" style="color:#004969;">Evolution in <br> language assesment</h1>
                     <p class="d-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in velit
@@ -620,7 +614,7 @@
                     <a href="#" class="boxed-btn">Learn More</a>
                 </div>
                 <div class="bg-image" style="background-image: url(assets/img/slider/home1/uni-students.jpg)"></div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -640,7 +634,7 @@
         <section class="franja-container section">
             <div class="franja">
                 <h3 class="franja__title"><span style="font-weight: bold;">Certify</span> all language skills <br> or just the ones you need.</h3>
-                <button class="giant-btn">Learn more</button>
+                <a href="/our-examinations.html#exam-modules"><button class="giant-btn">Learn more</button></a>
             </div>
         </section>
         <!-- FIN FRANJA -->
@@ -669,7 +663,7 @@
                         <div class="card__content-info">
                             <h3 style="color: white;" class="text-center">As a teacher or as an institution, find the programme that suits your needs</h3>
                             <p class="text-center">Join Path</p>
-                            <button class="main-btn">Learn more</button>
+                            <a href="teachers-institutions.html#join-path" class="main-btn">Learn more</a>
                         </div>
                         <div class="card__content-gradient gradient2"></div>
                         <div class="card__content-background card-background2"></div>
@@ -689,7 +683,7 @@
                         <div class="card__content-info">
                             <h3 class="text-center">Student-centred and communicative exams based on real-life situations and scenarios</h3>
                             <p class="text-center">Check our innovations</p>
-                            <button class="main-btn">Learn more</button>
+                            <a href="teachers-institutions.html#assessment-innovation" class="main-btn">Learn more</a>
                         </div>
                         <div class="card__content-gradient gradient4"></div>
                         <div class="card__content-background card-background4"></div>
@@ -760,13 +754,12 @@
                                 <div class="form-group required">
                                     <label for="email">Email address</label>
                                     <input type="email" id="email" class="form-control" name="email"
-                                        placeholder="johnLP12@gmail.com" />
+                                        placeholder="example@gmail.com" />
                                 </div>
                                 <div class="form-group">
                                     <label for="message">Message</label>
                                     <input type="text" id="message" class="form-control" name="name"
-                                        placeholder="Hello, I wanted to know about this particular course called..." />
-                                    <span class="small-text">120 characters left</span>
+                                        placeholder="Message..." />
                                 </div>
                                 <button class="main-btn" type="submit">Send message</button>
                             </form>
@@ -792,7 +785,7 @@
                         <img src="\assets\img\custom\EUROPE_FINAL.png" alt="">
                     </div>
                     <p>EUROPE</p>
-                    <a target="_blank" href="https://www.instagram.com/codingeeknet/"><i
+                    <a target="_blank" href="https://www.instagram.com/pathexams/"><i
                         class="fab fa-instagram"></i></a>
                 </div>
                 
@@ -804,7 +797,7 @@
                     <div class="connect__social row">
                     	<a target="_blank" href="https://www.instagram.com/pathlatam/"><i
                     	    class="fab fa-instagram"></i></a>
-                    	<a target="_blank" href="https://www.instagram.com/codingeeknet/"><i
+                    	<a target="_blank" href="https://www.youtube.com/channel/UCve-gJhC5WMuSkdUwo_VfVg"><i
                     	    class="fab fa-youtube"></i></a>
                     </div>
                 </div>
@@ -814,7 +807,7 @@
                         <img src="\assets\img\custom\AFRICA_FINAL.png" alt="">
                     </div>
                     <p>AFRICA</p>
-                    <a target="_blank" href="https://www.instagram.com/codingeeknet/"><i
+                    <a target="_blank" href="https://www.instagram.com/pathexams/"><i
                         class="fab fa-instagram"></i></a>
                 </div>
 
@@ -823,7 +816,7 @@
                         <img src="..\assets\img\custom\ASIA_FINAL.png" alt="">
                     </div>
                     <p>ASIA <span style="letter-spacing: normal;">and</span> AUSTRALASIA</p>
-                    <a target="_blank" href="https://www.instagram.com/codingeeknet/"><i
+                    <a target="_blank" href="https://www.instagram.com/pathexams/"><i
                         class="fab fa-instagram"></i></a>
                 </div>
 

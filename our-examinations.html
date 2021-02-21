@@ -269,10 +269,11 @@
       background: rgb(0 73 105 / 87%);
       z-index: 99!important;
     }
+    
     .cerra2{
       display: none;
-
     }
+
     #modal-back h5{
       color: #004969;
       font-weight: 700;
@@ -651,7 +652,7 @@ ANIMS OUR EXAMINATIONS
 </div>
 
 <!-- EXAM MODULES -->
-<div class="section modules">
+<div class="section modules" id="exam-modules">
   <div class="container modules__container">
     <div class="modules__text-container text-center">
       <h2 class="our-exams-anim3">Exam modules</h2>
@@ -1196,7 +1197,6 @@ function abridor_modal(examen){
 
 $(".close-popup").click(function(){
   $('#modal-back').addClass('cerra2')
-
 });
 
 $(document).click(function(event) {
