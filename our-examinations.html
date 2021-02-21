@@ -360,6 +360,26 @@ ANIMS OUR EXAMINATIONS
 }
 
     @media only screen and (max-width: 799px) {
+      .map__exam-title {
+        width: 100%!important;
+      }
+
+      .exam-modules__subtitle {
+        width: 103%;
+      }
+
+      .map__text-container p {
+        width: 100%;
+      }
+
+      .exams__module-container-mobile {
+        flex-direction: column;
+      }
+
+      .exams__module-container-mobile p:nth-of-type(2) {
+        margin: 1rem 0;
+      }
+
       .social-icon {
       position: absolute;
       /* right: 18%; */
@@ -370,6 +390,11 @@ ANIMS OUR EXAMINATIONS
       display: flex;
       flex-direction: column;
       justify-content: center;
+      }
+
+      #modal-back p, .level-specs__title ul li, .level-specs__info ul li {
+        font-size: 14px;
+        line-height: 1.5;
       }
 
       .features-section .container h2 {
@@ -669,7 +694,7 @@ ANIMS OUR EXAMINATIONS
     <div class="modules__text-container text-center">
       <h2 class="our-exams-anim3">Exam modules</h2>
       <p class="exam-modules__subtitle">Our examinations are divided into modules, which may be taken separately or altogether:</p>
-      <div class="d-flex">
+      <div class="d-flex exams__module-container-mobile">
         <p class="table__title">Speaking module</p> <p class="table__title">Listening module</p> <p class="table__title">Reading and module</p>
       </div>
     </div>

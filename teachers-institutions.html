@@ -760,6 +760,33 @@
 
 
         @media only screen and (max-width: 799px) {
+          .series__card {
+            margin-bottom: 3rem;
+          }
+
+          .hover-inner {
+            min-height: 125%;
+            background-color: rgba(0, 73, 105, 1)!important;
+            border-radius: 4px;
+            padding: 1rem 2rem 0 2rem;
+          }
+
+          .hover-inner-for-mobile2 {
+            min-height: 170%
+          }
+
+          .hover-inner-for-mobile4 {
+            min-height: 180%
+          }
+
+          .key-reasons-title {
+            max-width: 90%!important;
+          }
+
+          .inbuilt-benefits {
+            width: 100%!important;
+          }
+
           h2 {
             font-size: 1.8rem!important;
           }
@@ -919,7 +946,8 @@
         .popover-right {
           width: 300px;
           left: 10%;
-          top: -440%;
+          top: -570%; 
+          /* transform: translate(-50%, -50%); */
         }
 
         .quote__after-text h2 {
@@ -1951,7 +1979,7 @@
         <div class="natgeo-content">
           <div class="natgeo__logo-container"><img class="natgeo__img" src="assets\img\logos\natgeo-learning.svg" alt=""></div>
           <p><span style="font-weight: bold;">Path exams</span> do not need any special study books or preparation in particular. All that is really needed is to attend regular classes in order to develop effective communicative competence.</p>
-          <p>Teachers or institutions are free to choose the material they want for each of their classes. Nevertheless, <span style="font-weight: bold;">Path Examinations</span> is in partnership with <span style="font-weight: bold;">National Geographic Learning</span><span class="natgeo-cont"><img src="assets\img\logos\nat-geo-01.svg" alt=""></span> to provide anyone interested with a highly communicative alternative which is also aligned with our approach.</p>
+          <p>Teachers or institutions are free to choose the material they want for each of their classes. Nevertheless, <span style="font-weight: bold;">Path Examinations</span> is in partnership with <span style="font-weight: bold;">National Geographic Learning</span><span style="margin-left: 5px!important;" class="natgeo-cont"><img src="assets\img\logos\nat-geo-01.svg" alt=""></span> to provide anyone interested with a highly communicative alternative which is also aligned with our approach.</p>
         </div>
       </div>
       <div class="movida">
@@ -2059,7 +2087,7 @@
                     <span class="plus">
                       <i class="fas fa-plus-circle"></i>
                     </span>
-                    <div class="hover-inner">
+                    <div class="hover-inner hover-inner-for-mobile2">
                       <div class="course-details">
                         <p>Impact helps teenage students to understand themselves and the world they live in. By encouraging self-expression, global citizenship, and active participation, this series motivates students to explore who they are and who they want to be, all while learning English.  Cross-curricular topics engage students with stimulating information about the world and prepare them to be successful global citizens.</p>
                         <div class="d-flex">
@@ -2119,7 +2147,7 @@
                     <span class="plus">
                       <i class="fas fa-plus-circle"></i>
                     </span>
-                    <div class="hover-inner">
+                    <div class="hover-inner hover-inner-for-mobile4">
                       <div class="course-details">
                         <p>Life is a series which brings the world to the classroom. Through interesting content, videos and topics, this series inspires a whole generation of decision-makers to develop their ability to think critically and communicate effectively in the global community.  Relevant and up-to-date topics involve students, connect them with people and places from around the world, encourage them to develop well-informed opinions and help them make connections between the content and their own lives.</p>
                         <div class="d-flex">
@@ -2368,11 +2396,6 @@
           $('.tableta-certified').slideToggle();
         });
 
-        $('.tableta').click(function() {
-          $(this).slideUp();
-        });
-          
-        
 
         // Anim meet h1
       setTimeout(() => {
@@ -2385,6 +2408,11 @@
       $(function() {
           if(!window.mobileCheck()){        
               $(window).scroll(function() {
+
+                $('.tableta').click(function() {
+          $(this).slideUp();
+        });
+
                   var scroll = $(window).scrollTop();
                   console.log(scroll);
 
@@ -2505,25 +2533,25 @@
             }, 700);
         };
 
-        if (scroll >= 13700) {
+        if (scroll >= 10000) {
             $('.natgeo__img').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.natgeo-content p').css({'opacity':1, 'transform':'translateY(0%)'});
             }, 300);
         }; 
 
-        if (scroll >= 14200) {
+        if (scroll >= 10100) {
             $('.benefits__img').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.benefits__right').css({'opacity':1, 'transform':'translateY(0%)'});
             }, 500);
           };
 
-          if (scroll >= 15100) {
+          if (scroll >= 11100) {
             $('.quote__after-text h2').css({'opacity':1, 'transform':'translateY(0%)'});
           };
 
-          if (scroll >= 15500) {
+          if (scroll >= 12200) {
             $('.series__title').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.series__card').css({'opacity':1, 'transform':'translateY(0%)'});

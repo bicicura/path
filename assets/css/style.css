@@ -1548,7 +1548,7 @@ cursor: pointer;
 .small-btn,
 .large-btn {
   color: var(--white);
-  background-color: rgba(0, 147, 184, 0.8);
+  background-color: rgba(0,73,105, .9);
   border: 0;
   font-weight: 600;
   font-size: 1rem;
@@ -1560,6 +1560,7 @@ cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 2px;
 }
 .main-btn a,
 .small-btn a,
@@ -4352,7 +4353,7 @@ cursor: pointer;
   font-size: 16px;
   line-height: 26px;
   font-weight: 700;
-  background-color: #004969;
+  background-color: #767EA5;
   padding: 10px 30px;
   cursor: pointer;
   position: relative;
@@ -4369,7 +4370,7 @@ cursor: pointer;
   font-size: 10px;
 }
 .accordion-wrapper .card .card-header a[aria-expanded=false] {
-  background-color: #767EA5;
+  background-color: var(--heading-color);
   color: var(--white);
   font-weight: 400;
 }
