@@ -60,7 +60,13 @@
         top: 29%!important;
     }
 
-    #side__email {
+    /* 
+    ==========
+    SIDE ICONS
+    ==========
+    */
+
+    #side__phone, #side__location, #side__email {
         position: relative;
     }
 
@@ -78,10 +84,6 @@
         border-radius: 4px;
     }
 
-    #side__phone {
-        position: relative;
-    }
-
     #side__phone:hover::after {
         content: '+44 020 3468 2534';
         position: absolute;
@@ -94,6 +96,21 @@
         right: 150%;
         color: white;
         z-index:99999!important;
+        border-radius: 4px;
+    }
+
+    #side__location:hover::after {
+        content: 'London, United Kingdom';
+        position: absolute;
+        box-shadow: 0px 7px 5px 0px rgba(0,0,0,.15);
+        background: #004969;
+        padding: .5rem 1rem;
+        font-family: "skolar-sans-latin", sans-serif;
+        top: -50%;
+        width: 205px!important;
+        right: 150%;
+        color: white;
+        z-index:1000!important;
         border-radius: 4px;
     }
 
@@ -267,6 +284,7 @@
         .franja h3 {
             color: white;
             font-weight: 400;
+            width: 50%;
         }
 
         .franja button {
@@ -277,6 +295,7 @@
             border-radius: 2px;
             font-weight: bold;
             box-shadow: 0px 6px 20px -8px white;
+
         }
 
 
@@ -394,6 +413,27 @@
             html {
                 overflow-x: hidden;
             }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            #side__phone:hover::after {
+            top: -239%;
+            right: -180%;
+          }
+
+          #side__email:hover::after {
+          top: -239%;
+          right: -812%;
+        }
+
+        #side__location:hover::after {
+          top: -239%;
+          width: 205px!important;
+          right: -820%;
+        }
+
             .afuera {
                 left: 17.4%;
                 top: 19px;
@@ -425,9 +465,9 @@
             }
 
             .title {
-                position: sticky;
+                border: 2px solid pink;
                 left: 0;
-                text-shadow: 0px 2px 6px #FFFFFF;
+                text-shadow: 0px 2px 8px #FFFFFF;
             }
 
             .header_section {
@@ -445,24 +485,24 @@
             }
 
             .franja__title {
-                opacity: 1;
+                opacity: 0;
                 text-align: center;
-                width: 100%;
+                width: 100%!important;
             }
 
             .giant-btn {
-            padding: 1em 3.2em;
+            padding: .7rem 7.2rem!important;
             background-color: white;
             outline: none;
             border: none;
             border-radius: 2px;
             font-weight: bold;
-            box-shadow: 0px 6px 10px -8px white;
-            transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1)!important;
+            box-shadow: 0px 6px 2px -2px white;
+            margin-top: .5rem;
             }
 
             .quote__title {
-            opacity: 1;
+            opacity: 0;
             transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
             margin: 0 5%;
             text-align: left;
@@ -477,17 +517,28 @@
                 width: 100%;
             }
 
+            .card__content-info {
+                padding: 4rem 2rem;
+            }
+
             .card__signup {
-                /* margin: 0 auto; */
+                opacity: 0;
                 flex-direction: column;
                 justify-content: center;
                 align-content: center;
                 text-align: center;
                 align-items: center;
             }
+
+            .card__signup button {
+                width: 100%;
+                margin-top: .5rem;
+            }
+
+            
             
             .europe, .latin, .asia, .africa {
-                opacity: 1;
+                opacity: 0;
             } 
 
             .connect__container {
@@ -505,6 +556,16 @@
             .connect__social {
                 width: 20%;
             }
+
+            .connect {
+                padding: 12vh 0
+            }
+
+            .connect__title {
+                width: 90%;
+                margin: 0 auto;
+            }
+
         }
 
         
@@ -609,7 +670,6 @@
     <!-- Showcase Section -->
     <div class="header_section section">
         <div class="title-real afuera"><h1 style="color:#004969;">Evolution in <br> language assesment</h1></div>
-        <!-- <div class="title-real"><h1 style="color:#004969;">Evolution in <br> language assesment</h1></div> -->
         <div class="social-icon">
             <ul>
                 <li><i id="open-form-popup"  class="fas fa-envelope" style="margin:0" id="fab"></i></a></li>
@@ -622,20 +682,18 @@
         <div class="header-carousel">
             <div class="single-header-item">
                 <div class="content-area">
-                    <!-- <h1 style="opacity: 0;" class="title" style="color:#004969;">Evolution in <br> language assesment</h1> -->
                     <div class="banner__subtitle-container">
                         <p class="d-none d-lg-block banner__subtitle"><span class="banner__subtitle-span content-area-span">Internationally</span><br><span class="banner__subtitle-span content-area-span">recognised</span> examinations</p>
                     </div>
 
                     <a href="/teachers-institutions.html#international-standards" class="boxed-btn">Read more</a>
                 </div>
-                <div class="bg-image bg-image-anim" style="background-image: url(assets/img/slider/home1/banner_home.jpg)">
+                <div class="bg-image bg-image-anim" style="background-image: url(assets/img/slider/home1/banner_home.jpg);">
 
                 </div>
             </div>
             <div class="single-header-item">
                 <div class="content-area">
-                    <!-- <h1 style="opacity: 0;" class="title" style="color:#004969;">Evolution in <br> language assesment</h1> -->
                     <div class="banner__subtitle-container">
                         <p class="d-none d-lg-block banner__subtitle">Exams for children, adolescents and adults</p>
                     </div>
@@ -646,7 +704,6 @@
             </div>
             <div class="single-header-item">
                 <div class="content-area">
-                    <!-- <h1 style="opacity: 0;" class="title" style="color:#004969;">Evolution in <br> language assesment</h1> -->
                     <div class="banner__subtitle-container">
                         <p class="d-none d-lg-block banner__subtitle">Online and paper-based exams worldwide</p>
                     </div>
@@ -655,17 +712,6 @@
                 <div class="bg-image bg-image-anim"
                     style="background-image: url(assets/img/slider/home1/bestfriends-boys-dating.jpg)"></div>
             </div>
-            <!-- <div class="single-header-item">
-                <div class="content-area">
-                    <h1 class="title" style="color:#004969;">Evolution in <br> language assesment</h1>
-                    <p class="d-none d-lg-block">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in velit
-                        odio. Morbi sodales nisi nec
-                        tortor commodo, malesuada fermentum magna faucibus. Proin fringilla ante lacus, eu condimentum
-                        est rutrum eget. Vestibulum molestie at sapien sed facilisis.</p>
-                    <a href="#" class="boxed-btn">Learn More</a>
-                </div>
-                <div class="bg-image bg-image-anim" style="background-image: url(assets/img/slider/home1/uni-students.jpg)"></div>
-            </div> -->
         </div>
     </div>
 
@@ -684,7 +730,7 @@
         <!-- FRANJA CERTIFY -->
         <section class="franja-container section">
             <div class="franja">
-                <h3 class="franja__title"><span style="font-weight: bold;">Certify</span> all language skills <br> or just the ones you need.</h3>
+                <h3 class="franja__title"><span style="font-weight: bold;">Certify</span> all language skills or just the ones you need.</h3>
                 <a href="/our-examinations.html#exam-modules"><button class="giant-btn">Learn more</button></a>
             </div>
         </section>
@@ -696,7 +742,7 @@
         <div class="fixed-right side-form-icons">
             <i class="fas fa-phone icon side__button" id="side__phone"></i>
             <i class="fas fa-envelope icon side__button" id="side__email"></i>
-            <i class="fas fa-map-marker-alt icon"></i>
+            <i class="fas fa-map-marker-alt icon" id="side__location"></i>
         </div>
         <div class="container">
             <div class="card__container">
@@ -742,87 +788,14 @@
                 </div>
             </div>
             <div class="card__signup">
-                <h3>Receive the latest news from Path Examinations <br><span style="font-style: italic;">and keep updated.</span></h3> <button class="large-btn">Sign up</button>
+                <h3>Receive the latest news from Path Examinations <span style="font-style: italic;">and keep updated.</span></h3> <button class="large-btn">Sign up</button>
             </div> 
         </div>
     </section>
 
     <!-- Popup -->
-    <div class="side-form-popup">
-        <div class="popup-wrapper">
-            <div class="center-popup">
-                <div class="opening-popup">
-                    <div class="close-popup">
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-8 media">
-                            <img src="assets/img/University/About-us-1/series-life.jpg" alt="media"
-                                class="img-fluid">
-                        </div>
-                        <div class="col-md-6 col-lg-4 content">
-                            <h5>Opening hours</h5>
-                            <div class="openings">
-                                <div class="opening opening-days">
-                                    <p class="day">Monday</p>
-                                    <div class="divider"></div>
-                                    <p class="day">Friday</p>
-                                </div>
-                                <div class="opening opening-time">
-                                    <p class="time">08.00 am</p>
-                                    <div class="divider"></div>
-                                    <p class="time">16.00 pm</p>
-                                </div>
-                            </div>
-                            <p class="num">+44 020 3468 2534</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="location-popup">
-                    <div class="close-popup">
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-6 col-lg-8 media">
-                            <div id="location-map"></div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-4 content">
-                            <h5>Address</h5>
-                            <p class="address">2, Ave Manchester, Lorem ipsum St, Rio Danubin</p>
-                            <button class="main-btn">Open in Maps</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-popup">
-                    <div class="close-popup">
-                        <i class="fas fa-times"></i>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-lg-7 content">
-                            <h4>You have a question for us?</h4>
-                            <p>leave your message below or email us at admin@pathexaminations.com</p>
-                            <form class="text-left form-style-2">
-                                <div class="form-group required">
-                                    <label for="email">Email address</label>
-                                    <input type="email" id="email" class="form-control" name="email"
-                                        placeholder="example@gmail.com" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <input type="text" id="message" class="form-control" name="name"
-                                        placeholder="Message..." />
-                                </div>
-                                <button class="main-btn" type="submit">Send message</button>
-                            </form>
-                        </div>
-                        <div class="d-none d-lg-block col-lg-5 media">
-                            <img src="assets/img/University/students/05.jpg" alt="media image"
-                                class="img-fluid" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div id="load-pop-ups">
+      
     </div>
 
     <section class="section">
@@ -916,7 +889,6 @@
         setTimeout(() => {
             $('.afuera').css({'opacity':1, 'transform':'translateY(0%)'}, 800)});
 
-
           if(!window.mobileCheck()){
               $(window).scroll(function() {
                   var scroll = $(window).scrollTop();
@@ -968,28 +940,28 @@
               var scroll = $(window).scrollTop();
               console.log(scroll);
               // Si se excede la distancia de scroll que queres, haces un menjo
-              if (scroll >= 800) {
+              if (scroll >= 500) {
                   $('.quote__title').css({'opacity':1});
               };
 
-                if (scroll >= 1300) {
+                if (scroll >= 1000) {
                     $('.franja__title').css({'opacity':1, 'transform':'translateY(0%)'});
                 };
     
 
-                if (scroll >= 1400) {
+                if (scroll >= 1300) {
                 $('.col1').css({'opacity':1, 'transform':'translateY(-2.5%)'});
                 setTimeout(() => {
                 $('.col2').css({'opacity':1, 'transform':'translateY(2.5%)'});
                 }, 200);
                 };
 
-                if (scroll >= 2800) {
+                if (scroll >= 3800) {
                     $('.card__signup').css({'opacity':1, 'transform':'translateX(0%)'});
                 };
 
 
-                if (scroll >= 3200) {
+                if (scroll >= 4300) {
                 $('.europe').css({'opacity':1, 'transform':'translateY(0%)'});
                 setTimeout(() => {
                 $('.latin').css({'opacity':1, 'transform':'translateY(0%)'});

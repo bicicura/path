@@ -2,7 +2,7 @@
 $(function(){
   $("#header").load("header.html"); 
   $("#footer").load("footer.html"); 
-  $("#header-mobile").load("mobile-nav-bar.html"); 
+  $("#load-pop-ups").load("side-pop-ups.html"); 
 });
 
 /*===================================

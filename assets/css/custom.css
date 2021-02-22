@@ -94,6 +94,14 @@ TARJETAS
 
 @media only screen and (max-width: 799px) {
 
+  .form-style-2 .form-group label {
+    font-size: 1rem;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
   .natgeo-cont {
     margin-left: 33px!important;
   }

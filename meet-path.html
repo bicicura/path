@@ -293,7 +293,7 @@ POLICY
     ===============
     */
 
-    #side__email {
+    #side__email, #side__phone, #side__location {
         position: relative;
     }
 
@@ -311,10 +311,6 @@ POLICY
         border-radius: 4px;
     }
 
-    #side__phone {
-        position: relative;
-    }
-
     #side__phone:hover::after {
         content: '+54 9 11 5738 5100';
         position: absolute;
@@ -330,15 +326,46 @@ POLICY
         border-radius: 4px;
     }
 
+    #side__location:hover::after {
+        content: 'London, United Kingdom';
+        position: absolute;
+        box-shadow: 0px 7px 5px 0px rgba(0,0,0,.15);
+        background: #004969;
+        padding: .5rem 1rem;
+        font-family: "skolar-sans-latin", sans-serif;
+        top: -50%;
+        width: 205px!important;
+        right: 150%;
+        color: white;
+        z-index:1000!important;
+        border-radius: 4px;
+    }
+
     
     @media only screen and (max-width: 799px) {
+
+      #side__phone:hover::after {
+            top: -239%;
+            right: -180%;
+          }
+
+          #side__email:hover::after {
+          top: -239%;
+          right: -812%;
+        }
+
+        #side__location:hover::after {
+          top: -239%;
+          width: 205px!important;
+          right: -820%;
+        }
 
       .social-icon {
         display: none;
       }
 
       .section {
-        margin: 4vh 0!important;
+        margin: 10vh 0!important;
       }
 
       .navbar-mobile {
@@ -384,7 +411,6 @@ POLICY
       }
 
       .our-mission__subtitle {
-        text-align: center;
         width: 100%;
       }
 
@@ -426,7 +452,7 @@ POLICY
       content: 'Policies and procedures';
       position: absolute;
       left: 0;
-      top: -33%;
+      top: -13%;
       right: 0;
       transform: scale(1.2,1.2);
       z-index: 10;
@@ -588,7 +614,7 @@ POLICY
   <div class="fixed-right side-form-icons">
     <i class="fas fa-phone icon side__button" id="side__phone"></i>
     <i class="fas fa-envelope icon side__button" id="side__email"></i>
-    <i class="fas fa-map-marker-alt icon"></i>
+    <i class="fas fa-map-marker-alt icon" id="side__location"></i>
 </div>
 
   <div class="believes-section section">
@@ -719,82 +745,8 @@ POLICY
 
     
     <!-- Popup -->
-    <div class="side-form-popup">
-        <div class="popup-wrapper">
-            <div class="center-popup">
-              <div class="opening-popup">
-                <div class="close-popup">
-                    <i class="fas fa-times"></i>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-8 media">
-                        <img src="assets/img/University/About-us-1/series-life.jpg" alt="media"
-                            class="img-fluid">
-                    </div>
-                    <div class="col-md-6 col-lg-4 content">
-                        <h5>Opening hours</h5>
-                        <div class="openings">
-                            <div class="opening opening-days">
-                                <p class="day">Monday</p>
-                                <div class="divider"></div>
-                                <p class="day">Friday</p>
-                            </div>
-                            <div class="opening opening-time">
-                                <p class="time">08.00 am</p>
-                                <div class="divider"></div>
-                                <p class="time">16.00 pm</p>
-                            </div>
-                        </div>
-                        <p class="num">+54 9 11 5738 5100</p>
-                    </div>
-                </div>
-            </div>
-                        <div class="location-popup">
-                            <div class="close-popup">
-                                <i class="fas fa-times"></i>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 col-md-6 col-lg-8 media">
-                                    <div id="location-map"></div>
-                                </div>
-                                <div class="col-12 col-md-6 col-lg-4 content">
-                                    <h5>Address</h5>
-                                    <p class="address">2, Ave Manchester, Lorem ipsum St, Rio Danubin</p>
-                                    <button class="main-btn">Open in Maps</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-popup">
-                          <div class="close-popup">
-                              <i class="fas fa-times"></i>
-                          </div>
-                          <div class="row">
-                              <div class="col-12 col-lg-7 content">
-                                  <h4>You have a question for us?</h4>
-                                  <p>leave your message below or email us at admin@pathexaminations.com</p>
-                                  <form class="text-left form-style-2">
-                                      <div class="form-group required">
-                                          <label for="email">Email address</label>
-                                          <input type="email" id="email" class="form-control" name="email"
-                                              placeholder="johnLP12@gmail.com" />
-                                      </div>
-                                      <div class="form-group">
-                                          <label for="message">Message</label>
-                                          <input type="text" id="message" class="form-control" name="name"
-                                              placeholder="Hello, I wanted to know about this particular course called..." />
-                                          <span class="small-text">120 characters left</span>
-                                      </div>
-                                      <button class="main-btn" type="submit">Send message</button>
-                                  </form>
-                              </div>
-                              <div class="d-none d-lg-block col-lg-5 media">
-                                  <img src="assets/img/University/students/05.jpg" alt="media image"
-                                      class="img-fluid" />
-                              </div>
-                          </div>
-                      </div>
-            </div>
-        </div>
+    <div id="load-pop-ups">
+      
     </div>
 
     <div class="container" id="think-forward-strategy">
@@ -957,42 +909,41 @@ POLICY
           // JS MOBILE
       }
       else{
-              $(window).scroll(function() {
-              var scroll = $(window).scrollTop();
-              console.log(scroll);
-              setTimeout(() => {
-                if (scroll >= 187) {
+
+        setTimeout(() => {
         $('.path-exam-text').css({'opacity':1, 'transform':'translateY(0%)'});
-        };
-  
-      if (scroll >= 1000) {
+        }, 700);
+
+        $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        console.log(scroll);
+
+      if (scroll >= 950) {
                 $('.our-principles').css({'opacity':1, 'transform':'translateY(0%)'});
         };
 
-      if (scroll >= 1500) {
+      if (scroll >= 1900) {
           $('.our-vision__title').css({'opacity':1, 'transform':'translateX(0%)'});
           setTimeout(() => {
           $('.our-vision__text').css({'opacity':1, 'transform':'translateX(0%)'});
-            }, 200);
+            }, 400);
 };
        
 
-      if (scroll >= 2100) { 
+      if (scroll >= 2500) { 
             $('.our-mission__title').css({'opacity':1, 'transform':'translateY(0%)'});
           }
         
-      if (scroll >= 3600) {
+      if (scroll >= 3800) {
             $('.tabla-anim').css({'opacity':1, 'transform':'translateY(0%)'});
         }; 
         
-        if (scroll >= 5300) {
+        if (scroll >= 5800) {
             $('.btn-row-1').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
           $('.btn-row-2').css({'opacity':1, 'transform':'translateY(0%)'});
             }, 900);
         };               
-          });
-    
       });
       }
       });

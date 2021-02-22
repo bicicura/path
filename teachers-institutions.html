@@ -37,7 +37,7 @@
       width: 100%;
       height: 100vh;
       background: rgb(0 73 105 / 87%);
-      z-index: 99!important;
+      z-index: 9999999!important;
     }
 
     #learn-more-form>div {
@@ -730,11 +730,30 @@
         box-shadow: 0px 7px 5px 0px rgba(0,0,0,.15);
         background: #004969;
         padding: .5rem 1rem;
-        font-family: 'Lato', sans-serif;
+        font-family: "skolar-sans-latin", sans-serif;
         top: -50%;
         right: 150%;
         color: white;
-        z-index:99999!important;
+        z-index:1000!important;
+        border-radius: 4px;
+    }
+
+    #side__location {
+        position: relative;
+    }
+
+    #side__location:hover::after {
+        content: 'London, United Kingdom';
+        position: absolute;
+        box-shadow: 0px 7px 5px 0px rgba(0,0,0,.15);
+        background: #004969;
+        padding: .5rem 1rem;
+        font-family: "skolar-sans-latin", sans-serif;
+        top: -50%;
+        width: 205px!important;
+        right: 150%;
+        color: white;
+        z-index:1000!important;
         border-radius: 4px;
     }
 
@@ -749,17 +768,52 @@
         white-space: nowrap;
         background: #004969;
         padding: .5rem 1rem;
-        font-family: 'Lato', sans-serif;
+        font-family: "skolar-sans-latin", sans-serif;
         top: -50%;
         right: 150%;
         color: white;
-        z-index:99999!important;
+        z-index:1000!important;
         border-radius: 4px;
     }
         
 
 
         @media only screen and (max-width: 799px) {
+          #side__phone:hover::after {
+            top: -239%;
+            right: -180%;
+          }
+
+          #side__email:hover::after {
+          top: -239%;
+          right: -812%;
+        }
+
+        #side__location:hover::after {
+          top: -239%;
+          width: 205px!important;
+          right: -820%;
+        }
+
+
+          .international__text {
+            margin-top: 2rem;
+          }
+
+          .TH h4 {
+            font-size: 24px;
+          }
+
+          .feature p {
+            font-size: 1rem!important;
+            line-height: 1.3!important;
+            margin-top: .3rem;
+          }
+
+          .price-cards .price-card .features .feature {
+            align-items: baseline;
+          }
+
           .series__card {
             margin-bottom: 3rem;
           }
@@ -811,7 +865,7 @@
         }
 
         .international__text {
-          text-align: left;
+          text-align: left!important;
           width: 100%;
           margin-bottom: 2rem;
         }
@@ -920,6 +974,34 @@
           height: 500px;
         }
 
+        #learn-more-form>div {
+          width: 90vw;
+          z-index: 99999999;
+        }
+
+        .form-inbuilt-title {
+          width: 80%!important;
+          margin: 0 auto;
+          font-size: 16px;
+        }
+
+        .form-inbuilt-button {
+          margin: 0;
+          width: 80%;
+        }
+
+        .form-inbuilt-row {
+          width: 80%!important;
+        }
+
+        .form-inbuilt-row label {
+          margin-bottom: 0;
+        }
+
+        .form-row-content {
+          width: 100%!important;
+        }
+
         .benefits {
           width: 100%;
         }
@@ -961,7 +1043,7 @@
 
         .series__text {
           width: 100%;
-          font-size: .9rem;
+          font-size: 1.125rem;
         }
 
         .carta-anim-2, .img-anim, .carta-anim-1, .carta-anim-3, .inbuilt-checks-1, .inbuilt-checks-2, .our-principles-anim {
@@ -1088,22 +1170,23 @@
     <section class="section" id="international-standards">
         <div class="container text-center">
             <h2 class="table__title text-center teachers__title international_anim">International standards</h2>
-            <p class="text-center international__text">All Path exams are aligned with the <a href="https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions">Common European Framework of Reference for Languages</a>. The CEFR is the result of sustained research conducted by 41 member states of the Council of Europe, and was first published in 2001. This alignment provides consistency in international language assessment, as it sets out uniform standards for levels of competency in languages.</p>
+            <p class="text-center international__text">All Path exams are aligned with the <a href="https://www.coe.int/en/web/common-european-framework-reference-languages/level-descriptions">Common European Framework of Reference for Languages.</a> The CEFR is the result of sustained research conducted by 41 member states of the Council of Europe, and was first published in 2001. This alignment provides consistency in international language assessment, as it sets out uniform standards for levels of competency in languages.</p>
         </div>
-    </section>
-
         <!-- Side Icons -->
         <div class="fixed-right side-form-icons">
           <i class="fas fa-phone icon side__button" id="side__phone"></i>
            <i class="fas fa-envelope icon side__button" id="side__email"></i>
-           <i class="fas fa-map-marker-alt icon"></i>
+           <i class="fas fa-map-marker-alt icon side__button" id="side__location"></i>
          </div>
+    </section>
+
+        
          
          
     <!-- Events Section -->
     <section class="events-section section">
       <div class="container">            
-          <h2 class="text-center" class="teachers__title our-levels-anim">Our levels</h2>
+          <h2 class="text-center teachers__title our-levels-anim">Our levels</h2>
             <div class="row event-item-style-1 even-event carta-anim-1">
                 <div class="col-5 col-lg-2 date">
                     <h1>.A</h1>
@@ -2178,41 +2261,41 @@
             </div>
             <div>
           <div class="form-inbuilt__container content">
-              <h4 class="" style="width: 60%; margin: 1rem auto;">If you wish to be contacted and guided by our staff, please complete the form below:</h4>
+              <h4 class="form-inbuilt-title">If you wish to be contacted and guided by our staff, please complete the form below:</h4>
               <form class="d-flex flex-column align-items-center">
                   <div class="row form-inbuilt-row">
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column form-row-content">
                       <label for="">Name*</label>
                       <input type="text" placeholder="Name">
                     </div>
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column form-row-content">
                       <label for="">Surname*</label>
                       <input type="text" placeholder="Surname">
                     </div>
                   </div>
                   <div class="row form-inbuilt-row">
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column form-row-content">
                       <label for="">Email Adress*</label>
                       <input type="Email" placeholder="Email Adress">
                     </div>
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column form-row-content">
                       <label for="">Phone number*</label>
                       <input type="text" placeholder="Phone number">
                     </div>
                   </div>
                   <div class="row form-inbuilt-row">
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column form-row-content">
                       <label for="">Country*</label>
                       <input type="text" placeholder="Country">
                     </div>
-                    <div class="d-flex flex-column">
+                    <div class="d-flex flex-column form-row-content">
                       <label for="">City*</label>
                       <input type="text" placeholder="City">
                     </div>
                   </div>
                   <div class="d-flex flex-column form-inbuilt-row">
                     <label for="">How did you learn about Path?*</label>
-                    <select name="meetPath" id="meetPath">
+                    <select  name="meetPath" id="meetPath">
                       <option value="website">Website</option>
                       <option value="event">Event</option>
                       <option value="social-media">Social media</option>
@@ -2225,7 +2308,7 @@
                     <textarea style="resize: none;" name="" id="" cols="10" rows="3"></textarea>
                   </div>
         
-                  <button class="main-btn" type="submit">Send message</button>
+                  <button class="main-btn form-inbuilt-button" type="submit">Send message</button>
               </form>
           </div>
             </div>
@@ -2233,71 +2316,9 @@
     </div>
 
     <!-- Popup -->
-    <div class="side-form-popup">
-        <div class="popup-wrapper">
-            <div class="center-popup">
-              <div class="opening-popup">
-                <div class="close-popup">
-                    <i class="fas fa-times"></i>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-8 media">
-                        <img src="assets/img/University/About-us-1/series-life.jpg" alt="media"
-                            class="img-fluid">
-                    </div>
-                    <div class="col-md-6 col-lg-4 content">
-                        <h5>Opening hours</h5>
-                        <div class="openings">
-                            <div class="opening opening-days">
-                                <p class="day">Monday</p>
-                                <div class="divider"></div>
-                                <p class="day">Friday</p>
-                            </div>
-                            <div class="opening opening-time">
-                                <p class="time">08.00 am</p>
-                                <div class="divider"></div>
-                                <p class="time">16.00 pm</p>
-                            </div>
-                        </div>
-                        <p class="num">+54 9 11 5738 5100</p>
-                    </div>
-                </div>
-            </div>
-                
-                <div class="form-popup">
-                  <div class="close-popup">
-                      <i class="fas fa-times"></i>
-                  </div>
-                  <div class="row">
-                      <div class="col-12 col-lg-7 content">
-                          <h4>You have a question for us?</h4>
-                          <p>leave your message below or email us at admin@pathexaminations.com</p>
-                          <form class="text-left form-style-2">
-                              <div class="form-group required">
-                                  <label for="email">Email address</label>
-                                  <input type="email" id="email" class="form-control" name="email"
-                                      placeholder="johnLP12@gmail.com" />
-                              </div>
-                              <div class="form-group">
-                                  <label for="message">Message</label>
-                                  <input type="text" id="message" class="form-control" name="name"
-                                      placeholder="Hello, I wanted to know about this particular course called..." />
-                                  <span class="small-text">120 characters left</span>
-                              </div>
-                              <button class="main-btn" type="submit">Send message</button>
-                          </form>
-                      </div>
-                      <div class="d-none d-lg-block col-lg-5 media">
-                          <img src="assets/img/University/students/05.jpg" alt="media image"
-                              class="img-fluid" />
-                      </div>
-                  </div>
-              </div>
-            </div>
-        </div>
+    <div id="load-pop-ups">
+      
     </div>
-
-    
 
     <!-- Footer Section -->
     <footer class="footer-section" id="footer">
@@ -2483,44 +2504,35 @@
 
         })}
   
-          // JS MOBILE    
+          // JS MOBILE
       else{
               $(window).scroll(function() {
               var scroll = $(window).scrollTop();
               console.log(scroll);
-              if (scroll >= 500) {
+              if (scroll >= 550) {
         $('.our-levels-anim').css({'opacity':1, 'transform':'translateY(0%)'});
         };
   
-        if (scroll >= 830) {
+        if (scroll >= 650) {
         $('.carta-anim-1').css({'opacity':1, 'transform':'translateY(0%)'});
         };
   
-      if (scroll >= 1300) {
+      if (scroll >= 1200) {
                 $('.carta-anim-2').css({'opacity':1, 'transform':'translateY(0%)'});
         };
-
-      if (scroll >= 1600) {
-          $('.carta-anim-3').css({'opacity':1, 'transform':'translateY(0%)'});
-};
        
-
-      if (scroll >= 2300) { 
+      if (scroll >= 2100) { 
             $('.our-principles-anim').css({'opacity':1, 'transform':'translateY(0%)'});
-            setTimeout(() => {
-            $('.img-anim').css({'opacity':1, 'transform':'translateY(0%)'});
-            }, 300);
           }
         
-      if (scroll >= 3200) {
+      if (scroll >= 3500) {
             $('.join-path-title').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.price-card').css({'opacity':1, 'transform':'translateY(0%)'});
             }, 300);
         }; 
 
-        
-        if (scroll >= 4000) {
+        if (scroll >= 5200) {
             $('.inbuilt-checks-1').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.inbuilt-checks-2').css({'opacity':1, 'transform':'translateY(0%)'});
@@ -2533,25 +2545,25 @@
             }, 700);
         };
 
-        if (scroll >= 10000) {
+        if (scroll >= 10300) {
             $('.natgeo__img').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.natgeo-content p').css({'opacity':1, 'transform':'translateY(0%)'});
             }, 300);
         }; 
 
-        if (scroll >= 10100) {
+        if (scroll >= 11000) {
             $('.benefits__img').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.benefits__right').css({'opacity':1, 'transform':'translateY(0%)'});
             }, 500);
           };
 
-          if (scroll >= 11100) {
+          if (scroll >= 11700) {
             $('.quote__after-text h2').css({'opacity':1, 'transform':'translateY(0%)'});
           };
 
-          if (scroll >= 12200) {
+          if (scroll >= 12100) {
             $('.series__title').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.series__card').css({'opacity':1, 'transform':'translateY(0%)'});
