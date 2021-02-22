@@ -409,6 +409,27 @@
         transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1)!important;
         }
 
+        @keyframes bg-move {
+            0% {
+                background-position: top left;
+
+            }
+            100% {
+                background-position: bottom right;
+            }
+        }
+
+        /* The element to apply the animation to */
+        .bg-image-anim{
+            animation-name: bg-move;
+            animation-duration: 10s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            background-repeat: no-repeat;
+            background-position: top left;
+        }
+
         @media only screen and (max-width: 799px) {
             html {
                 overflow-x: hidden;
@@ -566,33 +587,29 @@
                 margin: 0 auto;
             }
 
-        }
-
-        
-        @keyframes bg-move {
+            @keyframes bg-move {
             0% {
                 background-position: top left;
-                background-size: 110%;
 
             }
             100% {
                 background-position: bottom right;
-                background-size: 115%;
-            
             }
         }
 
         /* The element to apply the animation to */
         .bg-image-anim{
             animation-name: bg-move;
-            animation-duration: 60s;
-            animation-timing-function: linear;
+            animation-duration: 40s;
+            animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
             animation-direction: alternate;
-            background-size: 110%;
             background-repeat: no-repeat;
             background-position: top left;
         }
+
+        }
+
         </style>
 </head>
 
@@ -688,9 +705,7 @@
 
                     <a href="/teachers-institutions.html#international-standards" class="boxed-btn">Read more</a>
                 </div>
-                <div class="bg-image bg-image-anim" style="background-image: url(assets/img/slider/home1/banner_home.jpg);">
-
-                </div>
+                <div class="bg-image bg-image-anim" style="background-image: url(assets/img/slider/home1/banner_home.jpg);"></div>
             </div>
             <div class="single-header-item">
                 <div class="content-area">
@@ -725,6 +740,7 @@
                 </div>
                 </div>
         </div>
+        
     </section>
 
         <!-- FRANJA CERTIFY -->

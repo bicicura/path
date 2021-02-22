@@ -110,12 +110,6 @@ $(".close-popup").click(function() {
 });
 
 // ===================== Show Details =====================
-// $(".card .plus").on("click", function() {
-//   var el = $(this);
-//   el.parent()
-//     .children(".hover-inner")
-//     .toggleClass("show");
-// });
 
 $(".carta-entera").click(function () {
   $(this).children('.thumb').children(".hover").children('.hover-inner').toggleClass('show');
@@ -165,16 +159,3 @@ $(window).on("scroll", function() {
   }
 });
 
-// Change Video player size in portrait mode
-if ($(".v-container").length > 0) {
-  window.addEventListener(
-    "orientationchange",
-    function() {
-      window.matchMedia("(orientation: portrait)").matches &&
-        $(".v-container").addClass("video-portrait-mode");
-      window.matchMedia("(orientation: landscape)").matches &&
-        $(".v-container").removeClass("video-portrait-mode");
-    },
-    false
-  );
-}
