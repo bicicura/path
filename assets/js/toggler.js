@@ -111,6 +111,7 @@ $(".close-popup").click(function() {
 
 // ===================== Show Details =====================
 
+
 $(".carta-entera").click(function () {
   $(this).children('.thumb').children(".hover").children('.hover-inner').toggleClass('show');
 })
