@@ -2,7 +2,7 @@
 if ($(".header-carousel").length > 0) {
   $(".header-carousel").owlCarousel({
     loop: true,
-    autoplay: false, //true if you want to enable autoplay
+    autoplay: true, //true if you want to enable autoplay
     autoPlayTimeout: 1000,
     margin: 0,
     dots: true,
