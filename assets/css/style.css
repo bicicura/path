@@ -2990,7 +2990,7 @@ cursor: pointer;
   justify-content: space-between;
 }
 .navbar-section .navbar .navbar-brand {
-  margin-right: 80px;
+  margin-right: 40px;
 }
 .navbar-section .navbar .navbar-brand img {
   height: 78px;
@@ -3022,7 +3022,7 @@ cursor: pointer;
 }
 .navbar-section .navbar .navbar-nav li .sub-menu {
   position: absolute;
-  top: 20%;
+  top: 53%;
   width: 190px;
   padding: 10px 0;
   left: 0;

@@ -1,4 +1,7 @@
-
+.navbar-section .navbar .navbar-nav li a {
+  font-size: 18px;
+  width: fit-content;
+}
 
 .learn-more-form-popup {
   display: none;
