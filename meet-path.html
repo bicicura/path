@@ -748,6 +748,440 @@ POLICY
     <div id="load-pop-ups">
       
     </div>
+    
+    
+    
+    
+       <!-- Empieza componente Juan -->
+
+    <style>
+
+      .r-cards-container{
+        padding: 10vh 0 3vh 0;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .r-aclaracion{
+        text-align: center;
+        font-style: italic;
+      }
+
+      .r-card{
+        /* background-color: lightblue; */
+        border-radius: 11px;
+        width: 200px;
+        text-align: center;
+        box-shadow: 0px 4px 5px 0px rgb(0 0 0 / 10%);
+        overflow: hidden;
+      }
+
+      .r-uppercard{
+        padding: 20px 12px 20px 12px;
+      }
+
+      .r-lowercard{
+        padding: 10px 30px 20px 30px;
+        height: 150px;
+        background-color: #f2fbff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow:hidden;
+      }
+
+      .r-card-title{
+        font-size: 1em;
+        font-weight: 500;
+        color: #23454f;
+        line-height: 23px;
+        margin-bottom: 7px;
+      }
+
+      .r-card-slogan{
+        font-style: italic;
+        font-size: 0.85em;
+      }
+
+      .r-card-expanded-info{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        z-index: 100;
+        color: black;
+        background-color: rgba(0,0,0,0.2);
+      }
+
+      .r-card-expanded-info ul, .r-card-expanded-info li{
+        color: black!important;
+      }
+
+      .r-card-expanded-info>div{
+        max-height: 70vh;
+        width: 70vw;
+        background-color: white;
+        /* overflow: hidden; */
+        border-radius: 5px;
+        display:flex;
+        padding: 41px;
+        box-shadow: 0px 4px 5px 0px rgb(0 0 0 / 10%);
+        position: relative;
+      }
+
+      .r-cerrar{
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 6px;
+        padding: 1px 10px 5px 10px;
+        background-color: #e3e3e3;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+
+      .r-left-col{
+        height: 100%;
+        width: 23%;
+        /* background-color: green; */
+      }
+
+      .r-right-col{
+        width: 77%;
+        /* background-color: blue;  */
+        height: 100%;
+        padding-left: 30px;
+        overflow-y: auto;
+      }
+
+      .r-right-col>div{
+        overflow-y: auto;
+        max-height: 50vh;
+      }
+
+      .r-left-col img{
+        margin-bottom: 10px;
+      }
+
+      .r-left-col span{
+        font-weight: bold;
+      }
+
+      #reconocimiento{
+        padding-bottom: 15vh;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .r-cards-container {
+          flex-wrap: wrap;
+          width: 95vw;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .r-card{
+          width: 275px;
+          margin-bottom: 35px;
+        }
+
+        .r-card-expanded-info>div{
+          flex-direction: column;
+          width: 90vw;
+          padding:30px 12px;
+        }
+        .r-right-col{
+          width: 100%;
+          padding-left: 0;
+          padding-top: 20px;
+        }
+        .r-left-col{
+          width: 100%;
+          height: 200px;
+          border-bottom: 1px solid #dedede;
+        }
+
+      }
+
+    </style>
+    
+
+    <div class="container" id="reconocimiento">
+
+      <div class="r-cards-container">
+        <div class="r-card" data-id="ciol">
+  
+          <div class="r-uppercard">
+            <div class="r-card-title">Chartered institute of linguistics (CIOL)</div>
+            <div class="r-card-slogan">worldwide recognition and validation</div>
+          </div>
+          <div class="r-lowercard">
+            <img src="assets/img/ciol.png" width="100px">
+          </div>
+  
+        </div>
+        
+        <div class="r-card" data-id="ces">
+  
+          <div class="r-uppercard">
+            <div class="r-card-title">Consejo de Educacion Secundaria (CES)</div>
+            <div class="r-card-slogan">national recognition in Uruguay</div>
+          </div>
+          <div class="r-lowercard">
+            <img src="assets/img/ces.png" width="100px">
+          </div>
+  
+        </div>
+  
+        <div class="r-card" data-id="usal">
+  
+          <div class="r-uppercard">
+            <div class="r-card-title">Universidad del Salvador (USAL)</div>
+            <div class="r-card-slogan">national recognition in Argentina</div>
+          </div>
+          <div class="r-lowercard">
+            <img src="assets/img/usal.png" width="100px">
+          </div>
+  
+        </div>
+  
+        <div class="r-card" data-id="uccuyo">
+  
+          <div class="r-uppercard">
+            <div class="r-card-title">Universidad Catolica de Cuyo (UCCuyo)</div>
+            <div class="r-card-slogan">national recognition in Argentina</div>
+          </div>
+          <div class="r-lowercard">
+            <img src="assets/img/uccuyo.png" width="100px">
+          </div>
+  
+        </div>
+  
+        <div class="r-card" data-id="newstart">
+  
+          <div class="r-uppercard">
+            <div class="r-card-title">Instituto New Start D-130</div>
+            <div class="r-card-slogan">national recognition in Argentina</div>
+          </div>
+          <div class="r-lowercard">
+            <img src="assets/img/newstart.png" width="130px">
+          </div>
+  
+        </div>
+      </div>
+
+      <div class="r-aclaracion">Other institutions recognising international exams aligned to the CEFR also recognise Path exams.</div>
+
+
+    </div>
+
+    <div class="r-card-expanded-info" id="ciol" style="display:none">
+
+      <div>
+        <div class="r-cerrar">x</div>
+
+        <div class="r-left-col">
+
+          <div>
+            <img src="assets/img/ciol.png" width="130px">
+            <div><span>Chartered Institute of Linguists (CIOL)</span> – worldwide recognition and validation</div>
+          </div>
+
+        </div>
+        <div class="r-right-col">
+          
+        <div>
+          <b>CIOL</b> <a href="https://www.ciol.org.uk">(https://www.ciol.org.uk)</a>, the Chartered Institute of Linguists, confers <b>Validated Programme status on Path Examinations Language Assessments</b> <a href="https://www.ciol.org.uk/ciol-rvc">(https://www.ciol.org.uk/ciol-rvc)</a> of ESOL Adult Qualifications at the B1 level of CEFR and above. Path certificates of these levels feature CIOL’s validation logo.
+            <br>
+            <ul>
+              <li>Founded in 1910 (110 years of established history)</li>
+              <li>Granted a Royal Charter (https://www.ciol.org.uk/sites/default/files/
+                CIOLRoyalCharter.pdf)</li>
+              <li>UK Professional Lead for Languages</li>
+              <li>UK regulated Awarding Organisation</li>
+            </ul>
+            <br>            
+           <b>CIOL representation: <a href="https://www.ciol.org.uk/representation">(https://www.ciol.org.uk/representation)</a></b>
+            <br>
+            <ul>
+              <li>President: Mr Richard Hardie</li>
+              <li>Vice-Presidents: Baroness Jean Coussins
+                Prof. David Crystal</li>
+            </ul>
+            <br>
+            
+            <b>CIOL statement:</b>
+            <br>
+            <br>            
+            <b>CIOL</b>, the Chartered Institute of Linguists, is pleased to confer <b>Validated Programme status on Path Examinations English Language Assessments</b>. CIOL recognises the ambition and intentions of Path Examinations to provide practical, applied language assessments focussed on language needs for every day contexts and real-life situations. CIOL is satisfied that the assessments are <b>clearly aligned to CEF language levels,</b> are <b>robustly organised and delivered</b>, and <b>assured by a level of rigour applied to their creation, content and delivery which provides reassurance and confidence of the validity of their level both to learners and those to whom a learner may present their achievement.</b></p>
+            <br>
+            <img src="assets/img/ciol-card.png" height="200px" alt="">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="r-card-expanded-info" id="ces" style="display:none">
+
+      <div>
+        <div class="r-cerrar">x</div>
+
+        <div class="r-left-col">
+
+          <div>
+            <img src="assets/img/ces.png" width="130px">
+            <div><span>Consejo de Educación Secundaria (CES)</span> – national recognition in Uruguay</div>
+          </div>
+
+        </div>
+        <div class="r-right-col">
+          
+        <div>
+          La Inspección de Inglés y Lenguas Extranjeras del <b>Consejo de Educación Superior Secundaria de Uruguay <a href="https://www.ces.edu.uy">(https://www.ces.edu.uy/)</a></b> dispone que las <b>certificaciones de Path Examinations de niveles B1 o superior, según el MCER, habilitan a los estudiantes de 2do y 3er año de Bachillerato a acreditar la asignatura inglés sin necesidad de cursarla. (PDF de reconocimiento)</b> Esto es válido para liceos públicos y privados con curricula oficial.
+          <br>
+          <ul>
+            <li>Órgano de la Administración Nacional de Educación Pública (ANEP) en Uruguay</li>
+          </ul>
+          <br>
+          <b>Representación del CES:</b>
+          <br>
+          <ul>
+            <li>Directora General: Lic. Prof. Jenifer Cherro Pintos</li>
+            <li>Subdirector: Prof. Óscar Yáñez</li>
+          </ul>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="r-card-expanded-info" id="usal" style="display:none">
+
+      <div>
+        <div class="r-cerrar">x</div>
+
+        <div class="r-left-col">
+
+          <div>
+            <img src="assets/img/usal.png" width="130px">
+            <div><span>Universidad del Salvador (USAL)</span> – national recognition in Argentina</div>
+          </div>
+
+        </div>
+        <div class="r-right-col">
+          
+        <div>
+          
+          La <b>Universidad del Salvador (USAL) (http://www.usal.edu.ar/)</b> de Buenos Aires, Argentina <b>adhiere a Path Examinations (PDF de reconocimiento)</b> por su importancia y alto nivel académico. Además de reconocer nuestros exámenes, la Universidad del Salvador es <b>Centro Examinador Aprobado en sus sedes de la Escuela de Lenguas Modernas (PDF de convenio de centro examinador)</b> de Pilar, Provincia de Buenos Aires y C.A.B.A., Argentina.
+          <br>
+          <ul>
+            <li>Fundada en 1956</li>
+            <li>Universidad privada en Argentina</li>
+          </ul>
+          <br>
+          <b>Representación de la USAL:</b>
+          <br>
+          <ul>
+            <li>Rector: Dr. Carlos I. Salvadores de Arzuaga</li>
+            <li>Directora de la Escuela de Lenguas Modernas: Dra. Paula Ortiz</li>
+          </ul>          
+          
+          
+        </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="r-card-expanded-info" id="uccuyo" style="display:none">
+
+      <div>
+        <div class="r-cerrar">x</div>
+
+        <div class="r-left-col">
+
+          <div>
+            <img src="assets/img/uccuyo.png" width="130px">
+            <div><span>Universidad Católica de Cuyo (UCCuyo)</span> – national recognition in Argentina</div>
+          </div>
+
+        </div>
+        <div class="r-right-col">
+          
+        <div>
+
+          La <b>Universidad Católica de Cuyo (UCCuyo) <a href="http://uccuyo.edu.ar">(http://uccuyo.edu.ar/)</a></b> de San Luis, Argentina <b>adhiere a Path Examinations (PDF de reconocimiento)</b> por su importancia y alto nivel académico. Además de reconocer nuestros exámenes, la Universidad Católica de Cuyo es <b>Centro Examinador Aprobado en su sede de San Luis, Argentina. (PDF de convenio de centro examinador)</b>
+          <br>
+          <ul>
+            <li>Fundada en 1995</li>
+            <li>Universidad privada en Argentina</li>
+          </ul>
+          <br>
+
+          <b>Representación de la UCCuyo:</b>
+          <br>
+          <ul>
+            <li>Rector: Dr. Claudio Marcelo Larrea Arnau</li>
+            <li>Vicerrectora de la sede San Luis: Abog. Melina Maluf Martínez</li>
+          </ul>
+          
+        </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="r-card-expanded-info" id="newstart" style="display:none">
+
+      <div>
+        <div class="r-cerrar">x</div>
+
+        <div class="r-left-col">
+
+          <div>
+            <img src="assets/img/newstart.png" width="130px">
+            <div><span>Instituto Superior New Start (D-130)</span> – national recognition in Argentina</div>
+          </div>
+
+        </div>
+        <div class="r-right-col">
+          
+        <div>
+
+          El <b>Instituto Superior New Start D-130 <a href="http://newstart.edu.ar">(http://newstart.edu.ar/)</a></b> de Entre Ríos, Argentina <b>adhiere a Path Examinations (PDF de reconocimiento)</b> por su importancia y alto nivel académico. Además de reconocer nuestros exámenes, el Instituto Superior New Start es <b>Centro Examinador Aprobado en su sede de Paraná, Entre Ríos, Argentina. (PDF de convenio de centro examinador)</b>
+          <br>
+          <ul>
+            <li>Fundado en 1991 </li>
+            <li>Instituto Superior en Argentina</li>
+          </ul>
+          <br>
+          <b>Representación de New Start:</b>
+          <br>
+          <ul>
+            <li>Rectora: Prof. Lucrecia Álvarez</li>
+            <li>Secretaria Académica: Lic. Virginia Mulone</li>
+          </ul>
+                    
+        </div>
+        </div>
+
+      </div>
+
+    </div>
+    
+    <!-- Termina componente Juan -->
+    
+    
+    
+    
 
     <div class="container" id="think-forward-strategy">
       <div class="stripped-table-part">
@@ -955,6 +1389,28 @@ POLICY
         };
   });
     </script>
+    
+    <script>
+
+    $(document).on('click', '.r-card', function(){
+      var card_clicked = $(this).attr('data-id')
+      console.log('card clicked')
+      $('#'+card_clicked).fadeIn(100)
+    })
+
+    $(document).on('click', '.r-cerrar', function(){
+      $('.r-card-expanded-info').fadeOut(100)
+    })
+
+    $(document).on('click', '.r-card-expanded-info>div', function(e){
+      e.stopPropagation(100)
+    })
+    
+    $(document).on('click', '.r-card-expanded-info', function(e){
+      $('.r-card-expanded-info').fadeOut(100)
+    })
+
+  </script>
 
 </body>
 

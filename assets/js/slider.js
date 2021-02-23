@@ -49,7 +49,7 @@ owlCarousel.removeItem(2);
 if ($(".showcase-style-4").length > 0) {
   $(".showcase-style-4 > .content-wrapper").slick({
     infinite: true,
-    speed: 500,
+    speed: 800,
     dots: true,
     arrows: false,
     cssEase: "linear",
@@ -95,7 +95,7 @@ if ($(".showcase-style-2").length > 0) {
     speed: 500,
     fade: true,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 7500,
     arrows: true,
     cssEase: "linear",
     prevArrow: $(".indicator-style-2 > .flaticon-back"),
@@ -191,7 +191,7 @@ if ($(".showcase-style-5").length > 0) {
     dots: false,
     autoplay: false,
     speed: 1000,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 7500,
     fade: true,
     prevArrow: $(".carousel-controlar > .prev"),
     nextArrow: $(".carousel-controlar > .next"),
