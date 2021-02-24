@@ -2990,7 +2990,7 @@ cursor: pointer;
   justify-content: space-between;
 }
 .navbar-section .navbar .navbar-brand {
-  margin-right: 40px;
+  margin-right: 80px;
 }
 .navbar-section .navbar .navbar-brand img {
   height: 78px;
@@ -3096,7 +3096,7 @@ cursor: pointer;
 .navbar-section .navbar .navbar-nav li a {
   font-size: 1rem;
   margin-right: 2px;
-  font-weight: 700;
+  /* font-weight: 700; */
 }
 .navbar-section .navbar .navbar-nav li a:after {
   content: "";
@@ -5093,6 +5093,7 @@ cursor: pointer;
 .price-cards .price-card .features .feature {
   display: flex;
   text-align: left;
+  align-items: baseline
 }
 .price-cards .price-card .features .feature i {
   font-size: 10px;

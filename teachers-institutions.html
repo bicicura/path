@@ -105,7 +105,7 @@
     }
 
     .teachers__title {
-      margin-bottom: 3vh;
+      margin-bottom: 4%;
     }
 
     .heading {
@@ -122,13 +122,19 @@
 
 
     .international__text {
-      width: 80%;
+      /* width: 80%; */
       margin: 0 auto;
     }
 
     .international__text a {
       color: #004969;
       font-weight: bold;
+    }
+
+    .our-levels-final-text {
+      font-weight: bold;
+      color: #004969;
+      font-size: 1.3rem;
     }
 
     /* 
@@ -410,6 +416,11 @@
           font-style: italic;
         }
 
+        .feature-cartita p {
+          font-size: 16px!important;
+          line-height: 1.4!important;
+        }
+
         .price-cards .price-card .main-btn {
           margin: 2rem auto;
           width: 80%;
@@ -563,7 +574,7 @@
     */
 
     .quote__after-img {
-            background-image: url(assets/img/University/students/path-quote.jpg); 
+            background-image: url(assets/img/University/students/natgeo-bg.jpg); 
             margin: 6vh 0!important;
             background-size: cover;
             background-position: center;
@@ -572,7 +583,7 @@
         }
 
         .quote__after-courtain {
-            background-color: rgba(0, 0, 0, .4)
+            background-color: rgba(0, 0, 0, .5)
         }
 
         .quote__after-text {
@@ -582,7 +593,7 @@
         }
 
         .quote__after-text h2 {
-            color: rgba(255, 255, 255, .8);
+            color: rgba(255, 255, 255, 1);
         }
 
         .quote__after-coma {
@@ -634,7 +645,7 @@
         }
 
         .TH{
-          padding: 10%;
+          padding: 7%;
           border-top-left-radius: 4px;
           border-top-right-radius: 4px;
           min-height: 220px;
@@ -664,7 +675,7 @@
           margin-bottom: .4rem!important;
         }
 
-        .fa-plus-circle:before {
+        .thumb .fa-plus-circle:before {
           filter: drop-shadow(0px 0px 2px black);
           font-size: 1.2rem;
         }
@@ -1104,70 +1115,65 @@
         
     </nav>
 
-    <!-- Navbar for mobile screen -->
-    <div class="navbar-mobile sticky-bar d-block d-sm-none">
-      <div class="container-fluid">
-          <div class="menu-toggler">
-              <div class="hamburger-menu">
-                  <a href="#">
-                      <span>Menu</span>
-                  </a>
+        <!-- Navbar for mobile screen -->
+        <div class="navbar-mobile sticky-bar d-block d-sm-none">
+          <div class="container-fluid">
+              <div class="menu-toggler">
+                  <div class="hamburger-menu">
+                      <a href="#">
+                          <span>Menu</span>
+                      </a>
+                  </div>
               </div>
-          </div>
-          <div class="divider"></div>
-          <div class="logo">
-              <a href="#"><img src="assets/img/logos/path_logo-mob.svg" alt="logo" class="img-fluid"></a>
-          </div>
-          <div class="divider"></div>
-          <div class="language">
-              <div class="dropdown">
-                  <button class="active" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-                      aria-expanded="false">
-                      <img class="flag" src="assets\img\icons\Flags\uk-flag.png" alt="cuntry flag" />
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                      <button class="dropdown-item" type="button"><img src="assets\img\icons\Flags\spain-flag.png"
-                              alt="flag image" class="flag" /></button>
-                      
+              <div class="divider"></div>
+              <div class="logo">
+                  <a href="#"><img src="assets/img/logos/path_logo-mob.svg" alt="logo" class="img-fluid"></a>
+              </div>
+              <div class="divider"></div>
+              <div class="language">
+                  <div class="dropdown">
+                      <button class="active" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                          aria-expanded="false">
+                          <img class="flag" src="assets\img\icons\Flags\uk-flag.png" alt="cuntry flag" />
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                          <button class="dropdown-item" type="button"><img src="assets\img\icons\Flags\spain-flag.png"
+                                  alt="flag image" class="flag" /></button>      
+                      </div>
                   </div>
               </div>
           </div>
-          
+          <div class="nav-menu-items">
+              <ul class="nav-items">
+                  <li><a href="index.html">Home</a></li>
+                  <li class="menu-item-has-children"><a href="meet-path.html">Meet Path</a>
+                      <ul class="sub-menu">
+                          <li><a href="/meet-path.html#about-us">About us</a></li>
+                          <li><a href="/meet-path.html#think-forward-strategy">Think Forward strategy</a></li>
+                          <li><a href="/meet-path.html#policies-and-procedures">Policies and procedures</a></li>
+                      </ul>
+                  </li>
+                  <li class="menu-item-has-children"><a href="teachers-institutions.html">Teachers and Institutions</a>
+                      <ul class="sub-menu">
+                          <li><a href="teachers-institutions.html#international-standards">International standards</a></li>
+                          <li><a href="teachers-institutions.html#assessment-innovation">Assessment innovations</a></li>
+                          <li><a href="teachers-institutions.html#join-path">Join Path</a></li>
+                          <li><a href="teachers-institutions.html#inbuilt-programme">Inbuilt programme</a></li>
+                          <li><a href="teachers-institutions.html#q-mark">Q-mark</a></li>
+                          <li><div class="natgeo"><a href="teachers-institutions.html#natgeo-learning">NatGeo Learning</a><div class="natgeo-cont"><img src="assets\img\logos\nat-geo-01.svg" alt=""></div></div></li>
+                      </ul>
+                  </li>
+                  <li class="menu-item-has-children"><a href="our-examinations.html">Our examinations</a>
+                      <ul class="sub-menu">
+                          <div><ul><li><a href="/our-examinations.html#general-information" style="font-weight: bold;">General information</a></li><div style="margin-left: 10px;"><li><a href="/our-examinations.html#about-our-exams">About our exams</a></li><li><a href="/our-examinations.html#exam-modules">Exam modules</a></li><li><a href="/our-examinations.html#map-of-levels">Map of levels</a></li></div></ul></div>
+                          <div><ul><li><a href="/our-examinations.html#speaking-only-exams" style="font-weight: bold;">Speaking-only exams</a></li><div style="margin-left: 10px;"><li><a href="/our-examinations.html#AminusSPAlevelI">A1- | Speaking Performance Assessment (SPA) level I</a></li><li><a href="/our-examinations.html#aSPAlevelII">A1 | Speaking Performance Assessment (SPA) level II</a></li><li><a href="/our-examinations.html#AplusSPAlevelIII">A1+ | Speaking Performance Assessment (SPA) level III</a></li></div></ul></div>
+                          <div><ul><li><a href="/our-examinations.html#four-skill-exam" style="font-weight: bold;">Four-skill exams</a></li><div style="margin-left: 10px;"><li><a href="/our-examinations.html#a1entrylevel">A1- | Entry level</a></li></li><li><a href="/our-examinations.html#A1AccessLevel">A1 | Access level</a></li></li><li><a href="/our-examinations.html#A1AchieverLevel">A1+ | Achiever level</a></li></li><li><a href="/our-examinations.html#A2PreliminaryLevel">A2 | Preliminary level</a></li></li><li><a href="/our-examinations.html#A2ElementaryLevel">A2+ | Elementary level</a></li></li><li><a href="/our-examinations.html#B1ProgressLevel">B1 | Progress level</a></li><li><a href="/our-examinations.html#B2CompetencyLevel">B2 | Competency level</a></li><li><a href="/our-examinations.html#B2ForwardLevel">B2+ | Forward level</a></li></div></ul></div>
+                      </ul>
+                  </li>
+                  <li class="menu-item-has-no-children"><a href="news-and-events.html">News and events</a></li>
+              </ul>
+          </div>
       </div>
-
-      <div class="nav-menu-items">
-          <ul class="nav-items">
-              <li><a style="font-weight: bold;" href="index.html">Home</a></li>
-              <li class="menu-item-has-children"><a style="font-weight: bold;" href="meet-path.html">Meet Path</a>
-                  <ul class="sub-menu">
-                      <li><a href="/meet-path.html#about-us">About us</a></li>
-                      <li><a href="/meet-path.html#think-forward-strategy">Think Forward strategy</a></li>
-                      <li><a href="/meet-path.html#policies-and-procedures">Policies and procedures</a></li>
-                  </ul>
-              </li>
-              <!-- <li><a href="teachers-institutions.html" class="current-menu-item">Teachers and Institutions</a></li> -->
-              <li class="menu-item-has-children"><a style="font-weight: bold;" href="teachers-institutions.html">Teachers and Institutions</a>
-                  <ul class="sub-menu">
-                      <li><a href="teachers-institutions.html#international-standards">International standards</a></li>
-                      <li><a href="teachers-institutions.html#assessment-innovation">Assessment innovation</a></li>
-                      <li><a href="teachers-institutions.html#join-path">Join Path</a></li>
-                      <li><a href="teachers-institutions.html#inbuilt-programme">Inbuilt programme</a></li>
-                      <li><a href="teachers-institutions.html#q-mark">Q-mark</a></li>
-                      <li><div class="natgeo"><a href="teachers-institutions.html#natgeo-learning">NatGeo Learning</a><div class="natgeo-cont"><img src="assets\img\logos\nat-geo-01.svg" alt=""></div></div></li>
-                  </ul>
-              </li>
-              <li class="menu-item-has-no-children"><a style="font-weight: bold;" href="#">Students and parents</a></li>
-              <li class="menu-item-has-children"><a style="font-weight: bold;" href="our-examinations.html">Our examinations</a>
-                  <ul class="sub-menu">
-                      <div><ul><li><a href="/our-examinations.html#general-information" style="font-weight: bold;">General information</a></li><div style="margin-left: 10px;"><li><a href="/our-examinations.html#about-our-exams">About our exams</a></li><li><a href="/our-examinations.html#exam-modules">Exam modules</a></li><li><a href="/our-examinations.html#map-of-levels">Map of levels</a></li></div></ul></div>
-                      <div><ul><li><a href="/our-examinations.html#speaking-only-exams" style="font-weight: bold;">Speaking-only exams</a></li><div style="margin-left: 10px;"><li><a href="/our-examinations.html#AminusSPAlevelI">A1- | Speaking Performance Assessment (SPA) level I</a></li><li><a href="/our-examinations.html#aSPAlevelII">A1 | Speaking Performance Assessment (SPA) level II</a></li><li><a href="/our-examinations.html#AplusSPAlevelIII">A1+ | Speaking Performance Assessment (SPA) level III</a></li></div></ul></div>
-                      <div><ul><li><a href="/our-examinations.html#four-skill-exam" style="font-weight: bold;">Four-skill exams</a></li><div style="margin-left: 10px;"><li><a href="/our-examinations.html#a1entrylevel">A1- | Entry level</a></li></li><li><a href="/our-examinations.html#A1AccessLevel">A1 | Access level</a></li></li><li><a href="/our-examinations.html#A1AchieverLevel">A1+ | Achiever level</a></li></li><li><a href="/our-examinations.html#A2PreliminaryLevel">A2 | Preliminary level</a></li></li><li><a href="/our-examinations.html#A2ElementaryLevel">A2+ | Elementary level</a></li></li><li><a href="/our-examinations.html#B1ProgressLevel">B1 | Progress level</a></li><li><a href="/our-examinations.html#B2CompetencyLevel">B2 | Competency level</a></li><li><a href="/our-examinations.html#B2ForwardLevel">B2+ | Forward level</a></li></div></ul></div>
-                  </ul>
-              </li>
-              <li class="menu-item-has-no-children"><a style="font-weight: bold;" href="news-and-events.html">News and events</a></li>
-          </ul>
-      </div>
-  </div>
 
     <div class="breadcrub-style-5 section">
       <div class="social-icon">
@@ -1235,7 +1241,7 @@
                     <p style="color: #0091B7;">Independent users are additionally able to use the language where it relates to travel, work and study. These users are generally considered to meet the demands of many university degree programmes</p>
                 </div>
             </div>
-            <p class="international__text text-center">Path Examinations has subdivided level A1 into 3 levels, and levels A2 and B2 into 2 levels. This is because the amount of time, effort and study required to move to the following level are considerable. Through this progressive approach, we ensure that the candidate’s language competency has been assessed thoroughly.</p>
+            <p class="international__text text-center our-levels-final-text">Path Examinations has subdivided level A1 into 3 levels, and levels A2 and B2 into 2 levels. This is because the amount of time, effort and study required to move to the following level are considerable. Through this progressive approach, we ensure that the candidate’s language competency has been assessed thoroughly.</p>
         </div>
 
         <!-- ASSESSMENT INNOVATION -->
@@ -1245,7 +1251,7 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-12 col-md-7 content">
-                  <h2 class="margin-bottom-30 our-principles-anim">Assessment Innovation</h2>
+                  <h2 class="margin-bottom-30 our-principles-anim">Assessment innovations</h2>
                   <div class="accordion-wrapper acorrdion__mine">
                     <div id="accordion">
                       <div class="card">
@@ -1448,7 +1454,7 @@
                           <div class="card-header" id="headingFifteen">
                             <h5 class="mb-0">
                               <a class="collapsed" role="button" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
-                              Online exams
+                              Online and paper-based exams
                               </a>
                             </h5>
                           </div>
@@ -1501,40 +1507,60 @@
               <table class="table">
                 <tbody>
                   <tr>
-                    <td id="af__online" class="card__more-info" scope="col">Online or paper-based exams at the nearest exam centre</td>
+                    <td id="af__online" class="card__more-info" scope="col">
+                      <span class="affiliate-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Online or paper-based exams at the nearest exam centre</td>
                   </tr>
                   <tr>
-                    <td id="af__academic" class="card__more-info">Academic guidance</td>
+                    <td id="af__academic" class="card__more-info">
+                      <span class="affiliate-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Academic guidance</td>
                   </tr>
                   <tr>
-                    <td id="af__logo" class="card__more-info">Path Affiliate logo</td>
+                    <td id="af__logo" class="card__more-info">
+                      <span class="affiliate-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Path Affiliate logo</td>
                   </tr>
                   <tr>
-                    <td id="af__platform" class="card__more-info">Access to our e-platform Beyond™</td>
+                    <td id="af__platform" class="card__more-info">
+                      <span class="affiliate-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Access to our e-platform Beyond™</td>
                   </tr>
                   <tr>
-                    <td id="af__groups" class="card__more-info">News group for Path affiliates</td>
+                    <td id="af__groups" class="card__more-info">
+                      <span class="affiliate-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      News group for Path affiliates</td>
                   </tr>
                   <tr>
-                    <td id="af__meetings" class="card__more-info">Meetings for students and parents</td>
+                    <td id="af__meetings" class="card__more-info">
+                      <span class="affiliate-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Meetings for students and parents</td>
                   </tr>
                   <tr>
-                    <td id="af__webinars" class="card__more-info">Discounted fee for Path webinars</td>
+                    <td id="af__webinars" class="card__more-info">
+                      <span class="affiliate-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Discounted fee for Path webinars</td>
                   </tr>
                   <tr>
-                    <td id="mem__fixed" class="card__more-info">Fixed exam fees in your local currency</td>
+                    <td id="mem__fixed" class="card__more-info">
+                      <span class="affiliate-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Fixed exam fees in your local currency</td>
                   </tr>
                   <tr>
-                    <td id="af__discount" class="card__more-info">5% discount on early exam registrations</td>
+                    <td id="af__discount" class="card__more-info">
+                      <span class="affiliate-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      5% discount on early exam registrations</td>
                   </tr>
                   <tr>
-                    <td id="af__invigliator" class="card__more-info">Application for Path invigilator</td>
+                    <td id="af__invigliator" class="card__more-info">
+                      <span class="affiliate-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Application for Path invigilator</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <div>
-              <button id="toggle-affiliate" class="main-btn" style="background-color: #0091B7;">Learn more</button>
+              <button id="toggle-affiliate" class="main-btn" style="background-color: #0091B7;">See benefits</button>
             </div>
           </div>
           <div class="price-card standard">
@@ -1564,61 +1590,95 @@
             <table class="table">
               <tbody>
                 <tr>
-                  <td id="mem__online" class="card__more-info" scope="col">Online or paper-based exams at the nearest exam centre</td>
+                  <td id="mem__online" class="card__more-info" scope="col">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Online or paper-based exams at the nearest exam centre</td>
                 </tr>
                 <tr>
-                  <td id="mem__academic" class="card__more-info">Academic guidance</td>
+                  <td id="mem__academic" class="card__more-info">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Academic guidance</td>
                 </tr>
                 <tr>
-                  <td id="mem__academic" class="card__more-info">Personalised Path Official Member logo</td>
+                  <td id="mem__academic" class="card__more-info">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Personalised Path Official Member logo</td>
                 </tr>
                 <tr>
-                  <td id="mem__platform" class="card__more-info">Access to our e-platform Beyond™</td>
+                  <td id="mem__platform" class="card__more-info">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Access to our e-platform Beyond™</td>
                 </tr>
                 <tr>
-                  <td id="mem__group" class="card__more-info">News group for Path members</td>
+                  <td id="mem__group" class="card__more-info">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    News group for Path members</td>
                 </tr>
                 <tr>
-                  <td id="mem__meeting" class="card__more-info">Meetings for students and parents</td>
+                  <td id="mem__meeting" class="card__more-info">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Meetings for students and parents</td>
                 </tr>
                 <tr>
-                  <td id="mem__webinars" class="card__more-info">Free access to Path webinars</td>
+                  <td id="mem__webinars" class="card__more-info">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Free access to Path webinars</td>
                 </tr>
                 <tr>
-                  <td id="mem__fixed" class="card__more-info">Fixed exam fees in your local currency</td>
+                  <td id="mem__fixed" class="card__more-info">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Fixed exam fees in your local currency</td>
                 </tr>  
                 <tr>
-                  <td id="mem__discount" class="card__more-info">5% discount on early exam registrations</td>
+                  <td id="mem__discount" class="card__more-info">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    5% discount on early exam registrations</td>
                 </tr>
                 <tr>
-                  <td id="mem__invigilator" class="card__more-info">Application for Path invigilator</td>
+                  <td id="mem__invigilator" class="card__more-info">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Application for Path invigilator</td>
                 </tr>
                 <tr>
-                  <td id="mem__access" class="card__more-info">Access to My Path area</td>
+                  <td id="mem__access" class="card__more-info">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Access to My Path area</td>
                 </tr>
                 <tr>
-                  <td id="mem__onboard" class="card__more-info">Onboarding meeting</td>
+                  <td id="mem__onboard" class="card__more-info">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Onboarding meeting</td>
                 </tr>
                 <tr>
-                  <td id="mem__id" class="card__more-info">Unique Path ID number</td>
+                  <td id="mem__id" class="card__more-info">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Unique Path ID number</td>
                 </tr>
                 <tr>
-                  <td id="mem__certificate" class="card__more-info">Digital member certificate</td>
+                  <td id="mem__certificate" class="card__more-info">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Digital member certificate</td>
                 </tr>
                 <tr>
-                  <td id="mem__annual" class="card__more-info">Annual package of personalised advertising material</td>
+                  <td id="mem__annual" class="card__more-info">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Annual package of personalised advertising material</td>
                 </tr>
                 <tr>
-                  <td id="mem__registrations" class="card__more-info">Changes to exam registrations</td>
+                  <td id="mem__registrations" class="card__more-info">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Changes to exam registrations</td>
                 </tr>
                 <tr>
-                  <td id="mem__comission" class="card__more-info">You will be given a 10% commission for registrations of 15+ candidates</td>
+                  <td id="mem__comission" class="card__more-info">
+                    <span class="member-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    You will be given a 10% commission for registrations of 15+ candidates</td>
                 </tr>
               </tbody>
             </table>
             </div>
             <div>
-              <button class="main-btn" style="background-color: #757DA4;" id="toggle-member">Learn more</button>
+              <button class="main-btn" style="background-color: #757DA4;" id="toggle-member">See benefits</button>
             </div>
           </div>
           <div class="price-card advanced">
@@ -1636,7 +1696,7 @@
               </div>
               <div class="feature feature-cartita">
                 <i class="fas fa-check"></i>
-                <p>Annual registration of 20 candidates or more, or institutions adopting our inbuilt programme</p>
+                <p>Annual registration of 20 candidates or more</p>
               </div>
             </div>
           </div>
@@ -1645,74 +1705,116 @@
               <tbody>
                 <div class="cerrar-tableta">
                   <tr>
-                    <td id="app__comission" class="card__more-info" scope="col">Online or paper-based exam sessions at your institution</td>
+                    <td id="app__comission" class="card__more-info" scope="col">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Online or paper-based exam sessions at your institution</td>
                   </tr>
                   <tr>
-                    <td id="mem__academic" class="card__more-info">Academic guidance</td>
+                    <td id="mem__academic" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Academic guidance</td>
                   </tr>
                   <tr>
-                    <td id="app__logo" class="card__more-info">personalised Path Approved Exam Centre logo</td>
+                    <td id="app__logo" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      personalised Path Approved Exam Centre logo</td>
                   </tr>
                   <tr>
-                    <td id="mem__platform" class="card__more-info">Access to our e-platform Beyond™</td>
+                    <td id="mem__platform" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Access to our e-platform Beyond™</td>
                   </tr>
                   <tr>
-                    <td id="app__group" class="card__more-info">News group for Path exam centres</td>
+                    <td id="app__group" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      News group for Path exam centres</td>
                   </tr>
                   <tr>
-                    <td id="app__meeting" class="card__more-info">Set up of meetings for students and parents</td>
+                    <td id="app__meeting" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Set up of meetings for students and parents</td>
                   </tr>
                   <tr>
-                    <td id="app__webinars" class="card__more-info">Free access to Path webinars and seminars</td>
+                    <td id="app__webinars" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Free access to Path webinars and seminars</td>
                   </tr>
                   <tr>
-                    <td id="mem__fixed" class="card__more-info">Fixed exam fees in your local currency</td>
+                    <td id="mem__fixed" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Fixed exam fees in your local currency</td>
                   </tr>
                   <tr>
-                    <td id="app__discounts" class="card__more-info">5% and 10% discounts on early exam registrations</td>
+                    <td id="app__discounts" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      5% and 10% discounts on early exam registrations</td>
                   </tr>
                   <tr>
-                    <td id="app__invigiliator" class="card__more-info">Application for Path invigilator and supervisor</td>
+                    <td id="app__invigiliator" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Application for Path invigilator and supervisor</td>
                   </tr>
                   <tr>
-                    <td id="app__access" class="card__more-info">Access to My Path area</td>
+                    <td id="app__access" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Access to My Path area</td>
                   </tr>
                   <tr>
-                    <td id="app__onboard" class="card__more-info">Onboarding meeting</td>
+                    <td id="app__onboard" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Onboarding meeting</td>
                   </tr>
                   <tr>
-                    <td id="mem__id" class="card__more-info">Unique Path ID number</td>
+                    <td id="mem__id" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Unique Path ID number</td>
                   </tr>
                   <tr>
                   <tr>
-                    <td id="app__certificate" class="card__more-info">Digital and paper centre certificate</td>
+                    <td id="app__certificate" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Digital and paper centre certificate</td>
                   <tr>
-                    <td id="app__adv" class="card__more-info">Personalised advertising material every month</td>
+                    <td id="app__adv" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Personalised advertising material every month</td>
                   </tr>
                   <tr>
-                    <td id="app__reg" class="card__more-info">Changes to exam registrations</td>
+                    <td id="app__reg" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Changes to exam registrations</td>
                   </tr>
                   <tr>
-                    <td id="app__10com" class="card__more-info">10% commission on registrations</td>
+                    <td id="app__10com" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      10% commission on registrations</td>
                   </tr>
                   <tr>
-                    <td id="app__perf" class="card__more-info">Report of exam performance</td>
+                    <td id="app__perf" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Report of exam performance</td>
                   </tr>
                   <tr>
-                    <td id="app__prop" class="card__more-info">Personalised Path academic proposal</td>
+                    <td id="app__prop" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Personalised Path academic proposal</td>
                   </tr>
                   <tr>
-                    <td id="app__banner" class="card__more-info">Path banner design</td>
+                    <td id="app__banner" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Path banner design</td>
                   </tr>
                   <tr>
-                    <td id="app__inst" class="card__more-info">Institution listed on the Path website</td>
+                    <td id="app__inst" class="card__more-info">
+                      <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                      Institution listed on the Path website</td>
                   </tr>
                 </div>
               </tbody>
             </table>
           </div>
           <div>
-            <button class="main-btn" id="toggle-exam" style="background-color: #79A786;">Learn more</button>
+            <button class="main-btn" id="toggle-exam" style="background-color: #79A786;">See benefits</button>
           </div>
           </div>
           <div class="price-card basic">
@@ -1739,88 +1841,140 @@
             <table class="table">
               <tbody> 
                 <tr>
-                  <td id="app__comission" class="card__more-info" scope="col">Online or paper-based exam sessions at your institution</td>
+                  <td id="app__comission" class="card__more-info" scope="col">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Online or paper-based exam sessions at your institution</td>
                 </tr> 
                 <tr>
-                  <td id="cer__comission" class="card__more-info">Exclusive academic guidance</td>
+                  <td id="cer__comission" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Exclusive academic guidance</td>
                 </tr>
                 <tr>
-                  <td id="cer__logo" class="card__more-info">personalised Path Certified Exam Centre logo</td>
+                  <td id="cer__logo" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    personalised Path Certified Exam Centre logo</td>
                 </tr>
                 <tr>
-                  <td id="mem__platform" class="card__more-info">Access to our e-platform Beyond™</td> 
+                  <td id="mem__platform" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Access to our e-platform Beyond™</td> 
                 </tr>
                 <tr>
-                  <td id="app__group" class="card__more-info">News group for Path exam centres</td> 
+                  <td id="app__group" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    News group for Path exam centres</td> 
                 </tr>
                 <tr>
-                  <td id="app__meeting" class="card__more-info">Set up of meetings for students and parents</td> 
+                  <td id="app__meeting" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Set up of meetings for students and parents</td> 
                 </tr>
                 <tr>
-                  <td id="cer__webinars" class="card__more-info">Free access to Path webinars, seminars and courses</td>
+                  <td id="cer__webinars" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Free access to Path webinars, seminars and courses</td>
                 </tr>
                 <tr>
-                  <td id="mem__fixed" class="card__more-info">Fixed exam fees in your local currency</td>
+                  <td id="mem__fixed" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Fixed exam fees in your local currency</td>
                 </tr>
                 <tr>
-                  <td id="mem__fixed" class="card__more-info">5% and 10% discounts on early exam registrations</td>
+                  <td id="mem__fixed" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    5% and 10% discounts on early exam registrations</td>
                 </tr>
                 <tr>
-                  <td id="app__invigiliator" class="card__more-info">Application for Path invigilator and supervisor</td> 
+                  <td id="app__invigiliator" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Application for Path invigilator and supervisor</td> 
                 </tr>
                 <tr>
-                  <td id="app__access" class="card__more-info">Access to My Path area</td> 
+                  <td id="app__access" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Access to My Path area</td> 
                 </tr>
                 <tr>
-                  <td id="app__onboard" class="card__more-info">Onboarding meeting</td> 
+                  <td id="app__onboard" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Onboarding meeting</td> 
                 </tr>
                 <tr>
-                  <td id="mem__id" class="card__more-info">Unique Path ID number</td>
+                  <td id="mem__id" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Unique Path ID number</td>
                 </tr>
                 <tr>
-                  <td id="app__cert-cent" class="card__more-info">Digital and paper Certified Exam Centre certificate</td>
+                  <td id="app__cert-cent" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Digital and paper Certified Exam Centre certificate</td>
                 </tr>
                 <tr>
-                  <td id="app__adv" class="card__more-info">Personalised advertising material every month</td>
+                  <td id="app__adv" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Personalised advertising material every month</td>
                 </tr>
                 <tr>
-                  <td id="app__reg" class="card__more-info">Changes to exam registrations</td> 
+                  <td id="app__reg" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Changes to exam registrations</td> 
                 </tr>
                 <tr>
-                  <td id="app__10com" class="card__more-info">10% commission on registrations</td> 
+                  <td id="app__10com" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    10% commission on registrations</td> 
                 </tr>
                 <tr>
-                  <td id="app__perf" class="card__more-info">Report of exam performance</td> 
+                  <td id="app__perf" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Report of exam performance</td> 
                 </tr>
                 <tr>
-                  <td id="app__prop" class="card__more-info">Personalised Path academic proposal</td>
+                  <td id="app__prop" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Personalised Path academic proposal</td>
                 </tr>
                 <tr>
-                  <td id="app__banner2" class="card__more-info">Path banner design</td>
+                  <td id="app__banner2" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Path banner design</td>
                 </tr>
                 <tr>
-                  <td id="app__website" class="card__more-info">Institution listed and described on the Path website</td>
+                  <td id="app__website" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Institution listed and described on the Path website</td>
                 </tr>
                 <tr>
-                  <td id="app__scho" class="card__more-info">Exam scholarships</td>
+                  <td id="app__scho" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Exam scholarships</td>
                 </tr>
                 <tr>
-                  <td id="app__stud" class="card__more-info"> Academic presentations for students</td>
+                  <td id="app__stud" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Academic presentations for students</td>
                 </tr>
                 <tr>
-                  <td id="app__prof" class="card__more-info">Professional development for teachers</td>
+                  <td id="app__prof" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Professional development for teachers</td>
                 </tr>
                 <tr>
-                  <td id="app__plaque" class="card__more-info">Certified Exam Centre plaque</td>
+                  <td id="app__plaque" class="card__more-info">
+                  <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                  Certified Exam Centre plaque</td>
                 </tr>
                 <tr>
-                  <td id="app__qmark" class="card__more-info">Candidate to the Path Q-mark</td>
+                  <td id="app__qmark" class="card__more-info">
+                    <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
+                    Candidate to the Path Q-mark</td>
                 </tr>
               </tbody>
             </table>
         </div>
         <div>
-          <button class="main-btn" id="toggle-certified" style="background-color: #CEA574;">Learn more</button>
+          <button class="main-btn" id="toggle-certified" style="background-color: #CEA574;">See benefits</button>
           </div>
         </div>
       </div>
@@ -1902,15 +2056,16 @@
                     </div>
                     <div id="collapseTwenty" class="collapse" aria-labelledby="headingTwenty" data-parent=".acordion-container">
                       <div class="card-body">
-                        <ul>
-                          <li>Take part and offer your staff Onboarding meetings to gain a deeper understanding of the Path proposal.</li>
-                          <li>Receive exclusive support from the Path academic team throughout the year.</li>
-                          <li>Have your own Path academic proposal to share with students and parents.</li>
-                          <li>Be able to organise informative meetings delivered by Path for students and parents.</li>
-                          <li>Have access to a demo of our exclusive e-platform Beyond™ for online mock exams.</li>
-                          <li>Have access to My Path area to download preparation materials and paper-based mock exams.</li>
-                          <li>Be able to conduct online or paper-based exam sessions at your institution.</li>
-                          <li>Be awarded scholarships for 3 all-module exams as part of the Path CSR (Corporate Social Responsibility) programme.</li>
+                        <b>You will:</b><br>
+                        <ul class="benefits__lists">
+                          <li>take part and offer your staff Onboarding meetings to gain a deeper understanding of the Path proposal</li>
+                          <li>receive exclusive support from the Path academic team throughout the year</li>
+                          <li>have your own Path academic proposal to share with students and parents</li>
+                          <li>be able to organise informative meetings delivered by Path for students and parents</li>
+                          <li>have access to a demo of our exclusive e-platform Beyond™ for online mock exams</li>
+                          <li>have access to My Path area to download preparation materials and paper-based mock exams.</li>
+                          <li>be able to conduct online or paper-based exam sessions at your institution</li>
+                          <li>be awarded scholarships for 3 all-module exams as part of the Path CSR (Corporate Social Responsibility) programme</li>
                         </ul>
                       </div>
                     </div>
@@ -1931,12 +2086,13 @@
                     </div>
                     <div id="collapseTwentytwo" class="collapse" aria-labelledby="headingTwentytwo" data-parent=".acordion-container">
                       <div class="card-body">
-                        <ul>
-                          <li>Be able to work closely together with our administrative team.</li>
-                          <li>Be provided with fixed exam fees in your local currency.</li>
-                          <li>Be able to offer your students a 10% discounts on exam registrations.</li>
-                          <li>Be able to make level changes to exam registrations throughout the year.</li>
-                          <li>Be given a 10% commission on exam registrations.</li>
+                        <b>You will:</b><br>
+                        <ul class="benefits__lists">
+                          <li>be able to work closely together with our administrative team.</li>
+                          <li>be provided with fixed exam fees in your local currency.</li>
+                          <li>be able to offer your students a 10% discounts on exam registrations.</li>
+                          <li>be able to make level changes to exam registrations throughout the year.</li>
+                          <li>be given a 10% commission on exam registrations.</li>
                         </ul>
                       </div>
                     </div>
@@ -1957,17 +2113,18 @@
                     </div>
                     <div id="collapseTwentythree" class="collapse" aria-labelledby="headingTwentythree" data-parent=".acordion-container">
                       <div class="card-body">
-                        <ul>
-                          <li>Have a unique Path ID number.</li>
-                          <li>Receive a digital and a paper certificate issued by Path Examinations UK stating your institution is a Path Certified Exam Centre and offers end-of-course international assessment.</li>
-                          <li>Receive a personalised Path Certified Exam Centre logo, stating that all of your courses include international certification.</li>
-                          <li>Be sent a Path Certified Exam Centre banner design, stating your institution offers end-of-course international assessment.</li>
-                          <li>Be sent personalised advertising material (images or videos) bearing your logo every month.</li>
-                          <li>Have the possibility to become a Path supervisor and offer your staff to act as invigilators.</li>
-                          <li style="font-weight: bold;">After two consecutive successful annual registrations, your institution will be:</li>
-                          <li>- Listed on our website, including a description of the courses you offer.</li>
-                          <li>- Invited, together with your staff, students and parents, to an awarding ceremony at which you will be presented with a Certified Exam Centre plaque.</li>
-                          <li>- A candidate to the <a class="bold-text" href="teachers-institutions.html#q-mark">Path Q-mark (Quality mark)</a></li>
+                        <b>You will:</b><br>
+                        <ul class="benefits__lists">
+                          <li>have a unique Path ID number.</li>
+                          <li>receive a digital and a paper certificate issued by Path Examinations UK stating your institution is a Path Certified Exam Centre and offers end-of-course international assessment</li>
+                          <li>receive a personalised Path Certified Exam Centre logo, stating that all of your courses include international certification</li>
+                          <li>be sent a Path Certified Exam Centre banner design, stating your institution offers end-of-course international assessment</li>
+                          <li>be sent personalised advertising material (images or videos) bearing your logo every month</li>
+                          <li>have the possibility to become a Path supervisor and offer your staff to act as invigilators.</li>
+                          <li style="font-weight: bold; list-style: none;">After two consecutive successful annual registrations, your institution will be:</li>
+                          <li>listed on our website, including a description of the courses you offer</li>
+                          <li>invited, together with your staff, students and parents, to an awarding ceremony at which you will be presented with a Certified Exam Centre plaque</li>
+                          <li>a candidate to the <a class="bold-text" href="teachers-institutions.html#q-mark">Path Q-mark (Quality mark)</a></li>
                         </ul>
                       </div>
                     </div>
@@ -2137,7 +2294,7 @@
            <div class="quote__after-courtain">
                 <div class="quote__after-text container">
                     <img class="quote__after-coma" src="assets\img\icons\caro-bac.png" alt="Quote">
-                <h2>At Path Examinations and National Geographic Learning, we believe that education is one of the greatest forces of change, and a source of wealth and wellbeing for all humankind.</h2>
+                <h2 style="font-weight: 500;">At <b>Path Examinations</b> and <b>National Geographic Learning</b>, we believe that education is one of the greatest forces of change, and a source of wealth and wellbeing for all humankind.</h2>
                 </div>
            </div>
         </div>
@@ -2154,7 +2311,7 @@
             <div class="course-card-style-3">
               <div class="card carta-entera">
                 <div class="thumb">
-                  <img class="card-img-top card" src="assets/img/University/About-us-1/series-look.jpg" alt="Card image cap">
+                  <img class="card-img-top card" src="assets/img/University/About-us-1/look.jpg" alt="Card image cap">
                   <!-- assets/img/slider/home1/path_cover.jpg -->
                   <div class="hover">
                     <span class="plus">
@@ -2183,7 +2340,7 @@
             <div class="course-card-style-3">
               <div class="card carta-entera">
                 <div class="thumb series__info">
-                  <img class="card-img-top" src="assets/img/University/About-us-1/series-impact.jpg" alt="Card image cap">
+                  <img class="card-img-top" src="assets/img/University/About-us-1/impact.jpg" alt="Card image cap">
                   <div class="hover">
                     <span class="plus">
                       <i class="fas fa-plus-circle"></i>
@@ -2214,7 +2371,7 @@
             <div class="course-card-style-3">
               <div class="card carta-entera">
                 <div class="thumb series__info">
-                  <img class="card-img-top" src="assets/img/University/About-us-1/series-perspectives.jpg" alt="Card image cap">
+                  <img class="card-img-top" src="assets/img/University/About-us-1/perspectives.jpg" alt="Card image cap">
                   <div class="hover">
                     <span class="plus">
                       <i class="fas fa-plus-circle"></i>
@@ -2243,7 +2400,7 @@
             <div class="course-card-style-3">
               <div class="card carta-entera">
                 <div class="thumb series__info">
-                  <img class="card-img-top" src="assets/img/University/About-us-1/series-life.jpg" alt="Card image cap">
+                  <img class="card-img-top" src="assets/img/University/About-us-1/lifebg.jpg" alt="Card image cap">
                   <div class="hover">
                     <span class="plus">
                       <i class="fas fa-plus-circle"></i>
@@ -2424,15 +2581,23 @@
         $('.table-affiliate, .tableta-member, .tableta-exam, .tableta-certified').hide();
         $('#toggle-affiliate').click(function() {
           $('.table-affiliate').slideToggle();
+          $(this).text(function(i, text){
+          return text === "Hide benefits" ? "See benefits" : "Hide benefits";})
         });
         $('#toggle-member').click(function() {
           $('.tableta-member').slideToggle();
+          $(this).text(function(i, text){
+      return text === "Hide benefits" ? "See benefits" : "Hide benefits";})
         });
         $('#toggle-exam').click(function() {
           $('.tableta-exam').slideToggle();
+          $(this).text(function(i, text){
+      return text === "Hide benefits" ? "See benefits" : "Hide benefits";})
         });
         $('#toggle-certified').click(function() {
           $('.tableta-certified').slideToggle();
+          $(this).text(function(i, text){
+      return text === "Hide benefits" ? "See benefits" : "Hide benefits";})
         });
 
 

@@ -76,7 +76,7 @@
         box-shadow: 0px 7px 5px 0px rgba(0,0,0,.15);
         background: #004969;
         padding: .5rem 1rem;
-        font-family: 'Lato', sans-serif;
+        font-family: "skolar-sans-latin", sans-serif;
         top: -50%;
         right: 150%;
         color: white;
@@ -91,7 +91,7 @@
         white-space: nowrap;
         background: #004969;
         padding: .5rem 1rem;
-        font-family: 'Lato', sans-serif;
+        font-family: "skolar-sans-latin", sans-serif;
         top: -50%;
         right: 150%;
         color: white;
@@ -138,10 +138,6 @@
         justify-content: space-between;
     }
 
-    .card__container button{
-        margin: 0 auto!important;
-    }
-
     .card__content {
         min-height: 600px;
         width: 100%;
@@ -166,23 +162,23 @@
     }
 
     .gradient1 {
-        background: rgb(255,255,255);
-        background: linear-gradient(0deg, rgba(255,255,255,0) 47%, rgba(212,217,221,1) 77%);
+        background: rgba(0,73,105, .5);
+        background: linear-gradient(180deg, rgba(0,73,105,1) -10%, rgba(255,255,255,0) 90%)
     }
 
     .gradient2 {
-        background: rgb(0,73,105);
-        background: linear-gradient(180deg, rgba(0,73,105,1) -2%, rgba(255,255,255,0) 100%)
+        background: rgba(0,73,105, .5);
+        background: linear-gradient(180deg, rgba(0,73,105,1) -10%, rgba(255,255,255,0) 90%)
     }
 
     .gradient3 {
-        background: rgb(255,255,255);
-        background: linear-gradient(0deg, rgba(255,255,255,0) 47%, rgba(196,194,195, 1) 77%);
+        background: rgba(0,73,105, .5);
+        background: linear-gradient(180deg, rgba(0,73,105,1) -10%, rgba(255,255,255,0) 90%)
     }
 
     .gradient4 {
-        background: rgb(255,255,255);
-        background: linear-gradient(0deg, rgba(255,255,255,0) 47%, rgba(182,186,177,1) 77%);
+        background: rgba(0,73,105, .5);
+        background: linear-gradient(180deg, rgba(0,73,105,1) -10%, rgba(255,255,255,0) 90%)
     }
 
     .card__content-background {
@@ -196,21 +192,21 @@
     }
     
     .card-background1 {
-        background-image: url(assets/img/University/students/path-card2.jpg); 
+        background-image: url(assets/img/University/students/book-exam.jpg); 
     }
 
     .card-background2 {
-        background-image: url(assets/img/University/students/path_card3.jpg);
-        background-position: left;
+        background-image: url(assets/img/University/students/join-path.jpg);
+        
     }
 
     .card-background3 {
-        background-image: url(assets/img/University/students/path-card1.jpg); 
+        background-image: url(assets/img/University/students/path_cover.jpg); 
+        background-position: left;
     }
 
     .card-background4 {
-        background-image: url(assets/img/University/students/path-card4.jpg); 
-        background-position: top;
+        background-image: url(assets/img/University/students/our-innovation.jpg); 
     }
 
     .card__content-info {
@@ -226,6 +222,15 @@
         margin-bottom: 0;
         color: white;
         text-shadow: 0px 2px 6px rgba(0, 0, 0, .7);
+    }
+
+    .card-btn {
+        margin-top: 10%;
+        width: fit-content;
+        text-align: center;
+        padding: 3% 5%;
+        font-size: 1.2rem;
+        white-space: nowrap;
     }
 
     .card__content-info p {
@@ -306,7 +311,7 @@
     */
 
         .quote__after-img {
-            background-image: url(assets/img/University/students/path_cover.jpg); 
+            background-image: url(assets/img/University/students/provide-education.jpg); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -609,9 +614,9 @@
         }
 
         /* The element to apply the animation to */
-        .bg-image-anim{
+        /* .bg-image-anim{
             
-        }
+        } */
 
         }
 
@@ -647,26 +652,22 @@
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                         <button class="dropdown-item" type="button"><img src="assets\img\icons\Flags\spain-flag.png"
-                                alt="flag image" class="flag" /></button>
-                        
+                                alt="flag image" class="flag" /></button>      
                     </div>
                 </div>
             </div>
-            
         </div>
-  
         <div class="nav-menu-items">
             <ul class="nav-items">
-                <li><a style="font-weight: bold;" href="index.html">Home</a></li>
-                <li class="menu-item-has-children"><a style="font-weight: bold;" href="meet-path.html">Meet Path</a>
+                <li><a href="index.html">Home</a></li>
+                <li class="menu-item-has-children"><a href="meet-path.html">Meet Path</a>
                     <ul class="sub-menu">
                         <li><a href="/meet-path.html#about-us">About us</a></li>
                         <li><a href="/meet-path.html#think-forward-strategy">Think Forward strategy</a></li>
                         <li><a href="/meet-path.html#policies-and-procedures">Policies and procedures</a></li>
                     </ul>
                 </li>
-                <!-- <li><a href="teachers-institutions.html" class="current-menu-item">Teachers and Institutions</a></li> -->
-                <li class="menu-item-has-children"><a style="font-weight: bold;" href="teachers-institutions.html">Teachers and Institutions</a>
+                <li class="menu-item-has-children"><a href="teachers-institutions.html">Teachers and Institutions</a>
                     <ul class="sub-menu">
                         <li><a href="teachers-institutions.html#international-standards">International standards</a></li>
                         <li><a href="teachers-institutions.html#assessment-innovation">Assessment innovation</a></li>
@@ -676,27 +677,26 @@
                         <li><div class="natgeo"><a href="teachers-institutions.html#natgeo-learning">NatGeo Learning</a><div class="natgeo-cont"><img src="assets\img\logos\nat-geo-01.svg" alt=""></div></div></li>
                     </ul>
                 </li>
-                <li class="menu-item-has-no-children"><a style="font-weight: bold;" href="#">Students and parents</a></li>
-                <li class="menu-item-has-children"><a style="font-weight: bold;" href="our-examinations.html">Our examinations</a>
+                <li class="menu-item-has-children"><a href="our-examinations.html">Our examinations</a>
                     <ul class="sub-menu">
                         <div><ul><li><a href="/our-examinations.html#general-information" style="font-weight: bold;">General information</a></li><div style="margin-left: 10px;"><li><a href="/our-examinations.html#about-our-exams">About our exams</a></li><li><a href="/our-examinations.html#exam-modules">Exam modules</a></li><li><a href="/our-examinations.html#map-of-levels">Map of levels</a></li></div></ul></div>
                         <div><ul><li><a href="/our-examinations.html#speaking-only-exams" style="font-weight: bold;">Speaking-only exams</a></li><div style="margin-left: 10px;"><li><a href="/our-examinations.html#AminusSPAlevelI">A1- | Speaking Performance Assessment (SPA) level I</a></li><li><a href="/our-examinations.html#aSPAlevelII">A1 | Speaking Performance Assessment (SPA) level II</a></li><li><a href="/our-examinations.html#AplusSPAlevelIII">A1+ | Speaking Performance Assessment (SPA) level III</a></li></div></ul></div>
                         <div><ul><li><a href="/our-examinations.html#four-skill-exam" style="font-weight: bold;">Four-skill exams</a></li><div style="margin-left: 10px;"><li><a href="/our-examinations.html#a1entrylevel">A1- | Entry level</a></li></li><li><a href="/our-examinations.html#A1AccessLevel">A1 | Access level</a></li></li><li><a href="/our-examinations.html#A1AchieverLevel">A1+ | Achiever level</a></li></li><li><a href="/our-examinations.html#A2PreliminaryLevel">A2 | Preliminary level</a></li></li><li><a href="/our-examinations.html#A2ElementaryLevel">A2+ | Elementary level</a></li></li><li><a href="/our-examinations.html#B1ProgressLevel">B1 | Progress level</a></li><li><a href="/our-examinations.html#B2CompetencyLevel">B2 | Competency level</a></li><li><a href="/our-examinations.html#B2ForwardLevel">B2+ | Forward level</a></li></div></ul></div>
                     </ul>
                 </li>
-                <li class="menu-item-has-no-children"><a style="font-weight: bold;" href="news-and-events.html">News and events</a></li>
+                <li class="menu-item-has-no-children"><a href="news-and-events.html">News and events</a></li>
             </ul>
         </div>
     </div>
 
     <!-- Showcase Section -->
     <div class="header_section section">
-        <div class="title-real afuera"><h1 style="color:#004969;">Evolution in <br> language assesment</h1></div>
+        <div class="title-real afuera"><h1 style="color:#004969;">Evolution in <br> language assessment</h1></div>
         <div class="social-icon">
             <ul>
                 <li><i id="open-form-popup"  class="fas fa-envelope" style="margin:0" id="fab"></i></a></li>
                 <li><i id="open-opening-popup" style="margin:0" class="fas fa-phone"></i></li>
-                <li><a target="_blank" href="https://www.facebook.com/pathlatam "><i class="fab fa-facebook-square"></i></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/pathlatam"><i class="fab fa-facebook-square"></i></a></li>
                 <li><a target="_blank" href="https://www.instagram.com/pathlatam"><i class="fab fa-instagram"></i></a></li>           
             </ul>
         </div>
@@ -715,9 +715,9 @@
             <div class="single-header-item">
                 <div class="content-area">
                     <div class="banner__subtitle-container">
-                        <p class="d-lg-block banner__subtitle">Exams for children, adolescents and adults</p>
+                        <p class="d-lg-block banner__subtitle">Exams for <span class="banner__subtitle-span content-area-span">children,<br>adolescents and adults</span></p>
                     </div>
-                    <a href="/our-examinations.html" class="boxed-btn">Learn More</a>
+                    <a href="/our-examinations.html" class="boxed-btn">Read more</a>
                 </div>
                 <div class="bg-image bg-image-anim" style="background-image: url(assets/img/slider1.jpg)">
                 </div>
@@ -725,9 +725,9 @@
             <div class="single-header-item">
                 <div class="content-area">
                     <div class="banner__subtitle-container">
-                        <p class="d-lg-block banner__subtitle">Online and paper-based exams worldwide</p>
+                        <p class="d-lg-block banner__subtitle"><span class="banner__subtitle-span content-area-span">Online and paper-based</span><br>exams worldwide</p>
                     </div>
-                    <a href="#" class="boxed-btn">Learn More</a>
+                    <a href="#" class="boxed-btn">Read more</a>
                 </div>
                 <div class="bg-image bg-image-anim"
                     style="background-image: url(assets/img/slider2.jpg)"></div>
@@ -771,8 +771,7 @@
                     <div class="card__content">
                         <div class="card__content-info">
                             <h3 class="text-center">Take a Path exam and gain an internationally-recognised certificate</h3>
-                            <p class="text-center">Book an exam</p>
-                            <button class="main-btn">Learn more</button>
+                            <button class="main-btn card-btn">Book an exam</button>
                         </div>
                         <div class="card__content-gradient gradient1"></div>
                         <div class="card__content-background card-background1"></div>
@@ -780,8 +779,7 @@
                     <div class="card__content">
                         <div class="card__content-info">
                             <h3 style="color: white;" class="text-center">As a teacher or as an institution, find the programme that suits your needs</h3>
-                            <p class="text-center">Join Path</p>
-                            <a href="teachers-institutions.html#join-path" class="main-btn">Learn more</a>
+                            <a href="teachers-institutions.html#join-path" class="main-btn card-btn">Join Path</a>
                         </div>
                         <div class="card__content-gradient gradient2"></div>
                         <div class="card__content-background card-background2"></div>
@@ -791,8 +789,7 @@
                     <div class="card__content">
                         <div class="card__content-info">
                             <h3 class="text-center">Learn more about Path Examinations services in your area</h3>
-                            <p class="text-center">Find Path in your country</p>
-                            <button class="main-btn">Learn more</button>
+                            <button class="main-btn card-btn">Find Path in your country</button>
                         </div>
                         <div class="card__content-gradient gradient3"></div>
                         <div class="card__content-background card-background3"></div>
@@ -800,8 +797,7 @@
                     <div class="card__content">
                         <div class="card__content-info">
                             <h3 class="text-center">Student-centred and communicative exams based on real-life situations and scenarios</h3>
-                            <p class="text-center">Check our innovations</p>
-                            <a href="teachers-institutions.html#assessment-innovation" class="main-btn">Learn more</a>
+                            <a href="teachers-institutions.html#assessment-innovation" class="main-btn card-btn">Check our innovations</a>
                         </div>
                         <div class="card__content-gradient gradient4"></div>
                         <div class="card__content-background card-background4"></div>
