@@ -135,6 +135,8 @@
       font-weight: bold;
       color: #004969;
       font-size: 1.3rem;
+      border-bottom: 1px solid var(--heading-color);
+      padding-bottom: 2%;
     }
 
     /* 
@@ -821,6 +823,12 @@
 
         @media only screen and (max-width: 799px) {
 
+          .our-levels-final-text {
+            font-size: 1.1rem;
+            padding-bottom: 2%;
+            border-bottom: solid 1px var(--heading-color);
+          }
+
           @keyframes bg-move {
             0% {
                 background-position: top left;
@@ -878,11 +886,11 @@
           }
 
           .series__card {
-            margin-bottom: 3rem;
+            margin-bottom: 25%;
           }
 
           .hover-inner {
-            min-height: 125%;
+            min-height: 131%;
             background-color: rgba(0, 73, 105, 1)!important;
             border-radius: 4px;
             padding: 1rem 2rem 0 2rem;
@@ -893,7 +901,7 @@
           }
 
           .hover-inner-for-mobile4 {
-            min-height: 180%
+            min-height: 190%
           }
 
           .key-reasons-title {
@@ -2670,25 +2678,25 @@
             }, 700);
         };
 
-        if (scroll >= 6600) {
+        if (scroll >= 6500) {
             $('.natgeo__img').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.natgeo-content p').css({'opacity':1, 'transform':'translateY(0%)'});
             }, 300);
         }; 
 
-        if (scroll >= 7400) {
+        if (scroll >= 7300) {
             $('.benefits__img').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.benefits__right').css({'opacity':1, 'transform':'translateY(0%)'});
             }, 500);
           };
 
-          if (scroll >= 7800) {
+          if (scroll >= 7700) {
             $('.quote__after-text h2').css({'opacity':1, 'transform':'translateY(0%)'});
           };
 
-          if (scroll >= 8300) {
+          if (scroll >= 8200) {
             $('.series__title').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.series__card').css({'opacity':1, 'transform':'translateY(0%)'});
