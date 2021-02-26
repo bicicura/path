@@ -1,3 +1,32 @@
+.benefits__lists li {
+  list-style: inside;
+  list-style-position: outside;
+}
+
+.affiliate-plus-icon, .member-plus-icon, .cert-plus-icon, .centre-plus-icon {
+  position: absolute; 
+  top: 4%;
+  right: -11%;
+}
+
+.affiliate-plus-icon > i {
+  color: #0091B7!important;
+}
+
+.member-plus-icon > i {
+  color: #757DA4!important;
+}
+
+.cert-plus-icon > i {
+  color: #79A786!important;
+}
+
+.centre-plus-icon > i {
+  color: #CEA574!important; 
+}
+
+
+
 .navbar-section .navbar .navbar-nav li a {
   font-size: 18px;
   width: fit-content;
@@ -63,8 +92,8 @@ TARJETAS
 .card__more-info:hover::before {
   position: absolute; 
   height: fit-content;
-  width: 250px!important;
-  padding: .5rem .5rem .7rem .5rem!important;
+  width: 126%!important;
+  padding: 4%!important;
   top: -15%;
   bottom: 0;
   left: 50%;

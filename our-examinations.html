@@ -65,7 +65,7 @@
     }
 
     #side__email:hover::after {
-        content: 'admin@pathexaminations.com';
+        content: 'info@pathexaminations.com';
         position: absolute;
         box-shadow: 0px 7px 5px 0px rgba(0,0,0,.15);
         background: #004969;
@@ -106,6 +106,23 @@
         color: white;
         z-index:1000!important;
         border-radius: 4px;
+    }
+
+    #modal__aclaration {
+      width: 30%;
+      height: fit-content;
+      font-weight: bold;
+      font-style: italic;
+      padding: 2%;
+      border-radius: 4px;
+      border: 2px solid #004969;
+      color: #004969;
+    }
+
+    .modal__end-info {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
     }
 
     /* 
@@ -197,6 +214,10 @@
       z-index: -1;
       opacity: .2;
     }
+
+    #modal__aclaration:empty {
+    display: none;
+}
 
     /* 
     ======================
@@ -378,7 +399,7 @@ ANIMS OUR EXAMINATIONS
 
           #side__email:hover::after {
           top: -239%;
-          right: -812%;
+          right: -752%
         }
 
         #side__location:hover::after {
@@ -495,10 +516,19 @@ ANIMS OUR EXAMINATIONS
     width: 70%;
   }
 
+  #modal-back {
+    overflow-y: scroll;
+  }
+
   #modal-back>div {
     width: 100%;
+    margin-top: 15%;
     padding: 7% 5%;
   }
+
+.modal__end-info {
+  flex-direction: column;
+}
 
   .level-specs__cont {
     margin: 2.5% 0;
@@ -518,7 +548,7 @@ ANIMS OUR EXAMINATIONS
 
   .level-specs__info {
     width: 75%;
-    margin-left: .5rem;
+    margin-left: .1rem;
   }
 
   #modal-back li {
@@ -526,9 +556,27 @@ ANIMS OUR EXAMINATIONS
     margin-bottom: 0;
   }
 
-  /* li {
-    margin-bottom: 0;
-  } */
+  #modal-back {
+    width: 100%;
+    padding: 5% 2.5%;
+  }
+
+  #modal-back>div {
+    top: 0%;
+    left: 00%;
+    transform: translate(0%, 0%);
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  #modal__aclaration {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .level-specs__title ul li {
+    min-width: 83px;
+  }
 
   .modal__action{
     margin-top: .5rem;
@@ -566,7 +614,7 @@ ANIMS OUR EXAMINATIONS
           </div>
           <div class="divider"></div>
           <div class="logo">
-              <a href="#"><img src="assets/img/logos/path_logo-mob.svg" alt="logo" class="img-fluid"></a>
+              <a href="#"><img src="assets/img/logos/logo-mob.jpg" alt="logo" class="img-fluid"></a>
           </div>
           <div class="divider"></div>
           <div class="language">
@@ -577,44 +625,39 @@ ANIMS OUR EXAMINATIONS
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                       <button class="dropdown-item" type="button"><img src="assets\img\icons\Flags\spain-flag.png"
-                              alt="flag image" class="flag" /></button>
-                      
+                              alt="flag image" class="flag" /></button>      
                   </div>
               </div>
           </div>
-          
       </div>
-
       <div class="nav-menu-items">
           <ul class="nav-items">
-              <li><a style="font-weight: bold;" href="index.html">Home</a></li>
-              <li class="menu-item-has-children"><a style="font-weight: bold;" href="meet-path.html">Meet Path</a>
+              <li><a href="index.html">Home</a></li>
+              <li class="menu-item-has-children"><a href="meet-path.html">Meet Path</a>
                   <ul class="sub-menu">
-                      <li><a href="/meet-path.html#about-us">About us</a></li>
-                      <li><a href="/meet-path.html#think-forward-strategy">Think Forward strategy</a></li>
-                      <li><a href="/meet-path.html#policies-and-procedures">Policies and procedures</a></li>
+                      <li><a href="meet-path.html#about-us">About us</a></li>
+                      <li><a href="meet-path.html#think-forward-strategy">Think Forward strategy</a></li>
+                      <li><a href="meet-path.html#policies-and-procedures">Policies and procedures</a></li>
                   </ul>
               </li>
-              <!-- <li><a href="teachers-institutions.html" class="current-menu-item">Teachers and Institutions</a></li> -->
-              <li class="menu-item-has-children"><a style="font-weight: bold;" href="teachers-institutions.html">Teachers and Institutions</a>
+              <li class="menu-item-has-children"><a href="teachers-institutions.html">Teachers and Institutions</a>
                   <ul class="sub-menu">
                       <li><a href="teachers-institutions.html#international-standards">International standards</a></li>
-                      <li><a href="teachers-institutions.html#assessment-innovation">Assessment innovation</a></li>
+                      <li><a href="teachers-institutions.html#assessment-innovation">Assessment innovations</a></li>
                       <li><a href="teachers-institutions.html#join-path">Join Path</a></li>
                       <li><a href="teachers-institutions.html#inbuilt-programme">Inbuilt programme</a></li>
                       <li><a href="teachers-institutions.html#q-mark">Q-mark</a></li>
                       <li><div class="natgeo"><a href="teachers-institutions.html#natgeo-learning">NatGeo Learning</a><div class="natgeo-cont"><img src="assets\img\logos\nat-geo-01.svg" alt=""></div></div></li>
                   </ul>
               </li>
-              <li class="menu-item-has-no-children"><a style="font-weight: bold;" href="#">Students and parents</a></li>
-              <li class="menu-item-has-children"><a style="font-weight: bold;" href="our-examinations.html">Our examinations</a>
+              <li class="menu-item-has-children"><a href="our-examinations.html">Our examinations</a>
                   <ul class="sub-menu">
-                      <div><ul><li><a href="/our-examinations.html#general-information" style="font-weight: bold;">General information</a></li><div style="margin-left: 10px;"><li><a href="/our-examinations.html#about-our-exams">About our exams</a></li><li><a href="/our-examinations.html#exam-modules">Exam modules</a></li><li><a href="/our-examinations.html#map-of-levels">Map of levels</a></li></div></ul></div>
-                      <div><ul><li><a href="/our-examinations.html#speaking-only-exams" style="font-weight: bold;">Speaking-only exams</a></li><div style="margin-left: 10px;"><li><a href="/our-examinations.html#AminusSPAlevelI">A1- | Speaking Performance Assessment (SPA) level I</a></li><li><a href="/our-examinations.html#aSPAlevelII">A1 | Speaking Performance Assessment (SPA) level II</a></li><li><a href="/our-examinations.html#AplusSPAlevelIII">A1+ | Speaking Performance Assessment (SPA) level III</a></li></div></ul></div>
-                      <div><ul><li><a href="/our-examinations.html#four-skill-exam" style="font-weight: bold;">Four-skill exams</a></li><div style="margin-left: 10px;"><li><a href="/our-examinations.html#a1entrylevel">A1- | Entry level</a></li></li><li><a href="/our-examinations.html#A1AccessLevel">A1 | Access level</a></li></li><li><a href="/our-examinations.html#A1AchieverLevel">A1+ | Achiever level</a></li></li><li><a href="/our-examinations.html#A2PreliminaryLevel">A2 | Preliminary level</a></li></li><li><a href="/our-examinations.html#A2ElementaryLevel">A2+ | Elementary level</a></li></li><li><a href="/our-examinations.html#B1ProgressLevel">B1 | Progress level</a></li><li><a href="/our-examinations.html#B2CompetencyLevel">B2 | Competency level</a></li><li><a href="/our-examinations.html#B2ForwardLevel">B2+ | Forward level</a></li></div></ul></div>
+                      <div><ul><li><a href="our-examinations.html#general-information" style="font-weight: bold;">General information</a></li><div style="margin-left: 10px;"><li><a href="our-examinations.html#about-our-exams">About our exams</a></li><li><a href="our-examinations.html#exam-modules">Exam modules</a></li><li><a href="our-examinations.html#map-of-levels">Map of levels</a></li></div></ul></div>
+                      <div><ul><li><a href="our-examinations.html#speaking-only-exams" style="font-weight: bold;">Speaking-only exams</a></li><div style="margin-left: 10px;"><li><a href="our-examinations.html#AminusSPAlevelI">A1- | Speaking Performance Assessment (SPA) level I</a></li><li><a href="our-examinations.html#aSPAlevelII">A1 | Speaking Performance Assessment (SPA) level II</a></li><li><a href="our-examinations.html#AplusSPAlevelIII">A1+ | Speaking Performance Assessment (SPA) level III</a></li></div></ul></div>
+                      <div><ul><li><a href="our-examinations.html#four-skill-exam" style="font-weight: bold;">Four-skill exams</a></li><div style="margin-left: 10px;"><li><a href="our-examinations.html#a1entrylevel">A1- | Entry level</a></li></li><li><a href="our-examinations.html#A1AccessLevel">A1 | Access level</a></li></li><li><a href="our-examinations.html#A1AchieverLevel">A1+ | Achiever level</a></li></li><li><a href="our-examinations.html#A2PreliminaryLevel">A2 | Preliminary level</a></li></li><li><a href="our-examinations.html#A2ElementaryLevel">A2+ | Elementary level</a></li></li><li><a href="our-examinations.html#B1ProgressLevel">B1 | Progress level</a></li><li><a href="our-examinations.html#B2CompetencyLevel">B2 | Competency level</a></li><li><a href="our-examinations.html#B2ForwardLevel">B2+ | Forward level</a></li></div></ul></div>
                   </ul>
               </li>
-              <li class="menu-item-has-no-children"><a style="font-weight: bold;" href="news-and-events.html">News and events</a></li>
+              <li class="menu-item-has-no-children"><a href="news-and-events.html">News and events</a></li>
           </ul>
       </div>
   </div>
@@ -727,7 +770,7 @@ ANIMS OUR EXAMINATIONS
       <h2 class="our-exams-anim3">Exam modules</h2>
       <p class="exam-modules__subtitle">Our examinations are divided into modules, which may be taken separately or altogether:</p>
       <div class="d-flex exams__module-container-mobile">
-        <p class="table__title">Speaking module</p> <p class="table__title">Listening module</p> <p class="table__title">Reading and module</p>
+        <p class="table__title">Speaking module</p> <p class="table__title">Listening module</p> <p class="table__title">Reading and writing module</p>
       </div>
     </div>
     
@@ -769,14 +812,14 @@ ANIMS OUR EXAMINATIONS
         <p>The diagram below shows all of our exam levels, which have been carefully designed to assess candidates progressively.</p>
       </div>
       <div class="map__speak-container" id="speaking-only-exams">
-        <h3 class="text-center margin-bottom-30 map__exam-title">Speaking only exams</h3>
+        <h3 class="text-center margin-bottom-30 map__exam-title">Speaking-only exams</h3>
         <div class="row justify-content-center speak-card-container">
           <div class="col-12 col-md-6 col-lg-3 padding-0 speak-card">
             <div class="course-card-style-3">
               <div class="card disparar_modal" id="AminusSPAlevelI" style="border: 1px solid #004969;
               border-radius: 4px;">
                 <div class="thumb exam-card___text">
-                  <h5 class="text-center bold-text" style="width: 90%; margin: 0 auto;">A1- Speaking Performance Assessment (SPA) level I</h5>
+                  <h4 class="text-center">A1- Speaking Performance Assessment (SPA) level I</h4>
                   
                 </div>
                 <div class="card-img-overlay">
@@ -795,7 +838,7 @@ ANIMS OUR EXAMINATIONS
               <div class="card disparar_modal" id="aSPAlevelII" style="border: 1px solid #004969;
               border-radius: 4px;">
                 <div class="thumb exam-card___text">
-                  <h5 class="text-center bold-text" style="width: 90%; margin: 0 auto;">A1 Speaking Performance Assessment (SPA) level II</h5>
+                  <h4 class="text-center">A1 Speaking Performance Assessment (SPA) level II</h4>
                 </div>
                 <div class="card-img-overlay">
                   <span style="position: absolute;" class="plus plus__container">
@@ -813,7 +856,7 @@ ANIMS OUR EXAMINATIONS
               <div class="card disparar_modal" id="AplusSPAlevelIII" style="border: 1px solid #004969;
               border-radius: 4px;">
                 <div class="thumb exam-card___text">
-                  <h5 class="text-center bold-text" style="width: 90%; margin: 0 auto;">A1+ Speaking Performance Assessment (SPA) level III</h5>
+                  <h4 class="text-center">A1+ Speaking Performance Assessment (SPA) level III</h4>
                 </div>
                 <div class="card-img-overlay">
                   <span style="position: absolute;" class="plus plus__container">
@@ -1011,33 +1054,38 @@ ANIMS OUR EXAMINATIONS
       </div>
         <h5 id="exam_name"></h5>
         <p id="exam_desc" class="comment-item-style-1"></p>
-        <div class="level-sepecs__container comment-item-style-1">
-          <h5>Level specifications</h5>
-          <div class="level-specs__cont d-flex">
-            <div class="level-specs__title">
-              <ul>
-                <li>CEFR level:</li>
-                <li>Exam type:</li>
-                <li>Modules:</li>
-                <li>Total length:</li>
-                <li>Age range:</li>
-              </ul>
-            </div>
-            <div class="level-specs__info">
-              <ul>
-                <li id="exam_level"></li>
-                <li id="exam_type"></li>
-                <li id="exam_modules"></li>
-                <li id="exam_length"></li>
-                <li id="exam_age"></li>
-              </ul>
+        <div class="modal__end-info">
+          <div class="level-sepecs__container comment-item-style-1">
+            <h5>Level specifications</h5>
+            <div class="level-specs__cont d-flex">
+              <div class="level-specs__title">
+                <ul>
+                  <li>CEFR level:</li>
+                  <li>Exam type:</li>
+                  <li>Modules:</li>
+                  <li>Total length:</li>
+                  <li>Age range:</li>
+                </ul>
+              </div>
+              <div class="level-specs__info">
+                <ul>
+                  <li id="exam_level"></li>
+                  <li id="exam_type"></li>
+                  <li id="exam_modules"></li>
+                  <li style="min-width: 80px;" id="exam_length"></li>
+                  <li id="exam_age"></li>
+                  <li id="exam_age2"></li>
+                </ul>
+              </div>
             </div>
           </div>
-          
+          <div id="modal__aclaration"></div>
         </div>
-        <div><a class="modal__action">Download a sample test</a></div>
-        <div><a class="modal__action">Book this exam</a></div>
-        <div><a class="modal__action">Are you ready for this exam?</a></div>
+          <div class="modal__actions-container">
+            <div><a class="modal__action">Download a sample test</a></div>
+            <div><a class="modal__action">Book this exam</a></div>
+            <div><a class="modal__action">Are you ready for this exam?</a></div>
+          </div>
       </div>
   </div>              
 </div>
@@ -1077,7 +1125,9 @@ var exams_modales = {
         Examtype : 'Online and presential',
         Modules : 'Speaking',
         Totallength : '10 minutes',
-        Agerange : 'Version for children aged 4-12, Version for adolescents aged 13+ and adults'
+        Agerange : 'Version for children aged 4-12',
+        Agerange2 : 'Version for adolescents aged 13+ and adults',
+        Aclaration : ''
     },
     aSPAlevelII : {
         nombre: 'A1 Speaking Performance Assessment (SPA) level II',
@@ -1086,7 +1136,9 @@ var exams_modales = {
         Examtype : 'Online and presential',
         Modules : 'Speaking',
         Totallength : '10 minutes',
-        Agerange : 'Version for children aged 5-12, Version for adolescents aged 13+ and adults'
+        Agerange : 'Version for children aged 5-12',
+        Agerange2 : 'Version for adolescents aged 13+ and adults',
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
     },
     AplusSPAlevelIII : {
         nombre: 'A1+ Speaking Performance Assessment (SPA) level III',
@@ -1095,7 +1147,9 @@ var exams_modales = {
         Examtype : 'Online and presential',
         Modules : 'Speaking',
         Totallength : '10 minutes',
-        Agerange : 'Version for children aged 6-12, Version for adolescents aged 13+ and adults'
+        Agerange : 'Version for children aged 6-12',
+        Agerange2 : 'Version for adolescents aged 13+ and adults',
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
     },
     a1entrylevel: {
         nombre: 'A1- Entry level',
@@ -1104,7 +1158,9 @@ var exams_modales = {
         Examtype : 'Online and paper-based',
         Modules : 'Speaking | Listening | Reading and writing',
         Totallength : '1 hour 30 minutes',
-        Agerange : 'All ages'
+        Agerange : 'All ages',
+        Agerange2 : '',
+        Aclaration : ''
     },
     A1AccessLevel : {
         nombre: 'A1 Access level',
@@ -1113,7 +1169,9 @@ var exams_modales = {
         Examtype : 'Online and paper-based',
         Modules : 'Speaking | Listening | Reading and writing',
         Totallength : '1 hour 30 minutes',
-        Agerange : 'All ages'
+        Agerange : 'All ages',
+        Agerange2 : '',
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
     },
     A1AchieverLevel : {
         nombre: 'A1+ Achiever level',
@@ -1122,7 +1180,9 @@ var exams_modales = {
         Examtype : 'Online and paper-based',
         Modules : 'Speaking | Listening | Reading and writing',
         Totallength : '1 hour 30 minutes',
-        Agerange : 'All ages'
+        Agerange : 'All ages',
+        Agerange2 : '',
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
     },
     A2PreliminaryLevel : {
         nombre: 'A2 Preliminary level',
@@ -1131,7 +1191,9 @@ var exams_modales = {
         Examtype : 'Online and paper-based',
         Modules : 'Speaking | Listening | Reading and writing',
         Totallength : '1 hour 30 minutes',
-        Agerange : 'All ages'
+        Agerange : 'All ages',
+        Agerange2 : '',
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.',
 
     },
     A2ElementaryLevel : {
@@ -1141,7 +1203,9 @@ var exams_modales = {
         Examtype : 'Online and paper-based',
         Modules : 'Speaking | Listening | Reading and writing',
         Totallength : '1 hour 30 minutes',
-        Agerange : 'All ages'
+        Agerange : 'All ages',
+        Agerange2 : '',
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
 
     },
     B1ProgressLevel : {
@@ -1151,7 +1215,9 @@ var exams_modales = {
         Examtype : 'Online and paper-based',
         Modules : 'Speaking | Listening | Reading and writing',
         Totallength : '2 hours',
-        Agerange : 'All ages'
+        Agerange : 'All ages',
+        Agerange2 : '',
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
     },
     B2CompetencyLevel : {
         nombre: ' B2 Competency level',
@@ -1160,7 +1226,9 @@ var exams_modales = {
         Examtype : 'Online and paper-based',
         Modules : 'Speaking | Listening | Reading and writing',
         Totallength : '2 hours 30 minutes',
-        Agerange : 'All ages'
+        Agerange : 'All ages',
+        Agerange2 : '',
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
     },
     B2ForwardLevel : {
         nombre: 'B2+ Forward level',
@@ -1169,7 +1237,9 @@ var exams_modales = {
         Examtype : 'Online and paper-based',
         Modules : 'Speaking | Listening | Reading and writing',
         Totallength : '2 hours 30 minutes',
-        Agerange : 'All ages'
+        Agerange : 'All ages',
+        Agerange2 : '',
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
     }
 
 }
@@ -1179,6 +1249,8 @@ $('.disparar_modal').click(function () {
   abridor_modal($(this).attr('id'))
 })
 
+
+
 function abridor_modal(examen){
   $('#exam_name').text(exams_modales[examen].nombre)
   $('#exam_desc').text(exams_modales[examen].desc)
@@ -1187,19 +1259,25 @@ function abridor_modal(examen){
   $('#exam_type').text(exams_modales[examen].Examtype)
   $('#exam_length').text(exams_modales[examen].Totallength)
   $('#exam_age').text(exams_modales[examen].Agerange)
-
+  $('#exam_age2').text(exams_modales[examen].Agerange2)
+  $('#modal__aclaration').text(exams_modales[examen].Aclaration)
+  
   $('#modal-back').removeClass('cerra2')
 };
+
+
 
 $(".close-popup").click(function(){
   $('#modal-back').addClass('cerra2')
 });
 
-$(document).click(function(event) {
-  //if you click on anything except the modal itself or the "open modal" link, close the modal
-  if (!$(event.target).closest("#modal-back>div ,.disparar_modal").length) {
-    $("body").find(".modal").removeClass("visible");
-  }
+// Para que se cierre el modal al clickear afuera
+
+$('body').click(function (event) 
+{
+   if(!$(event.target).closest('#modal-back>div ,.disparar_modal').length && !$(event.target).is('.disparar_modal')) {
+     $("#modal-back").addClass('cerra2');
+   }     
 });
 
 //PARA HACER Q AL APRETAR EL SUBMENU DEL NAV BAR SE ABRA EL MODAL INDICADO.
@@ -1256,7 +1334,7 @@ setTimeout(() => {
               $(window).scroll(function() {
                   
                   var scroll = $(window).scrollTop();
-                  console.log(scroll);
+                  // console.log(scroll);
 if (scroll >= 800) {
       $('.our-exams-anim3').css({'opacity':1, 'transform':'translateY(0%)'});
   };
@@ -1289,7 +1367,7 @@ if (scroll >= 800) {
               }, 500);
           $(window).scroll(function() {
           var scroll = $(window).scrollTop();
-          console.log(scroll);
+          // console.log(scroll);
 
           if (scroll >= 588) {
               $('.our-exams-anim2').css({'opacity':1, 'transform':'translateX(0%)'});
