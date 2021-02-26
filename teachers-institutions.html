@@ -50,7 +50,7 @@
     transform: translate(-50%, -50%);
 }
 
-.close-popup {
+  .close-popup {
     right: -2%;
   }
 
@@ -162,6 +162,7 @@
       transform: scale(2,2);
       z-index: -1;
       opacity: .07;
+      white-space: nowrap;
     }
 
 
@@ -213,6 +214,7 @@
       transform: scale(2,2);
       z-index: -1;
       opacity: .07;
+      white-space: nowrap;
     }
 
     .membership-section {
@@ -410,6 +412,7 @@
 
         .join-path-title {
         position: relative;
+        margin-bottom: 0;
         }
 
 
@@ -438,6 +441,7 @@
 
         .qmark h2 {
       position: relative;
+      font-size: 54px;
     }
 
     .qmark h2::after {
@@ -449,6 +453,7 @@
       transform: scale(2,2);
       z-index: -1;
       opacity: .07;
+      white-space: nowrap;
     }
 
         .qmark__card-container {
@@ -613,6 +618,7 @@
 
         .series__title {
       position: relative;
+      font-size: 54px;
     }
 
     .series__title::after {
@@ -624,6 +630,7 @@
       transform: scale(2,2);
       z-index: -1;
       opacity: .07;
+      white-space: nowrap;
     }
 
     .series__text {
@@ -822,6 +829,9 @@
 
 
         @media only screen and (max-width: 799px) {
+          .quote__after-text h2 {
+            font-size: 1.8rem!important;
+        }
 
           .our-levels-final-text {
             font-size: 1.1rem;
@@ -913,7 +923,7 @@
           }
 
           h2 {
-            font-size: 1.8rem!important;
+            font-size: 2rem!important;
           }
 
           .section {
@@ -1045,25 +1055,36 @@
           height: 500px;
         }
 
+        #learn-more-form {
+          padding: 5% 2.5%;
+          overflow-y: scroll;
+        }
+
         #learn-more-form>div {
-          width: 90vw;
+          width: 100%;
           z-index: 99999999;
+          top: 0%;
+          left: 00%;
+          transform: translate(0%, 0%);
+          margin-top: 5%;
+          margin-bottom: 5%;
         }
 
         .form-inbuilt-title {
-          width: 80%!important;
+          width: 90%!important;
           margin: 0 auto;
           font-size: 16px;
+          margin-bottom: 1%;
           
         }
 
         .form-inbuilt-button {
           margin: 0;
-          width: 80%;
+          width: 90%;
         }
 
         .form-inbuilt-row {
-          width: 80%!important;
+          width: 90%!important;
         }
 
         .form-inbuilt-row label {
@@ -1116,6 +1137,7 @@
         .series__text {
           width: 100%;
           font-size: 1.125rem;
+          line-height: 1.4;
         }
 
         .carta-anim-2, .img-anim, .carta-anim-1, .carta-anim-3, .inbuilt-checks-1, .inbuilt-checks-2, .our-principles-anim {
