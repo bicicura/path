@@ -1,0 +1,330 @@
+<?php 
+
+require 'fpdf/fpdf.php';
+require "phpmailer/PHPMailerAutoload.php";
+
+$func = $_GET['func'];
+
+// Funcion para limpiar strings y poder incluirlos como nombre de archivos
+function clean($string) {
+    $string = str_replace(' ', '_', $string); // Replaces all spaces with hyphens.
+    return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+ }
+
+// Funcion para generar los PDFs
+function generate_pdf($pdf_content){
+
+    $pdf = new FPDF();
+
+    $pdf->AddPage();
+
+    $pdf_content['Type'] = ucfirst($pdf_content['Type']);
+
+    $pdf->SetFont('Arial', 'B', 15);
+    $pdf->Write(5, $pdf_content['Type'] . ' form submission');
+
+    $pdf->SetY(15);
+
+    foreach ($pdf_content as $key => $value) {
+        
+        $y = $pdf->GetY();
+
+        if($key=='empty_divider'){
+
+            $pdf->SetY($y+12);
+            $pdf->SetFont('Arial', 'B', 13);
+            $pdf->Write(5, 'Head of the institution details:');
+            $pdf->SetY($y+18);
+            continue;
+
+        }
+
+        $pdf->SetY($y+6);
+
+        $pdf->SetFont('Arial', 'B', 11);
+        $pdf->Write(5, $key . ': ');
+        $pdf->SetFont('Arial', '', 11);
+        $pdf->Write(5, $value);
+
+    }
+
+
+    // $file_id = date('d') . '_' . date('m') . '_' . date('Y') . '_' . rand(1000000,10000000);
+
+    $file_id = clean($pdf_content['Name']) . '_' . '_' . clean($pdf_content['Type']) . '_' . rand(1000000,10000000);
+    $filename = $file_id.".pdf";
+    $file_location="./app-form-entries/".$filename;
+    $pdf->Output($file_location,'F');
+
+    return [$filename, $file_location];
+
+}
+
+if($func == 'form_affiliate'){
+
+    $ref = $_POST['ref'];
+    $type = $_POST['type'];
+    $name = $_POST['name'];
+    $surname = $_POST['surname'];
+    $birthdate = $_POST['birthdate'];
+    $i_am_a = $_POST['i_am_a'];
+    $i_am_a_spec = $_POST['i_am_a_spec'];
+    $email = $_POST['email'];
+    $area_code = $_POST['area_code'];
+    $phone = $_POST['phone'];
+    $instagram = $_POST['instagram'];
+    $facebook = $_POST['facebook'];
+    $country = $_POST['country'];
+    $state = $_POST['state'];
+    $city = $_POST['city'];
+    $address = $_POST['address'];
+    $zipcode = $_POST['zipcode'];
+
+    $pdf_content = array("Ref"=>$ref, "Type"=>$type, "Name"=>$name, "Surname"=>$surname, "Birthdate"=>$birthdate, "I am a"=>$i_am_a, "Specification"=>$i_am_a_spec, "Email"=>$email, "Area code"=>$area_code, "Phone"=>$phone, "Instagram"=>$instagram, "Facebook"=>$facebook, "Country"=>$country, "State"=>$state, "City"=>$city, "Address"=>$address, "Zipcode"=>$zipcode,);
+    $pdf_data = generate_pdf($pdf_content);
+
+    $cuerpo_mail = '
+                    <b>Ref:</b> ' . $ref . '<br>
+                    <b>Type:</b> ' . $type . '<br>
+                    <b>Name:</b> ' . $name . '<br>
+                    <b>Surname:</b> ' . $surname . '<br>
+                    <b>Birthdate:</b> ' . $birthdate . '<br>
+                    <b>I am a:</b> ' . $i_am_a . '<br>
+                    <b>Specification:</b> ' . $i_am_a_spec . '<br>
+                    <b>Email:</b> ' . $email . '<br>
+                    <b>Area code:</b> ' . $area_code . '<br>
+                    <b>Phone:</b> ' . $phone . '<br>
+                    <b>Instagram:</b> ' . $instagram . '<br>
+                    <b>Facebook:</b> ' . $facebook . '<br>
+                    <b>Country:</b> ' . $country . '<br>
+                    <b>State:</b> ' . $state . '<br>
+                    <b>City:</b> ' . $city . '<br>
+                    <b>Address:</b> ' . $address . '<br>
+                    <b>Zipcode</b> ' . $zipcode . '<br>';
+
+    echo $cuerpo_mail;
+
+    $mail = new PHPMailer;
+
+    $mail->SMTPDebug=3;
+
+    $mail->setFrom('admin@pathexaminations.com', 'Path');
+    $mail->addAddress('admin@pathexaminations.com', 'Path');
+    $mail->addReplyTo($email, $name);
+
+    $mail->isHTML(true);
+
+    $mail->Subject= 'Path application form: new submission ('.$name.')';
+
+    $mail->Body = $cuerpo_mail;
+    $mail->AddAttachment($pdf_data[1], $name = $pdf_data[0],  $encoding = 'base64', $type = 'application/pdf');
+
+
+    if(!$mail->send()){
+        return false;
+    }else{
+        return true;
+    }
+
+}
+
+
+if($func == 'form_individual'){
+
+    $ref = $_POST['ref'];
+    $type = $_POST['type'];
+    $name = $_POST['name'];
+    $surname = $_POST['surname'];
+    $birthdate = $_POST['birthdate'];
+    $i_am_a = $_POST['i_am_a'];
+    $i_am_a_spec = $_POST['i_am_a_spec'];
+    $email = $_POST['email'];
+    $area_code = $_POST['area_code'];
+    $phone = $_POST['phone'];
+    $instagram = $_POST['instagram'];
+    $facebook = $_POST['facebook'];
+    $country = $_POST['country'];
+    $state = $_POST['state'];
+    $city = $_POST['city'];
+    $address = $_POST['address'];
+    $zipcode = $_POST['zipcode'];
+    $estimated_candidates = $_POST['estimated_candidates'];
+
+    $pdf_content = array("Ref"=>$ref, "Type"=>$type, "Name"=>$name, "Surname"=>$surname, "Birthdate"=>$birthdate, "I am a"=>$i_am_a, "Specification"=>$i_am_a_spec, "Email"=>$email, "Area code"=>$area_code, "Phone"=>$phone, "Instagram"=>$instagram, "Facebook"=>$facebook, "Country"=>$country, "State"=>$state, "City"=>$city, "Address"=>$address, "Zipcode"=>$zipcode, "Estimated # of candidates per year"=>$estimated_candidates);
+    generate_pdf($pdf_content);
+
+    $cuerpo_mail = '
+                    <b>Ref:</b> ' . $ref . '<br>
+                    <b>Type:</b> ' . $type . '<br>
+                    <b>Name:</b> ' . $name . '<br>
+                    <b>Surname:</b> ' . $surname . '<br>
+                    <b>Birthdate:</b> ' . $birthdate . '<br>
+                    <b>I am a:</b> ' . $i_am_a . '<br>
+                    <b>Specification:</b> ' . $i_am_a_spec . '<br>
+                    <b>Email:</b> ' . $email . '<br>
+                    <b>Area code:</b> ' . $area_code . '<br>
+                    <b>Phone:</b> ' . $phone . '<br>
+                    <b>Instagram:</b> ' . $instagram . '<br>
+                    <b>Facebook:</b> ' . $facebook . '<br>
+                    <b>Country:</b> ' . $country . '<br>
+                    <b>State:</b> ' . $state . '<br>
+                    <b>City:</b> ' . $city . '<br>
+                    <b>Address:</b> ' . $address . '<br>
+                    <b>Zipcode:</b> ' . $zipcode . '<br>
+                    <b>Estimated # of candidates per year:</b> ' . $estimated_candidates . '<br>';
+
+    echo $cuerpo_mail;
+
+    $mail = new PHPMailer;
+
+    $mail->SMTPDebug=3;
+
+    $mail->setFrom('admin@pathexaminations.com', 'Path');
+    $mail->addAddress('admin@pathexaminations.com', 'Path');
+    $mail->addReplyTo($email, $name);
+
+    $mail->isHTML(true);
+
+    $mail->Subject= 'Path application form: new submission ('.$name.')';
+
+    $mail->Body = $cuerpo_mail;
+
+    if(!$mail->send()){
+        return false;
+    }else{
+        return true;
+    }
+
+}
+
+if($func == 'form_institution'){
+    
+    $ref = $_POST['ref'];
+    $type = $_POST['type'];
+    $institution_name = $_POST['institution_name'];
+    $institution_type = $_POST['institution_type'];
+    $institution_type_spec = $_POST['institution_type_spec'];
+    $institution_email = $_POST['institution_email'];
+    $institution_phone = $_POST['institution_phone'];
+    $website = $_POST['website'];
+    $facebook = $_POST['facebook'];
+    $instagram = $_POST['instagram'];
+    $staff = $_POST['staff'];
+    $rooms = $_POST['rooms'];
+    $room_capacity = $_POST['room_capacity'];
+    $country = $_POST['country'];
+    $state = $_POST['state'];
+    $city = $_POST['city'];
+    $address = $_POST['address'];
+    $zipcode = $_POST['zipcode'];
+    $estimated_candidates = $_POST['estimated_candidates'];
+    $name = $_POST['name'];
+    $surname = $_POST['surname'];
+    $birthdate = $_POST['birthdate'];
+    $i_am_a = $_POST['i_am_a'];
+    $i_am_a_spec = $_POST['i_am_a_spec'];
+    $email = $_POST['email'];
+    $area_code = $_POST['area_code'];
+    $phone = $_POST['phone'];
+
+    $pdf_content = array("Ref"=>$ref, "Type"=>$type, "Institution name"=>$institution_name, "Institution type"=>$institution_type, "Specification"=>$institution_type_spec, "Institution email"=>$institution_email, "Institution phone"=>$institution_phone, "Website"=>$website, "Facebook"=>$facebook, "Instagram"=>$instagram, "Staff"=>$staff, "Rooms"=>$rooms, "Room capacity"=>$room_capacity, "Country"=>$country, "State"=>$state, "City"=>$city, "Address"=>$address, "Zipcode"=>$zipcode, "Estimated # of candidates per year"=>$estimated_candidates,"empty_divider"=>"", "Name"=>$name, "Surname"=>$surname, "Birthdate"=>$birthdate, "I am a"=>$i_am_a, "Specification"=>$i_am_a_spec, "Email"=>$email, "Area code"=>$area_code, "Phone"=>$phone);
+    generate_pdf($pdf_content);
+
+
+    $cuerpo_mail = '
+                    <b>Ref:</b> ' . $ref . '<br>
+                    <b>Type:</b> ' . $type . '<br>
+                    <b>Institution name:</b> ' . $institution_name . '<br>
+                    <b>Institution type:</b> ' . $institution_type . '<br>
+                    <b>Specification:</b> ' . $institution_type_spec . '<br>
+                    <b>Institution email:</b> ' . $institution_email . '<br>
+                    <b>Institution phone:</b> ' . $institution_phone . '<br>
+                    <b>Website:</b> ' . $website . '<br>
+                    <b>Facebook:</b> ' . $facebook . '<br>
+                    <b>Instagram:</b> ' . $instagram . '<br>
+                    <b>Number of staff:</b> ' . $staff . '<br>
+                    <b>Number of rooms:</b> ' . $instagram . '<br>
+                    <b>Approximate # of candidates per room:</b> ' . $room_capacity . '<br>
+                    <b>Country:</b> ' . $country . '<br>
+                    <b>State:</b> ' . $state . '<br>
+                    <b>City:</b> ' . $city . '<br>
+                    <b>Address:</b> ' . $address . '<br>
+                    <b>Zipcode:</b> ' . $zipcode . '<br>
+                    <b>Estimated # of candidates per year:</b> ' . $estimated_candidates . '<br><br>
+                    
+                    <b>Head of the institution details</b>
+                    <br>
+                    <b>Name:</b> ' . $name . '<br>
+                    <b>Surname:</b> ' . $surname . '<br>
+                    <b>Birthdate:</b> ' . $birthdate . '<br>
+                    <b>I am a:</b> ' . $i_am_a . '<br>
+                    <b>Specification:</b> ' . $i_am_a_spec . '<br>
+                    <b>Email:</b> ' . $email . '<br>
+                    <b>Area code:</b> ' . $area_code . '<br>
+                    <b>Phone:</b> ' . $phone . '<br>';
+
+    echo $cuerpo_mail;
+
+    $mail = new PHPMailer;
+
+    $mail->SMTPDebug=3;
+
+    $mail->setFrom('admin@pathexaminations.com', 'Path');
+    $mail->addAddress('admin@pathexaminations.com', 'Path');
+    $mail->addReplyTo($email, $name);
+
+    $mail->isHTML(true);
+
+    $mail->Subject= 'Path application form: new submission ('.$name.')';
+
+    $mail->Body = $cuerpo_mail;
+
+    if(!$mail->send()){
+        return false;
+    }else{
+        return true;
+    }
+
+}
+
+if($func=='enviar_mail'){
+    
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    
+    
+    $mail = new PHPMailer;
+    
+    $mail->SMTPDebug=3;
+    
+    $mail->setFrom($email, $name);
+    $mail->addAddress('contact@plannet.cc', 'plannet');
+    $mail->addReplyTo($email, $name);
+    
+    $mail->isHTML(true);
+    
+    $mail->Subject='Desarrollo de Sitio Web: ' . $nombre;
+    
+    $mail->Body = utf8_decode('Nombre: ' . $nombre . '<br>
+                   Email: ' . $email . '<br>
+                   Empresa: ' . $empresa . '<br>
+                   Telefono: ' . $telefono . '<br>
+                   País: ' . $pais . '<br>
+                   Canal: ' . $canal . '<br>
+                   Plan: ' . $plan . '<br>
+                   Mensaje: ' . $mensaje . '<br>
+                   Region: ' . $region . '<br>');
+    
+    if(!$mail->send()){
+        echo 'No se pudo enviar';
+    }else{
+        echo 'exito';
+    }
+}
+
+
+
+
+
+ ?>
