@@ -348,21 +348,6 @@ if($func=='init_checkout'){
         $modules_text .= '<b>Time:</b> ' . $module->time . '<br><br>';
     }
 
-    $order_detail = json_encode($detalle_pedido);
-
-    // Lo cargamos en la BBDD
-    $q = "INSERT INTO checkouts (name, surname, mail, country, exam, order_detail, status) VALUES (?,?,?,?,?,?,?)";        
-    $stmt= $pdo->prepare($q);
-    $stmt->execute([$name, $surname, $email, $country, $exam, $order_detail, 0]);
-
-    $last_insert_id = $pdo->lastInsertId();
-
-    if($stmt){
-        echo '{"error": 0, "id":'.$last_insert_id.'}';
-    }else{
-        echo '{"error": 1, "id": 0}';
-    }
-
 
     $cuerpo_mail = '<b>Name:</b> ' . $name . '<br>
                    <b>Surname:</b> ' . $surname . '<br>
@@ -380,7 +365,7 @@ if($func=='init_checkout'){
                     ' . $modules_text . '
                    <b>Final price :</b> ' . $final_price . '<br>';
 
-    echo 'CUERPO MAIL: ' . $cuerpo_mail;
+    // echo 'CUERPO MAIL: ' . $cuerpo_mail;
 
     $mail = new PHPMailer;
 
@@ -396,10 +381,25 @@ if($func=='init_checkout'){
 
     $mail->Body = $cuerpo_mail;
 
-    if(!$mail->send()){
-        return false;
+    // if(!$mail->send()){
+    //     return false;
+    // }else{
+    //     return true;
+    // }
+
+    $order_detail = json_encode($detalle_pedido);
+
+    // Lo cargamos en la BBDD
+    $q = "INSERT INTO checkouts (name, surname, mail, country, exam, order_detail, status) VALUES (?,?,?,?,?,?,?)";        
+    $stmt= $pdo->prepare($q);
+    $stmt->execute([$name, $surname, $email, $country, $exam, $order_detail, 0]);
+
+    $last_insert_id = $pdo->lastInsertId();
+
+    if($stmt){
+        echo '{"error": 0, "id":'.$last_insert_id.'}';
     }else{
-        return true;
+        echo '{"error": 1, "id": 0}';
     }
 
 

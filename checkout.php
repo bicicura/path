@@ -1453,8 +1453,11 @@ $('#submit-cont button').click(function() {
             success:function(data){
                 console.log('data')
                 console.log(data)
+                data = JSON.parse(data)
                 // Mostramos el boton de paypal
-                render_paypal_button(1)
+                if(data.error==0){
+                    render_paypal_button(data.id)
+                }
             }
         });
 
