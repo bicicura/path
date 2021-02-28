@@ -37,6 +37,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.min.js"></script>
 
+    <!-- SDK de cliente para PayPal -->
+	<script src="https://www.paypal.com/sdk/js?client-id=AcSOQzXrlRL_ERTh5svonn3GXR-HYzxEsdGqsjNczLmJUueoLS96o6byOgYsPEGWtc4MzMQ-KfPyXLv4"></script>
+
+
 
     <title>Path LATAM | Checkout</title>
     <style type="text/css">
@@ -667,16 +671,16 @@ input[type=number] {
                     <div>
                         <select name="" id="">
                             <option value="" hidden selected>Choose a time</option>
-                            <option value="">10:00 UK - </option>
-                            <option value="">11:00 UK - </option>
-                            <option value="">12:00 UK - </option>
-                            <option value="">13:00 UK - </option>
-                            <option value="">14:00 UK - </option>
-                            <option value="">15:00 UK - </option>
-                            <option value="">16:00 UK - </option>
-                            <option value="">17:00 UK - </option>
-                            <option value="">18:00 UK - </option>
-                            <option value="">19:00 UK - </option>
+                            <option value="10:00 UK">10:00 UK - </option>
+                            <option value="11:00 UK">11:00 UK - </option>
+                            <option value="12:00 UK">12:00 UK - </option>
+                            <option value="13:00 UK">13:00 UK - </option>
+                            <option value="14:00 UK">14:00 UK - </option>
+                            <option value="15:00 UK">15:00 UK - </option>
+                            <option value="16:00 UK">16:00 UK - </option>
+                            <option value="17:00 UK">17:00 UK - </option>
+                            <option value="18:00 UK">18:00 UK - </option>
+                            <option value="19:00 UK">19:00 UK - </option>
                         </select>
                     </div>
                 </div>
@@ -686,30 +690,30 @@ input[type=number] {
                     <div>
                         <select name="" id="">
                             <option value="" hidden selected>Choose a time</option>
-                            <option value="cero">00:00 UK - </option>
-                            <option value="">01:00 UK - </option>
-                            <option value="">02:00 UK - </option>
-                            <option value="">03:00 UK - </option>
-                            <option value="">04:00 UK - </option>
-                            <option value="">05:00 UK - </option>
-                            <option value="">06:00 UK - </option>
-                            <option value="">07:00 UK - </option>
-                            <option value="">08:00 UK - </option>
-                            <option value="">09:00 UK - </option>
-                            <option value="">10:00 UK - </option>
-                            <option value="">11:00 UK - </option>
-                            <option value="">12:00 UK - </option>
-                            <option value="">13:00 UK - </option>
-                            <option value="">14:00 UK - </option>
-                            <option value="">15:00 UK - </option>
-                            <option value="">16:00 UK - </option>
-                            <option value="">17:00 UK - </option>
-                            <option value="">18:00 UK - </option>
-                            <option value="">19:00 UK - </option>
-                            <option value="">20:00 UK - </option>
-                            <option value="">21:00 UK - </option>
-                            <option value="">22:00 UK - </option>
-                            <option value="">23:00 UK - </option>
+                            <option value="00:00 UK">00:00 UK - </option>
+                            <option value="01:00 UK">01:00 UK - </option>
+                            <option value="02:00 UK">02:00 UK - </option>
+                            <option value="03:00 UK">03:00 UK - </option>
+                            <option value="04:00 UK">04:00 UK - </option>
+                            <option value="05:00 UK">05:00 UK - </option>
+                            <option value="06:00 UK">06:00 UK - </option>
+                            <option value="07:00 UK">07:00 UK - </option>
+                            <option value="08:00 UK">08:00 UK - </option>
+                            <option value="09:00 UK">09:00 UK - </option>
+                            <option value="10:00 UK">10:00 UK - </option>
+                            <option value="11:00 UK">11:00 UK - </option>
+                            <option value="12:00 UK">12:00 UK - </option>
+                            <option value="13:00 UK">13:00 UK - </option>
+                            <option value="14:00 UK">14:00 UK - </option>
+                            <option value="15:00 UK">15:00 UK - </option>
+                            <option value="16:00 UK">16:00 UK - </option>
+                            <option value="17:00 UK">17:00 UK - </option>
+                            <option value="18:00 UK">18:00 UK - </option>
+                            <option value="19:00 UK">19:00 UK - </option>
+                            <option value="20:00 UK">20:00 UK - </option>
+                            <option value="21:00 UK">21:00 UK - </option>
+                            <option value="22:00 UK">22:00 UK - </option>
+                            <option value="23:00 UK">23:00 UK - </option>
                         </select>
                         <!-- <input type="time" /> -->
                     </div>
@@ -720,30 +724,30 @@ input[type=number] {
                                     <div>
                         <select name="" id="">
                             <option value="" hidden selected>Choose a time</option>
-                            <option value="list">00:00 UK - </option>
-                            <option value="">01:00 UK - </option>
-                            <option value="">02:00 UK - </option>
-                            <option value="">03:00 UK - </option>
-                            <option value="">04:00 UK - </option>
-                            <option value="">05:00 UK - </option>
-                            <option value="">06:00 UK - </option>
-                            <option value="">07:00 UK - </option>
-                            <option value="">08:00 UK - </option>
-                            <option value="">09:00 UK - </option>
-                            <option value="">10:00 UK - </option>
-                            <option value="">11:00 UK - </option>
-                            <option value="">12:00 UK - </option>
-                            <option value="">13:00 UK - </option>
-                            <option value="">14:00 UK - </option>
-                            <option value="">15:00 UK - </option>
-                            <option value="">16:00 UK - </option>
-                            <option value="">17:00 UK - </option>
-                            <option value="">18:00 UK - </option>
-                            <option value="">19:00 UK - </option>
-                            <option value="">20:00 UK - </option>
-                            <option value="">21:00 UK - </option>
-                            <option value="">22:00 UK - </option>
-                            <option value="">23:00 UK - </option>
+                            <option value="00:00 UK">00:00 UK - </option>
+                            <option value="01:00 UK">01:00 UK - </option>
+                            <option value="02:00 UK">02:00 UK - </option>
+                            <option value="03:00 UK">03:00 UK - </option>
+                            <option value="04:00 UK">04:00 UK - </option>
+                            <option value="05:00 UK">05:00 UK - </option>
+                            <option value="06:00 UK">06:00 UK - </option>
+                            <option value="07:00 UK">07:00 UK - </option>
+                            <option value="08:00 UK">08:00 UK - </option>
+                            <option value="09:00 UK">09:00 UK - </option>
+                            <option value="10:00 UK">10:00 UK - </option>
+                            <option value="11:00 UK">11:00 UK - </option>
+                            <option value="12:00 UK">12:00 UK - </option>
+                            <option value="13:00 UK">13:00 UK - </option>
+                            <option value="14:00 UK">14:00 UK - </option>
+                            <option value="15:00 UK">15:00 UK - </option>
+                            <option value="16:00 UK">16:00 UK - </option>
+                            <option value="17:00 UK">17:00 UK - </option>
+                            <option value="18:00 UK">18:00 UK - </option>
+                            <option value="19:00 UK">19:00 UK - </option>
+                            <option value="20:00 UK">20:00 UK - </option>
+                            <option value="21:00 UK">21:00 UK - </option>
+                            <option value="22:00 UK">22:00 UK - </option>
+                            <option value="23:00 UK">23:00 UK - </option>
                         </select>
                     </div>
                 </div>
@@ -1130,9 +1134,8 @@ input[type=number] {
 
 <!-- <div class="cont80"> -->
     <div id="pp-cont">
-        <p>Your information OK</p>
-        <p>You will be redirected to PayPal to proceed with the payment</p>
-        <button>ORDER NOW</button>
+        <p>Thank you! You can now proceed with the payment to complete your order.</p>
+        <div id="paypal-button-container"></div>
     </div>
 <!-- </div> -->
 
@@ -1175,6 +1178,9 @@ input[type=number] {
     <script src="assets/js/toggler.js"></script>
 </body>
 <script>
+
+var global_pedido;
+
 $(document).ready(function() {
 
 
@@ -1227,6 +1233,10 @@ $('.exam').click(function() {
     }
     countModules()
 
+})
+
+$(document).on('change', '#datesandtime input, #datesandtime select', function(){
+    actualizarCarrito()
 })
 
 $('.module').click(function() {
@@ -1303,7 +1313,22 @@ function actualizarCarrito(){
 
     var modules = [];
     $('.modules-selected').each(function(){
-        modules.push($(this).text());
+
+        var module_selector = ''
+
+        if($(this).html()=='Speaking'){
+            module_selector = '#speakingDate'
+        }else if($(this).html()=='Listening'){
+            module_selector = '#listeningDate'
+        }else if($(this).html()=='Reading and writing'){
+            module_selector = '#randwDate'
+        }
+
+        var module_date = $(module_selector + ' input').val()
+        var module_time = $(module_selector + ' select').val()
+
+        var module = {"module": $(this).text(), "date": module_date, "time": module_time}
+        modules.push(module);
     })
 
     prc_module = parseInt($('.exam-selected').attr('data-price'));
@@ -1332,6 +1357,8 @@ function actualizarCarrito(){
         price_module: prc_module,
         final_price: final_price
     }
+
+    global_pedido = detalle_pedido
 
 
 
@@ -1374,7 +1401,7 @@ $('#submit-cont button').click(function() {
     })
     $('#tyc li').each(function() {
         if (!$(this).hasClass('li-yes')) {
-            alert('Accept erms and conticions')
+            alert('Accept terms and conticions')
             todoOk = 'no';
             return false;
         }
@@ -1385,6 +1412,53 @@ $('#submit-cont button').click(function() {
         $("html, body").delay(150).animate({
             scrollTop: $('#pp-cont').offset().top 
         }, 700);
+
+        $('.cont80').slideUp()
+
+        // Levantamos los campos
+        var name = $('#name').val()
+        var surname = $('#surname').val()
+        var id_number = $('#id-num').val()
+        var birthdate = $('#birthdate').val()
+        var email = $('#email').val()
+        var area_code = $('#area-code').val()
+        var phone = $('#phone').val()
+        var country = $('#country').val()
+        var state = $('#state').val()
+        var city = $('#city').val()
+        var address = $('#address').val()
+        var zipcode = $('#zipcode').val()
+
+        // Hacemos el init_checkout
+        $.ajax({
+            url:'api.php?func=init_checkout',
+            method:'POST',
+            cache: false,
+            data:{
+                name,
+                surname,
+                id_number,
+                birthdate,
+                email,
+                area_code,
+                phone,
+                country,
+                state,
+                city,
+                address,
+                zipcode,
+                detalle_pedido: JSON.stringify(global_pedido)
+            },
+            dataType:'text',
+            success:function(data){
+                console.log('data')
+                console.log(data)
+                // Mostramos el boton de paypal
+                render_paypal_button(1)
+            }
+        });
+
+
     }
     
 })
@@ -1417,5 +1491,33 @@ $('#speakingCalendar').change(function() {
 
 
 })
+
+function render_paypal_button(checkout_id){
+
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        // This function sets up the details of the transaction, including the amount and line item details.
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: global_pedido.final_price
+            },
+            custom_id: checkout_id,
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+    return actions.order.capture().then(function() {
+        console.log('data: ')
+        console.log(data)
+         window.location = "paypal-transaction-complete.php?orderID="+data.orderID;				
+    });
+    }
+    }).render('#paypal-button-container');
+    //This function displays Smart Payment Buttons on your web page.
+
+}
+
+
 </script>
 </html>

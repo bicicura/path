@@ -18,7 +18,7 @@
                 <input type="text" id="message" class="form-control" name="message" placeholder="">
               </div>
             </form>
-            <div class="main-btn footer-btn-mob" style="background: #014a68; box-shadow: 0px 6px 20px -8px #014a68">Send message</div>
+            <div class="main-btn footer-btn-mob" style="background: #014a68; box-shadow: 0px 6px 20px -8px #014a68" id="send_message">Send message</div>
           </div>
     </div>
 </div>
@@ -98,5 +98,36 @@
             scrollTop: $(".header").offset().top},
             'slow');
     });
+
+    // Funcion que levanta los datos del form cuando cliquean en enviar
+    $(document).on('click', '#send_message', function(e){
+        e.preventDefault()
+
+        var name = $('#franja-contacto #name').val()
+        var email = $('#franja-contacto #email').val()
+        var message = $('#franja-contacto #message').val()
+
+        $.ajax({
+            url:'api.php?func=enviar_mail',
+            method:'POST',
+            cache: false,
+            data:{
+                name,
+                email,
+                message
+            },
+            dataType:'text',
+            success:function(data){
+                
+                console.log(data)
+                $('#franja-contacto #name').val('')
+                $('#franja-contacto #email').val('')
+                $('#franja-contacto #message').val('')
+            }
+        });
+
+
+    })
+
     
 </script>

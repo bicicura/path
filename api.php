@@ -2,6 +2,7 @@
 
 require 'fpdf/fpdf.php';
 require "phpmailer/PHPMailerAutoload.php";
+require "connection.php";
 
 $func = $_GET['func'];
 
@@ -288,11 +289,13 @@ if($func == 'form_institution'){
 }
 
 if($func=='enviar_mail'){
+
+    echo 'Llego a la api';
     
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
-    
+
     
     $mail = new PHPMailer;
     
@@ -304,23 +307,102 @@ if($func=='enviar_mail'){
     
     $mail->isHTML(true);
     
-    $mail->Subject='Desarrollo de Sitio Web: ' . $nombre;
+    $mail->Subject='New message: ' . $name;
     
-    $mail->Body = utf8_decode('Nombre: ' . $nombre . '<br>
+    $mail->Body = utf8_decode('Name: ' . $name . '<br>
                    Email: ' . $email . '<br>
-                   Empresa: ' . $empresa . '<br>
-                   Telefono: ' . $telefono . '<br>
-                   País: ' . $pais . '<br>
-                   Canal: ' . $canal . '<br>
-                   Plan: ' . $plan . '<br>
-                   Mensaje: ' . $mensaje . '<br>
-                   Region: ' . $region . '<br>');
+                   Message: ' . $message . '<br>');
     
     if(!$mail->send()){
         echo 'No se pudo enviar';
     }else{
         echo 'exito';
     }
+}
+
+if($func=='init_checkout'){
+
+    $name = $_POST['name'];
+    $surname = $_POST['surname'];
+    $id_number = $_POST['id_number'];
+    $birthdate = $_POST['birthdate'];
+    $email = $_POST['email'];
+    $area_code = $_POST['area_code'];
+    $phone = $_POST['phone'];
+    $country = $_POST['country'];
+    $state = $_POST['state'];
+    $city = $_POST['city'];
+    $address = $_POST['address'];
+    $zipcode = $_POST['zipcode'];
+    $detalle_pedido = $_POST['detalle_pedido'];
+    $detalle_pedido = json_decode($detalle_pedido);
+
+    $exam = $detalle_pedido->exam;
+    $final_price = $detalle_pedido->final_price;
+
+    $modules_text = '<br><b>Modules: </b><br>';
+
+    foreach ($detalle_pedido->module as $module) {
+        $modules_text .= '<b>Module:</b> ' . $module->module . '<br>';
+        $modules_text .= '<b>Date:</b> ' . $module->date . '<br>';
+        $modules_text .= '<b>Time:</b> ' . $module->time . '<br><br>';
+    }
+
+    $order_detail = json_encode($detalle_pedido);
+
+    // Lo cargamos en la BBDD
+    $q = "INSERT INTO checkouts (name, surname, mail, country, exam, order_detail, status) VALUES (?,?,?,?,?,?,?)";        
+    $stmt= $pdo->prepare($q);
+    $stmt->execute([$name, $surname, $email, $country, $exam, $order_detail, 0]);
+
+    $last_insert_id = $pdo->lastInsertId();
+
+    if($stmt){
+        echo '{"error": 0, "id":'.$last_insert_id.'}';
+    }else{
+        echo '{"error": 1, "id": 0}';
+    }
+
+
+    $cuerpo_mail = '<b>Name:</b> ' . $name . '<br>
+                   <b>Surname:</b> ' . $surname . '<br>
+                   <b>ID number:</b> ' . $id_number . '<br>
+                   <b>Birthdate:</b> ' . $birthdate . '<br>
+                   <b>Email:</b> ' . $email . '<br>
+                   <b>Area code:</b> ' . $area_code . '<br>
+                   <b>Phone:</b> ' . $phone . '<br>
+                   <b>Country:</b> ' . $country . '<br>
+                   <b>State:</b> ' . $state . '<br>
+                   <b>City:</b> ' . $city . '<br>
+                   <b>Address:</b> ' . $address . '<br>
+                   <b>Zipcode:</b> ' . $zipcode . '<br>
+                   <b>Exam :</b> ' . $exam . '<br>
+                    ' . $modules_text . '
+                   <b>Final price :</b> ' . $final_price . '<br>';
+
+    echo 'CUERPO MAIL: ' . $cuerpo_mail;
+
+    $mail = new PHPMailer;
+
+    $mail->SMTPDebug=3;
+
+    $mail->setFrom('admin@pathexaminations.com', 'Path');
+    $mail->addAddress('admin@pathexaminations.com', 'Path');
+    $mail->addReplyTo($email, $name);
+
+    $mail->isHTML(true);
+
+    $mail->Subject= 'Book an exam: New checkout ('.$name.')';
+
+    $mail->Body = $cuerpo_mail;
+
+    if(!$mail->send()){
+        return false;
+    }else{
+        return true;
+    }
+
+
 }
 
 
