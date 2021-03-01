@@ -6,7 +6,7 @@ session_start();
 
 require 'connection.php';
 
-// require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 use Sample\PayPalClient;
 use PayPalCheckoutSdk\Orders\OrdersGetRequest;
@@ -35,15 +35,15 @@ class GetOrder
     $checkout_id = $response->result->purchase_units[0]->custom_id;
     // echo 'CHECKOUT ID: ' . $checkout_id;
 
+    global $pdo;
     // Actualizamos el row de checkouts correspondiente a este id, con el estado a "1"
     $sql = "UPDATE checkouts SET status=? WHERE id=?";
     $stmt= $pdo->prepare($sql);
     $stmt->execute([1, $checkout_id]);
 
     if($stmt){
-
         echo 'Status actualizado con exito!';
-
+        header('location: checkout.php?payment_status=success');
     }else{
         echo 'Error al actualizar el status';
     }

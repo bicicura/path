@@ -1,9 +1,14 @@
 {
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "a93fd4d640474a66eea42465cbf30482",
     "packages": [
         {
             "name": "paypal/paypal-checkout-sdk",
             "version": "1.0.1",
-            "version_normalized": "1.0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paypal/Checkout-PHP-SDK.git",
@@ -21,9 +26,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^5.7"
             },
-            "time": "2019-11-07T23:16:44+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "PayPalCheckoutSdk\\": "lib/PayPalCheckoutSdk",
@@ -54,12 +57,11 @@
                 "issues": "https://github.com/paypal/Checkout-PHP-SDK/issues",
                 "source": "https://github.com/paypal/Checkout-PHP-SDK/tree/1.0.1"
             },
-            "install-path": "../paypal/paypal-checkout-sdk"
+            "time": "2019-11-07T23:16:44+00:00"
         },
         {
             "name": "paypal/paypalhttp",
             "version": "1.0.0",
-            "version_normalized": "1.0.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paypal/paypalhttp_php.git",
@@ -78,9 +80,7 @@
                 "phpunit/phpunit": "^5.7",
                 "wiremock-php/wiremock-php": "1.43.2"
             },
-            "time": "2019-11-06T21:27:12+00:00",
             "type": "library",
-            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "PayPalHttp\\": "lib/PayPalHttp"
@@ -100,9 +100,16 @@
                 "issues": "https://github.com/paypal/paypalhttp_php/issues",
                 "source": "https://github.com/paypal/paypalhttp_php/tree/1.0.0"
             },
-            "install-path": "../paypal/paypalhttp"
+            "time": "2019-11-06T21:27:12+00:00"
         }
     ],
-    "dev": true,
-    "dev-package-names": []
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
 }

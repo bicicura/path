@@ -42,7 +42,7 @@
 
 
 
-    <title>Path LATAM | Checkout</title>
+    <title>Path | Checkout</title>
     <style type="text/css">
 
     header{
@@ -1517,7 +1517,7 @@ function render_paypal_button(checkout_id){
     });
     }
     }).render('#paypal-button-container');
-    //This function displays Smart Payment Buttons on your web page.
+
 
 }
 
