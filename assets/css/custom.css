@@ -6,6 +6,8 @@
 
 .covid-banner p {
   color: white;
+  font-size: 16px;
+  margin-bottom: 0;
 }
 
 .covid-banner a {
@@ -40,6 +42,8 @@
 .cookie-content p {
   width: 60%;
   color: white;
+  font-size: 16px;
+  margin-bottom: 0;
 }
 
 .cookie-content a {
