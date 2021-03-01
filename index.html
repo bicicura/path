@@ -224,7 +224,8 @@
     }
 
     .card-btn {
-        margin-top: 10%;
+        margin-top: 85%;
+        margin-bottom: 0;
         width: fit-content;
         text-align: center;
         padding: 3% 5%;
@@ -383,9 +384,13 @@
         }
 
         .connect__social {
-            width: 32%;
-            justify-content: space-between;
+            width: 5vw;
+            justify-content: space-between
         }
+
+        /* .connect__social > a:nth-child(2) {
+            margin: 0 15%;
+        } */
 
         .connect__img-cont {
             background-color: #004969;
@@ -623,6 +628,8 @@
 </head>
 
 <body>
+    <div class="covid-banner"><p>View our <a target="_blank" href="covid.html"><b>Coronavirus (COVID 19) page</b></a> for the latest updates</p></div>
+
     <!-- Navbar Section -->
     <nav class="navbar-section container-fluid d-none d-sm-block" id="header">
         
@@ -662,6 +669,7 @@
                 <li class="menu-item-has-children"><a href="meet-path.html">Meet Path</a>
                     <ul class="sub-menu">
                         <li><a href="meet-path.html#about-us">About us</a></li>
+                        <li><a href="meet-path.html#recognition-and-validation">Recognition and validation</a></li>
                         <li><a href="meet-path.html#think-forward-strategy">Think Forward strategy</a></li>
                         <li><a href="meet-path.html#policies-and-procedures">Policies and procedures</a></li>
                     </ul>
@@ -695,8 +703,8 @@
             <ul>
                 <li><i id="open-form-popup"  class="fas fa-envelope" style="margin:0" id="fab"></i></a></li>
                 <li><i id="open-opening-popup" style="margin:0" class="fas fa-phone"></i></li>
-                <li><a target="_blank" href="https://www.facebook.com/pathlatam"><i class="fab fa-facebook-square"></i></a></li>
-                <li><a target="_blank" href="https://www.instagram.com/pathlatam"><i class="fab fa-instagram"></i></a></li>           
+                <li><a target="_blank" href="https://www.facebook.com/pathexams"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/pathexams"><i class="fab fa-instagram"></i></a></li>           
             </ul>
         </div>
         
@@ -825,8 +833,10 @@
                         <img src="assets\img\custom\EUROPE_FINAL.png" alt="">
                     </div>
                     <p>EUROPE</p>
-                    <a target="_blank" href="https://www.instagram.com/pathexams/"><i
-                        class="fab fa-instagram"></i></a>
+                    <div class="connect__social row">
+                    	<a target="_blank" href="https://www.instagram.com/pathexams"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/pathexams"><i class="fab fa-facebook-square"></i></a>
+                    </div>
                 </div>
                 
                 <div class="connect__europe">
@@ -835,10 +845,11 @@
                     </div>
                     <p>LATIN AMERICA</p>
                     <div class="connect__social row">
-                    	<a target="_blank" href="https://www.instagram.com/pathlatam/"><i
+                    	<a target="_blank" href="https://www.instagram.com/pathlatam"><i
                     	    class="fab fa-instagram"></i></a>
                     	<a target="_blank" href="https://www.youtube.com/channel/UCve-gJhC5WMuSkdUwo_VfVg"><i
                     	    class="fab fa-youtube"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/pathexams"><i class="fab fa-facebook-square"></i></a>
                     </div>
                 </div>
 
@@ -847,8 +858,8 @@
                         <img src="assets\img\custom\AFRICA_FINAL.png" alt="">
                     </div>
                     <p>AFRICA</p>
-                    <a target="_blank" href="https://www.instagram.com/pathexams/"><i
-                        class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/pathafrica"><i
+                        class="fab fa-facebook-square"></i></a>
                 </div>
 
                 <div class="connect__europe">
@@ -856,14 +867,18 @@
                         <img src="assets\img\custom\ASIA_FINAL.png" alt="">
                     </div>
                     <p>ASIA <span style="letter-spacing: normal;">and</span> AUSTRALASIA</p>
-                    <a target="_blank" href="https://www.instagram.com/pathexams/"><i
-                        class="fab fa-instagram"></i></a>
+                    <div class="connect__social row">
+                    	<a target="_blank" href="https://www.instagram.com/pathexams"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/pathexams"><i class="fab fa-facebook-square"></i></a>
+                    </div>
                 </div>
 
                 
             </div>
         </div>
     </section>
+
+    <div id="cookie-banner"></div>
 
     <!-- Footer Section -->
     <footer class="footer-section" id="footer">

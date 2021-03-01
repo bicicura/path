@@ -1,8 +1,12 @@
+// Banner de cookies
+ 
+
 // USE SAME HEADER/FOOTER FILES FOR ALL VIEWS
 $(function(){
   $("#header").load("header.html"); 
   $("#footer").load("footer.html"); 
   $("#load-pop-ups").load("side-pop-ups.html"); 
+  $("#cookie-banner").load("cookie-banner.html"); 
 });
 
 /*===================================

@@ -1,0 +1,26 @@
+<div class="cookie-container">
+    <div class="container cookie-content">
+        <p>We use cookies to offer you a better user experience, analyse site traffic, and
+            serve targeted advertisements. By continuing to use this website, you consent to
+            the use of cookies in accordance with our <a href="cookies-policy.html"><b>Cookie policy</b></a>.</p>
+        <button class="cookie-btn large-btn">Accept</button>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() { 
+        const cookieContainer = document.querySelector('.cookie-container');
+        const cookieButton = document.querySelector('.cookie-btn');
+
+        cookieButton.addEventListener("click", () => {
+        cookieContainer.classList.remove("active");
+        localStorage.setItem("cookieBannerDisplayed", "true")
+        });
+
+        setTimeout(() => {
+        if (!localStorage.getItem("cookieBannerDisplayed"))
+        cookieContainer.classList.add("active");
+        }, 2000)
+            });
+
+</script>

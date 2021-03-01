@@ -72,6 +72,7 @@ $q = $q->fetchAll();
 </head>
 
 <body>
+<div class="covid-banner"><p>View our <a target="_blank" href="covid.html"><b>Coronavirus (COVID 19) page</b></a> for the latest updates</p></div>
     <!-- Navbar Section -->
     <nav class="navbar-section container-fluid d-none d-sm-block" id="header">
       
@@ -111,6 +112,7 @@ $q = $q->fetchAll();
               <li class="menu-item-has-children"><a href="meet-path.html">Meet Path</a>
                   <ul class="sub-menu">
                       <li><a href="meet-path.html#about-us">About us</a></li>
+                      <li><a href="meet-path.html#recognition-and-validation">Recognition and validation</a></li>
                       <li><a href="meet-path.html#think-forward-strategy">Think Forward strategy</a></li>
                       <li><a href="meet-path.html#policies-and-procedures">Policies and procedures</a></li>
                   </ul>
@@ -141,15 +143,15 @@ $q = $q->fetchAll();
   <section class="breadcrub-style-4 section margin-bottom-0 header-img">
     <div class="social-icon">
       <ul>
-          <li><a target="_blank" href="https://www.facebook.com/pathlatam"><i class="fab fa-facebook-square"></i></a></li>
-          <li><a target="_blank" href="https://www.instagram.com/pathlatam"><i class="fab fa-instagram"></i></a></li>
+          <li><a target="_blank" href="https://www.facebook.com/pathexams"><i class="fab fa-facebook-square"></i></a></li>
+          <li><a target="_blank" href="https://www.instagram.com/pathexams"><i class="fab fa-instagram"></i></a></li>
           <li><i class="fas fa-envelope" id="open-form-popup"></i></li>
           <li><i class="fas fa-phone" id="open-opening-popup"></i></li>      
       </ul>
   </div>
     <div class="container">
       <div class="heading">
-        <h1>News and Events</h1>
+        <h1>News and events</h1>
       </div>
     </div>
   </section>
@@ -204,6 +206,8 @@ $q = $q->fetchAll();
       
     </div>
   </section>
+
+  <div id="cookie-banner"></div>
 
   <!-- Footer Section -->
   <footer class="footer-section" id="footer">

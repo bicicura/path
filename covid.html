@@ -1,15 +1,3 @@
-<?php
-
-require 'connection.php';
-
-$id_entry = $_GET['id'];
-
-
-$q = $pdo->prepare("SELECT * FROM entradas WHERE id=:id");
-$q->execute(['id' => $id_entry]); 
-$entrada = $q->fetch();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,9 +5,8 @@ $entrada = $q->fetch();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
   <!-- Fonts -->
-  <link rel="stylesheet" href="https://use.typekit.net/jwf6mkc.css">  
+  <link rel="stylesheet" href="https://use.typekit.net/jwf6mkc.css">
   <!-- Fab Icon -->
   <link rel="shortcut icon" type="image/png" href="assets/img/logos/pathfavicon-01.png" /> 
   <!-- Fonts Awesome Icons -->
@@ -37,23 +24,12 @@ $entrada = $q->fetch();
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/custom.css">
-  <title>Path | <?php echo $entrada['titulo'] ?></title>
+  <title>Path | Covid-19 updates</title>
   <style>
-
-    .blog-detail__gradient-cont {
-    position: relative;
-    
-}
-
-    .blog-detail__gradient {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: rgb(0,212,255);
-    background: linear-gradient(180deg, rgba(0,212,255,0) 36%, rgba(0,73,105,1) 100%);
-}
+    .a__covid-updates {
+        color: #0091B7;
+        border-bottom: 1px solid #0091B7;
+    }
   </style>
 </head>
 
@@ -119,22 +95,18 @@ $entrada = $q->fetch();
                         <div><ul><li><a href="our-examinations.html#four-skill-exam" style="font-weight: bold;">Four-skill exams</a></li><div style="margin-left: 10px;"><li><a href="our-examinations.html#a1entrylevel">A1- | Entry level</a></li></li><li><a href="our-examinations.html#A1AccessLevel">A1 | Access level</a></li></li><li><a href="our-examinations.html#A1AchieverLevel">A1+ | Achiever level</a></li></li><li><a href="our-examinations.html#A2PreliminaryLevel">A2 | Preliminary level</a></li></li><li><a href="our-examinations.html#A2ElementaryLevel">A2+ | Elementary level</a></li></li><li><a href="our-examinations.html#B1ProgressLevel">B1 | Progress level</a></li><li><a href="our-examinations.html#B2CompetencyLevel">B2 | Competency level</a></li><li><a href="our-examinations.html#B2ForwardLevel">B2+ | Forward level</a></li></div></ul></div>
                     </ul>
                 </li>
-                <li class="menu-item-has-no-children"><a href="news-and-events.php">News and events</a></li>
+                <li class="menu-item-has-no-children"><a href="news-and-events.html">News and events</a></li>
             </ul>
         </div>
     </div>
 
-  <!-- Breadcrumb -->
-  <div class="blog-detail__gradient-cont">
-      <div class="blog-detail__gradient">
-        </div>
-          <section class="breadcrub-style-4 section margin-bottom-0">
-            <div class="container">
-                <div class="heading-detail-blog text-center">
-                    <h1><?php echo $entrada['titulo'] ?></h1>
-                  </div>
-            </div>
-          </section>
+  <div class="breadcrub-style-5 section" style="background-image: url(assets/img/University/students/path_cover.jpg); background-size: cover;
+  background-position: left; ">
+    <div class="container">
+      <div class="heading">
+        <h2>Covid-19 updates</h2>
+      </div>
+    </div>
   </div>
 
   <!-- Blog detail -->
@@ -143,26 +115,20 @@ $entrada = $q->fetch();
     <div class="blog-contents">
       <div class="container">
         <div class="blog-text">
-          <p>
-
-          <?php
-          
-          echo $entrada['cuerpo'];
-
-          ?>
-          
-        </p>
+          <h4>COVID 19 was declared a pandemic by the World Health Organisation (WHO) in March 2020, causing huge impact on people's lives.</h4><br>
+          <p>We faced significant challenges to which we needed to respond rapidly. We had to rethink the way we usually operate to adapt accordingly. Some changes were forced on us, while others represented the height of innovation in a crisis.</p>
+          <br>
+          <p>At <b>Path Examinations</b>, we committed ourselves, from day one, to bringing certainty to all our members and centres, ensuring exam sessions were going to take place on the announced dates.</p>
+          <p>We identified all possible scenarios and quickly decided to start building our Path platform Beyond™ to conduct exams remotely and securely. The 2020 online sessions proved to be a huge success!</p>
+          <p>For this new year, we want to reiterate our support to all our members and centres, and to stress that the health and safety of all our candidates, examiners and staff is our absolute priority.</p>
+          <p>Please contact <b>info@pathexaminations.com</b> for any questions related to this issue.</p>
+          <p>Check the World Health Organization (WHO) <a target="_blank" class="a__covid-updates" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019?gclid=CjwKCAiAm-2BBhANEiwAe7eyFLLDEooDT-J_XeH4j0_eoJXbbnBrgAikdwSeObyz0ipR-0uHqAVeLBoCnS4QAvD_BwE">updates on the Coronavirus disease (COVID-10) pandemic.</a></p>
         </div>
       </div>
     </div>
   </section>
 
-    <!-- Popup -->
-    <div id="load-pop-ups">
-      
-    </div>
-
-    <div id="cookie-banner"></div>
+  <div id="cookie-banner"></div>
 
   <!-- Footer Section -->
   <footer class="footer-section" id="footer">

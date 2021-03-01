@@ -1,3 +1,66 @@
+.covid-banner {
+  text-align: center;
+  padding: 12px 0;
+  background-color: #004969;
+}
+
+.covid-banner p {
+  color: white;
+}
+
+.covid-banner a {
+  font-style: italic;
+  border-bottom: 1px solid white;
+}
+
+.covid-banner a:hover {
+  color: #0091B7;
+  border-bottom: 1px solid #0091B7;
+}
+
+.cookie-container {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background-color: #004969;
+  color: white;
+  padding: 12px 0;
+  transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
+  z-index: 99999999;
+  box-shadow: 0 -2px 16px hsla(198, 100%, 21%, .7);
+}
+
+.cookie-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cookie-content p {
+  width: 60%;
+  color: white;
+}
+
+.cookie-content a {
+  font-style: italic;
+  border-bottom: 1px solid white;
+}
+
+.cookie-content a:hover {
+  color: #0091B7;
+  border-bottom: 1px solid #0091B7;
+}
+
+.cookie-content button {
+  background-color: white;
+  color: black;
+}
+
+.cookie-container.active {
+  bottom: 0;
+}
+
 .benefits__lists li {
   list-style: inside;
   list-style-position: outside;
@@ -125,6 +188,25 @@ TARJETAS
 
 
 @media only screen and (max-width: 799px) {
+
+  .covid-banner p {
+    font-size: 13px;
+    margin: 0 auto;
+  }
+
+  .cookie-content {
+    flex-direction: column;
+  }
+
+  .cookie-content p {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .cookie-content button {
+    width: 100%;
+    margin: 4% 0;
+  }
 
   .form-style-2 .form-group label {
     font-size: 1rem;
