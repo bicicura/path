@@ -1,3 +1,15 @@
+<?php
+
+require 'connection.php';
+
+$id_entry = $_GET['id'];
+
+
+$q = $pdo->prepare("SELECT * FROM entradas WHERE id=:id");
+$q->execute(['id' => $id_entry]); 
+$entrada = $q->fetch();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +37,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/custom.css">
-  <title>Path | Blog entry</title>
+  <title>Path | <?php echo $entrada['titulo'] ?></title>
   <style>
 
     .blog-detail__gradient-cont {
@@ -106,7 +118,7 @@
                         <div><ul><li><a href="our-examinations.html#four-skill-exam" style="font-weight: bold;">Four-skill exams</a></li><div style="margin-left: 10px;"><li><a href="our-examinations.html#a1entrylevel">A1- | Entry level</a></li></li><li><a href="our-examinations.html#A1AccessLevel">A1 | Access level</a></li></li><li><a href="our-examinations.html#A1AchieverLevel">A1+ | Achiever level</a></li></li><li><a href="our-examinations.html#A2PreliminaryLevel">A2 | Preliminary level</a></li></li><li><a href="our-examinations.html#A2ElementaryLevel">A2+ | Elementary level</a></li></li><li><a href="our-examinations.html#B1ProgressLevel">B1 | Progress level</a></li><li><a href="our-examinations.html#B2CompetencyLevel">B2 | Competency level</a></li><li><a href="our-examinations.html#B2ForwardLevel">B2+ | Forward level</a></li></div></ul></div>
                     </ul>
                 </li>
-                <li class="menu-item-has-no-children"><a href="news-and-events.html">News and events</a></li>
+                <li class="menu-item-has-no-children"><a href="news-and-events.php">News and events</a></li>
             </ul>
         </div>
     </div>
@@ -118,7 +130,7 @@
           <section class="breadcrub-style-4 section margin-bottom-0">
             <div class="container">
                 <div class="heading-detail-blog text-center">
-                    <h1>Blog entry 1</h1>
+                    <h1><?php echo $entrada['titulo'] ?></h1>
                   </div>
             </div>
           </section>
@@ -130,34 +142,15 @@
     <div class="blog-contents">
       <div class="container">
         <div class="blog-text">
-          <p>Lorem ipsum, dolor sit Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae modi, consequatur
-            velit in a nostrum laborum iusto quam ut voluptatum! amet consectetur adipisicing elit. Cumque fugiat, quod
-            aspernatur eum aliquid laborum, tempora minus, vero illo sapiente modi optio nulla odio doloremque
-            architecto. Dolor neque expedita sed.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, officia quia! Corrupti mollitia at
-            aspernatur ab deserunt explicabo praesentium odit, voluptate autem, atque fugit voluptatum incidunt
-            repudiandae reiciendis sint nemo. Nobis minus doloribus ut reprehenderit optio doloremque expedita non vel?
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et iste cupiditate vitae dolore provident ducimus
-            ex harum modi quibusdam, accusantium ipsum rerum voluptatibus eaque qui voluptate facilis similique at rem!
-          </p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo deserunt consequuntur dicta possimus sit
-            laborum, perspiciatis cupiditate consequatur. Exercitationem, repellendus! Aliquam, harum amet in, suscipit
-            asperiores tempore fugit nulla inventore, expedita nisi enim aspernatur possimus! Ratione corporis minus eum
-            quisquam vitae facilis ad ipsa nihil. Odio provident soluta facere, deserunt ex tenetur necessitatibus illum
-            blanditiis eligendi. Unde enim corrupti provident ad? Hic porro tenetur maxime sit, ducimus a veritatis enim
-            nulla labore voluptatum voluptate omnis! Repudiandae iste officia quod doloremque excepturi aliquid,
-            nesciunt dolor quia maiores modi veritatis cumque temporibus esse earum obcaecati deserunt fugit illum
-            numquam inventore velit molestiae?</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis qui, deserunt maiores veniam reiciendis
-            tempore culpa consectetur nam fuga, facilis voluptate blanditiis quo ab voluptatum reprehenderit aspernatur
-            nemo ad rem distinctio tenetur quasi? Rerum blanditiis inventore nam aperiam modi aliquam dolores quod
-            asperiores soluta! Doloribus soluta dolores obcaecati nulla exercitationem!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam fugiat labore nisi nihil? Reprehenderit
-            eveniet beatae repudiandae soluta accusantium eum iste pariatur totam aut aliquam ab quidem, perferendis
-            quasi exercitationem doloribus et ad impedit iure! Itaque sed libero quidem nemo voluptate suscipit corporis
-            magnam officiis culpa recusandae aliquid unde modi sapiente debitis, ipsum labore consequatur dolore
-            voluptatem quaerat omnis earum aperiam. Accusamus neque suscipit, numquam reprehenderit beatae doloribus
-            porro nesciunt nulla, mollitia iure harum doloremque at obcaecati ducimus aperiam perspiciatis?</p>
+          <p>
+
+          <?php
+          
+          echo $entrada['cuerpo'];
+
+          ?>
+          
+        </p>
         </div>
       </div>
     </div>

@@ -1,3 +1,14 @@
+<?php
+
+require 'connection.php';
+
+$q = $pdo->prepare("SELECT * FROM entradas");
+$q->execute(); 
+$q = $q->fetchAll();
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -121,7 +132,7 @@
                       <div><ul><li><a href="our-examinations.html#four-skill-exam" style="font-weight: bold;">Four-skill exams</a></li><div style="margin-left: 10px;"><li><a href="our-examinations.html#a1entrylevel">A1- | Entry level</a></li></li><li><a href="our-examinations.html#A1AccessLevel">A1 | Access level</a></li></li><li><a href="our-examinations.html#A1AchieverLevel">A1+ | Achiever level</a></li></li><li><a href="our-examinations.html#A2PreliminaryLevel">A2 | Preliminary level</a></li></li><li><a href="our-examinations.html#A2ElementaryLevel">A2+ | Elementary level</a></li></li><li><a href="our-examinations.html#B1ProgressLevel">B1 | Progress level</a></li><li><a href="our-examinations.html#B2CompetencyLevel">B2 | Competency level</a></li><li><a href="our-examinations.html#B2ForwardLevel">B2+ | Forward level</a></li></div></ul></div>
                   </ul>
               </li>
-              <li class="menu-item-has-no-children"><a href="news-and-events.html">News and events</a></li>
+              <li class="menu-item-has-no-children"><a href="news-and-events.php">News and events</a></li>
           </ul>
       </div>
   </div>
@@ -152,173 +163,45 @@
   <section class="popular-courses section margin-top-0">
     <div class="container">
       <h2 class="rotated-text-2 d-none d-md-block">Our news!</h2>
+
       <div class="row">
-        <div class="col-12 col-md-6 col-lg-3 padding-0">
-          <div class="course-card-style-3">
-            <div class="card">
-              <div class="thumb">
-                <img class="card-img-top"
-                  src="assets/img/University/All_courses/course_5.png" alt="Card image cap">
-                <!-- <div class="hover">
-                  <span class="plus">
-                    <i class="fas fa-plus-circle"></i>
-                  </span>
-                  <div class="hover-inner">
-                    <div class="course-details">
-                      <p>Lorem ipsum dolor sit, sapiente eaque in voluptas, ab repellendus. Molestias molestiae dolorem
-                        nulla.</p>
+
+        
+        <?php
+
+        foreach ($q as $key => $entrada) {
+          $id = $entrada['id'];
+          $img_url = $entrada['thumbnail'];
+          $titulo = $entrada['titulo'];
+          $autor = $entrada['autor'];
+
+            echo '
+            <div class="col-12 col-md-6 col-lg-3 padding-0 blog-entry">
+              <div class="course-card-style-3">
+                <div class="card">
+                  <a href="blog-detail.php?id='.$id.'">
+                    <div class="thumb">
+                      <img class="card-img-top"
+                      src="assets/blog_imgs/'.$img_url.'" alt="Card image cap">
                     </div>
-                  </div>
-                </div> -->
-              </div>
-
-              <div class="card-img-overlay">
-                <div class="card-body">
-                  <h6>Blog entry 1</h6>
-                  <!-- <p>By Elena Marie Clair</p> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 padding-0">
-          <div class="course-card-style-3">
-            <div class="card">
-              <div class="thumb">
-                <img class="card-img-top"
-                  src="assets/img/University/All_courses/course_3.png"
-                  alt="Card image cap">
-                <!-- <div class="hover">
-                  <span class="plus">
-                    <i class="fas fa-plus-circle"></i>
-                  </span>
-                  <div class="hover-inner">
-                    <div class="course-details">
-                      <p>Lorem ipsum dolor sit, sapiente eaque in voluptas, ab repellendus. Molestias molestiae dolorem
-                        nulla.</p>
+                    
+                    <div class="card-img-overlay">
+                      <div class="card-body" style="cursor: pointer">
+                        <h6>'.$titulo.'</h6>
+                        <p>'.$autor.'</p> 
+                      </div>
                     </div>
-                  </div>
-                </div> -->
-              </div>
-
-              <div class="card-img-overlay">
-                <div class="card-body">
-                  <h6>Blog entry 2</h6>
-                  <!-- <p>By Elena Marie Clair</p> -->
+                  </a>  
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 padding-0">
-          <div class="course-card-style-3">
-            <div class="card">
-              <div class="thumb">
-                <img class="card-img-top"
-                  src="assets/img/University/All_courses/course_8.png" alt="Card image cap">
-              </div>
-
-              <div class="card-img-overlay">
-                <div class="card-body">
-                  <h6>Blog entry 3</h6>
-                  <!-- <p>By Elena Marie Clair</p> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 padding-0">
-          <div class="course-card-style-3">
-            <div class="card">
-              <div class="thumb">
-                <img class="card-img-top" src="assets/img/University/All_courses/course_4.png"
-                  alt="Card image cap">
-              </div>
-
-              <div class="card-img-overlay">
-                <div class="card-body">
-                  <h6>Blog entry 4</h6>
-                  <!-- <p>By Elena Marie Clair</p> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-3 padding-0">
-          <div class="course-card-style-3">
-            <div class="card">
-              <div class="thumb">
-                <img class="card-img-top"
-                  src="assets/img/University/All_courses/course_5.png" alt="Card image cap">
-              
-              </div>
-
-              <div class="card-img-overlay">
-                <div class="card-body">
-                  <h6>Blog entry 5</h6>
-                  <!-- <p>By Elena Marie Clair</p> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 padding-0">
-          <div class="course-card-style-3">
-            <div class="card">
-              <div class="thumb">
-                <img class="card-img-top"
-                  src="assets/img/University/All_courses/course_3.png"
-                  alt="Card image cap">
-              </div>
-
-              <div class="card-img-overlay">
-                <div class="card-body">
-                  <h6>Blog entry 6</h6>
-                  <!-- <p>By Elena Marie Clair</p> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 padding-0">
-          <div class="course-card-style-3">
-            <div class="card">
-              <div class="thumb">
-                <img class="card-img-top"
-                  src="assets/img/University/All_courses/course_8.png" alt="Card image cap">
-              </div>
-
-              <div class="card-img-overlay">
-                <div class="card-body">
-                  <h6>Blog entry 7</h6>
-                  <!-- <p>By Elena Marie Clair</p> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 padding-0">
-          <div class="course-card-style-3">
-            <div class="card">
-              <div class="thumb">
-                <img class="card-img-top" src="assets/img/University/All_courses/course_4.png"
-                  alt="Card image cap">
-              </div>
-
-              <div class="card-img-overlay">
-                <div class="card-body">
-                  <h6>Blog entry 8</h6>
-                  <!-- <p>By Elena Marie Clair</p> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+            </div>';
+            
+        }
+            
+       ?>
+      
+    </div>
+      
     </div>
   </section>
 
