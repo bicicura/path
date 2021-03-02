@@ -29,6 +29,17 @@
     <!-- CSS exclusivamente para esta pag -->
     <link rel="stylesheet" href="assets/css/application-form.css">
     <title>Path | Application form</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQWREFVWND"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BQWREFVWND');
+    </script>
+
     <style type="text/css">
     /* 
     ======

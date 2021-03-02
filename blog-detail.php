@@ -38,6 +38,17 @@ $entrada = $q->fetch();
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/custom.css">
   <title>Path | <?php echo $entrada['titulo'] ?></title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQWREFVWND"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BQWREFVWND');
+</script>
+
   <style>
 
     .blog-detail__gradient-cont {
