@@ -186,7 +186,6 @@ $q = $q->fetchAll();
           $id = $entrada['id'];
           $img_url = $entrada['thumbnail'];
           $titulo = $entrada['titulo'];
-          $autor = $entrada['autor'];
 
             echo '
             <div class="col-12 col-md-6 col-lg-3 padding-0 blog-entry">
@@ -201,7 +200,6 @@ $q = $q->fetchAll();
                     <div class="card-img-overlay">
                       <div class="card-body" style="cursor: pointer">
                         <h6>'.$titulo.'</h6>
-                        <p>'.$autor.'</p> 
                       </div>
                     </div>
                   </a>  
