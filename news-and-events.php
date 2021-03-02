@@ -30,6 +30,17 @@ $q = $q->fetchAll();
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/custom.css" />
   <title>Path | News and Events</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BQWREFVWND"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BQWREFVWND');
+</script>
+
   <style>
 
     @media only screen and (max-width: 799px) {
