@@ -616,7 +616,7 @@
 
         .quote__after-coma {
             position: absolute;
-            top: 13%;
+            top: 9%;
             left: 0;
         }
 
@@ -712,14 +712,13 @@
             transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
         }
 
-        .international_anim, .our-levels-anim, .our-principles-anim, .join-path-title, .price-card, .inbuilt__titles-aside, .inbuilt__info, 
-        .natgeo__img, .natgeo-content p, .benefits__img, .benefits__right, .quote__after-text h2, .series__title, .series__card{
+        .international_anim, .our-levels-anim, .our-principles-anim, .join-path-title, .price-card {
           opacity: 0;
           transform: translateY(7%);
           transition: .2s cubic-bezier(0.13, 0.77, 0.33, 1); 
         }
 
-        .carta-anim-1, .carta-anim-3, .inbuilt-checks-1, .inbuilt-checks-2, .carta-anim-2, .img-anim {
+        .carta-anim-1, .carta-anim-3, .carta-anim-2, .img-anim {
           opacity: 0;
           transform: translateX(-5%);
           transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
@@ -1153,13 +1152,25 @@
           line-height: 1.4;
         }
 
-        .carta-anim-2, .img-anim, .carta-anim-1, .carta-anim-3, .inbuilt-checks-1, .inbuilt-checks-2, .our-principles-anim {
+        .carta-anim-2, .img-anim, .carta-anim-1, .carta-anim-3, .our-principles-anim {
           opacity: 0;
           transform: translateY(10%);
           transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
         }
       }
 
+    .fade-in {
+    opacity: 0;
+    transform: translateY(10%);
+    transition: opacity 250ms ease-in;
+    }
+
+    .fade-in.appear {
+    opacity: 1;
+    transform: translateY(0%);
+    }
+
+      /* .inbuilt-checks-1, .inbuilt-checks-2, .inbuilt__info, .inbuilt__titles-aside, .natgeo__img, .natgeo-content p, .benefits__img, .benefits__right, */
         </style>
 </head>
 
@@ -2040,7 +2051,7 @@
       <div class="container">
         <div class="inbuilt__title-container">
           <h2 class="inbuilt__title">Path Inbuilt programme</h2>
-          <div class="feature d-flex align-items-baseline inbuilt-checks inbuilt-checks-1">
+          <div class="feature d-flex align-items-baseline inbuilt-checks inbuilt-checks-1 fade-in">
             <div class="d-flex align-items-baseline">
               <i class="fas fa-check path-inbuilt-check"></i>
               <p style="font-weight: bold;">Free of charge</p>
@@ -2053,12 +2064,12 @@
         </div>
         <div class="inbuilt__titles-container">
           <div class="features inbuilt-info-container">
-            <div class="inbuilt__info">
+            <div class="inbuilt__info fade-in">
               <p>Path exams provide focus and pace to keep your students motivated, every step of the way. Our progressive scale of levels makes it possible for institutions to adopt Path exams as their end-of-course assessment.</p>
               <p>Institutions adopting the Inbuilt programme will work closely together with our academic team to align the different Path levels with their existing courses. In this way, all students will be candidates to a Path international certification at the end of the school year.</p>
               <p>The Path administrative team will also develop a tailor-made solution for flexible exam registration and payment of fees, so that all students will have confirmation of placement at the beginning of their courses.</p>
             </div>
-            <div class="inbuilt__titles-aside">
+            <div class="inbuilt__titles-aside fade-in">
               <h4 style="color:white">Requirements</h4>
               <p style="color: white;">Eligible for institutions wishing to adopt Path exams for<span style="font-weight: bold;"> all their students </span>and integrate our proposal into their existing programmes.</p>
               <p style="color: white;"><span style="font-weight: bold;">- Minimum</span> number of candidates: <span style="font-weight: bold;">50</span></p>
@@ -2291,19 +2302,19 @@
     <section class="section" id="natgeo-learning">
       <div class="container">
         <div class="natgeo-content">
-          <div class="natgeo__logo-container"><img class="natgeo__img" src="assets\img\logos\natgeo-learning.svg" alt=""></div>
-          <p><span style="font-weight: bold;">Path exams</span> do not need any special study books or preparation in particular. All that is really needed is to attend regular classes in order to develop effective communicative competence.</p>
-          <p>Teachers or institutions are free to choose the material they want for each of their classes. Nevertheless, <span style="font-weight: bold;">Path Examinations</span> is in partnership with <span style="font-weight: bold;">National Geographic Learning</span><span style="margin-left: 5px!important;" class="natgeo-cont"><img src="assets\img\logos\nat-geo-01.svg" alt=""></span> to provide anyone interested with a highly communicative alternative which is also aligned with our approach.</p>
+          <div class="natgeo__logo-container"><img class="natgeo__img fade-in" src="assets\img\logos\natgeo-learning.svg" alt=""></div>
+          <p class="fade-in"><span style="font-weight: bold;">Path exams</span> do not need any special study books or preparation in particular. All that is really needed is to attend regular classes in order to develop effective communicative competence.</p>
+          <p class="fade-in">Teachers or institutions are free to choose the material they want for each of their classes. Nevertheless, <span style="font-weight: bold;">Path Examinations</span> is in partnership with <span style="font-weight: bold;">National Geographic Learning</span><span style="margin-left: 5px!important;" class="natgeo-cont"><img src="assets\img\logos\nat-geo-01.svg" alt=""></span> to provide anyone interested with a highly communicative alternative which is also aligned with our approach.</p>
         </div>
       </div>
       <div class="movida">
         <div class="container benefits">
           <div class="benefits__left">
-            <div class="benefits__img-container"><img class="benefits__img" src="assets\img\logos\natgeo-learning.svg" alt=""></div>
+            <div class="benefits__img-container"><img class="benefits__img fade-in" src="assets\img\logos\natgeo-learning.svg" alt=""></div>
             <span>+</span>
-            <div class="benefits__img-container"><img class="benefits__img" src="assets\img\logos\path_natgeo-01.svg" alt=""></div>
+            <div class="benefits__img-container"><img class="benefits__img fade-in" src="assets\img\logos\path_natgeo-01.svg" alt=""></div>
           </div>
-          <div class="popover-container benefits__right">
+          <div class="popover-container benefits__right fade-in">
             <button id="popup-toggle" class="main-btn" style="background-color: #004969;">See benefits</button>
             <div class="popover-right">
               <div class="contact-links">
@@ -2350,7 +2361,7 @@
            <div class="quote__after-courtain">
                 <div class="quote__after-text container">
                     <img class="quote__after-coma" src="assets\img\icons\caro-bac.png" alt="Quote">
-                <h2 style="font-weight: 500;">At <b>Path Examinations</b> and <b>National Geographic Learning</b>, we believe that education is one of the greatest forces of change, and a source of wealth and wellbeing for all humankind.</h2>
+                <h2 class="fade-in" style="font-weight: 500;">At <b>Path Examinations</b> and <b>National Geographic Learning</b>, we believe that education is one of the greatest forces of change, and a source of wealth and wellbeing for all humankind.</h2>
                 </div>
            </div>
         </div>
@@ -2359,11 +2370,11 @@
     <section class="popular-courses section margin-top-0">
       <div class="container">
         <div class="text-center">
-          <h2 class="text-center teachers__title series__title">Series</h2>
+          <h2 class="text-center teachers__title series__title fade-in">Series</h2>
           <p class="series__text">Members and centres of Path Examinations will be able to access a digital sample of the following recommended series.</p>
         </div>
         <div class="row justify-content-center series__row1">
-          <div class="col-12 col-md-6 col-lg-6 padding-0 hover series__card">
+          <div class="col-12 col-md-6 col-lg-6 padding-0 hover series__card fade-in">
             <div class="course-card-style-3">
               <div class="card carta-entera">
                 <div class="thumb">
@@ -2392,7 +2403,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-6 padding-0 series__card">
+          <div class="col-12 col-md-6 col-lg-6 padding-0 series__card fade-in">
             <div class="course-card-style-3">
               <div class="card carta-entera">
                 <div class="thumb series__info">
@@ -2423,7 +2434,7 @@
           </div>
         </div>
         <div class="row justify-content-center series__row2">
-          <div class="col-12 col-md-6 col-lg-6 padding-0 series__card">
+          <div class="col-12 col-md-6 col-lg-6 padding-0 series__card fade-in">
             <div class="course-card-style-3">
               <div class="card carta-entera">
                 <div class="thumb series__info">
@@ -2452,7 +2463,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-6 padding-0 series__card">
+          <div class="col-12 col-md-6 col-lg-6 padding-0 series__card fade-in">
             <div class="course-card-style-3">
               <div class="card carta-entera">
                 <div class="thumb series__info">
@@ -2704,43 +2715,43 @@
         }; 
 
         
-        if (scroll >= 3700) {
-            $('.inbuilt-checks-1').css({'opacity':1, 'transform':'translateX(0%)'});
-            setTimeout(() => {
-            $('.inbuilt-checks-2').css({'opacity':1, 'transform':'translateX(0%)'});
-            }, 200);
-            setTimeout(() => {
-            $('.inbuilt__info').css({'opacity':1, 'transform':'translateY(0%)'});
-            }, 500);
-            setTimeout(() => {
-            $('.inbuilt__titles-aside').css({'opacity':1, 'transform':'translateY(0%)'});
-            }, 700);
-        };
+        // if (scroll >= 3700) {
+        //     $('.inbuilt-checks-1').css({'opacity':1, 'transform':'translateX(0%)'});
+        //     setTimeout(() => {
+        //     $('.inbuilt-checks-2').css({'opacity':1, 'transform':'translateX(0%)'});
+        //     }, 200);
+        //     setTimeout(() => {
+        //     $('.inbuilt__info').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     }, 500);
+        //     setTimeout(() => {
+        //     $('.inbuilt__titles-aside').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     }, 700);
+        // };
 
-        if (scroll >= 6500) {
-            $('.natgeo__img').css({'opacity':1, 'transform':'translateY(0%)'});
-            setTimeout(() => {
-            $('.natgeo-content p').css({'opacity':1, 'transform':'translateY(0%)'});
-            }, 300);
-        }; 
+        // if (scroll >= 6500) {
+        //     $('.natgeo__img').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     setTimeout(() => {
+        //     $('.natgeo-content p').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     }, 300);
+        // }; 
 
-        if (scroll >= 7300) {
-            $('.benefits__img').css({'opacity':1, 'transform':'translateY(0%)'});
-            setTimeout(() => {
-            $('.benefits__right').css({'opacity':1, 'transform':'translateY(0%)'});
-            }, 500);
-          };
+        // if (scroll >= 7300) {
+        //     $('.benefits__img').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     setTimeout(() => {
+        //     $('.benefits__right').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     }, 500);
+        //   };
 
-          if (scroll >= 7700) {
-            $('.quote__after-text h2').css({'opacity':1, 'transform':'translateY(0%)'});
-          };
+        //   if (scroll >= 7700) {
+        //     $('.quote__after-text h2').css({'opacity':1, 'transform':'translateY(0%)'});
+        //   };
 
-          if (scroll >= 8200) {
-            $('.series__title').css({'opacity':1, 'transform':'translateY(0%)'});
-            setTimeout(() => {
-            $('.series__card').css({'opacity':1, 'transform':'translateY(0%)'});
-            }, 500);
-          };
+        //   if (scroll >= 8200) {
+        //     $('.series__title').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     setTimeout(() => {
+        //     $('.series__card').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     }, 500);
+        //   };
 
         })}
   
@@ -2772,43 +2783,43 @@
             }, 300);
         }; 
 
-        if (scroll >= 5200) {
-            $('.inbuilt-checks-1').css({'opacity':1, 'transform':'translateY(0%)'});
-            setTimeout(() => {
-            $('.inbuilt-checks-2').css({'opacity':1, 'transform':'translateY(0%)'});
-            }, 200);
-            setTimeout(() => {
-            $('.inbuilt__info').css({'opacity':1, 'transform':'translateY(0%)'});
-            }, 500);
-            setTimeout(() => {
-            $('.inbuilt__titles-aside').css({'opacity':1, 'transform':'translateY(0%)'});
-            }, 700);
-        };
+        // if (scroll >= 5200) {
+        //     $('.inbuilt-checks-1').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     setTimeout(() => {
+        //     $('.inbuilt-checks-2').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     }, 200);
+        //     setTimeout(() => {
+        //     $('.inbuilt__info').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     }, 500);
+        //     setTimeout(() => {
+        //     $('.inbuilt__titles-aside').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     }, 700);
+        // };
 
-        if (scroll >= 10300) {
-            $('.natgeo__img').css({'opacity':1, 'transform':'translateY(0%)'});
-            setTimeout(() => {
-            $('.natgeo-content p').css({'opacity':1, 'transform':'translateY(0%)'});
-            }, 300);
-        }; 
+        // if (scroll >= 10300) {
+        //     $('.natgeo__img').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     setTimeout(() => {
+        //     $('.natgeo-content p').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     }, 300);
+        // }; 
 
-        if (scroll >= 11000) {
-            $('.benefits__img').css({'opacity':1, 'transform':'translateY(0%)'});
-            setTimeout(() => {
-            $('.benefits__right').css({'opacity':1, 'transform':'translateY(0%)'});
-            }, 500);
-          };
+        // if (scroll >= 11000) {
+        //     $('.benefits__img').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     setTimeout(() => {
+        //     $('.benefits__right').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     }, 500);
+        //   };
 
-          if (scroll >= 11700) {
-            $('.quote__after-text h2').css({'opacity':1, 'transform':'translateY(0%)'});
-          };
+        //   if (scroll >= 11700) {
+        //     $('.quote__after-text h2').css({'opacity':1, 'transform':'translateY(0%)'});
+        //   };
 
-          if (scroll >= 12100) {
-            $('.series__title').css({'opacity':1, 'transform':'translateY(0%)'});
-            setTimeout(() => {
-            $('.series__card').css({'opacity':1, 'transform':'translateY(0%)'});
-            }, 500);
-          };
+        //   if (scroll >= 12100) {
+        //     $('.series__title').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     setTimeout(() => {
+        //     $('.series__card').css({'opacity':1, 'transform':'translateY(0%)'});
+        //     }, 500);
+        //   };
     
       });
       }
@@ -2820,6 +2831,32 @@
           return check;
         };
   });
+    </script>
+    <script>
+      $(document).ready(function() {
+    const faders = document.querySelectorAll(".fade-in");
+const appearOptions = {
+    rootMargin: "0px 0px -125px 0px"
+};
+const appearOnScroll = new IntersectionObserver (function(
+    entries, 
+    appearOnScroll
+    ) {
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) {
+            return;
+            } else {
+            entry.target.classList.add("appear");
+        appearOnScroll.unobserve(entry.target);
+    }
+});
+},
+ appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+});
+})
     </script>
 </body>
 
