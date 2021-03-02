@@ -434,7 +434,7 @@
         .bg-image-anim{
             animation-name: bg-move;
             animation-duration: 85s;
-            animation-timing-function: ease-in-out;
+            animation-timing-function: linear;
             animation-iteration-count: infinite;
             animation-direction: alternate;
             background-repeat: no-repeat;
@@ -608,12 +608,16 @@
             @keyframes bg-move {
             0% {
                 background-position: top left;
-                background-size: 115%;
+                /* background-size: 115%; */
+                background-size: auto 105%;
+
 
             }
             100% {
                 background-position: bottom right;
-                background-size: 115%;
+                /* background-size: 115%; */
+                background-size: auto 135%;
+
             }
         }
 
@@ -623,7 +627,62 @@
         } */
 
         }
-
+        
+        #nletter-form{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgb(0 73 105 / 87%);
+            z-index: 9999999!important;
+            display: none;
+        }
+        #nletter-form>div {
+            position: relative;
+            background: white;
+            width: 58vw;
+            padding: 25px 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .close-popup {
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            background-color: var(--dark-blue-1);
+            right: -20px;
+            top: -20px;
+            border-radius: 50%;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.3s;
+        }
+        .form-inbuilt-title {
+            width: 60%;
+            margin: 0 auto;
+            margin-bottom: 3%;
+        }
+        #nletter-form form{
+            display: flex!important;
+            flex-direction: row!important;
+            width: 80%;
+            margin: auto 20%;
+        }
+        #nletter-form>div label {
+            /* display: inline-block; */
+            margin-bottom: .5rem;
+            display: none;
+        }
+        .form-inbuilt__container input{
+            padding: .25rem .5rem;
+            border: none;
+            border-bottom: 1px solid #004969;
+        }
         </style>
 </head>
 
@@ -796,7 +855,7 @@
                     <div class="card__content">
                         <div class="card__content-info">
                             <h3 class="text-center">Learn more about Path Examinations services in your area</h3>
-                            <button class="main-btn card-btn">Find Path in your country</button>
+                            <a href="#connect"><button class="main-btn card-btn">Find Path in your country</button></a>
                         </div>
                         <div class="card__content-gradient gradient3"></div>
                         <div class="card__content-background card-background3"></div>
@@ -812,7 +871,7 @@
                 </div>
             </div>
             <div class="card__signup">
-                <h3>Receive the latest news from Path Examinations <span style="font-style: italic;">and keep updated.</span></h3> <button class="large-btn">Sign up</button>
+                <h3>Receive the latest news from Path Examinations <span style="font-style: italic;">and keep updated.</span></h3> <button id="subs" class="large-btn">Sign up</button>
             </div> 
         </div>
     </section>
@@ -823,7 +882,7 @@
     </div>
 
     <section class="section">
-        <div class="connect">
+        <div class="connect" id="connect">
             <div class="connect__title">
                 <h2>Connect with Path Examinations</h2>
             </div>
@@ -884,7 +943,30 @@
     <footer class="footer-section" id="footer">
     </footer>
 
-
+    <div id="nletter-form" class="cerra2">
+        <div class="center-popup content">
+          <div class="close-popup">
+            <i class="fas fa-times"></i>
+              </div>
+              <div>
+            <div class="form-inbuilt__container content">
+                <h4 class="form-inbuilt-title">Receive the latest news from Path Examinations</h4>
+                <form class="d-flex flex-column align-items-center">
+  
+                    <div class="row form-inbuilt-row">
+                      <div class="d-flex flex-column form-row-content">
+                        <label for="">Email address*</label>
+                        <input type="Email" placeholder="Email address">
+                      </div>
+                      
+                    </div>
+          
+                    <button class="main-btn form-inbuilt-button" type="submit">Suscribe</button>
+                </form>
+            </div>
+              </div>
+        </div>
+      </div>
     <div class="preloader" id="preloader">
         <div class="preloader-inner">
             <div class="spinner">
@@ -911,6 +993,15 @@
     <script src="assets/js/toggler.js"></script>
     <script>
         $(document).ready(function(){
+
+
+        $('#subs').click(function () {
+            $('#nletter-form').fadeIn(200)
+        })
+        $('.close-popup').click(function () {
+            $('#nletter-form').fadeOut(200)
+        })
+
             
       // JS DESKTOP
       $(function() {
@@ -1012,6 +1103,7 @@
               return check;
             };
       });
+      
     </script>
 </body>
 
