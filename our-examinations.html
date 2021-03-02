@@ -32,6 +32,22 @@
 
   <style>
 
+    .spa-title {
+      margin-bottom: 0;
+      padding: 1.8% 1%;
+    }
+
+    .fade-in {
+    opacity: 0;
+    transform: translateY(10%);
+    transition: .4s cubic-bezier(0.13, 0.77, 0.33, 1);
+    }
+
+    .fade-in.appear {
+    opacity: 1;
+    transform: translateY(0%);
+    }
+
 .header-img {
       position: relative;
     }
@@ -311,6 +327,8 @@
       height: 100vh;
       background: rgb(0 73 105 / 87%);
       z-index: 99999!important;
+      padding: 5% 2.5%;
+      overflow-y: scroll;
     }
     
     .cerra2{
@@ -334,9 +352,10 @@
       background: white;
       width: 65vw;
       padding: 30px 5%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 0%;
+      margin: 0 auto;
+      left: 0%;
+      transform: translate(0%, 0%);
     }
     #modal-back li {
         margin-right: 20px;
@@ -377,19 +396,13 @@ ANIMS OUR EXAMINATIONS
   transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
 }
 
-.our-exams-anim2, .our-exams-anim3, .our-exams-anim4 {
+.our-exams-anim2 {
   opacity: 0;
   transform: translateY(5%);
   transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
 }
 
   .card {
-    opacity: 0;
-    transform: translateY(5%);
-    transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
-  }
-
-  .speak-card, .basic-exam-card, .a2-level, .independent-level {
     opacity: 0;
     transform: translateY(5%);
     transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1);
@@ -445,6 +458,7 @@ ANIMS OUR EXAMINATIONS
       left: 88%;
       background: rgba(0, 73, 105, .7);
       /* width: 3.8%; */
+      top: 6%;
       border-radius: 4px;
       display: flex;
       flex-direction: column;
@@ -781,7 +795,7 @@ ANIMS OUR EXAMINATIONS
 <div class="section modules" >
   <div class="container modules__container">
     <div class="modules__text-container text-center">
-      <h2 class="our-exams-anim3">Exam modules</h2>
+      <h2 class="our-exams-anim3 fade-in">Exam modules</h2>
       <p class="exam-modules__subtitle">Our examinations are divided into modules, which may be taken separately or altogether:</p>
       <div class="d-flex exams__module-container-mobile">
         <p class="table__title">Speaking module</p> <p class="table__title">Listening module</p> <p class="table__title">Reading and writing module</p>
@@ -822,13 +836,13 @@ ANIMS OUR EXAMINATIONS
   <section class="popular-courses section margin-top-0" id="map-of-levels">
     <div class="container map">
       <div class="map__text-container text-center">
-        <h2 class="our-exams-anim4">Map of levels</h2>
+        <h2 class="our-exams-anim4 fade-in">Map of levels</h2>
         <p>The diagram below shows all of our exam levels, which have been carefully designed to assess candidates progressively.</p>
       </div>
       <div class="map__speak-container" id="speaking-only-exams">
         <h3 class="text-center margin-bottom-30 map__exam-title">Speaking-only exams</h3>
         <div class="row justify-content-center speak-card-container">
-          <div class="col-12 col-md-6 col-lg-3 padding-0 speak-card">
+          <div class="col-12 col-md-6 col-lg-3 padding-0 speak-card fade-in">
             <div class="course-card-style-3">
               <div class="card disparar_modal" id="AminusSPAlevelI" style="border: 1px solid #004969;
               border-radius: 4px;">
@@ -847,12 +861,12 @@ ANIMS OUR EXAMINATIONS
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-3 padding-0 speak-card">
+          <div class="col-12 col-md-6 col-lg-3 padding-0 speak-card fade-in">
             <div class="course-card-style-3">
               <div class="card disparar_modal" id="aSPAlevelII" style="border: 1px solid #004969;
               border-radius: 4px;">
                 <div class="thumb exam-card___text">
-                  <h4 class="text-center">A1 Speaking Performance Assessment (SPA) level II</h4>
+                  <h4 class="text-center spa-title">A1 Speaking Performance Assessment (SPA) level II</h4>
                 </div>
                 <div class="card-img-overlay">
                   <span style="position: absolute;" class="plus plus__container">
@@ -865,7 +879,7 @@ ANIMS OUR EXAMINATIONS
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-3 padding-0 speak-card">
+          <div class="col-12 col-md-6 col-lg-3 padding-0 speak-card fade-in">
             <div class="course-card-style-3 ">
               <div class="card disparar_modal" id="AplusSPAlevelIII" style="border: 1px solid #004969;
               border-radius: 4px;">
@@ -893,7 +907,7 @@ ANIMS OUR EXAMINATIONS
         <div  class="container map__header-guide">
           <div class="row justify-content-center basic-container">
             <h2 class="rotated-text-2 d-none d-md-block">Basic levels</h2>
-            <div class="col-12 col-md-6 col-lg-3 padding-0 basic-exam-card">
+            <div class="col-12 col-md-6 col-lg-3 padding-0 basic-exam-card fade-in">
               <div class="course-card-style-3">
                 <div class="card disparar_modal" id="a1entrylevel" style="border: 1px solid #cfa676;
                 border-radius: 4px;">
@@ -911,7 +925,7 @@ ANIMS OUR EXAMINATIONS
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3 padding-0 basic-exam-card">
+            <div class="col-12 col-md-6 col-lg-3 padding-0 basic-exam-card fade-in">
               <div class="course-card-style-3">
                 <div class="card disparar_modal" id="A1AccessLevel" style="border: 1px solid #cfa676;
                 border-radius: 4px;">
@@ -929,7 +943,7 @@ ANIMS OUR EXAMINATIONS
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3 padding-0 basic-exam-card">
+            <div class="col-12 col-md-6 col-lg-3 padding-0 basic-exam-card fade-in">
               <div class="course-card-style-3">
                 <div class="card disparar_modal" id="A1AchieverLevel"  style="border: 1px solid #cfa676;
                 border-radius: 4px;">
@@ -950,7 +964,7 @@ ANIMS OUR EXAMINATIONS
             </div>
           </div>
           <div class="row justify-content-center a2-levels-container">
-            <div class="col-12 col-md-6 col-lg-3 padding-0 a2-level">
+            <div class="col-12 col-md-6 col-lg-3 padding-0 a2-level fade-in">
               <div class="course-card-style-3">
                 <div class="card disparar_modal" id="A2PreliminaryLevel" style="border: 1px solid #CB574C;
                 border-radius: 4px;">
@@ -969,7 +983,7 @@ ANIMS OUR EXAMINATIONS
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3 padding-0 a2-level">
+            <div class="col-12 col-md-6 col-lg-3 padding-0 a2-level fade-in">
               <div class="course-card-style-3">
                 <div class="card disparar_modal" id="A2ElementaryLevel" style="border: 1px solid #CB574C;
                 border-radius: 4px;">
@@ -994,7 +1008,7 @@ ANIMS OUR EXAMINATIONS
       <div class="container map__header-guide">
         <div class="row justify-content-center independent-level-container">
           <h3 style="left: -15%" class="rotated-text-2 d-none d-md-block">Independent levels</h3>
-          <div class="col-12 col-md-6 col-lg-3 padding-0 independent-level">
+          <div class="col-12 col-md-6 col-lg-3 padding-0 independent-level fade-in">
             <div class="course-card-style-3">
               <div class="card disparar_modal" id="B1ProgressLevel" style="border: 1px solid #767EA5;
               border-radius: 4px;">
@@ -1013,7 +1027,7 @@ ANIMS OUR EXAMINATIONS
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-3 padding-0 independent-level">
+          <div class="col-12 col-md-6 col-lg-3 padding-0 independent-level fade-in">
             <div class="course-card-style-3">
               <div class="card disparar_modal" id="B2CompetencyLevel" style="border: 1px solid #767EA5;
               border-radius: 4px;">
@@ -1031,7 +1045,7 @@ ANIMS OUR EXAMINATIONS
               </div>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-3 padding-0 independent-level">
+          <div class="col-12 col-md-6 col-lg-3 padding-0 independent-level fade-in">
             <div class="course-card-style-3">
               <div class="card disparar_modal" id="B2ForwardLevel" style="border: 1px solid #767EA5;
               border-radius: 4px;">
@@ -1348,30 +1362,7 @@ setTimeout(() => {
               $(window).scroll(function() {
                   
                   var scroll = $(window).scrollTop();
-                  // console.log(scroll);
-if (scroll >= 800) {
-      $('.our-exams-anim3').css({'opacity':1, 'transform':'translateY(0%)'});
-  };
-
-  if (scroll >= 1800) {
-    $('.our-exams-anim4').css({'opacity':1, 'transform':'translateY(0%)'});
-};
-    
-    if (scroll >= 2000) {
-      $('.speak-card').css({'opacity':1, 'transform':'translateY(0%)'});
-    };
-    
-    if (scroll >= 2300) {
-      $('.basic-exam-card').css({'opacity':1, 'transform':'translateY(0%)'});
-    };
-    
-    if (scroll >= 2500) {
-      $('.a2-level').css({'opacity':1, 'transform':'translateY(0%)'});
-    };
-    
-    if (scroll >= 3000) {
-      $('.independent-level').css({'opacity':1, 'transform':'translateY(0%)'});
-    };           
+                  // console.log(scroll);          
           });
           // JS MOBILE
       }
@@ -1391,29 +1382,6 @@ if (scroll >= 800) {
       $('.card').css({'opacity':1, 'transform':'translateY(0%)'});
     };
               
-  if (scroll >= 1500) {
-      $('.our-exams-anim3').css({'opacity':1, 'transform':'translateY(0%)'});
-  };
-
-  if (scroll >= 3400) {
-    $('.our-exams-anim4').css({'opacity':1, 'transform':'translateY(0%)'});
-  };
-
-    if (scroll >= 3700) {
-      $('.speak-card').css({'opacity':1, 'transform':'translateY(0%)'});
-    };
-    
-    if (scroll >= 4800) {
-      $('.basic-exam-card').css({'opacity':1, 'transform':'translateY(0%)'});
-    };
-    
-    if (scroll >= 5800) {
-      $('.a2-level').css({'opacity':1, 'transform':'translateY(0%)'});
-    };
-    
-    if (scroll >= 6500) {
-      $('.independent-level').css({'opacity':1, 'transform':'translateY(0%)'});
-    };
       });
       }
       });
@@ -1425,6 +1393,32 @@ if (scroll >= 800) {
         };
   });
 
+})
+</script>
+<script>
+  $(document).ready(function() {
+const faders = document.querySelectorAll(".fade-in");
+const appearOptions = {
+rootMargin: "0px 0px -115px 0px"
+};
+const appearOnScroll = new IntersectionObserver (function(
+entries, 
+appearOnScroll
+) {
+    entries.forEach(entry => {
+        if(!entry.isIntersecting) {
+        return;
+        } else {
+        entry.target.classList.add("appear");
+    appearOnScroll.unobserve(entry.target);
+}
+});
+},
+appearOptions);
+
+faders.forEach(fader => {
+appearOnScroll.observe(fader);
+});
 })
 </script>
 

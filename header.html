@@ -301,24 +301,29 @@
     </div>
 
         <script>
-            if (window.location.href.indexOf("index") > -1) {
+            if (window.location.href.indexOf("") > -1) {
                 $('#index').addClass('current-menu-item')
             };
             
             if (window.location.href.indexOf("meet-path") > -1) {
                 $('#meet-path').addClass('current-menu-item')
+                $('#index').removeClass('current-menu-item')
             };
             if (window.location.href.indexOf("students-and-parents") > -1) {
                 $('#students-and-parents').addClass('current-menu-item')
+                $('#index').removeClass('current-menu-item')
             };
             if (window.location.href.indexOf("our-examinations") > -1) {
                 $('#our-examinations').addClass('current-menu-item')
+                $('#index').removeClass('current-menu-item')
             };
             if (window.location.href.indexOf("news-and-events") > -1) {
                 $('#news-and-events').addClass('current-menu-item')
+                $('#index').removeClass('current-menu-item')
             };
             if (window.location.href.indexOf("teachers-institutions") > -1) {
                 $('#teachers-institutions').addClass('current-menu-item')
+                $('#index').removeClass('current-menu-item')
             };
 
 
