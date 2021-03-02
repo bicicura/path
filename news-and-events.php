@@ -104,7 +104,7 @@ $q = $q->fetchAll();
               <a href="#"><img src="assets/img/logos/logo-mob.jpg" alt="logo" class="img-fluid"></a>
           </div>
           <div class="divider"></div>
-          <div class="language">
+          <!-- <div class="language">
               <div class="dropdown">
                   <button class="active" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
                       aria-expanded="false">
@@ -115,7 +115,7 @@ $q = $q->fetchAll();
                               alt="flag image" class="flag" /></button>      
                   </div>
               </div>
-          </div>
+          </div> -->
       </div>
       <div class="nav-menu-items">
           <ul class="nav-items">

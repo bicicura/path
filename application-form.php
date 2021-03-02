@@ -335,7 +335,7 @@
                 <a href="#"><img src="assets/img/logos/path_logo-mob.svg" alt="logo" class="img-fluid"></a>
             </div>
             <div class="divider"></div>
-            <div class="language">
+            <!-- <div class="language">
                 <div class="dropdown">
                     <button class="active" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
@@ -347,7 +347,7 @@
                         
                     </div>
                 </div>
-            </div>
+            </div> -->
             
         </div>
 
