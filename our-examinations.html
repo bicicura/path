@@ -32,11 +32,6 @@
 
   <style>
 
-    .spa-title {
-      margin-bottom: 0;
-      padding: 1.8% 1%;
-    }
-
     .fade-in {
     opacity: 0;
     transform: translateY(10%);
@@ -252,6 +247,10 @@
     ======================
     */
 
+    .a2elementary {
+      max-height: 250px;
+    }
+
     .map__text-container h2 {
       position: relative;
     }
@@ -317,10 +316,14 @@
     }
 
     .exam-card___text {
-      padding: 38% 0;
+      padding: 35% 3%;
+      max-height: 230px;
+      min-height: 200px;
     }
 
-
+    .exam-card___text h4 {
+      margin-bottom: 0;
+    }
 
 
     /* MODAL HECHO POR FRAN */
@@ -973,7 +976,7 @@ ANIMS OUR EXAMINATIONS
                 <div class="card disparar_modal" id="A2PreliminaryLevel" style="border: 1px solid #CB574C;
                 border-radius: 4px;">
                   <div class="thumb exam-card___text">
-                    <h4>A2 Preliminary level</h4>
+                    <h4 class="text-center">A2 Preliminary level</h4>
                     <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_5.png" alt="Card image cap"> -->
                   </div>
                   <div class="card-img-overlay">
@@ -991,7 +994,7 @@ ANIMS OUR EXAMINATIONS
               <div class="course-card-style-3">
                 <div class="card disparar_modal" id="A2ElementaryLevel" style="border: 1px solid #CB574C;
                 border-radius: 4px;">
-                  <div class="thumb exam-card___text">
+                  <div class="thumb exam-card___text a2elementary">
                     <h4 class="text-center">A2+ Elementary level</h4>
                     <!-- <img class="card-img-top" src="assets/img/University/All_courses/course_4.png"alt="Card image cap"> -->
                   </div>
@@ -1036,7 +1039,7 @@ ANIMS OUR EXAMINATIONS
               <div class="card disparar_modal" id="B2CompetencyLevel" style="border: 1px solid #767EA5;
               border-radius: 4px;">
                 <div class="thumb exam-card___text">
-                  <h4>B2 Competency level</h4>
+                  <h4 class="text-center">B2 Competency level</h4>
                 </div>
                 <div class="card-img-overlay">
                   <span style="position: absolute;" class="plus plus__container">
