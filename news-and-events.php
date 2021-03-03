@@ -191,6 +191,7 @@ $q = $q->fetchAll();
             <div class="col-12 col-md-6 col-lg-3 padding-0 blog-entry">
               <div class="course-card-style-3">
                 <div class="card">
+
                   <a href="blog-detail.php?id='.$id.'">
                     <div class="thumb">
                       <img class="card-img-top"
@@ -199,6 +200,10 @@ $q = $q->fetchAll();
                     
                     <div class="card-img-overlay">
                       <div class="card-body" style="cursor: pointer">
+                      <span style="position: absolute; z-index: 2; right: 5px; bottom:5px" class="plus plus__container">
+                    <i style="color: #004969; border-radius: 12px;" class="fas fa-plus-circle" id="open-exam-modal"></i>
+                  </span>
+
                         <h6>'.$titulo.'</h6>
                       </div>
                     </div>
