@@ -23,7 +23,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/custom.css">
-    <title>Path | Teachers and Institutions</title>
+    <title>Path | Teachers and institutions</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQWREFVWND"></script>
@@ -49,6 +49,8 @@
       height: 100vh;
       background: rgb(0 73 105 / 87%);
       z-index: 9999999!important;
+      padding: 2.5% 0;
+      overflow-y: scroll;
     }
 
     #learn-more-form>div {
@@ -56,9 +58,10 @@
     background: white;
     width: 58vw;
     padding: 25px 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    margin: 0 auto;
 }
 
   .close-popup {
@@ -121,7 +124,7 @@
 
     .heading {
         height: 60px!important;
-        width: 60%!important;
+        width: 62%!important;
     }
 
     .breadcrub-style-5 h1 {
@@ -836,6 +839,12 @@
         .form-inbuilt-button {
           margin: 0;
         }
+
+        @media (max-width: 1250px){
+          .life-details {
+            overflow-y: scroll;
+          }
+        }
         
 
 
@@ -927,7 +936,7 @@
           }
 
           .key-reasons-title {
-            max-width: 90%!important;
+            max-width: 100%!important;
           }
 
           .inbuilt-benefits {
@@ -2475,7 +2484,7 @@
                     <span class="plus">
                       <i class="fas fa-plus-circle"></i>
                     </span>
-                    <div class="hover-inner hover-inner-for-mobile4">
+                    <div class="hover-inner hover-inner-for-mobile4 life-details">
                       <div class="course-details">
                         <p>Life is a series which brings the world to the classroom. Through interesting content, videos and topics, this series inspires a whole generation of decision-makers to develop their ability to think critically and communicate effectively in the global community.  Relevant and up-to-date topics involve students, connect them with people and places from around the world, encourage them to develop well-informed opinions and help them make connections between the content and their own lives.</p>
                         <div class="d-flex">
@@ -2718,45 +2727,6 @@
             }, 300);
         }; 
 
-        
-        // if (scroll >= 3700) {
-        //     $('.inbuilt-checks-1').css({'opacity':1, 'transform':'translateX(0%)'});
-        //     setTimeout(() => {
-        //     $('.inbuilt-checks-2').css({'opacity':1, 'transform':'translateX(0%)'});
-        //     }, 200);
-        //     setTimeout(() => {
-        //     $('.inbuilt__info').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     }, 500);
-        //     setTimeout(() => {
-        //     $('.inbuilt__titles-aside').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     }, 700);
-        // };
-
-        // if (scroll >= 6500) {
-        //     $('.natgeo__img').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     setTimeout(() => {
-        //     $('.natgeo-content p').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     }, 300);
-        // }; 
-
-        // if (scroll >= 7300) {
-        //     $('.benefits__img').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     setTimeout(() => {
-        //     $('.benefits__right').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     }, 500);
-        //   };
-
-        //   if (scroll >= 7700) {
-        //     $('.quote__after-text h2').css({'opacity':1, 'transform':'translateY(0%)'});
-        //   };
-
-        //   if (scroll >= 8200) {
-        //     $('.series__title').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     setTimeout(() => {
-        //     $('.series__card').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     }, 500);
-        //   };
-
         })}
   
           // JS MOBILE
@@ -2787,43 +2757,6 @@
             }, 300);
         }; 
 
-        // if (scroll >= 5200) {
-        //     $('.inbuilt-checks-1').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     setTimeout(() => {
-        //     $('.inbuilt-checks-2').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     }, 200);
-        //     setTimeout(() => {
-        //     $('.inbuilt__info').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     }, 500);
-        //     setTimeout(() => {
-        //     $('.inbuilt__titles-aside').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     }, 700);
-        // };
-
-        // if (scroll >= 10300) {
-        //     $('.natgeo__img').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     setTimeout(() => {
-        //     $('.natgeo-content p').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     }, 300);
-        // }; 
-
-        // if (scroll >= 11000) {
-        //     $('.benefits__img').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     setTimeout(() => {
-        //     $('.benefits__right').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     }, 500);
-        //   };
-
-        //   if (scroll >= 11700) {
-        //     $('.quote__after-text h2').css({'opacity':1, 'transform':'translateY(0%)'});
-        //   };
-
-        //   if (scroll >= 12100) {
-        //     $('.series__title').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     setTimeout(() => {
-        //     $('.series__card').css({'opacity':1, 'transform':'translateY(0%)'});
-        //     }, 500);
-        //   };
     
       });
       }
