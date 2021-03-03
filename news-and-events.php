@@ -216,6 +216,147 @@ $q = $q->fetchAll();
     </div>
   </section>
 
+
+  <!-- Seccions newsletter -->
+  <style>
+
+.card__signup {
+        margin-top: 6rem;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid rgba(0,73,105, .5);
+        justify-content: space-between;
+        display: flex;
+        align-items: baseline;
+        opacity: 0;
+        transform: translateX(-5%);
+        transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1)!important;
+    }
+
+    .card__signup button {
+        margin: 0;
+    }
+    
+    .col1, .col2 {
+        opacity: 0;
+        transform: translateY(10%);
+        transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1)!important;
+    }
+
+     
+    #nletter-form{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgb(0 73 105 / 87%);
+            z-index: 9999999!important;
+            display: none;
+        }
+        #nletter-form>div {
+            position: relative;
+            background: white;
+            width: 58vw;
+            padding: 25px 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .close-popup {
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            background-color: var(--dark-blue-1);
+            right: -20px;
+            top: -20px;
+            border-radius: 50%;
+            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.3s;
+        }
+        .form-inbuilt-title {
+            width: 60%;
+            margin: 0 auto;
+            margin-bottom: 3%;
+        }
+        #nletter-form form{
+            display: flex!important;
+            flex-direction: row!important;
+            width: 80%;
+            margin: auto 20%;
+        }
+        #nletter-form>div label {
+            /* display: inline-block; */
+            margin-bottom: .5rem;
+            display: none;
+        }
+        .form-inbuilt__container input{
+            padding: .25rem .5rem;
+            border: none;
+            border-bottom: 1px solid #004969;
+        }
+        @media only screen and (max-width: 799px) {
+        #nletter-form form {
+                display: flex!important;
+                flex-direction: column!important;
+                width: 100%;
+                margin: 0;
+                margin-top: 25%;
+            }
+        }
+
+  </style>
+
+  <div style="width: 100%; display: flex; margin-top: -90px; justify-content: center; align-items: center">
+    <div class="card__signup" style="opacity: 1; width: 80%; transform: translateX(0%);">
+      <h3>Receive the latest news from Path Examinations <span style="font-style: italic;">and keep updated.</span></h3> <button id="subs" class="large-btn">Sign up</button>
+    </div>
+  </div>
+    
+
+            <div id="nletter-form" class="cerra2">
+        <div class="center-popup content">
+          <div class="close-popup">
+            <i class="fas fa-times"></i>
+              </div>
+              <div>
+            <div class="form-inbuilt__container content">
+                <h4 class="form-inbuilt-title">Receive the latest news from Path Examinations</h4>
+                <form class="d-flex flex-column align-items-center">
+  
+                    <div class="row form-inbuilt-row">
+                      <div class="d-flex flex-column form-row-content">
+                        <label for="">Email address*</label>
+                        <input type="Email" placeholder="Email address" id="nl-email">
+                      </div>
+                      
+                    </div>
+          
+                    <button class="main-btn form-inbuilt-button" type="submit" id="nl-sub">Subscribe</button>
+                </form>
+                <div id="nl-form-msj"></div>
+            </div>
+              </div>
+        </div>
+      </div>
+      <script>
+
+          setTimeout(() => {
+            
+            $('#subs').click(function () {
+              $('#nletter-form').fadeIn(200)
+            })
+            $('.close-popup').click(function () {
+              $('#nletter-form').fadeOut(200)
+            })
+          }, 1000);
+
+      </script>
+<!-- Termina seccions NL -->
+
   <div id="cookie-banner"></div>
 
   <!-- Footer Section -->
@@ -241,6 +382,36 @@ $q = $q->fetchAll();
   <!-- Custom Script -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/toggler.js"></script>
+
+  <script>
+
+    //   Suscripcion al newsletter
+    $(document).on('click', '#nl-sub', function(e){
+        e.preventDefault()
+
+        var email = $('#nl-email').val()
+
+        $.ajax({
+            url:'api.php?func=subscribe',
+            method:'POST',
+            cache: false,
+            data:{
+                email
+            },
+            dataType:'text',
+            success:function(data){
+                
+                console.log(data)
+                $('#nl-email').val('')
+                $('#nl-form-msj').html('Thank you!')
+                $('#nl-form-msj').slideDown(200)
+            }
+        });
+
+    })
+
+  </script>
+
 </body>
 
 </html>

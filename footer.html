@@ -19,7 +19,8 @@
               </div>
             </form>
             <div class="main-btn footer-btn-mob" style="background: #014a68; box-shadow: 0px 6px 20px -8px #014a68" id="send_message">Send message</div>
-          </div>
+            <div id="form-msj">Thank you!</div>
+        </div>
     </div>
 </div>
 <div class="container-fluid">
@@ -52,7 +53,7 @@
             <h5>Links</h5>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Meet Path</a></li>
+                <li><a href="meet-path.html">Meet Path</a></li>
                 <li><a href="teachers-institutions.html">Teachers and institutions</a></li>
                 <li><a href="our-examinations.html">Our examinations</a></li>
                 <li><a href="news-and-events.php">News and events</a></li>
@@ -123,6 +124,8 @@
                 $('#franja-contacto #name').val('')
                 $('#franja-contacto #email').val('')
                 $('#franja-contacto #message').val('')
+                $('#form-msj').html('Thank you!')
+                $('#form-msj').slideDown(200)
             }
         });
 

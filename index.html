@@ -423,7 +423,7 @@
         position: absolute;
         top: 76px;
         z-index: 2;
-        left: 9.4%;
+        left: 10%;
         transform: translateX(-10%);
         opacity: 0;
         transition: .5s cubic-bezier(0.13, 0.77, 0.33, 1)!important;
@@ -458,7 +458,11 @@
             }
 
             h1 {
-                font-size: 30px;
+                font-size: 30px;#
+            }
+
+            #arafue{
+                left: 15.2%;
             }
 
             #side__phone:hover::after {
@@ -475,6 +479,10 @@
           top: -239%;
           width: 205px!important;
           right: -820%;
+        }
+
+        .header_section .bg-image{
+            opacity: 0.5;;
         }
 
             .afuera {
@@ -777,7 +785,7 @@
 
     <!-- Showcase Section -->
     <div class="header_section section">
-        <div class="title-real afuera"><h1 style="color:#004969;">Evolution in <br> language assessment</h1></div>
+        <div class="title-real afuera" id="arafue"><h1 style="color:#004969;">Evolution in <br> language assessment</h1></div>
         <div class="social-icon">
             <ul>
                 <li><i id="open-form-popup"  class="fas fa-envelope" style="margin:0" id="fab"></i></a></li>
@@ -791,10 +799,10 @@
             <div class="single-header-item">
                 <div class="content-area">
                     <div class="banner__subtitle-container">
-                        <p class="d-lg-block banner__subtitle"><span class="banner__subtitle-span content-area-span">Internationally</span><br><span class="banner__subtitle-span content-area-span">recognised</span> examinations</p>
+                        <p class="d-lg-block banner__subtitle"><span class="banner__subtitle-span content-area-span get-distance-j">Internationally</span><br><span class="banner__subtitle-span content-area-span">recognised</span> examinations</p>
                     </div>
 
-                    <a href="/teachers-institutions.html#international-standards" class="boxed-btn">Read more</a>
+                    <a href="meet-path.html#recognition-and-validation" class="boxed-btn">Read more</a>
                 </div>
                 <div class="bg-image bg-image-anim" style="background-image: url(assets/img/slider/home1/banner_home.jpg);"></div>
             </div>
@@ -976,13 +984,14 @@
                     <div class="row form-inbuilt-row">
                       <div class="d-flex flex-column form-row-content">
                         <label for="">Email address*</label>
-                        <input type="Email" placeholder="Email address">
+                        <input type="Email" placeholder="Email address" id="nl-email">
                       </div>
                       
                     </div>
           
-                    <button class="main-btn form-inbuilt-button" type="submit">Subscribe</button>
+                    <button class="main-btn form-inbuilt-button" type="submit" id="nl-sub">Subscribe</button>
                 </form>
+                <div id="nl-form-msj"></div>
             </div>
               </div>
         </div>
@@ -1013,6 +1022,12 @@
     <script src="assets/js/toggler.js"></script>
     <script>
         $(document).ready(function(){
+
+            setTimeout(() => {
+                
+                // var x_distance = $('.get-distance-j').position().left
+                // $('#arafue').css('left', '-'+x_distance+'px')
+            }, 250);
 
 
         $('#subs').click(function () {
@@ -1123,6 +1138,31 @@
               return check;
             };
       });
+
+    //   Suscripcion al newsletter
+    $(document).on('click', '#nl-sub', function(e){
+        e.preventDefault()
+
+        var email = $('#nl-email').val()
+
+        $.ajax({
+            url:'api.php?func=subscribe',
+            method:'POST',
+            cache: false,
+            data:{
+                email
+            },
+            dataType:'text',
+            success:function(data){
+                
+                console.log(data)
+                $('#nl-email').val('')
+                $('#nl-form-msj').html('Thank you!')
+                $('#nl-form-msj').slideDown(200)
+            }
+        });
+
+    })
       
     </script>
 </body>

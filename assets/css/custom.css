@@ -432,7 +432,7 @@ TARJETAS
 }
 
 #cer__webinars:hover::before {
-  content: 'You will be able to attend Path webinars, seminars and courses for free';
+  content: 'You will be able to attend Path webinars and seminars for free and Path courses at a discounted fee';
 }
 
 #app__cert-cent:hover::before {

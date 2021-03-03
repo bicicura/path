@@ -302,7 +302,7 @@ if($func=='enviar_mail'){
     $mail->SMTPDebug=3;
     
     $mail->setFrom($email, $name);
-    $mail->addAddress('contact@plannet.cc', 'plannet');
+    $mail->addAddress('info@pathexaminations.com', 'Path');
     $mail->addReplyTo($email, $name);
     
     $mail->isHTML(true);
@@ -319,6 +319,80 @@ if($func=='enviar_mail'){
         echo 'exito';
     }
 }
+
+
+if($func=='subscribe'){
+
+    echo 'Llego a la api';
+    
+    $email = $_POST['email'];
+
+    $mail = new PHPMailer;
+    
+    $mail->SMTPDebug=3;
+    
+    $mail->setFrom($email, '');
+    $mail->addAddress('info@pathexaminations.com', 'Path');
+    $mail->addReplyTo($email, '');
+    
+    $mail->isHTML(true);
+    
+    $mail->Subject='New subscriber: ' . $email;
+    
+    $mail->Body = utf8_decode('Email: ' . $email);
+    
+    if(!$mail->send()){
+        echo 'No se pudo enviar';
+    }else{
+        echo 'exito';
+    }
+}
+
+
+
+if($func=='inbuilt_form'){
+
+    echo 'Llego a la api';
+    
+    $name = $_POST['name'];
+    $surname = $_POST['surname'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $country = $_POST['country'];
+    $city = $_POST['city'];
+    $meet_path = $_POST['meet_path'];
+    $describe = $_POST['describe'];
+    
+
+    
+    $mail = new PHPMailer;
+    
+    $mail->SMTPDebug=3;
+    
+    $mail->setFrom($email, $name);
+    $mail->addAddress('info@pathexaminations.com', 'Path');
+    $mail->addReplyTo($email, $name);
+    
+    $mail->isHTML(true);
+    
+    $mail->Subject='Path Inbuilt Form: ' . $name;
+    
+    $mail->Body = utf8_decode('Name: ' . $name . '<br>
+                   Surname: ' . $surname . '<br>
+                   Email: ' . $email . '<br>
+                   Phone: ' . $phone . '<br>
+                   Country: ' . $country . '<br>
+                   City: ' . $city . '<br>
+                   Meet path: ' . $meet_path . '<br>
+                   Describe: ' . $describe . '<br>');
+    
+    if(!$mail->send()){
+        echo 'No se pudo enviar';
+    }else{
+        echo 'exito';
+    }
+}
+
 
 if($func=='init_checkout'){
 

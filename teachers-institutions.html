@@ -1457,7 +1457,7 @@
                           </div>
                           <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
                             <div class="card-body">
-                              Path exams comprise modules, which may be taken separately or altogether. This scheme has been designed to address the candidates’ needs, as they may simply have to certify certain skills. At the same time, having separate modules takes into consideration individual learning paces, as candidates may choose to certify their skills at different levels. Please <a class="bold-text" href="/our-examinations.html#exam-modules">click here to read more about it.</a> 
+                              Path exams comprise modules, which may be taken separately or altogether. This scheme has been designed to address the candidates’ needs, as they may simply have to certify certain skills. At the same time, having separate modules takes into consideration individual learning paces, as candidates may choose to certify their skills at different levels. Please <a class="bold-text" href="our-examinations.html#exam-modules">click here to read more about it.</a> 
                             </div>
                           </div>
                         </div>
@@ -1784,7 +1784,7 @@
                   <tr>
                     <td id="app__logo" class="card__more-info">
                       <span class="cert-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
-                      personalised Path Approved Exam Centre logo</td>
+                      Personalised Path Approved Exam Centre logo</td>
                   </tr>
                   <tr>
                     <td id="mem__platform" class="card__more-info">
@@ -1920,7 +1920,7 @@
                 <tr>
                   <td id="cer__logo" class="card__more-info">
                     <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
-                    personalised Path Certified Exam Centre logo</td>
+                    Personalised Path Certified Exam Centre logo</td>
                 </tr>
                 <tr>
                   <td id="mem__platform" class="card__more-info">
@@ -1940,7 +1940,7 @@
                 <tr>
                   <td id="cer__webinars" class="card__more-info">
                     <span class="centre-plus-icon plus plus__container"><i class="fas fa-plus-circle" id="open-exam-modal"></i></span>
-                    Free access to Path webinars, seminars and courses</td>
+                    Free access to Path webinars and seminars and discounted fee for Path courses</td>
                 </tr>
                 <tr>
                   <td id="mem__fixed" class="card__more-info">
@@ -2214,6 +2214,9 @@
         
     <section class="section" id="q-mark">
       <div class="container qmark">
+        <div style="width: 100%; display: flex; justify-content: center; align-items: center; margin-top: 115px;">
+          <img src="assets/img/Path-Q-Mark.png" height="200px">
+        </div>
         <h2 class="text-center teachers__title">Path Q-mark</h2>
         <div class="qmark__card-container">
           <div class="qmark__card"><div class="qmark__card-circle modules__circle" style="background-color:#7BA988"><img class="modules__circle-img" src="assets\img\icons\study-01.svg" alt="Skills"></div><p>The Path Q-mark (Quality mark) is an international accreditation that supports and recognises rigorous standards in the provision, practice and performance of English language courses at level B1 and above. Our Q-mark provides institutions with recognition of their commitment to academic excellence.</p></div>
@@ -2508,31 +2511,31 @@
                   <div class="row form-inbuilt-row">
                     <div class="d-flex flex-column form-row-content">
                       <label for="">Name*</label>
-                      <input type="text" placeholder="Name">
+                      <input type="text" placeholder="Name" id="in-name">
                     </div>
                     <div class="d-flex flex-column form-row-content">
                       <label for="">Surname*</label>
-                      <input type="text" placeholder="Surname">
+                      <input type="text" placeholder="Surname" id="in-surname">
                     </div>
                   </div>
                   <div class="row form-inbuilt-row">
                     <div class="d-flex flex-column form-row-content">
                       <label for="">Email address*</label>
-                      <input type="Email" placeholder="Email address">
+                      <input type="Email" placeholder="Email address" id="in-email">
                     </div>
                     <div class="d-flex flex-column form-row-content">
                       <label for="">Phone number*</label>
-                      <input type="text" placeholder="Phone number">
+                      <input type="text" placeholder="Phone number" id="in-phone">
                     </div>
                   </div>
                   <div class="row form-inbuilt-row">
                     <div class="d-flex flex-column form-row-content">
                       <label for="">Country*</label>
-                      <input type="text" placeholder="Country">
+                      <input type="text" placeholder="Country" id="in-country">
                     </div>
                     <div class="d-flex flex-column form-row-content">
                       <label for="">City*</label>
-                      <input type="text" placeholder="City">
+                      <input type="text" placeholder="City" id="in-city">
                     </div>
                   </div>
                   <div class="d-flex flex-column form-inbuilt-row">
@@ -2547,10 +2550,11 @@
                   </div>
                   <div class="d-flex flex-column form-inbuilt-row">
                     <label for="">Describe briefly your services or your institution*</label>
-                    <textarea style="resize: none;" name="" id="" cols="10" rows="3"></textarea>
+                    <textarea style="resize: none;" name="" id="in-describe" cols="10" rows="3"></textarea>
                   </div>
         
-                  <button class="main-btn form-inbuilt-button" type="submit">Send message</button>
+                  <button class="main-btn form-inbuilt-button" type="submit" id="in-send-message">Send message</button>
+                  <div id="in-form-msj"></div>
               </form>
           </div>
             </div>
@@ -2855,8 +2859,57 @@ const appearOnScroll = new IntersectionObserver (function(
 
 faders.forEach(fader => {
     appearOnScroll.observe(fader);
+    
 });
 })
+
+$(document).on('click', '#in-send-message', function(e){
+  console.log('form sent!')
+  e.preventDefault()
+
+  var name = $('#in-name').val()
+  var surname = $('#in-surname').val()
+  var email = $('#in-email').val()
+  var phone = $('#in-phone').val()
+  var country = $('#in-country').val()
+  var city = $('#in-city').val()
+  var meet_path = $('#meetPath').val()
+  var describe = $('#in-describe').val()
+
+  $.ajax({
+            url:'api.php?func=inbuilt_form',
+            method:'POST',
+            cache: false,
+            data:{
+
+                name,
+                surname,
+                email,
+                phone,
+                country,
+                city,
+                meet_path,
+                describe
+            },
+            dataType:'text',
+            success:function(data){
+                
+                console.log(data)
+                $('#in-name').val('')
+                $('#in-surname').val('')
+                $('#in-email').val('')
+                $('#in-phone').val('')
+                $('#in-country').val('')
+                $('#in-city').val('')
+                $('#meetPath').val('')
+                $('#in-describe').val('')
+                $('#in-form-msj').html('Thank you!')
+                $('#in-form-msj').slideDown()
+            }
+        });
+
+})
+
     </script>
 </body>
 
