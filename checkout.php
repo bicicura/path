@@ -88,6 +88,11 @@
         padding: 3%;
         margin-top: 4vh;
     }
+    .boxi p {
+        font-size: 1em;
+        margin-top: 15px;
+        width: 90%;
+    }
     .tit::before{
         position: absolute;
         left: -3%;
@@ -334,7 +339,6 @@ input[type=number] {
 </head>
 
 <body>
-
 
 <header>
     <h2>Book an exam</h2>
@@ -677,89 +681,94 @@ input[type=number] {
             <div>
                 <div id="speakingDate"  class="moduleDateDis">
                     <h4>Speaking module</h4>
-                    <input  id="speakingCalendar" type="date" id="txtDate" min="<?php echo date('Y-m-d',strtotime('+7 days'));  ?>">
+                    <input  id="speakingCalendar" type="date" min="<?php echo date('Y-m-d',strtotime('+7 days'));  ?>">
                     <div>
-                        <select name="" id="">
+                        <select name="" id="speakingTime">
                             <option value="" hidden selected>Choose a time</option>
-                            <option value="10:00 UK">10:00 UK - </option>
-                            <option value="11:00 UK">11:00 UK - </option>
-                            <option value="12:00 UK">12:00 UK - </option>
-                            <option value="13:00 UK">13:00 UK - </option>
-                            <option value="14:00 UK">14:00 UK - </option>
-                            <option value="15:00 UK">15:00 UK - </option>
-                            <option value="16:00 UK">16:00 UK - </option>
-                            <option value="17:00 UK">17:00 UK - </option>
-                            <option value="18:00 UK">18:00 UK - </option>
-                            <option value="19:00 UK">19:00 UK - </option>
+                            <option value="10:00 UK">10:00 UK</option>
+                            <option value="11:00 UK">11:00 UK</option>
+                            <option value="12:00 UK">12:00 UK</option>
+                            <option value="13:00 UK">13:00 UK</option>
+                            <option value="14:00 UK">14:00 UK</option>
+                            <option value="15:00 UK">15:00 UK</option>
+                            <option value="16:00 UK">16:00 UK</option>
+                            <option value="17:00 UK">17:00 UK</option>
+                            <option value="18:00 UK">18:00 UK</option>
+                            <option value="19:00 UK">19:00 UK</option>
                         </select>
                     </div>
+                    <p id="horaSpeaking"></p>
                 </div>
                 <div id="listeningDate"  class=" ">
                     <h4>Listening module</h4>
-                    <input type="date" id="txtDate" min="<?php echo date('Y-m-d',strtotime('+7 days'));  ?>">
+                    <input type="date" id="listeningCalendar" min="<?php echo date('Y-m-d',strtotime('+7 days'));  ?>">
                     <div>
-                        <select name="" id="">
+                        <select name="" id="listeningTime">
                             <option value="" hidden selected>Choose a time</option>
-                            <option value="00:00 UK">00:00 UK - </option>
-                            <option value="01:00 UK">01:00 UK - </option>
-                            <option value="02:00 UK">02:00 UK - </option>
-                            <option value="03:00 UK">03:00 UK - </option>
-                            <option value="04:00 UK">04:00 UK - </option>
-                            <option value="05:00 UK">05:00 UK - </option>
-                            <option value="06:00 UK">06:00 UK - </option>
-                            <option value="07:00 UK">07:00 UK - </option>
-                            <option value="08:00 UK">08:00 UK - </option>
-                            <option value="09:00 UK">09:00 UK - </option>
-                            <option value="10:00 UK">10:00 UK - </option>
-                            <option value="11:00 UK">11:00 UK - </option>
-                            <option value="12:00 UK">12:00 UK - </option>
-                            <option value="13:00 UK">13:00 UK - </option>
-                            <option value="14:00 UK">14:00 UK - </option>
-                            <option value="15:00 UK">15:00 UK - </option>
-                            <option value="16:00 UK">16:00 UK - </option>
-                            <option value="17:00 UK">17:00 UK - </option>
-                            <option value="18:00 UK">18:00 UK - </option>
-                            <option value="19:00 UK">19:00 UK - </option>
-                            <option value="20:00 UK">20:00 UK - </option>
-                            <option value="21:00 UK">21:00 UK - </option>
-                            <option value="22:00 UK">22:00 UK - </option>
-                            <option value="23:00 UK">23:00 UK - </option>
+                            <option value="00:00 UK">00:00 UK</option>
+                            <option value="01:00 UK">01:00 UK</option>
+                            <option value="02:00 UK">02:00 UK</option>
+                            <option value="03:00 UK">03:00 UK</option>
+                            <option value="04:00 UK">04:00 UK</option>
+                            <option value="05:00 UK">05:00 UK</option>
+                            <option value="06:00 UK">06:00 UK</option>
+                            <option value="07:00 UK">07:00 UK</option>
+                            <option value="08:00 UK">08:00 UK</option>
+                            <option value="09:00 UK">09:00 UK</option>
+                            <option value="10:00 UK">10:00 UK</option>
+                            <option value="11:00 UK">11:00 UK</option>
+                            <option value="12:00 UK">12:00 UK</option>
+                            <option value="13:00 UK">13:00 UK</option>
+                            <option value="14:00 UK">14:00 UK</option>
+                            <option value="15:00 UK">15:00 UK</option>
+                            <option value="16:00 UK">16:00 UK</option>
+                            <option value="17:00 UK">17:00 UK</option>
+                            <option value="18:00 UK">18:00 UK</option>
+                            <option value="19:00 UK">19:00 UK</option>
+                            <option value="20:00 UK">20:00 UK</option>
+                            <option value="21:00 UK">21:00 UK</option>
+                            <option value="22:00 UK">22:00 UK</option>
+                            <option value="23:00 UK">23:00 UK</option>
                         </select>
                         <!-- <input type="time" /> -->
                     </div>
+                    <p id="horaListening"></p>
+
                 </div>
                 <div id="randwDate" class="moduleDateDis">
                     <h4>Reading and writing module</h4>
-                    <input type="date" id="txtDate" min="<?php echo date('Y-m-d',strtotime('+7 days'));  ?>">
+                    <input type="date" id="RandWCalendar" min="<?php echo date('Y-m-d',strtotime('+7 days'));  ?>">
                                     <div>
-                        <select name="" id="">
+                        <select name="" id="RandWTime">
                             <option value="" hidden selected>Choose a time</option>
-                            <option value="00:00 UK">00:00 UK - </option>
-                            <option value="01:00 UK">01:00 UK - </option>
-                            <option value="02:00 UK">02:00 UK - </option>
-                            <option value="03:00 UK">03:00 UK - </option>
-                            <option value="04:00 UK">04:00 UK - </option>
-                            <option value="05:00 UK">05:00 UK - </option>
-                            <option value="06:00 UK">06:00 UK - </option>
-                            <option value="07:00 UK">07:00 UK - </option>
-                            <option value="08:00 UK">08:00 UK - </option>
-                            <option value="09:00 UK">09:00 UK - </option>
-                            <option value="10:00 UK">10:00 UK - </option>
-                            <option value="11:00 UK">11:00 UK - </option>
-                            <option value="12:00 UK">12:00 UK - </option>
-                            <option value="13:00 UK">13:00 UK - </option>
-                            <option value="14:00 UK">14:00 UK - </option>
-                            <option value="15:00 UK">15:00 UK - </option>
-                            <option value="16:00 UK">16:00 UK - </option>
-                            <option value="17:00 UK">17:00 UK - </option>
-                            <option value="18:00 UK">18:00 UK - </option>
-                            <option value="19:00 UK">19:00 UK - </option>
-                            <option value="20:00 UK">20:00 UK - </option>
-                            <option value="21:00 UK">21:00 UK - </option>
-                            <option value="22:00 UK">22:00 UK - </option>
-                            <option value="23:00 UK">23:00 UK - </option>
+                            <option value="00:00 UK">00:00 UK</option>
+                            <option value="01:00 UK">01:00 UK</option>
+                            <option value="02:00 UK">02:00 UK</option>
+                            <option value="03:00 UK">03:00 UK</option>
+                            <option value="04:00 UK">04:00 UK</option>
+                            <option value="05:00 UK">05:00 UK</option>
+                            <option value="06:00 UK">06:00 UK</option>
+                            <option value="07:00 UK">07:00 UK</option>
+                            <option value="08:00 UK">08:00 UK</option>
+                            <option value="09:00 UK">09:00 UK</option>
+                            <option value="10:00 UK">10:00 UK</option>
+                            <option value="11:00 UK">11:00 UK</option>
+                            <option value="12:00 UK">12:00 UK</option>
+                            <option value="13:00 UK">13:00 UK</option>
+                            <option value="14:00 UK">14:00 UK</option>
+                            <option value="15:00 UK">15:00 UK</option>
+                            <option value="16:00 UK">16:00 UK</option>
+                            <option value="17:00 UK">17:00 UK</option>
+                            <option value="18:00 UK">18:00 UK</option>
+                            <option value="19:00 UK">19:00 UK</option>
+                            <option value="20:00 UK">20:00 UK</option>
+                            <option value="21:00 UK">21:00 UK</option>
+                            <option value="22:00 UK">22:00 UK</option>
+                            <option value="23:00 UK">23:00 UK</option>
                         </select>
                     </div>
+                    <p id="horaRandW"></p>
+
                 </div>
             </div>
         </div>
@@ -1489,19 +1498,60 @@ $('#area-code').html(html_codes)
 
 
 
-console.log( Date.now() )
-var d = new Date();
-var n = d.getTime();
-console.log(d)
 
+var d = new Date()
+var gmtHours = -d.getTimezoneOffset()/60;
+console.log( gmtHours);
 
+var dt = new Date();
+var test = dt.setHours( dt.getHours() - gmtHours );
+let date = new Date( test );
 
-$('#speakingCalendar').change(function() {
-    let dia = Date.parse($(this).val());
+// alert(date);
+
+$('#speakingTime, #speakingCalendar').change(function() {
+    if (new Date($('#speakingCalendar').val()).getDay() == 5 || new Date($('#speakingCalendar').val()).getDay() == 6) {
+        alert("This module is only avaible during business days")
+        $('#speakingCalendar').val('')
+    }
+    if ($('#speakingCalendar').val() != '' ) {
+        let fechaSpeak = $('#speakingCalendar').val()
+
+        let horaSpeak = $('#speakingTime').val().replace(" UK", "");
+        var localTime = new Date(fechaSpeak+"T"+horaSpeak)
+        var gmtHours = -d.getTimezoneOffset()/60;
+        var ggaa = localTime.setHours( localTime.getHours() + gmtHours );
+        
+        $('#horaSpeaking').text(new Date( ggaa ))
+    }
     
-    console.log( dia )
 })
 
+$('#listeningTime, #listeningCalendar').change(function() {
+    if ($('#listeningCalendar').val() != '' ) {
+        let fechaList = $('#listeningCalendar').val()
+
+        let horaList = $('#listeningTime').val().replace(" UK", "");
+        var localTime = new Date(fechaList+"T"+horaList)
+        var gmtHours = -d.getTimezoneOffset()/60;
+        var ggaa = localTime.setHours( localTime.getHours() + gmtHours );
+        
+        $('#horaListening').text(new Date( ggaa ))
+    }
+})
+
+$('#RandWTime, #RandWCalendar').change(function() {
+    if ($('#RandWCalendar').val() != '' ) {
+        let fechaSpeak = $('#RandWCalendar').val()
+
+        let horaSpeak = $('#RandWTime').val().replace(" UK", "");
+        var localTime = new Date(fechaSpeak+"T"+horaSpeak)
+        var gmtHours = -d.getTimezoneOffset()/60;
+        var ggaa = localTime.setHours( localTime.getHours() + gmtHours );
+        
+        $('#horaRandW').text(new Date( ggaa ))
+    }
+})
 
 })
 
