@@ -31,11 +31,12 @@
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
     <!--  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- SDK de cliente para PayPal -->
 	<script src="https://www.paypal.com/sdk/js?client-id=AcSOQzXrlRL_ERTh5svonn3GXR-HYzxEsdGqsjNczLmJUueoLS96o6byOgYsPEGWtc4MzMQ-KfPyXLv4"></script>
@@ -334,6 +335,64 @@ input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
 
+
+@media only screen and (max-width: 800px) {
+    .cont80 {
+        width: 90%;
+    }
+    .tit::before{
+        bottom: 0%;
+    }
+    .boxi{
+        padding: 7% 5%!important;
+    }
+    #examandmodule .boxi>div{
+        display: block;
+    }
+    #exams, #modules{
+        width: 100%
+    }
+    #exams ul>div {
+        width: 48%;
+    }
+    #modules ul li, #exams ul li{
+        width: 100%
+    }
+    #datesandtime>div{
+        display: block;
+    }
+    #datesandtime>div>div{
+        width: 100%;
+        margin: 5vh 0
+    }
+    #datesandtime>div>div h4{ height: auto; margin-top: 25%}
+    #datesandtime>div>div select, #datesandtime>div>div input {
+        width: 100%;
+    }
+    #datesandtime>div>div:first-child h4{
+        margin-top: 0;
+    }
+    #tyc li{
+        justify-content: space-between;
+    }
+    #tyc li span{
+        width: 85%;
+        opacity: 0.9em;
+    }
+    #tyc li>div{
+        width: 24px;
+        height: 24px;
+    }
+    #tyc li {
+        margin: 12% 0;
+    }
+    #submit-cont p, #pp-cont p{
+        width: 90%
+    }
+    #submit-cont{
+        margin-top: -25%;
+    }
+}
     
     </style>
 </head>
@@ -1579,8 +1638,18 @@ function render_paypal_button(checkout_id){
     }).render('#paypal-button-container');
 
 
+
+if ($(window).width() < 800) {
+
+    $('#exams ul li').click(function () {
+        $('html, body').animate({
+            scrollTop: $("#modules").offset().top
+        }, 400);
+    })
+    
 }
 
 
+}
 </script>
 </html>
