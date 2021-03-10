@@ -27,8 +27,8 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/application-form.css">
     
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!--  -->
@@ -43,9 +43,16 @@
 
 
 
+
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/jwf6mkc.css">  
+
     <title>Path | Checkout</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQWREFVWND"></script>
+
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -56,8 +63,12 @@
 
     <style type="text/css">
 
+    body{
+        font-family: "skolar-sans-latin", sans-serif;
+    }
+    #scroll-top, #franja-contacto{ display:none!important }
     header{
-        padding-top: 10vh;
+        padding-top: 23vh;
         margin-bottom: 8%;
 
     }
@@ -77,7 +88,7 @@
     }
     .cont80{
         margin: 26vh auto;
-        width: 80%;
+        width: 75%;
         display:block;
     }
     .tit{
@@ -180,6 +191,9 @@
         font-weight: 600;
         border-width: 3px;
         opacity: 1!important;
+    }
+    #examDetails{
+        background: #e2eff2;
     }
     #examDetails>div{
         display: block!important;
@@ -336,6 +350,76 @@ input[type=number] {
 }
 
 
+
+.navbar-section{
+    background: white;
+    position: relative;
+    margin-top: 0!important;
+    padding-top: 40px!important;
+    z-index: 9999;
+}
+.navbar-section>div{
+    background: white;
+    position: relative;
+    margin-top: 0!important;
+    z-index: 9999;
+    padding-bottom: 20px!important;
+
+}
+
+#progreso-cont{
+    position: fixed;
+    background: white;
+    width: 98%;
+    left: 1%;
+    top: 2%;
+    z-index: 9;
+}
+#pasos-cont{
+    display: flex;
+    width: 90%;
+    background: white;
+    margin: auto;
+    justify-content: space-between;
+    box-shadow:0px 8px 18px 2px #ddd;
+    padding: 13px 0 7px;
+    position: relative;
+}
+#pasos-cont aside{
+    width: 84%;
+    position: absolute;
+    height: 8px;
+    left: 8%;
+    top: 22px;
+    /* background: #004972; */
+    background: linear-gradient(to right, #004972 0%, #f0f0f0 0%)
+}
+
+#pasos-cont>div{
+    width: 25%;
+    text-align: center;
+    margin: auto;
+    z-index: 99;
+
+}
+#pasos-cont>div>div{
+    cursor:pointer;
+}
+#pasos-cont>div>div>div{
+    width: 26px;
+    margin: auto;
+    height: 26px;
+    background: #f0f0f0;
+    border-radius: 35px;
+}
+#pasos-cont>div>div span{
+    font-size: 16px
+}
+#pasos-cont>div p{
+    font-size: 16px;
+    margin-top: 5px;
+}
+
 @media only screen and (max-width: 800px) {
     .cont80 {
         width: 90%;
@@ -381,7 +465,7 @@ input[type=number] {
     }
     #tyc li>div{
         width: 24px;
-        height: 24px;
+        height: 24px; 
     }
     #tyc li {
         margin: 12% 0;
@@ -392,18 +476,112 @@ input[type=number] {
     #submit-cont{
         margin-top: -25%;
     }
+    #pasos-cont{
+        width: 100%
+    }
+    #pasos-cont>div p {
+    font-size: 11px;
+    margin-top: 5px;
+    position: absolute;
+    width: 16%;
+    }
+    #pasos-cont>div>div span {
+    font-size: 14px;
+    }
+    #pasos-cont{
+        padding-bottom: 50px;
+    }
+
 }
-    
+input[type="date"]
+{
+    display:block;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    min-height: 1.2em;
+}
     </style>
+
+
+
 </head>
 
 <body>
 
+<div id="progreso-cont">
+    <div>
+        <div id="pasos-cont">
+            <aside></aside>
+            <div>
+                <div class="anchor" data-link="#country">
+                    <div>
+                        <span>1</span>
+                    </div>
+                    <p>Country</p>
+                </div>
+            </div>
+            <div>
+                <div class="anchor" data-link="#examandmodule">
+                    <div>
+                        <span>2</span>
+                    </div>
+                    <p>Exam and modules</p>
+                </div>
+            </div> 
+            <div>
+                <div class="anchor" data-link="#dateandtime">
+                    <div>
+                        <span>3</span>
+                    </div>
+                    <p>Date and time</p>
+                </div>
+            </div>
+            <div>
+                <div class="anchor" data-link="#personalinfo">
+                    <div>
+                        <span>4</span>
+                    </div>
+                    <p>Personal info</p>
+                </div>
+            </div>
+            <div>
+                <div class="anchor" data-link="#termsandconditions" onclick="return false;">
+                    <div>
+                        <span>5</span>
+                    </div>
+                    <p>Terms and conditions</p>
+                </div>
+            </div>
+            <div>
+                <div class="anchor" data-link="#payment">
+                    <div>
+                        <span>6</span>
+                    </div>
+                    <p>Payment</p>
+                </div>
+            </div> 
+        
+        </div>
+    </div>
+</div>
+
+<!-- Navbar Section -->
+<nav class="navbar-section container-fluid d-none d-sm-block" id="header">
+<?php include 'header.html' ?>    
+</nav>
 <header>
     <h2>Book an exam</h2>
 </header>
 
-<div class="cont80">
+
+<!-- <input  id="speakingCalendar" type="text" > -->
+<div id="wrapper" ng-app="myApp">
+  <p>{{datePicker || "00/00/0000"}}</p>
+  <input type="text" ng-model="datePicker" id="ass" datepicker />
+</div>
+
+
+<div class="cont80" id="country">
     <div>
         <!-- <h4>01</h4> -->
         <h3 class="tit" data-num="01" id="tit_pais">Please select your country of residence</h3>
@@ -730,7 +908,7 @@ input[type=number] {
 </div>
 
 
-<div class="cont80">
+<div class="cont80" id="dateandtime">
     <div>
         <!-- <h4>01</h4> -->
         <h3 class="tit" data-num="03" id="tit_pais">Select a date and time</h3>
@@ -740,7 +918,7 @@ input[type=number] {
             <div>
                 <div id="speakingDate"  class="moduleDateDis">
                     <h4>Speaking module</h4>
-                    <input  id="speakingCalendar" type="date" min="<?php echo date('Y-m-d',strtotime('+7 days'));  ?>">
+                    <!-- <input  id="speakingCalendar" type="text" > -->
                     <div>
                         <select name="" id="speakingTime">
                             <option value="" hidden selected>Choose a time</option>
@@ -834,7 +1012,7 @@ input[type=number] {
     </div>
 </div>
 
-<div class="cont80">
+<div class="cont80" id="personalinfo">
     <div>
         <!-- <h4>01</h4> -->
         <h3 class="tit" data-num="04" id="tit_pais">Personal details</h3>
@@ -1186,10 +1364,10 @@ input[type=number] {
 </div>
 
 
-<div class="cont80">
+<div class="cont80" id="termsandconditions">
     <div>
         <!-- <h4>01</h4> -->
-        <h3 class="tit" data-num="05" id="tit_pais">Terms and conticions</h3>
+        <h3 class="tit" data-num="05" id="tit_pais">Terms and conditions</h3>
     </div>
     <div class="boxi">
         <div id="tyc">
@@ -1202,7 +1380,7 @@ input[type=number] {
     </div>
 </div>
 
-<div class="cont80">
+<div class="cont80" id="payment">
     <div id="submit-cont">
         <p>Upon submission, you will be provided with a payment button to complete your registration.</p>
         <button>SUBMIT</button>
@@ -1221,7 +1399,10 @@ input[type=number] {
 
 
 
-
+<!-- Footer Section -->
+<footer class="footer-section" id="footer">
+    <?php include 'footer.html' ?>
+</footer>
 <div>
 
 </div>
@@ -1262,11 +1443,20 @@ var global_pedido;
 $(document).ready(function() {
 
 
+// $( function() {
+//     $( "#speakingCalendar" ).datepicker();
+// } );
+
+
+
 $( "#countryRes" ).change(function() {
     if ($( "#countryRes" ).val() == "Argentina" || $( "#countryRes" ).val() == "Uruguay") {
         $('body').css('overflow-y','hidden')
     }else{
         $('body').css('overflow-y','auto')
+        $('html, body').animate({
+            scrollTop: $("#examandmodule").offset().top - 100
+        }, 400);
     }
     if ($( "#countryRes" ).val() == "Argentina") {
         $('#arg').slideDown()
@@ -1479,7 +1669,7 @@ $('#submit-cont button').click(function() {
     })
     $('#tyc li').each(function() {
         if (!$(this).hasClass('li-yes')) {
-            alert('Accept terms and conticions')
+            alert('Accept terms and conditions')
             todoOk = 'no';
             return false;
         }
@@ -1611,45 +1801,110 @@ $('#RandWTime, #RandWCalendar').change(function() {
         $('#horaRandW').text(new Date( ggaa ))
     }
 })
-
-})
-
-function render_paypal_button(checkout_id){
-
-    paypal.Buttons({
-      createOrder: function(data, actions) {
-        // This function sets up the details of the transaction, including the amount and line item details.
-        return actions.order.create({
-          purchase_units: [{
-            amount: {
-              value: global_pedido.final_price
-            },
-            custom_id: checkout_id,
-          }]
-        });
-      },
-      onApprove: function(data, actions) {
-    return actions.order.capture().then(function() {
-        console.log('data: ')
-        console.log(data)
-         window.location = "paypal-transaction-complete.php?orderID="+data.orderID;				
-    });
-    }
-    }).render('#paypal-button-container');
-
-
-
 if ($(window).width() < 800) {
 
     $('#exams ul li').click(function () {
         $('html, body').animate({
-            scrollTop: $("#modules").offset().top
+            scrollTop: $("#modules").offset().top - 150
         }, 400);
     })
     
 }
 
+$('.anchor').click(function(ev) {
+    let href = $(this).attr('data-link');
 
-}
+    $('html, body').animate({
+            scrollTop: $(href).offset().top - 150
+    }, 700);
+    console.log(href)
+})
+
+
+let country = $("#country").offset().top;
+let examMod = $("#examandmodule").offset().top;
+let dateandtime = $("#dateandtime").offset().top;
+let personinfo = $("#personalinfo").offset().top;
+let termsandco = $("#termsandconditions").offset().top;
+let payment = $("#payment").offset().top;
+
+$(window).scroll( function(){
+    
+    let bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+    let top_of_screen = $(window).scrollTop();   
+    console.log(top_of_screen)
+
+
+    if (country < top_of_screen +200) {
+        $('.anchor[data-link="#country"]>div').css({'color':'white', 'background-color':'#004972'})
+        $('#pasos-cont aside').css('background', 'linear-gradient(to right, #004972 0%, #f0f0f0 0%)')
+    }else{
+        $('.anchor[data-link="#country"]>div').css({'color':'black', 'background-color':'#f0f0f0'})
+    }
+    if (examMod < top_of_screen +200) {
+        $('#pasos-cont aside').css('background', 'linear-gradient(to right, #004972 20%, #f0f0f0 20%)')
+        $('.anchor[data-link="#examandmodule"]>div').css({'color':'white', 'background-color':'#004972'})
+    }else{
+        $('.anchor[data-link="#examandmodule"]>div').css({'color':'black', 'background-color':'#f0f0f0'})
+    }  
+    if (dateandtime < top_of_screen +200) {
+        $('#pasos-cont aside').css('background', 'linear-gradient(to right, #004972 40%, #f0f0f0 40%)')
+        $('.anchor[data-link="#dateandtime"]>div').css({'color':'white', 'background-color':'#004972'})
+    }else{
+        $('.anchor[data-link="#dateandtime"]>div').css({'color':'black', 'background-color':'#f0f0f0'})
+    }  
+    if (personinfo < top_of_screen +200) {
+        $('#pasos-cont aside').css('background', 'linear-gradient(to right, #004972 60%, #f0f0f0 60%)')
+        $('.anchor[data-link="#personalinfo"]>div').css({'color':'white', 'background-color':'#004972'})
+    }else{
+        $('.anchor[data-link="#personalinfo"]>div').css({'color':'black', 'background-color':'#f0f0f0'})
+    }  
+    if (termsandco < top_of_screen +200) {
+        $('#pasos-cont aside').css('background', 'linear-gradient(to right, #004972 80%, #f0f0f0 80%)')
+        $('.anchor[data-link="#termsandconditions"]>div').css({'color':'white', 'background-color':'#004972'})
+    }else{
+        $('.anchor[data-link="#termsandconditions"]>div').css({'color':'black', 'background-color':'#f0f0f0'})
+    }  
+    if (payment < top_of_screen +200) {
+        $('#pasos-cont aside').css('background', 'linear-gradient(to right, #004972 100%, #f0f0f0 100%)')
+        $('.anchor[data-link="#payment"]>div').css({'color':'white', 'background-color':'#004972'})
+    }else{
+        $('.anchor[data-link="#payment"]>div').css({'color':'black', 'background-color':'#f0f0f0'})
+    }  
+});
+// termina el F() scroll
+
+
+
+
+
+})
+
+// function render_paypal_button(checkout_id){
+
+//     paypal.Buttons({
+//       createOrder: function(data, actions) {
+//         // This function sets up the details of the transaction, including the amount and line item details.
+//         return actions.order.create({
+//           purchase_units: [{
+//             amount: {
+//               value: global_pedido.final_price
+//             },
+//             custom_id: checkout_id,
+//           }]
+//         });
+//       },
+//       onApprove: function(data, actions) {
+//         return actions.order.capture().then(function() {
+//         console.log('data: ')
+//         console.log(data)
+//         window.location = "paypal-transaction-complete.php?orderID="+data.orderID;				
+//     });
+//     }
+//     }).render('#paypal-button-container');
+
+// })
+
+
 </script>
 </html>
