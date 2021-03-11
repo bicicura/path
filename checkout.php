@@ -498,7 +498,13 @@ input[type="date"]
     display:block;
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
-    min-height: 1.2em;
+    min-height: 1.
+}
+
+#paypal-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
     </style>
 
@@ -2008,31 +2014,29 @@ $(window).scroll( function(){
 
 })
 
-// function render_paypal_button(checkout_id){
+function render_paypal_button(checkout_id){
 
-//     paypal.Buttons({
-//       createOrder: function(data, actions) {
-//         // This function sets up the details of the transaction, including the amount and line item details.
-//         return actions.order.create({
-//           purchase_units: [{
-//             amount: {
-//               value: global_pedido.final_price
-//             },
-//             custom_id: checkout_id,
-//           }]
-//         });
-//       },
-//       onApprove: function(data, actions) {
-//         return actions.order.capture().then(function() {
-//         console.log('data: ')
-//         console.log(data)
-//         window.location = "paypal-transaction-complete.php?orderID="+data.orderID;				
-//     });
-//     }
-//     }).render('#paypal-button-container');
-
-// })
-
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        // This function sets up the details of the transaction, including the amount and line item details.
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: global_pedido.final_price
+            },
+            custom_id: checkout_id,
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function() {
+        console.log('data: ')
+        console.log(data)
+        window.location = "paypal-transaction-complete.php?orderID="+data.orderID;				
+    });
+    }
+    }).render('#paypal-button-container');
+}
 
 </script>
 </html>
