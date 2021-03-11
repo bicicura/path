@@ -27,24 +27,32 @@
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" href="assets/css/application-form.css">
     
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
     <!--  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- SDK de cliente para PayPal -->
 	<script src="https://www.paypal.com/sdk/js?client-id=AcSOQzXrlRL_ERTh5svonn3GXR-HYzxEsdGqsjNczLmJUueoLS96o6byOgYsPEGWtc4MzMQ-KfPyXLv4"></script>
 
 
 
+
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/jwf6mkc.css">  
+
     <title>Path | Checkout</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQWREFVWND"></script>
+
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -55,8 +63,12 @@
 
     <style type="text/css">
 
+    body{
+        font-family: "skolar-sans-latin", sans-serif;
+    }
+    #scroll-top, #franja-contacto{ display:none!important }
     header{
-        padding-top: 10vh;
+        padding-top: 23vh;
         margin-bottom: 8%;
 
     }
@@ -76,7 +88,7 @@
     }
     .cont80{
         margin: 26vh auto;
-        width: 80%;
+        width: 75%;
         display:block;
     }
     .tit{
@@ -87,6 +99,11 @@
         box-shadow: 0px 0px 5px 1px #ddd;
         padding: 3%;
         margin-top: 4vh;
+    }
+    .boxi p {
+        font-size: 1em;
+        margin-top: 15px;
+        width: 90%;
     }
     .tit::before{
         position: absolute;
@@ -174,6 +191,9 @@
         font-weight: 600;
         border-width: 3px;
         opacity: 1!important;
+    }
+    #examDetails{
+        background: #e2eff2;
     }
     #examDetails>div{
         display: block!important;
@@ -329,18 +349,236 @@ input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
 
-    
+
+
+.navbar-section{
+    background: white;
+    position: relative;
+    margin-top: 0!important;
+    padding-top: 40px!important;
+    z-index: 9999;
+}
+.navbar-section>div{
+    background: white;
+    position: relative;
+    margin-top: 0!important;
+    z-index: 9999;
+    padding-bottom: 20px!important;
+
+}
+
+#progreso-cont{
+    position: fixed;
+    background: white;
+    width: 98%;
+    left: 1%;
+    top: 2%;
+    z-index: 9;
+}
+#pasos-cont{
+    display: flex;
+    width: 90%;
+    background: white;
+    margin: auto;
+    justify-content: space-between;
+    box-shadow:0px 8px 18px 2px #ddd;
+    padding: 13px 0 7px;
+    position: relative;
+}
+#pasos-cont aside{
+    width: 84%;
+    position: absolute;
+    height: 8px;
+    left: 8%;
+    top: 22px;
+    /* background: #004972; */
+    background: linear-gradient(to right, #004972 0%, #f0f0f0 0%)
+}
+
+#pasos-cont>div{
+    width: 25%;
+    text-align: center;
+    margin: auto;
+    z-index: 99;
+
+}
+#pasos-cont>div>div{
+    cursor:pointer;
+}
+#pasos-cont>div>div>div{
+    width: 26px;
+    margin: auto;
+    height: 26px;
+    background: #f0f0f0;
+    border-radius: 35px;
+}
+#pasos-cont>div>div span{
+    font-size: 16px
+}
+#pasos-cont>div p{
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+@media only screen and (max-width: 800px) {
+    .cont80 {
+        width: 90%;
+    }
+    .tit::before{
+        bottom: 0%;
+    }
+    .boxi{
+        padding: 7% 5%!important;
+    }
+    #examandmodule .boxi>div{
+        display: block;
+    }
+    #exams, #modules{
+        width: 100%
+    }
+    #exams ul>div {
+        width: 48%;
+    }
+    #modules ul li, #exams ul li{
+        width: 100%
+    }
+    #datesandtime>div{
+        display: block;
+    }
+    #datesandtime>div>div{
+        width: 100%;
+        margin: 5vh 0
+    }
+    #datesandtime>div>div h4{ height: auto; margin-top: 25%}
+    #datesandtime>div>div select, #datesandtime>div>div input {
+        width: 100%;
+    }
+    #datesandtime>div>div:first-child h4{
+        margin-top: 0;
+    }
+    #tyc li{
+        justify-content: space-between;
+    }
+    #tyc li span{
+        width: 85%;
+        opacity: 0.9em;
+    }
+    #tyc li>div{
+        width: 24px;
+        height: 24px; 
+    }
+    #tyc li {
+        margin: 12% 0;
+    }
+    #submit-cont p, #pp-cont p{
+        width: 90%
+    }
+    #submit-cont{
+        margin-top: -25%;
+    }
+    #pasos-cont{
+        width: 100%
+    }
+    #pasos-cont>div p {
+    font-size: 11px;
+    margin-top: 5px;
+    position: absolute;
+    width: 16%;
+    }
+    #pasos-cont>div>div span {
+    font-size: 14px;
+    }
+    #pasos-cont{
+        padding-bottom: 50px;
+    }
+
+}
+input[type="date"]
+{
+    display:block;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    min-height: 1.2em;
+}
     </style>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+
 </head>
 
 <body>
 
+<div id="progreso-cont">
+    <div>
+        <div id="pasos-cont">
+            <aside></aside>
+            <div>
+                <div class="anchor" data-link="#country">
+                    <div>
+                        <span>1</span>
+                    </div>
+                    <p>Country</p>
+                </div>
+            </div>
+            <div>
+                <div class="anchor" data-link="#examandmodule">
+                    <div>
+                        <span>2</span>
+                    </div>
+                    <p>Exam and modules</p>
+                </div>
+            </div> 
+            <div>
+                <div class="anchor" data-link="#dateandtime">
+                    <div>
+                        <span>3</span>
+                    </div>
+                    <p>Date and time</p>
+                </div>
+            </div>
+            <div>
+                <div class="anchor" data-link="#personalinfo">
+                    <div>
+                        <span>4</span>
+                    </div>
+                    <p>Personal info</p>
+                </div>
+            </div>
+            <div>
+                <div class="anchor" data-link="#termsandconditions" onclick="return false;">
+                    <div>
+                        <span>5</span>
+                    </div>
+                    <p>Terms and conditions</p>
+                </div>
+            </div>
+            <div>
+                <div class="anchor" data-link="#payment">
+                    <div>
+                        <span>6</span>
+                    </div>
+                    <p>Payment</p>
+                </div>
+            </div> 
+        
+        </div>
+    </div>
+</div>
 
+<!-- Navbar Section -->
+<nav class="navbar-section container-fluid d-none d-sm-block" id="header">
+<?php include 'header.html' ?>    
+</nav>
 <header>
     <h2>Book an exam</h2>
 </header>
 
-<div class="cont80">
+
+
+<div class="cont80" id="country">
     <div>
         <!-- <h4>01</h4> -->
         <h3 class="tit" data-num="01" id="tit_pais">Please select your country of residence</h3>
@@ -667,7 +905,7 @@ input[type=number] {
 </div>
 
 
-<div class="cont80">
+<div class="cont80" id="dateandtime">
     <div>
         <!-- <h4>01</h4> -->
         <h3 class="tit" data-num="03" id="tit_pais">Select a date and time</h3>
@@ -677,96 +915,108 @@ input[type=number] {
             <div>
                 <div id="speakingDate"  class="moduleDateDis">
                     <h4>Speaking module</h4>
-                    <input  id="speakingCalendar" type="date" id="txtDate" min="<?php echo date('Y-m-d',strtotime('+7 days'));  ?>">
+                   
+                    <div id="calen-cont-speak">
+
+                    </div>
                     <div>
-                        <select name="" id="">
+                        <select name="" id="speakingTime">
                             <option value="" hidden selected>Choose a time</option>
-                            <option value="10:00 UK">10:00 UK - </option>
-                            <option value="11:00 UK">11:00 UK - </option>
-                            <option value="12:00 UK">12:00 UK - </option>
-                            <option value="13:00 UK">13:00 UK - </option>
-                            <option value="14:00 UK">14:00 UK - </option>
-                            <option value="15:00 UK">15:00 UK - </option>
-                            <option value="16:00 UK">16:00 UK - </option>
-                            <option value="17:00 UK">17:00 UK - </option>
-                            <option value="18:00 UK">18:00 UK - </option>
-                            <option value="19:00 UK">19:00 UK - </option>
+                            <option value="10:00 UK">10:00 UK</option>
+                            <option value="11:00 UK">11:00 UK</option>
+                            <option value="12:00 UK">12:00 UK</option>
+                            <option value="13:00 UK">13:00 UK</option>
+                            <option value="14:00 UK">14:00 UK</option>
+                            <option value="15:00 UK">15:00 UK</option>
+                            <option value="16:00 UK">16:00 UK</option>
+                            <option value="17:00 UK">17:00 UK</option>
+                            <option value="18:00 UK">18:00 UK</option>
+                            <option value="19:00 UK">19:00 UK</option>
                         </select>
                     </div>
+                    <p id="horaSpeaking"></p>
                 </div>
-                <div id="listeningDate"  class=" ">
+                <div id="listeningDate"  class="moduleDateDis">
                     <h4>Listening module</h4>
-                    <input type="date" id="txtDate" min="<?php echo date('Y-m-d',strtotime('+7 days'));  ?>">
+                    <div id="calen-cont-listen">
+
+                    </div>
                     <div>
-                        <select name="" id="">
+                        <select name="" id="listeningTime">
                             <option value="" hidden selected>Choose a time</option>
-                            <option value="00:00 UK">00:00 UK - </option>
-                            <option value="01:00 UK">01:00 UK - </option>
-                            <option value="02:00 UK">02:00 UK - </option>
-                            <option value="03:00 UK">03:00 UK - </option>
-                            <option value="04:00 UK">04:00 UK - </option>
-                            <option value="05:00 UK">05:00 UK - </option>
-                            <option value="06:00 UK">06:00 UK - </option>
-                            <option value="07:00 UK">07:00 UK - </option>
-                            <option value="08:00 UK">08:00 UK - </option>
-                            <option value="09:00 UK">09:00 UK - </option>
-                            <option value="10:00 UK">10:00 UK - </option>
-                            <option value="11:00 UK">11:00 UK - </option>
-                            <option value="12:00 UK">12:00 UK - </option>
-                            <option value="13:00 UK">13:00 UK - </option>
-                            <option value="14:00 UK">14:00 UK - </option>
-                            <option value="15:00 UK">15:00 UK - </option>
-                            <option value="16:00 UK">16:00 UK - </option>
-                            <option value="17:00 UK">17:00 UK - </option>
-                            <option value="18:00 UK">18:00 UK - </option>
-                            <option value="19:00 UK">19:00 UK - </option>
-                            <option value="20:00 UK">20:00 UK - </option>
-                            <option value="21:00 UK">21:00 UK - </option>
-                            <option value="22:00 UK">22:00 UK - </option>
-                            <option value="23:00 UK">23:00 UK - </option>
+                            <option value="00:00 UK">00:00 UK</option>
+                            <option value="01:00 UK">01:00 UK</option>
+                            <option value="02:00 UK">02:00 UK</option>
+                            <option value="03:00 UK">03:00 UK</option>
+                            <option value="04:00 UK">04:00 UK</option>
+                            <option value="05:00 UK">05:00 UK</option>
+                            <option value="06:00 UK">06:00 UK</option>
+                            <option value="07:00 UK">07:00 UK</option>
+                            <option value="08:00 UK">08:00 UK</option>
+                            <option value="09:00 UK">09:00 UK</option>
+                            <option value="10:00 UK">10:00 UK</option>
+                            <option value="11:00 UK">11:00 UK</option>
+                            <option value="12:00 UK">12:00 UK</option>
+                            <option value="13:00 UK">13:00 UK</option>
+                            <option value="14:00 UK">14:00 UK</option>
+                            <option value="15:00 UK">15:00 UK</option>
+                            <option value="16:00 UK">16:00 UK</option>
+                            <option value="17:00 UK">17:00 UK</option>
+                            <option value="18:00 UK">18:00 UK</option>
+                            <option value="19:00 UK">19:00 UK</option>
+                            <option value="20:00 UK">20:00 UK</option>
+                            <option value="21:00 UK">21:00 UK</option>
+                            <option value="22:00 UK">22:00 UK</option>
+                            <option value="23:00 UK">23:00 UK</option>
                         </select>
                         <!-- <input type="time" /> -->
                     </div>
+                    <p id="horaListening"></p>
+
                 </div>
                 <div id="randwDate" class="moduleDateDis">
                     <h4>Reading and writing module</h4>
-                    <input type="date" id="txtDate" min="<?php echo date('Y-m-d',strtotime('+7 days'));  ?>">
-                                    <div>
-                        <select name="" id="">
+                        <div id="calen-cont-RandW">
+
+                        </div>
+                        <div>
+                        <select name="" id="RandWTime">
                             <option value="" hidden selected>Choose a time</option>
-                            <option value="00:00 UK">00:00 UK - </option>
-                            <option value="01:00 UK">01:00 UK - </option>
-                            <option value="02:00 UK">02:00 UK - </option>
-                            <option value="03:00 UK">03:00 UK - </option>
-                            <option value="04:00 UK">04:00 UK - </option>
-                            <option value="05:00 UK">05:00 UK - </option>
-                            <option value="06:00 UK">06:00 UK - </option>
-                            <option value="07:00 UK">07:00 UK - </option>
-                            <option value="08:00 UK">08:00 UK - </option>
-                            <option value="09:00 UK">09:00 UK - </option>
-                            <option value="10:00 UK">10:00 UK - </option>
-                            <option value="11:00 UK">11:00 UK - </option>
-                            <option value="12:00 UK">12:00 UK - </option>
-                            <option value="13:00 UK">13:00 UK - </option>
-                            <option value="14:00 UK">14:00 UK - </option>
-                            <option value="15:00 UK">15:00 UK - </option>
-                            <option value="16:00 UK">16:00 UK - </option>
-                            <option value="17:00 UK">17:00 UK - </option>
-                            <option value="18:00 UK">18:00 UK - </option>
-                            <option value="19:00 UK">19:00 UK - </option>
-                            <option value="20:00 UK">20:00 UK - </option>
-                            <option value="21:00 UK">21:00 UK - </option>
-                            <option value="22:00 UK">22:00 UK - </option>
-                            <option value="23:00 UK">23:00 UK - </option>
+                            <option value="00:00 UK">00:00 UK</option>
+                            <option value="01:00 UK">01:00 UK</option>
+                            <option value="02:00 UK">02:00 UK</option>
+                            <option value="03:00 UK">03:00 UK</option>
+                            <option value="04:00 UK">04:00 UK</option>
+                            <option value="05:00 UK">05:00 UK</option>
+                            <option value="06:00 UK">06:00 UK</option>
+                            <option value="07:00 UK">07:00 UK</option>
+                            <option value="08:00 UK">08:00 UK</option>
+                            <option value="09:00 UK">09:00 UK</option>
+                            <option value="10:00 UK">10:00 UK</option>
+                            <option value="11:00 UK">11:00 UK</option>
+                            <option value="12:00 UK">12:00 UK</option>
+                            <option value="13:00 UK">13:00 UK</option>
+                            <option value="14:00 UK">14:00 UK</option>
+                            <option value="15:00 UK">15:00 UK</option>
+                            <option value="16:00 UK">16:00 UK</option>
+                            <option value="17:00 UK">17:00 UK</option>
+                            <option value="18:00 UK">18:00 UK</option>
+                            <option value="19:00 UK">19:00 UK</option>
+                            <option value="20:00 UK">20:00 UK</option>
+                            <option value="21:00 UK">21:00 UK</option>
+                            <option value="22:00 UK">22:00 UK</option>
+                            <option value="23:00 UK">23:00 UK</option>
                         </select>
                     </div>
+                    <p id="horaRandW"></p>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="cont80">
+<div class="cont80" id="personalinfo">
     <div>
         <!-- <h4>01</h4> -->
         <h3 class="tit" data-num="04" id="tit_pais">Personal details</h3>
@@ -1118,10 +1368,10 @@ input[type=number] {
 </div>
 
 
-<div class="cont80">
+<div class="cont80" id="termsandconditions">
     <div>
         <!-- <h4>01</h4> -->
-        <h3 class="tit" data-num="05" id="tit_pais">Terms and conticions</h3>
+        <h3 class="tit" data-num="05" id="tit_pais">Terms and conditions</h3>
     </div>
     <div class="boxi">
         <div id="tyc">
@@ -1134,7 +1384,7 @@ input[type=number] {
     </div>
 </div>
 
-<div class="cont80">
+<div class="cont80" id="payment">
     <div id="submit-cont">
         <p>Upon submission, you will be provided with a payment button to complete your registration.</p>
         <button>SUBMIT</button>
@@ -1153,7 +1403,121 @@ input[type=number] {
 
 
 
+<!-- Footer Section -->
+<footer class="footer-section" id="footer">
+<div class="container-fluid">
+    <div class="divider"></div>
+    <div class="row footer-content">
+        <div class="col-12 col-md-6 col-lg-4">
+            <img class="brand-logo" src="assets/img/logos/path_logo.png" alt="University Logo">
+            <div class="contact-links">
+                <div class="link">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>167-169 Great Portland St., 5th Floor<br>Westminster, London W1W 5PF<br>United Kingdom</p>
+                </div>
+                <div class="link">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@pathexaminations.com</p>
+                </div>
+                <div class="link">
+                    <i class="fas fa-phone"></i>
+                    <p>+44 020 3468 2534</p>
+                </div>
+                <div class="link social-icons">
+                    <a target="_blank" href="https://www.facebook.com/pathexams"><i
+                            class="fab fa-facebook-square"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/pathexams"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-2">
+            <h5>Links</h5>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="meet-path.html">Meet Path</a></li>
+                <li><a href="teachers-institutions.html">Teachers and institutions</a></li>
+                <li><a href="our-examinations.html">Our examinations</a></li>
+                <li><a href="news-and-events.php">News and events</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-2">
+            <h5>Information</h5>
+            <ul>
+                <li><a href="#">Job opportunities</a></li>
+                <li><a href="#">Give us feedback</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-2">
+            <h5>Policies</h5>
+            <ul>
+                <li><a href="privacy-policy.html">Privacy policy</a></li>
+                <li><a href="terms-and-conditions.html">Terms and conditions</a></li>
+                <li><a href="cookies-policy.html">Cookies policy</a></li>
+            </ul>
+        </div>
+        <!-- <div class="col-12 col-md-6 col-lg-2 d-flex footer__flag-container justify-content-center">
+            <div class="footer__e-flag"><img src="assets\img\icons\Flags\uk.png" alt=""></div>
+            <div class="footer__e-flag"><img src="assets\img\icons\Flags\spanish.png" alt=""></div> 
+        </div> -->
+    </div>
 
+
+</div>
+
+<div class="copyright">
+    <div class="container-fluid">
+        <p>Copyright © <a class="footer-a" href="assets\img\University\About-us-1\Path-Examinations-Ltd.pdf">Path Examinations Ltd.</a> 2021 | London, United Kingdom</p>
+    </div>
+    <!-- Scroll Top Start -->
+    <a id="scroll-top" class="d-flex justify-content-center align-items-center">
+        <i class="flaticon-up-arrow"></i>
+    </a>
+</div>
+
+<script>
+    $("#scroll-top").click(function() {
+        $('html,body').animate({
+            scrollTop: $(".header").offset().top},
+            'slow');
+    });
+
+    // Funcion que levanta los datos del form cuando cliquean en enviar
+    $(document).on('click', '#send_message', function(e){
+        e.preventDefault()
+
+        var name = $('#franja-contacto #name').val()
+        var email = $('#franja-contacto #email').val()
+        var message = $('#franja-contacto #message').val()
+
+        $.ajax({
+            url:'api.php?func=enviar_mail',
+            method:'POST',
+            cache: false,
+            data:{
+                name,
+                email,
+                message
+            },
+            dataType:'text',
+            success:function(data){
+                
+                console.log(data)
+                $('#franja-contacto #name').val('')
+                $('#franja-contacto #email').val('')
+                $('#franja-contacto #message').val('')
+                $('#form-msj').html('Thank you!')
+                $('#form-msj').slideDown(200)
+            }
+        });
+
+
+    })
+
+    
+</script>
+    
+</footer>
 <div>
 
 </div>
@@ -1179,8 +1543,8 @@ input[type=number] {
     <script src="assets/js/vander/jQuery.rcounter.js"></script>
 
     <!-- Google maps geolocation -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqFuLx8S7A8eianoUhkYMeXpGPvsXp1NM&callback=initMap"
-        async defer></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqFuLx8S7A8eianoUhkYMeXpGPvsXp1NM&callback=initMap"
+        async defer></script> -->
     <!-- Custom Script -->
     <script src="assets/js/map.js"></script>
     <script src="assets/js/main.js"></script>
@@ -1192,6 +1556,18 @@ input[type=number] {
 var global_pedido;
 
 $(document).ready(function() {
+    setTimeout(() => {
+        
+        $('#calen-cont-speak').load('speakingCalendar.html')
+        $('#calen-cont-listen').load('listeningCalendar.html')
+        $('#calen-cont-RandW').load('RandWCalendar.html')
+    }, 300);
+})
+
+
+
+$(document).ready(function() {
+
 
 
 $( "#countryRes" ).change(function() {
@@ -1199,6 +1575,9 @@ $( "#countryRes" ).change(function() {
         $('body').css('overflow-y','hidden')
     }else{
         $('body').css('overflow-y','auto')
+        $('html, body').animate({
+            scrollTop: $("#examandmodule").offset().top - 100
+        }, 400);
     }
     if ($( "#countryRes" ).val() == "Argentina") {
         $('#arg').slideDown()
@@ -1411,7 +1790,7 @@ $('#submit-cont button').click(function() {
     })
     $('#tyc li').each(function() {
         if (!$(this).hasClass('li-yes')) {
-            alert('Accept terms and conticions')
+            alert('Accept terms and conditions')
             todoOk = 'no';
             return false;
         }
@@ -1489,47 +1868,170 @@ $('#area-code').html(html_codes)
 
 
 
-console.log( Date.now() )
-var d = new Date();
-var n = d.getTime();
-console.log(d)
 
+var d = new Date()
+var gmtHours = -d.getTimezoneOffset()/60;
+console.log( gmtHours);
 
+var dt = new Date();
+var test = dt.setHours( dt.getHours() - gmtHours );
+let date = new Date( test );
 
-$('#speakingCalendar').change(function() {
-    let dia = Date.parse($(this).val());
+// alert(date);
+
+$(document).on('change', '#speakingTime', function(){
+
+    // $('#speakingTime, #speakingCalendar').change(function() {
     
-    console.log( dia )
-})
-
-
-})
-
-function render_paypal_button(checkout_id){
-
-    paypal.Buttons({
-      createOrder: function(data, actions) {
-        // This function sets up the details of the transaction, including the amount and line item details.
-        return actions.order.create({
-          purchase_units: [{
-            amount: {
-              value: global_pedido.final_price
-            },
-            custom_id: checkout_id,
-          }]
-        });
-      },
-      onApprove: function(data, actions) {
-    return actions.order.capture().then(function() {
-        console.log('data: ')
-        console.log(data)
-         window.location = "paypal-transaction-complete.php?orderID="+data.orderID;				
-    });
+    // console.log(new Date($('#speakingCalendar').val()).getDay())
+    if (new Date($('#speakingCalendar').val()).getDay() == 0 || new Date($('#speakingCalendar').val()).getDay() == 6) {
+        alert("This module is only avaible during business days")
+        $('#speakingCalendar').val('')
     }
-    }).render('#paypal-button-container');
+    if ($('#speakingCalendar').val() != '' ) {
+        let fechaSpeak = $('#speakingCalendar').val()
+
+        let horaSpeak = $('#speakingTime').val().replace(" UK", "");
+        var localTime = new Date(fechaSpeak+"T"+horaSpeak)
+        var gmtHours = -d.getTimezoneOffset()/60;
+        var ggaa = localTime.setHours( localTime.getHours() + gmtHours );
+        
+        $('#horaSpeaking').text(new Date( ggaa ))
+    }
+    
+})
 
 
+$(document).on('change', '#listeningTime', function(){
+
+    if ($('#listeningCalendar').val() != '' ) {
+        let fechaList = $('#listeningCalendar').val()
+
+        let horaList = $('#listeningTime').val().replace(" UK", "");
+        var localTime = new Date(fechaList+"T"+horaList)
+        var gmtHours = -d.getTimezoneOffset()/60;
+        var ggaa = localTime.setHours( localTime.getHours() + gmtHours );
+        
+        $('#horaListening').text(new Date( ggaa ))
+    }
+})
+
+$(document).on('change', '#RandWTime', function(){
+// $('#RandWTime, #RandWCalendar').change(function() {
+    if ($('#RandWCalendar').val() != '' ) {
+        let fechaSpeak = $('#RandWCalendar').val()
+
+        let horaSpeak = $('#RandWTime').val().replace(" UK", "");
+        var localTime = new Date(fechaSpeak+"T"+horaSpeak)
+        var gmtHours = -d.getTimezoneOffset()/60;
+        var ggaa = localTime.setHours( localTime.getHours() + gmtHours );
+        
+        $('#horaRandW').text(new Date( ggaa ))
+    }
+})
+if ($(window).width() < 800) {
+
+    $('#exams ul li').click(function () {
+        $('html, body').animate({
+            scrollTop: $("#modules").offset().top - 150
+        }, 400);
+    })
+    
 }
+
+$('.anchor').click(function(ev) {
+    let href = $(this).attr('data-link');
+
+    $('html, body').animate({
+            scrollTop: $(href).offset().top - 150
+    }, 700);
+    console.log(href)
+})
+
+
+let country = $("#country").offset().top;
+let examMod = $("#examandmodule").offset().top;
+let dateandtime = $("#dateandtime").offset().top;
+let personinfo = $("#personalinfo").offset().top;
+let termsandco = $("#termsandconditions").offset().top;
+let payment = $("#payment").offset().top;
+
+$(window).scroll( function(){
+    
+    let bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+    let top_of_screen = $(window).scrollTop();   
+    // console.log(top_of_screen)
+
+
+    if (country < top_of_screen +200) {
+        $('.anchor[data-link="#country"]>div').css({'color':'white', 'background-color':'#004972'})
+        $('#pasos-cont aside').css('background', 'linear-gradient(to right, #004972 0%, #f0f0f0 0%)')
+    }else{
+        $('.anchor[data-link="#country"]>div').css({'color':'black', 'background-color':'#f0f0f0'})
+    }
+    if (examMod < top_of_screen +200) {
+        $('#pasos-cont aside').css('background', 'linear-gradient(to right, #004972 20%, #f0f0f0 20%)')
+        $('.anchor[data-link="#examandmodule"]>div').css({'color':'white', 'background-color':'#004972'})
+    }else{
+        $('.anchor[data-link="#examandmodule"]>div').css({'color':'black', 'background-color':'#f0f0f0'})
+    }  
+    if (dateandtime < top_of_screen +200) {
+        $('#pasos-cont aside').css('background', 'linear-gradient(to right, #004972 40%, #f0f0f0 40%)')
+        $('.anchor[data-link="#dateandtime"]>div').css({'color':'white', 'background-color':'#004972'})
+    }else{
+        $('.anchor[data-link="#dateandtime"]>div').css({'color':'black', 'background-color':'#f0f0f0'})
+    }  
+    if (personinfo < top_of_screen +200) {
+        $('#pasos-cont aside').css('background', 'linear-gradient(to right, #004972 60%, #f0f0f0 60%)')
+        $('.anchor[data-link="#personalinfo"]>div').css({'color':'white', 'background-color':'#004972'})
+    }else{
+        $('.anchor[data-link="#personalinfo"]>div').css({'color':'black', 'background-color':'#f0f0f0'})
+    }  
+    if (termsandco < top_of_screen +200) {
+        $('#pasos-cont aside').css('background', 'linear-gradient(to right, #004972 80%, #f0f0f0 80%)')
+        $('.anchor[data-link="#termsandconditions"]>div').css({'color':'white', 'background-color':'#004972'})
+    }else{
+        $('.anchor[data-link="#termsandconditions"]>div').css({'color':'black', 'background-color':'#f0f0f0'})
+    }  
+    if (payment < top_of_screen +200) {
+        $('#pasos-cont aside').css('background', 'linear-gradient(to right, #004972 100%, #f0f0f0 100%)')
+        $('.anchor[data-link="#payment"]>div').css({'color':'white', 'background-color':'#004972'})
+    }else{
+        $('.anchor[data-link="#payment"]>div').css({'color':'black', 'background-color':'#f0f0f0'})
+    }  
+});
+// termina el F() scroll
+
+
+
+
+
+})
+
+// function render_paypal_button(checkout_id){
+
+//     paypal.Buttons({
+//       createOrder: function(data, actions) {
+//         // This function sets up the details of the transaction, including the amount and line item details.
+//         return actions.order.create({
+//           purchase_units: [{
+//             amount: {
+//               value: global_pedido.final_price
+//             },
+//             custom_id: checkout_id,
+//           }]
+//         });
+//       },
+//       onApprove: function(data, actions) {
+//         return actions.order.capture().then(function() {
+//         console.log('data: ')
+//         console.log(data)
+//         window.location = "paypal-transaction-complete.php?orderID="+data.orderID;				
+//     });
+//     }
+//     }).render('#paypal-button-container');
+
+// })
 
 
 </script>
