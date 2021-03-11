@@ -502,7 +502,10 @@ input[type="date"]
 }
     </style>
 
-
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
 
 </head>
 
@@ -573,12 +576,6 @@ input[type="date"]
     <h2>Book an exam</h2>
 </header>
 
-
-<!-- <input  id="speakingCalendar" type="text" > -->
-<div id="wrapper" ng-app="myApp">
-  <p>{{datePicker || "00/00/0000"}}</p>
-  <input type="text" ng-model="datePicker" id="ass" datepicker />
-</div>
 
 
 <div class="cont80" id="country">
@@ -918,7 +915,10 @@ input[type="date"]
             <div>
                 <div id="speakingDate"  class="moduleDateDis">
                     <h4>Speaking module</h4>
-                    <!-- <input  id="speakingCalendar" type="text" > -->
+                   
+                    <div id="calen-cont-speak">
+
+                    </div>
                     <div>
                         <select name="" id="speakingTime">
                             <option value="" hidden selected>Choose a time</option>
@@ -936,9 +936,11 @@ input[type="date"]
                     </div>
                     <p id="horaSpeaking"></p>
                 </div>
-                <div id="listeningDate"  class=" ">
+                <div id="listeningDate"  class="moduleDateDis">
                     <h4>Listening module</h4>
-                    <input type="date" id="listeningCalendar" min="<?php echo date('Y-m-d',strtotime('+7 days'));  ?>">
+                    <div id="calen-cont-listen">
+
+                    </div>
                     <div>
                         <select name="" id="listeningTime">
                             <option value="" hidden selected>Choose a time</option>
@@ -974,8 +976,10 @@ input[type="date"]
                 </div>
                 <div id="randwDate" class="moduleDateDis">
                     <h4>Reading and writing module</h4>
-                    <input type="date" id="RandWCalendar" min="<?php echo date('Y-m-d',strtotime('+7 days'));  ?>">
-                                    <div>
+                        <div id="calen-cont-RandW">
+
+                        </div>
+                        <div>
                         <select name="" id="RandWTime">
                             <option value="" hidden selected>Choose a time</option>
                             <option value="00:00 UK">00:00 UK</option>
@@ -1401,7 +1405,118 @@ input[type="date"]
 
 <!-- Footer Section -->
 <footer class="footer-section" id="footer">
-    <?php include 'footer.html' ?>
+<div class="container-fluid">
+    <div class="divider"></div>
+    <div class="row footer-content">
+        <div class="col-12 col-md-6 col-lg-4">
+            <img class="brand-logo" src="assets/img/logos/path_logo.png" alt="University Logo">
+            <div class="contact-links">
+                <div class="link">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>167-169 Great Portland St., 5th Floor<br>Westminster, London W1W 5PF<br>United Kingdom</p>
+                </div>
+                <div class="link">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@pathexaminations.com</p>
+                </div>
+                <div class="link">
+                    <i class="fas fa-phone"></i>
+                    <p>+44 020 3468 2534</p>
+                </div>
+                <div class="link social-icons">
+                    <a target="_blank" href="https://www.facebook.com/pathexams"><i
+                            class="fab fa-facebook-square"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/pathexams"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-2">
+            <h5>Links</h5>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="meet-path.html">Meet Path</a></li>
+                <li><a href="teachers-institutions.html">Teachers and institutions</a></li>
+                <li><a href="our-examinations.html">Our examinations</a></li>
+                <li><a href="news-and-events.php">News and events</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-2">
+            <h5>Information</h5>
+            <ul>
+                <li><a href="#">Job opportunities</a></li>
+                <li><a href="#">Give us feedback</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-2">
+            <h5>Policies</h5>
+            <ul>
+                <li><a href="privacy-policy.html">Privacy policy</a></li>
+                <li><a href="terms-and-conditions.html">Terms and conditions</a></li>
+                <li><a href="cookies-policy.html">Cookies policy</a></li>
+            </ul>
+        </div>
+        <!-- <div class="col-12 col-md-6 col-lg-2 d-flex footer__flag-container justify-content-center">
+            <div class="footer__e-flag"><img src="assets\img\icons\Flags\uk.png" alt=""></div>
+            <div class="footer__e-flag"><img src="assets\img\icons\Flags\spanish.png" alt=""></div> 
+        </div> -->
+    </div>
+
+
+</div>
+
+<div class="copyright">
+    <div class="container-fluid">
+        <p>Copyright © <a class="footer-a" href="assets\img\University\About-us-1\Path-Examinations-Ltd.pdf">Path Examinations Ltd.</a> 2021 | London, United Kingdom</p>
+    </div>
+    <!-- Scroll Top Start -->
+    <a id="scroll-top" class="d-flex justify-content-center align-items-center">
+        <i class="flaticon-up-arrow"></i>
+    </a>
+</div>
+
+<script>
+    $("#scroll-top").click(function() {
+        $('html,body').animate({
+            scrollTop: $(".header").offset().top},
+            'slow');
+    });
+
+    // Funcion que levanta los datos del form cuando cliquean en enviar
+    $(document).on('click', '#send_message', function(e){
+        e.preventDefault()
+
+        var name = $('#franja-contacto #name').val()
+        var email = $('#franja-contacto #email').val()
+        var message = $('#franja-contacto #message').val()
+
+        $.ajax({
+            url:'api.php?func=enviar_mail',
+            method:'POST',
+            cache: false,
+            data:{
+                name,
+                email,
+                message
+            },
+            dataType:'text',
+            success:function(data){
+                
+                console.log(data)
+                $('#franja-contacto #name').val('')
+                $('#franja-contacto #email').val('')
+                $('#franja-contacto #message').val('')
+                $('#form-msj').html('Thank you!')
+                $('#form-msj').slideDown(200)
+            }
+        });
+
+
+    })
+
+    
+</script>
+    
 </footer>
 <div>
 
@@ -1428,8 +1543,8 @@ input[type="date"]
     <script src="assets/js/vander/jQuery.rcounter.js"></script>
 
     <!-- Google maps geolocation -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqFuLx8S7A8eianoUhkYMeXpGPvsXp1NM&callback=initMap"
-        async defer></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqFuLx8S7A8eianoUhkYMeXpGPvsXp1NM&callback=initMap"
+        async defer></script> -->
     <!-- Custom Script -->
     <script src="assets/js/map.js"></script>
     <script src="assets/js/main.js"></script>
@@ -1441,11 +1556,17 @@ input[type="date"]
 var global_pedido;
 
 $(document).ready(function() {
+    setTimeout(() => {
+        
+        $('#calen-cont-speak').load('speakingCalendar.html')
+        $('#calen-cont-listen').load('listeningCalendar.html')
+        $('#calen-cont-RandW').load('RandWCalendar.html')
+    }, 300);
+})
 
 
-// $( function() {
-//     $( "#speakingCalendar" ).datepicker();
-// } );
+
+$(document).ready(function() {
 
 
 
@@ -1758,8 +1879,12 @@ let date = new Date( test );
 
 // alert(date);
 
-$('#speakingTime, #speakingCalendar').change(function() {
-    if (new Date($('#speakingCalendar').val()).getDay() == 5 || new Date($('#speakingCalendar').val()).getDay() == 6) {
+$(document).on('change', '#speakingTime', function(){
+
+    // $('#speakingTime, #speakingCalendar').change(function() {
+    
+    // console.log(new Date($('#speakingCalendar').val()).getDay())
+    if (new Date($('#speakingCalendar').val()).getDay() == 0 || new Date($('#speakingCalendar').val()).getDay() == 6) {
         alert("This module is only avaible during business days")
         $('#speakingCalendar').val('')
     }
@@ -1776,7 +1901,9 @@ $('#speakingTime, #speakingCalendar').change(function() {
     
 })
 
-$('#listeningTime, #listeningCalendar').change(function() {
+
+$(document).on('change', '#listeningTime', function(){
+
     if ($('#listeningCalendar').val() != '' ) {
         let fechaList = $('#listeningCalendar').val()
 
@@ -1789,7 +1916,8 @@ $('#listeningTime, #listeningCalendar').change(function() {
     }
 })
 
-$('#RandWTime, #RandWCalendar').change(function() {
+$(document).on('change', '#RandWTime', function(){
+// $('#RandWTime, #RandWCalendar').change(function() {
     if ($('#RandWCalendar').val() != '' ) {
         let fechaSpeak = $('#RandWCalendar').val()
 
@@ -1832,7 +1960,7 @@ $(window).scroll( function(){
     
     let bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
     let top_of_screen = $(window).scrollTop();   
-    console.log(top_of_screen)
+    // console.log(top_of_screen)
 
 
     if (country < top_of_screen +200) {
