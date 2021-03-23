@@ -130,7 +130,7 @@
         width: 50%;
     }
     #exams ul>div:last-child{
-        border-right: 1px solid #f0f0f0;
+        border-right: 1px solid #004972ab;
     }
 
     #modules{
@@ -206,6 +206,13 @@
         font-size: 1em;
         margin-top: 15%;
         transition: .2s cubic-bezier(0.13, 0.77, 0.33, 1);
+        color: white;
+        background: #004972;
+        padding: 0px 5px;
+        border-radius: 3px;
+        /* display: inline-block; */
+        letter-spacing: 0.6px;
+
     }
     .dcto-appl{
         color: #004969;
@@ -322,7 +329,7 @@
     }
 
     #subtot-prc::before, #final-prc::before{
-        content: '$'
+        content: 'U$D '
     }
     #countryRes{
         background: #fafafa;
@@ -500,6 +507,14 @@ input[type="date"]
     -moz-appearance: textfield;
     min-height: 1.2em;
 }
+#dcto-appl{font-size: 1.3em;
+    text-align: center;
+    color: #004972;
+    display: none;
+    }
+#subtot-prc-dcto::before,#final-prc-dcto::before{
+    content: 'U$D';
+}
     </style>
 
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
@@ -520,7 +535,7 @@ input[type="date"]
                     <div>
                         <span>1</span>
                     </div>
-                    <p>Country</p>
+                    <p>Select your country</p>
                 </div>
             </div>
             <div>
@@ -536,7 +551,7 @@ input[type="date"]
                     <div>
                         <span>3</span>
                     </div>
-                    <p>Date and time</p>
+                    <p>Select date and time</p>
                 </div>
             </div>
             <div>
@@ -848,7 +863,7 @@ input[type="date"]
     <div class="boxi" >
         <div>
             <div id="exams">
-                <h5>Exam:</h5>
+                <h5>Select exam:</h5>
                 <ul>
                     <div>
                         <li data-price="40" class="exam speaking">A1- Speaking Performance Assessment (SPA) level I</li>
@@ -868,7 +883,7 @@ input[type="date"]
                 </ul>
             </div>
             <div id="modules">
-                <h5>Module:</h5>
+                <h5>Select module(s):</h5>
                 <ul>
                     <li id="selectSpeaking" class="module">Speaking</li>
                     <li id="selectListening" class="module no-spk">Listening</li>
@@ -876,7 +891,7 @@ input[type="date"]
                 </ul>
                 <div>
                     <p id="dcto-alert">Special offer! If 3 modules are ordered, you have 1 module for free.</p>
-                    <!-- <p id="dcto-appl"></p> -->
+                    <p id="dcto-appl"><span><del id="subtot-prc-dcto" style="display: inline;"></del> <span id="final-prc-dcto"></span></span></p>
                 </div>
             </div>
         </div>
@@ -1726,13 +1741,18 @@ function actualizarCarrito(){
     if (modules.length == 3) {
         $('#subtot-prc').css('display','inline')
         $('#subtot-prc').text(sub_tot)
+        $('#subtot-prc-dcto').text(sub_tot)
         final_price = prc_module*2;
         $('#final-prc').text(final_price)
+        $('#final-prc-dcto').text(final_price)
+        $('#dcto-appl').fadeIn()
 
     }else{
+        $('#dcto-appl').fadeOut()
         $('#subtot-prc').css('display','none');
         final_price = sub_tot;
         $('#final-prc').text(final_price);
+        $('#subtot-prc-dcto, #final-prc-dcto').text('')
 
     }
 
@@ -1751,7 +1771,7 @@ function actualizarCarrito(){
 
 
 
-    console.log(detalle_pedido)
+    console.log(detalle_pedido.modules)
 }
 
 
