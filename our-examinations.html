@@ -18,7 +18,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/custom.css" />
-  <title>Path | Our examinations</title>
+  <title>Path | General English exams</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQWREFVWND"></script>
@@ -708,7 +708,7 @@ ANIMS OUR EXAMINATIONS
   </div>
     <div class="container">
       <div class="heading">
-        <h1>Our examinations</h1>
+        <h1>General English exams</h1>
       </div>
     </div>
   </section>
@@ -1102,6 +1102,7 @@ ANIMS OUR EXAMINATIONS
                   <li>Modules:</li>
                   <li>Total length:</li>
                   <li>Age range:</li>
+                  <li class="passing_mark">Passing mark:</li>
                 </ul>
               </div>
               <div class="level-specs__info">
@@ -1112,6 +1113,7 @@ ANIMS OUR EXAMINATIONS
                   <li style="min-width: 80px;" id="exam_length"></li>
                   <li id="exam_age"></li>
                   <li id="exam_age2"></li>
+                  <li class="passing_mark">60%</li>
                 </ul>
               </div>
             </div>
@@ -1194,7 +1196,7 @@ var exams_modales = {
         CEFRlevel : 'A1- (Pre Breakthrough)',
         Examtype : 'Online and paper-based',
         Modules : 'Speaking | Listening | Reading and writing',
-        Totallength : '1 hour 30 minutes',
+        Totallength : '1 hour 20 minutes',
         Agerange : 'All ages',
         Agerange2 : '',
         Aclaration : ''
@@ -1205,7 +1207,7 @@ var exams_modales = {
         CEFRlevel : 'A1 (Breakthrough)',
         Examtype : 'Online and paper-based',
         Modules : 'Speaking | Listening | Reading and writing',
-        Totallength : '1 hour 30 minutes',
+        Totallength : '1 hour 20 minutes',
         Agerange : 'All ages',
         Agerange2 : '',
         Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
@@ -1216,7 +1218,7 @@ var exams_modales = {
         CEFRlevel : 'A1+ (Strong Breakthrough)',
         Examtype : 'Online and paper-based',
         Modules : 'Speaking | Listening | Reading and writing',
-        Totallength : '1 hour 30 minutes',
+        Totallength : '1 hour 20 minutes',
         Agerange : 'All ages',
         Agerange2 : '',
         Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
@@ -1227,7 +1229,7 @@ var exams_modales = {
         CEFRlevel : 'A2 (Waystage)',
         Examtype : 'Online and paper-based',
         Modules : 'Speaking | Listening | Reading and writing',
-        Totallength : '1 hour 30 minutes',
+        Totallength : '1 hour 25 minutes',
         Agerange : 'All ages',
         Agerange2 : '',
         Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.',
@@ -1239,7 +1241,7 @@ var exams_modales = {
         CEFRlevel : 'A2+ (Strong Waystage)',
         Examtype : 'Online and paper-based',
         Modules : 'Speaking | Listening | Reading and writing',
-        Totallength : '1 hour 30 minutes',
+        Totallength : '1 hour 35 minutes',
         Agerange : 'All ages',
         Agerange2 : '',
         Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
@@ -1251,7 +1253,7 @@ var exams_modales = {
         CEFRlevel : 'B1 (Threshold)',
         Examtype : 'Online and paper-based',
         Modules : 'Speaking | Listening | Reading and writing',
-        Totallength : '2 hours',
+        Totallength : '2 hours 10 minutes',
         Agerange : 'All ages',
         Agerange2 : '',
         Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
@@ -1289,6 +1291,14 @@ $('.disparar_modal').click(function () {
 
 
 function abridor_modal(examen){
+
+  // Hacemos un manejo para ver si se muestra el renglo de "passing mark"
+  if(examen != 'aSPAlevelII' && examen != 'AminusSPAlevelI' && examen != 'AplusSPAlevelIII'){
+    $('.passing_mark').show()
+  }else{
+    $('.passing_mark').hide()
+  }
+
   $('#exam_name').text(exams_modales[examen].nombre)
   $('#exam_desc').text(exams_modales[examen].desc)
   $('#exam_level').text(exams_modales[examen].CEFRlevel)
