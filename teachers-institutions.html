@@ -41,6 +41,14 @@
     BANNER
     ======
     */
+    .no-delay{
+      /* transform: translateY(7%)!important; */
+      transition-delay: 0s!important;
+    }
+
+    .move-card{
+      transform: translateY(-5%)!important;
+    }
 
     #learn-more-form{
       position: fixed;
@@ -503,6 +511,11 @@
           box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.10);
           border: 1px solid #cccccc;
           border-radius: 4px;
+          background-color: #004969;
+        }
+
+        .qmark__end p{
+          color: white!important;
         }
 
         /* 
@@ -1184,7 +1197,7 @@
 </head>
 
 <body>
-  <div class="covid-banner"><p>View our <a target="_blank" href="covid.html"><b>Coronavirus (COVID 19) page</b></a> for the latest updates</p></div>
+  <div class="covid-banner"><p>View our <a target="_blank" href="covid.html"><b>Coronavirus (COVID-19) page</b></a> for the latest updates</p></div>
     <!-- Navbar Section -->
     <nav class="navbar-section container-fluid d-none d-sm-block" id="header">
         
@@ -2069,6 +2082,10 @@
               <i style="font-weight: bold;" class="fas fa-check path-inbuilt-check"></i>
               <p style="font-weight: bold;">Eligible for institutions with 50 students or more</p>
             </div>
+            <div class="d-flex align-items-baseline">
+              <i style="font-weight: bold;" class="fas fa-check path-inbuilt-check"></i>
+              <p style="font-weight: bold;">For already-existing members and exam centres.</p>
+            </div>
           </div>
         </div>
         <div class="inbuilt__titles-container">
@@ -2724,6 +2741,12 @@
             $('.join-path-title').css({'opacity':1, 'transform':'translateY(0%)'});
             setTimeout(() => {
             $('.price-card').css({'opacity':1, 'transform':'translateY(0%)'});
+
+            // Luego le sacamos el transition delay
+            setTimeout(() => {
+              $('.price-card').addClass('no-delay')
+            }, 400);
+
             }, 300);
         }; 
 
@@ -2841,6 +2864,18 @@ $(document).on('click', '#in-send-message', function(e){
             }
         });
 
+})
+
+
+$(document).on('mouseenter', '.price-card', function(e){
+    console.log('entro')
+    $(this).addClass('move-card')
+      
+})
+$(document).on('mouseleave', '.price-card', function(e){
+  
+  $(this).removeClass('move-card')
+  
 })
 
     </script>

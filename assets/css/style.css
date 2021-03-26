@@ -2975,6 +2975,7 @@ cursor: pointer;
   background-color: var(--white);
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.15);
+  min-height: 100px;
 }
 .course-card-style-3 .card .card-img-overlay .card-body h6 {
   margin-bottom: 2px;
