@@ -1181,16 +1181,22 @@
         }
       }
 
+      /* .fade-in{
+        opacity: 1!important;
+        transform: translateY(0%)!important;
+      } */
+
     .fade-in {
     opacity: 0;
     transform: translateY(10%);
     transition: opacity 250ms ease-in;
     }
-
+    
+    /*
     .fade-in.appear {
     opacity: 1;
     transform: translateY(0%);
-    }
+    } */
 
       /* .inbuilt-checks-1, .inbuilt-checks-2, .inbuilt__info, .inbuilt__titles-aside, .natgeo__img, .natgeo-content p, .benefits__img, .benefits__right, */
         </style>
@@ -2396,7 +2402,7 @@
         </div>
     </section>
 
-    <section class="popular-courses section margin-top-0">
+    <section class="popular-courses section margin-top-0" id="popular-courses">
       <div class="container">
         <div class="text-center">
           <h2 class="text-center teachers__title series__title fade-in">Series</h2>
@@ -2716,7 +2722,7 @@
         });
 
                   var scroll = $(window).scrollTop();
-                  // console.log(scroll);
+                  console.log(scroll);
 
       if (scroll >= 550) {
         $('.our-levels-anim').css({'opacity':1, 'transform':'translateY(0%)'});
@@ -2749,6 +2755,18 @@
 
             }, 300);
         }; 
+
+        if (scroll >= 3800) {
+                $('#inbuilt-programme .fade-in').css({'opacity':1, 'transform':'translateY(0%)'});
+        };
+        
+        if (scroll >= 7200) {
+                $('#natgeo-learning .fade-in').css({'opacity':1, 'transform':'translateY(0%)'});
+        };
+        
+        if (scroll >= 9100) {
+                $('#popular-courses .fade-in').css({'opacity':1, 'transform':'translateY(0%)'});
+        };
 
         })}
   
@@ -2793,31 +2811,33 @@
   });
     </script>
     <script>
-      $(document).ready(function() {
-    const faders = document.querySelectorAll(".fade-in");
-const appearOptions = {
-    rootMargin: "0px 0px -125px 0px"
-};
-const appearOnScroll = new IntersectionObserver (function(
-    entries, 
-    appearOnScroll
-    ) {
-        entries.forEach(entry => {
-            if(!entry.isIntersecting) {
-            return;
-            } else {
-            entry.target.classList.add("appear");
-        appearOnScroll.unobserve(entry.target);
-    }
-});
-},
- appearOptions);
 
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
+// Este script traía problemas en safari asique queda comentado
+//       $(document).ready(function() {
+//     const faders = document.querySelectorAll(".fade-in");
+// const appearOptions = {
+//     rootMargin: "0px 0px -125px 0px"
+// };
+// const appearOnScroll = new IntersectionObserver (function(
+//     entries, 
+//     appearOnScroll
+//     ) {
+//         entries.forEach(entry => {
+//             if(!entry.isIntersecting) {
+//             return;
+//             } else {
+//             entry.target.classList.add("appear");
+//         appearOnScroll.unobserve(entry.target);
+//     }
+// });
+// },
+//  appearOptions);
+
+// faders.forEach(fader => {
+//     appearOnScroll.observe(fader);
     
-});
-})
+// });
+// })
 
 $(document).on('click', '#in-send-message', function(e){
   console.log('form sent!')
