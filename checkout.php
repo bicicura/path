@@ -2118,13 +2118,3 @@ setTimeout(() => {
 </html>
 
 
-<!-- 
-Alan
-                                 ????
-                        amigo agus     amigo agus 
-                dante                              nano 
-
-                        mateo       ???? 
-                AA                               FranB
-
-                        coqui      agus brega                            -->
