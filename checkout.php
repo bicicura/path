@@ -611,7 +611,7 @@ input[type="date"]
     <div class="boxi">
         <div>
         <select id="countryRes" name="countryRes">
-            <option value="">--</option>
+            <option value="">Choose your country</option>
             <option value="Afganistan">Afghanistan</option>
             <option value="Albania">Albania</option>
             <option value="Algeria">Algeria</option>
@@ -1733,6 +1733,7 @@ $('#tyc li').click(function() {
 function actualizarCarrito(){
 
     var modules = [];
+    var modules_name = [];
     $('.modules-selected').each(function(){
 
         var module_selector = ''
@@ -1749,6 +1750,7 @@ function actualizarCarrito(){
 
         var module = {"module": $(this).text(), "date": module_date, "time": module_time}
         modules.push(module);
+        modules_name.push( $(this).text() );
 
     })
 
@@ -1774,7 +1776,6 @@ function actualizarCarrito(){
     }
 
     $('#exam-fin-det b').text($('.exam-selected').text())
-    $('#exam-fin-det span').text(modules.join(' - '))
 
     
     var detalle_pedido = {
@@ -1786,13 +1787,13 @@ function actualizarCarrito(){
 
     global_pedido = detalle_pedido
 
+    console.log( modules_name )
+    $('#exam-fin-det span').text(modules_name.join(' - '))
 
-
-    console.log(detalle_pedido.modules)
 }
 
 
-$('#submit-cont button').click(function() {
+    $('#submit-cont button').click(function() {
     var todoOk = 'si';
     if( $('#countryRes').val() == '' ){
         alert('Please select your country of residence')
@@ -2085,6 +2086,10 @@ $(document).on('click', '.section-disabled', function(e) {
     e.preventDefault()
 })
 
+setTimeout(() => {
+    $('#listeningCalendar, #RandWCalendar, #speakingCalendar').attr('placeholder','Select date')
+    
+}, 1100);
 
 
 })
@@ -2115,3 +2120,5 @@ function render_paypal_button(checkout_id){
 
 </script>
 </html>
+
+
