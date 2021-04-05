@@ -39,10 +39,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- SDK de cliente para PayPal -->
-	<script src="https://www.paypal.com/sdk/js?client-id=AcSOQzXrlRL_ERTh5svonn3GXR-HYzxEsdGqsjNczLmJUueoLS96o6byOgYsPEGWtc4MzMQ-KfPyXLv4"></script>
-
-
-
+	<script src="https://www.paypal.com/sdk/js?client-id=ARDCi3FIBBP9EAKeL5VTreoO1wmD1tF8IGOIehneZqbdaXpM5yC3Cr7K0FF75HwtlcVVtL35zt5YGjiq"></script>
 
 
     <!-- Fonts -->
