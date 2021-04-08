@@ -23,9 +23,9 @@
     <!-- Flaticon -->
     <link rel="stylesheet" href="assets/img/logos/favicon.ico">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel="stylesheet" href="assets/css/application-form.css">
+    <link rel="stylesheet" href="assets/css/style.css?r=1">
+    <link rel="stylesheet" href="assets/css/custom.css?r=1">
+    <link rel="stylesheet" href="assets/css/application-form.css?r=1">
     
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
