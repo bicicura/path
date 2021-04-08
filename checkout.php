@@ -1880,6 +1880,7 @@ function actualizarCarrito(){
                 data = JSON.parse(data)
                 // Mostramos el boton de paypal
                 if(data.error==0){
+                    $('#progreso-cont').remove()
                     render_paypal_button(data.id)
                 }
             }
