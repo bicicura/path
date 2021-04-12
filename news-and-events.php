@@ -195,7 +195,7 @@ $q = $q->fetchAll();
                   <a href="blog-detail.php?id='.$id.'">
                     <div class="thumb">
                       <img class="card-img-top"
-                      src="assets/blog_imgs/'.$img_url.'" alt="Card image cap">
+                      src="blogg8/blog_images/'.$img_url.'" alt="Card image cap">
                     </div>
                     
                     <div class="card-img-overlay">
