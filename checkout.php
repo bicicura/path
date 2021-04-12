@@ -354,6 +354,15 @@ input[type=number] {
 }
 
 
+.leyenda{
+    margin-bottom: 15px;
+    background-color: #f2f2f2;
+    width: max-content;
+    padding: 4px 20px;
+    border-radius: 8px;
+    font-size: 0.85em;
+    color: #212121;
+}
 
 .navbar-section{
     background: white;
@@ -941,6 +950,7 @@ input[type="date"]
     </div>
     <div class="boxi section-disabled">
         <div id="datesandtime">
+            <div class="leyenda">Please make sure you select a different time for each of the modules booked.</div>
             <div>
                 <div id="speakingDate"  class="moduleDateDis">
                     <h4>Speaking module</h4>
