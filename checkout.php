@@ -507,17 +507,24 @@ input[type="date"]
     -moz-appearance: textfield;
     min-height: 1.2em;
 }
-#dcto-appl{font-size: 1.3em;
+#dcto-appl{
+    font-size: 1.3em;
     text-align: center;
     color: #004972;
-    display: none;
-    }
+}
+#final-prc-dcto{
+    display:none
+}
 #subtot-prc-dcto::before,#final-prc-dcto::before{
-    content: 'U$D';
+    content: 'U$D ';
 }
 .section-disabled *{
     cursor: not-allowed!important;
     opacity: 0.6!important;
+}
+.listo{
+    background: #004972!important;
+    color: white!important
 }
     </style>
 
@@ -895,7 +902,7 @@ input[type="date"]
                 </ul>
                 <div>
                     <p id="dcto-alert">Special offer! If 3 modules are ordered, you have 1 module for free.</p>
-                    <p id="dcto-appl"><span><del id="subtot-prc-dcto" style="display: inline;"></del> <span id="final-prc-dcto"></span></span></p>
+                    <p id="dcto-appl"><span><span id="subtot-prc-dcto" style="display: inline;"></span> <span id="final-prc-dcto"></span></span></p>
                 </div>
             </div>
         </div>
@@ -1063,7 +1070,7 @@ input[type="date"]
                     
                     
                     <div class="input-cont">
-                            <div class="form-label">ID number<span class="required">*</span></div>
+                            <div class="form-label">ID or passport number<span class="required">*</span></div>
                             <input type="text" id="id-num" class="form-input non-required">
                     </div>
                     
@@ -1081,7 +1088,16 @@ input[type="date"]
                             <div class="form-label">Email<span class="required">*</span></div>
                             <input type="mail" id="email" class="form-input">
                     </div>
+                    <div class="input-cont">
+                            <div class="form-label">Repeat email<span class="required">*</span></div>
+                            <input type="mail" id="repeatemail" class="form-input">
+                    </div>
                     
+                    
+
+                </div>
+
+                <div class="inputs-row" style="margin-bottom: 15px">
                     <div class="input-cont">
                             <div class="form-label">Mobile phone number<span class="required">*</span></div>
                             <div style="display:flex">
@@ -1092,13 +1108,6 @@ input[type="date"]
                                 <input type="number" id="phone" class="form-input">
                             </div>
                     </div>
-                    
-                    
-
-                </div>
-
-                <div class="inputs-row" style="margin-bottom: 15px">
-
                     <div class="input-cont">
                             <div class="form-label">Country<span class="required">*</span></div>
                             <select id="country" name="country">
@@ -1356,15 +1365,16 @@ input[type="date"]
                         <div class="form-label">State/County/Province<span class="required">*</span></div>
                         <input type="text" id="state" class="form-input">
                     </div>
-                    <div class="input-cont">
-                        <div class="form-label">City/Town<span class="required">*</span></div>
-                        <input type="text" id="city" class="form-input">
-                    </div>
+                    
 
                 </div>
 
                 <div class="inputs-row">
 
+                    <div class="input-cont">
+                        <div class="form-label">City/Town<span class="required">*</span></div>
+                        <input type="text" id="city" class="form-input">
+                    </div>
                     <div class="input-cont">
                         <div class="form-label">Address<span class="required">*</span></div>
                         <input type="text" id="address" class="form-input">
@@ -1639,6 +1649,7 @@ $('.exam').click(function() {
         $('.no-spk').addClass('disabled')
     }else{
         $('.no-spk').removeClass('disabled')
+
     }
     countModules()
 
@@ -1674,8 +1685,13 @@ function countModules(){
     var numItems = $('.modules-selected').length
     if (numItems == 3 ) {
         $('#dcto-alert').addClass('dcto-appl')
+        $('#final-prc-dcto').css('display','inline')
+        $('#subtot-prc-dcto').css('text-decoration','line-through')
     }else{
         $('#dcto-alert').removeClass('dcto-appl')
+        $('#final-prc-dcto').css('display','none')
+        $('#subtot-prc-dcto').css('text-decoration','none')
+
     }
     if (numItems > 0) {
         $('#dateandtime .boxi').removeClass('section-disabled')
@@ -1752,21 +1768,18 @@ function actualizarCarrito(){
     sub_tot = prc_module * modules.length;
 
     if (modules.length == 3) {
-        $('#subtot-prc').css('display','inline')
         $('#subtot-prc').text(sub_tot)
         $('#subtot-prc-dcto').text(sub_tot)
         final_price = prc_module*2;
         $('#final-prc').text(final_price)
         $('#final-prc-dcto').text(final_price)
-        $('#dcto-appl').fadeIn()
 
     }else{
-        $('#dcto-appl').fadeOut()
-        $('#subtot-prc').css('display','none');
         final_price = sub_tot;
         $('#final-prc').text(final_price);
         $('#subtot-prc-dcto, #final-prc-dcto').text('')
-
+        $('#subtot-prc').text(sub_tot)
+        $('#subtot-prc-dcto').text(sub_tot)
     }
 
     $('#exam-fin-det b').text($('.exam-selected').text())
@@ -1827,14 +1840,35 @@ function actualizarCarrito(){
             return false;
         }
     })
+    
+    // checkEmail()
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(!re.test($('#email').val())){      
+        alert("Please enter a valid email address");
+        todoOk = 'no';
+        return false;
+    }
+    if ($('#email').val() != $('#repeatemail').val() ) {
+        alert("Emails doesn't match");
+        todoOk = 'no';
+        return false;
+    }
 
     if (todoOk == 'si') {
         $('#pp-cont').slideDown()
-        $("html, body").delay(150).animate({
-            scrollTop: $('#pp-cont').offset().top 
+        $("html, body").delay(300).animate({
+            scrollTop: $('#pp-cont').offset().top - 100
         }, 700);
 
         $('.cont80').slideUp()
+        
+$('.anchor[data-link="#country"]>div').addClass('listo')
+$('.anchor[data-link="#examandmodule"]>div').addClass('listo')
+$('.anchor[data-link="#dateandtime"]>div').addClass('listo')
+$('.anchor[data-link="#personalinfo"]>div').addClass('listo')
+$('.anchor[data-link="#termsandconditions"]>div').addClass('listo')
+$('.anchor[data-link="#payment"]>div').addClass('listo')
+$('#pasos-cont aside').addClass('listo')
 
         // Levantamos los campos
         var name = $('#name').val()
@@ -2021,6 +2055,8 @@ $('.anchor').click(function(ev) {
 })
 
 
+
+
 let country = $("#country").offset().top;
 let examMod = $("#examandmodule").offset().top;
 let dateandtime = $("#dateandtime").offset().top;
@@ -2085,7 +2121,6 @@ setTimeout(() => {
     
 }, 1100);
 
-
 })
 
 // function render_paypal_button(checkout_id){
@@ -2111,7 +2146,8 @@ setTimeout(() => {
 //     }
 //     }).render('#paypal-button-container');
 
-// })
+// }
+
 
 
 </script>
