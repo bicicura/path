@@ -1,0 +1,502 @@
+/*Customizando la scrollbar*/
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+/*::-webkit-scrollbar-track {
+  background: ;
+}*/
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b5b5b5;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+body{
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	font-family: ubuntu;
+	overflow-y: hidden;
+}
+
+#btn-sticky{
+    position: absolute;
+    z-index: 3;
+    left: 85%;
+    top: 90%;
+    display: none;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+#msj-volador{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: -1;
+}
+
+#msj-volador div{
+	font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    background: -webkit-linear-gradient(#d6197a, #990c54);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+    padding: 10px;
+    margin-bottom: 10%;
+    transform: scale(2.5);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.2s;
+
+}
+
+#big-cont{
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.col{
+	display: flex;
+	flex-direction: column;
+}
+
+#side-bar{
+	background-color: #151515;
+	width: 12%;
+	display: flex;
+	flex-direction: column;
+	padding: 5% 2.5%;
+	height: 80%;
+}
+
+#work-area{
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+#mid-bar{
+	background-color: #e2e2e2;
+	width: 0.5%;
+	overflow-y: scroll;
+}
+
+#right-bar{
+	background-color: #f2f2f2;
+	width: 0.5%;
+	overflow-y: scroll;
+}
+
+#mid-bar, #right-bar{
+	transition: width 0.3s ease-out;
+	box-shadow: 2px 2px 6px #ebebeb;
+}
+
+.mid-expand{
+	width: 32%!important;
+	padding: 6% 4%;
+}
+
+.right-expand{
+	width: 60%!important;
+	padding: 6% 4%;
+}
+
+#quote-cont{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quote{
+	margin-bottom: 100px;
+    max-width: 30%;
+    text-align: center;
+    color: #bfbfbf;
+    font-style: italic;
+}
+
+/*Empieza CSS de la Sidebar*/
+#identity{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 50px;
+}
+
+#blogg8{
+	font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: ubuntu;
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+#blogg8 span{
+	color: #d6107a;
+}
+
+#identity div:nth-child(2){
+	color: #919191;
+	font-size: 0.7em;
+}
+
+#menu{
+	display: flex;
+	flex-direction: column;
+}
+
+.tab-btn{
+    background-image: linear-gradient( to bottom right, #780942 , #9b0954 );    
+	width: 130px;
+    height: fit-content;
+    padding: 10px;
+    font-size: 0.7em;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+    color: #f0f0f0;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#notificacion{
+	position: absolute;
+    background-color: #f2f2f2;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 9px;
+    transform: translate(40px, -15px) scale(3);
+    transition: transform 0.3s ease-in, opacity 0.2s;
+    opacity: 0;
+    color: black;
+}
+
+#menu .tab-btn{
+	margin-bottom: 6px;
+}
+
+.active{
+	color: #230213;
+}
+/*TERMINA SIDEBAR CSS*/
+
+
+/*EMPIEZA MIDBAR CSS*/
+#nueva-entrada-mid{
+	width: 100%;
+	height: 100%;
+	display: none;
+	flex-direction: column;
+}
+
+.input-cont{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.input-cont div:nth-child(1){
+	text-transform: uppercase;
+	font-weight: bold;
+    font-size: 0.7em;
+    color: #383838;
+    margin-bottom: 4px;
+}
+
+#mid-bar input, #mid-bar select{
+	outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 25px;
+    padding: 3px 12px;
+    color: #999999;
+    font-weight: 300;
+    font-family: ubuntu;
+    background-color: #f2f2f2;
+}
+
+#ipt-titulo, #ipt-autor, #ipt-categoria, #editor div{
+	transition: transform 0.3s ease-out;
+}
+
+/* Customizando input para adjuntar archivos */
+.input-file {
+  color: transparent!important;
+  background-color: transparent!important;
+  padding: 0!important;
+  height: fit-content!important;
+}
+.input-file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.input-file::before {
+    content: 'Adjuntar Imagen';
+    font-family: ubuntu;
+    display: inline-block;
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 10pt;
+    color: #999999;
+    background-color: #f2f2f2!important;
+}
+.input-file:hover::before {
+  /*border-color: black;*/
+}
+.input-file:active {
+  outline: 0;
+}
+
+/*Cuando cliquean*/
+.input-file:active::before {
+}
+/* Termina customizador de input para adjuntar archivos */
+
+#img-prev{
+	width: 100%;
+    height: 300px;
+    background-color: #f2f2f2;
+    margin-top: 20px;
+    border-radius: 4px;
+    background-size: cover;
+}
+
+#file-prev-cont div{
+    font-weight: 300;
+    background-color: #f2f2f2;
+    width: fit-content;
+    padding: 5px 5px 5px 7px;
+    border-radius: 4px;
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+#remove-file{
+	font-family: cursive;
+    margin-left: 8px;
+    background-color: #e3e3e3;
+    font-size: 8px;
+    padding: 3px 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#archivo-mid{
+	display: none;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+#archivo-mid .label{
+	font-size: 0.9em;
+	font-weight: bold;
+	margin-right: 8px;
+}
+
+.archivo-big-cont{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+.archivo-img{
+	width: 100%;
+	border-radius: 5px;
+	background-color: white;
+	height: 120px;
+	margin-bottom: 7px;
+    background-size: cover;
+    background-position: center;
+}
+
+.archivo-des-row{
+	display: flex;
+	flex-direction: column;
+}
+
+.archivo-autor{
+	font-size: 0.7em;
+    color: #696969;
+}
+
+/*TERMINA MIDBAR CSS*/
+
+
+/*EMPIEZA RIGHT BAR CSS*/
+#nueva-entrada-right{
+	display: none;
+	justify-content: center;
+}
+
+#nueva-entrada-right > div{
+	display: flex; 
+	flex-direction: column; 
+	width: 100%;
+}
+
+.label{
+	text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.7em;
+    color: #383838;
+    margin-bottom: 4px;
+}
+
+#archivo-right{
+	display: none;
+	flex-direction: column;
+	opacity: 0;
+	transition: opacity 0.2s, transform 0.4s;
+}
+
+#archivo-right input{
+	font-family: ubuntu;
+}
+
+#ed-tit{
+	font-size: 1em!important;
+	width: 550px;
+	outline: none;
+    border: none;
+    padding: 3px 12px;
+    background-color: transparent;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+#ed-aut{
+	font-size: 1em;
+	 color: #696969;
+    font-weight: 300;
+    font-size: 1em!important;
+    width: fit-content;
+    outline: none;
+    border: none;
+    padding: 3px 12px;
+    background-color: transparent;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+#ed-cat{
+    font-size: 1em;
+    color: #696969;
+   font-weight: 300;
+   font-size: 1em!important;
+   width: fit-content;
+   outline: none;
+   border: none;
+   padding: 3px 12px;
+   background-color: transparent;
+   border-bottom: 1px solid #c7c7c7;   
+}
+
+.archivo-prev-titulo{
+	font-size: 2em;
+	margin-bottom: 7px;
+}
+
+.archivo-prev-autor{
+	color: #696969;
+	font-weight: 300;
+}
+
+.archivo-prev-cuerpo{
+	margin: 5% 0 10% 0;
+	font-weight: 300;
+}
+
+.archivo-prev-categoria{
+    font-weight: 300;
+}
+
+.archivo-thumbnail-cont{
+	display: flex;
+	flex-direction: column;
+}
+
+.thumbnail-label{
+	text-transform: uppercase;
+    font-size: 0.75em;
+    font-weight: bold;
+    color: #696969;
+}
+
+.archivo-thumbnail{
+	width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    margin-top: 10px;
+    border-radius: 4px;
+    background-size: contain;
+}
+
+.archivo-big-cont-tit{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.archivo-big-cont-tit > div{
+	display: flex;
+	flex-direction: column;
+}
+
+#icons-cont{
+	display: flex;
+	flex-direction: row!important;
+}
+
+#borrar-entrada{
+	position: relative;
+	display: flex;
+	opacity: 0;
+	transition: transform 0.1s, opacity 0.05s;
+}
+
+#editar-entrada{
+	z-index: 2;
+}
+
+.icon-cont{
+	height: 32px;
+    width: 32px;
+    border: 1px solid #d6197a;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.archivo-big-cont-tit img{
+	height: 20px;
+
+}
