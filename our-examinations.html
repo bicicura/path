@@ -1121,6 +1121,7 @@ ANIMS OUR EXAMINATIONS
           <div id="modal__aclaration"></div>
         </div>
           <div class="modal__actions-container">
+            <div><a class="modal__action" id="btnContents" target="_blank">Download contents and competences</a></div>
             <div><a class="modal__action">Download a sample test</a></div>
             <div><a class="modal__action">Book this exam</a></div>
             <div><a class="modal__action">Are you ready for this exam?</a></div>
@@ -1166,7 +1167,8 @@ var exams_modales = {
         Totallength : '10 minutes',
         Agerange : 'Version for children aged 4-12',
         Agerange2 : 'Version for adolescents aged 13+ and adults',
-        Aclaration : ''
+        Aclaration : '',
+        btnContents: 'pdfs/exam_contents/A1- SPA level I - contents and competences.pdf'
     },
     aSPAlevelII : {
         nombre: 'A1 Speaking Performance Assessment (SPA) level II',
@@ -1177,7 +1179,8 @@ var exams_modales = {
         Totallength : '10 minutes',
         Agerange : 'Version for children aged 5-12',
         Agerange2 : 'Version for adolescents aged 13+ and adults',
-        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.',
+        btnContents: 'pdfs/exam_contents/A1 SPA level II - contents and competences.pdf'
     },
     AplusSPAlevelIII : {
         nombre: 'A1+ Speaking Performance Assessment (SPA) level III',
@@ -1188,7 +1191,8 @@ var exams_modales = {
         Totallength : '10 minutes',
         Agerange : 'Version for children aged 6-12',
         Agerange2 : 'Version for adolescents aged 13+ and adults',
-        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.',
+        btnContents: 'pdfs/exam_contents/A1+ SPA level III - contents and competences.pdf'
     },
     a1entrylevel: {
         nombre: 'A1- Entry level',
@@ -1199,7 +1203,8 @@ var exams_modales = {
         Totallength : '1 hour 20 minutes',
         Agerange : 'All ages',
         Agerange2 : '',
-        Aclaration : ''
+        Aclaration : '',
+        btnContents: 'pdfs/exam_contents/A1- Entry level - contents and competences.pdf'
     },
     A1AccessLevel : {
         nombre: 'A1 Access level',
@@ -1210,7 +1215,8 @@ var exams_modales = {
         Totallength : '1 hour 20 minutes',
         Agerange : 'All ages',
         Agerange2 : '',
-        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.',
+        btnContents: 'pdfs/exam_contents/A1 Access level - contents and competences.pdf'
     },
     A1AchieverLevel : {
         nombre: 'A1+ Achiever level',
@@ -1221,7 +1227,8 @@ var exams_modales = {
         Totallength : '1 hour 20 minutes',
         Agerange : 'All ages',
         Agerange2 : '',
-        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.',
+        btnContents: 'pdfs/exam_contents/A1+ Achiever level - contents and competences.pdf'
     },
     A2PreliminaryLevel : {
         nombre: 'A2 Preliminary level',
@@ -1233,6 +1240,7 @@ var exams_modales = {
         Agerange : 'All ages',
         Agerange2 : '',
         Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.',
+        btnContents: 'pdfs/exam_contents/A2 Preliminary level - contents and competences.pdf'
 
     },
     A2ElementaryLevel : {
@@ -1244,7 +1252,8 @@ var exams_modales = {
         Totallength : '1 hour 35 minutes',
         Agerange : 'All ages',
         Agerange2 : '',
-        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.',
+        btnContents: 'pdfs/exam_contents/A2+ Elementary level - contents and competences.pdf'
 
     },
     B1ProgressLevel : {
@@ -1256,7 +1265,8 @@ var exams_modales = {
         Totallength : '2 hours 10 minutes',
         Agerange : 'All ages',
         Agerange2 : '',
-        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.',
+        btnContents: 'pdfs/exam_contents/B1 Progress level - contents and competences.pdf'
     },
     B2CompetencyLevel : {
         nombre: ' B2 Competency level',
@@ -1267,7 +1277,8 @@ var exams_modales = {
         Totallength : '2 hours 30 minutes',
         Agerange : 'All ages',
         Agerange2 : '',
-        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.',
+        btnContents: 'pdfs/exam_contents/B2 Competency level - contents and competences.pdf'
     },
     B2ForwardLevel : {
         nombre: 'B2+ Forward level',
@@ -1278,7 +1289,8 @@ var exams_modales = {
         Totallength : '2 hours 30 minutes',
         Agerange : 'All ages',
         Agerange2 : '',
-        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.'
+        Aclaration : 'Each Path exam builds on the knowledge and skills learned in the previous levels.',
+        btnContents: 'pdfs/exam_contents/B2+ Forward level - contents and competences.pdf'
     }
 
 }
@@ -1308,6 +1320,8 @@ function abridor_modal(examen){
   $('#exam_age').text(exams_modales[examen].Agerange)
   $('#exam_age2').text(exams_modales[examen].Agerange2)
   $('#modal__aclaration').text(exams_modales[examen].Aclaration)
+  
+  $('#btnContents').attr('href', exams_modales[examen].btnContents)
   
   $('#modal-back').removeClass('cerra2')
 };
